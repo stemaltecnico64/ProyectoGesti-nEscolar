@@ -1,0 +1,4 @@
+C:\Users\joseg\Desktop\Repositorio Proyecto Ingenieria de Software\ProyectoGesti-nEscolar\ProyectoGestiónEscolar\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\joseg\Desktop\Repositorio Proyecto Ingenieria de Software\ProyectoGesti-nEscolar\ProyectoGestiónEscolar\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\joseg\Desktop\Repositorio Proyecto Ingenieria de Software\ProyectoGesti-nEscolar\ProyectoGestiónEscolar\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\joseg\Desktop\Repositorio Proyecto Ingenieria de Software\ProyectoGesti-nEscolar\ProyectoGestiónEscolar\CapaDatos\obj\Debug\CapaDatos.pdb
