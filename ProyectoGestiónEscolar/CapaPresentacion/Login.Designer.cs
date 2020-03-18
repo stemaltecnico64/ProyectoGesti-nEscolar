@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
-            this.bunifuTextbox2 = new Bunifu.Framework.UI.BunifuTextbox();
             this.btn_ingresar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.panel1.SuspendLayout();
@@ -45,7 +44,6 @@
             // 
             this.panel1.Controls.Add(this.bunifuSeparator1);
             this.panel1.Controls.Add(this.btn_ingresar);
-            this.panel1.Controls.Add(this.bunifuTextbox2);
             this.panel1.Controls.Add(this.bunifuTextbox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -117,19 +115,6 @@
             this.bunifuTextbox1.TabIndex = 7;
             this.bunifuTextbox1.text = "Bunifu TextBox";
             // 
-            // bunifuTextbox2
-            // 
-            this.bunifuTextbox2.BackColor = System.Drawing.Color.Silver;
-            this.bunifuTextbox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox2.BackgroundImage")));
-            this.bunifuTextbox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuTextbox2.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox2.Icon")));
-            this.bunifuTextbox2.Location = new System.Drawing.Point(53, 157);
-            this.bunifuTextbox2.Name = "bunifuTextbox2";
-            this.bunifuTextbox2.Size = new System.Drawing.Size(233, 36);
-            this.bunifuTextbox2.TabIndex = 8;
-            this.bunifuTextbox2.text = "Bunifu TextBox";
-            // 
             // btn_ingresar
             // 
             this.btn_ingresar.Activecolor = System.Drawing.Color.Red;
@@ -198,7 +183,6 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_ingresar;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox2;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
