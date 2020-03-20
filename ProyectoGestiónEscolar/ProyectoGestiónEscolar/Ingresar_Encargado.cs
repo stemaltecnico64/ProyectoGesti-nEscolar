@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace ProyectoGestiónEscolar
 {
-    public partial class Form1 : Form
+    public partial class Ingresar_Encargado : Form
     {
-        public Form1()
+        public Ingresar_Encargado()
         {
             InitializeComponent();
         }
