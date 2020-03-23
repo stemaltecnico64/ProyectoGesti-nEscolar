@@ -16,5 +16,35 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        int progress = 0;
+
+        public void fn_probar()
+        {
+            progress += 1;
+            if (progress >= 100)
+            {
+                Timer_Loader.Enabled = false;
+                Timer_Loader.Stop();
+                this.Timer_Loader.Stop();
+                this.Hide();
+                Inicio ventanaInicio = new Inicio();
+                ventanaInicio.Show();
+            }
+            else
+            {
+                bunifuCircleProgressbar1.Value = progress;
+            }
+        }
+
+        private void Timer_Loader_Tick(object sender, EventArgs e)
+        {
+            fn_probar();
+        }
+
+        private void Timer_Fecha_Hora_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }
