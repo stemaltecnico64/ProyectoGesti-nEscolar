@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CapaPresentacion;
 namespace ProyectoGestiónEscolar
 {
     static class Program
@@ -16,7 +16,7 @@ namespace ProyectoGestiónEscolar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inscribir_alumnos());
+            Application.Run(new FrmPaginaPrincipal());
         }
     }
 }
