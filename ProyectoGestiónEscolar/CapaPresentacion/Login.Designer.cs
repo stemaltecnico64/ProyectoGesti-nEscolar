@@ -1,4 +1,4 @@
-﻿namespace ProyectoGestiónEscolar
+﻿namespace CapaPresentacion
 {
     partial class Login
     {
@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 364);
+            this.ClientSize = new System.Drawing.Size(468, 388);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
