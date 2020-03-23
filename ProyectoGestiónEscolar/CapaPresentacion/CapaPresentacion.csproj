@@ -54,6 +54,12 @@
     <Compile Include="FrmPaginaPrincipal.Designer.cs">
       <DependentUpon>FrmPaginaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantalla_carga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalla_carga.Designer.cs">
+      <DependentUpon>Pantalla_carga.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -70,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmPaginaPrincipal.resx">
       <DependentUpon>FrmPaginaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalla_carga.resx">
+      <DependentUpon>Pantalla_carga.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
