@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Pantalla_carga : Form
+    public partial class Pantalla_Carga : Form
     {
-        public Pantalla_carga()
+        public Pantalla_Carga()
         {
             InitializeComponent();
         }

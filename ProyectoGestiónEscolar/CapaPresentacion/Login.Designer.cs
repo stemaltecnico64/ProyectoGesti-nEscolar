@@ -53,9 +53,9 @@
             this.panel1.Controls.Add(this.bunifuTextbox2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(272, 0);
+            this.panel1.Location = new System.Drawing.Point(271, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 430);
+            this.panel1.Size = new System.Drawing.Size(275, 431);
             this.panel1.TabIndex = 3;
             // 
             // bunifuTextbox1
@@ -129,7 +129,6 @@
             this.btn_ingresar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_ingresar.Textcolor = System.Drawing.Color.White;
             this.btn_ingresar.TextFont = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ingresar.Click += new System.EventHandler(this.btn_ingresar_Click);
             // 
             // bunifuSeparator1
             // 
@@ -181,7 +180,7 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(272, 430);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(272, 431);
             this.bunifuGradientPanel1.TabIndex = 2;
             // 
             // bunifuDragControl1
@@ -195,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 430);
+            this.ClientSize = new System.Drawing.Size(546, 431);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
