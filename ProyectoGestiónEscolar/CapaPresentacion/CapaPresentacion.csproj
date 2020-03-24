@@ -54,6 +54,12 @@
     <Compile Include="FrmPaginaPrincipal.Designer.cs">
       <DependentUpon>FrmPaginaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantalla_carga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmPaginaPrincipal.resx">
       <DependentUpon>FrmPaginaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla_carga.resx">
       <DependentUpon>Pantalla_carga.cs</DependentUpon>
