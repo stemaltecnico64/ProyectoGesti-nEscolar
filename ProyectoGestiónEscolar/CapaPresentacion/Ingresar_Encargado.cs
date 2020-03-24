@@ -14,7 +14,7 @@ namespace CapaPresentacion
     {
         public Ingresar_Encargado()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
     }
 }

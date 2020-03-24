@@ -47,24 +47,28 @@
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuMaterialTextbox7 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuMaterialTextbox8 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox9 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuMaterialTextbox10 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.bnt_borrar1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_borrar2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lbl_codigo = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bnt_borrar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_borrar2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuDragControl1
@@ -81,7 +85,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(625, 61);
+            this.panelTitleBar.Size = new System.Drawing.Size(629, 61);
             this.panelTitleBar.TabIndex = 26;
             // 
             // lblTitle
@@ -91,7 +95,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(229, 21);
+            this.lblTitle.Location = new System.Drawing.Point(231, 21);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(164, 26);
             this.lblTitle.TabIndex = 0;
@@ -196,7 +200,6 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.bnt_borrar1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.bunifuMaterialTextbox4);
             this.panel1.Controls.Add(this.label1);
@@ -209,7 +212,7 @@
             this.panel1.Controls.Add(this.bunifuMaterialTextbox6);
             this.panel1.Controls.Add(this.bunifuMaterialTextbox3);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(16, 62);
+            this.panel1.Location = new System.Drawing.Point(16, 116);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(592, 172);
             this.panel1.TabIndex = 27;
@@ -313,61 +316,108 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.comboBox4);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.comboBox6);
-            this.panel3.Controls.Add(this.btn_borrar2);
-            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.bunifuMaterialTextbox7);
+            this.panel3.Controls.Add(this.bunifuMaterialTextbox8);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.bunifuMaterialTextbox9);
             this.panel3.Controls.Add(this.bunifuMaterialTextbox10);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(16, 240);
+            this.panel3.Location = new System.Drawing.Point(16, 294);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(419, 231);
+            this.panel3.Size = new System.Drawing.Size(419, 152);
             this.panel3.TabIndex = 28;
             // 
-            // comboBox4
+            // label15
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(112, 201);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(162, 21);
-            this.comboBox4.TabIndex = 18;
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label15.Location = new System.Drawing.Point(496, 477);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 23);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Guardar";
             // 
-            // label12
+            // btn_guardar
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label12.Location = new System.Drawing.Point(98, 166);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(185, 23);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "Municipio de Residencia";
+            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
+            this.btn_guardar.ImageActive = null;
+            this.btn_guardar.Location = new System.Drawing.Point(500, 405);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(55, 52);
+            this.btn_guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_guardar.TabIndex = 29;
+            this.btn_guardar.TabStop = false;
+            this.btn_guardar.Zoom = 10;
             // 
-            // comboBox6
+            // bunifuMaterialTextbox7
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(112, 128);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(162, 21);
-            this.comboBox6.TabIndex = 7;
+            this.bunifuMaterialTextbox7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMaterialTextbox7.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMaterialTextbox7.HintForeColor = System.Drawing.Color.Empty;
+            this.bunifuMaterialTextbox7.HintText = "";
+            this.bunifuMaterialTextbox7.isPassword = false;
+            this.bunifuMaterialTextbox7.LineFocusedColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox7.LineIdleColor = System.Drawing.Color.Gray;
+            this.bunifuMaterialTextbox7.LineMouseHoverColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuMaterialTextbox7.LineThickness = 3;
+            this.bunifuMaterialTextbox7.Location = new System.Drawing.Point(38, 110);
+            this.bunifuMaterialTextbox7.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox7.Name = "bunifuMaterialTextbox7";
+            this.bunifuMaterialTextbox7.Size = new System.Drawing.Size(162, 33);
+            this.bunifuMaterialTextbox7.TabIndex = 45;
+            this.bunifuMaterialTextbox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // label13
+            // bunifuMaterialTextbox8
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label13.Location = new System.Drawing.Point(86, 88);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(216, 23);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Departamento de Residencia";
+            this.bunifuMaterialTextbox8.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMaterialTextbox8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMaterialTextbox8.HintForeColor = System.Drawing.Color.Empty;
+            this.bunifuMaterialTextbox8.HintText = "";
+            this.bunifuMaterialTextbox8.isPassword = false;
+            this.bunifuMaterialTextbox8.LineFocusedColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox8.LineIdleColor = System.Drawing.Color.Gray;
+            this.bunifuMaterialTextbox8.LineMouseHoverColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuMaterialTextbox8.LineThickness = 3;
+            this.bunifuMaterialTextbox8.Location = new System.Drawing.Point(217, 110);
+            this.bunifuMaterialTextbox8.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox8.Name = "bunifuMaterialTextbox8";
+            this.bunifuMaterialTextbox8.Size = new System.Drawing.Size(162, 33);
+            this.bunifuMaterialTextbox8.TabIndex = 47;
+            this.bunifuMaterialTextbox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label16.Location = new System.Drawing.Point(40, 83);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(160, 23);
+            this.label16.TabIndex = 44;
+            this.label16.Text = "Fecha de Nacimiento";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label17.Location = new System.Drawing.Point(255, 83);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(74, 23);
+            this.label17.TabIndex = 46;
+            this.label17.Text = "Telefono";
             // 
             // bunifuMaterialTextbox9
             // 
@@ -381,11 +431,11 @@
             this.bunifuMaterialTextbox9.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox9.LineMouseHoverColor = System.Drawing.Color.RoyalBlue;
             this.bunifuMaterialTextbox9.LineThickness = 3;
-            this.bunifuMaterialTextbox9.Location = new System.Drawing.Point(8, 43);
+            this.bunifuMaterialTextbox9.Location = new System.Drawing.Point(38, 39);
             this.bunifuMaterialTextbox9.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox9.Name = "bunifuMaterialTextbox9";
             this.bunifuMaterialTextbox9.Size = new System.Drawing.Size(162, 33);
-            this.bunifuMaterialTextbox9.TabIndex = 3;
+            this.bunifuMaterialTextbox9.TabIndex = 41;
             this.bunifuMaterialTextbox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuMaterialTextbox10
@@ -400,11 +450,11 @@
             this.bunifuMaterialTextbox10.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox10.LineMouseHoverColor = System.Drawing.Color.RoyalBlue;
             this.bunifuMaterialTextbox10.LineThickness = 3;
-            this.bunifuMaterialTextbox10.Location = new System.Drawing.Point(187, 43);
+            this.bunifuMaterialTextbox10.Location = new System.Drawing.Point(217, 39);
             this.bunifuMaterialTextbox10.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox10.Name = "bunifuMaterialTextbox10";
             this.bunifuMaterialTextbox10.Size = new System.Drawing.Size(162, 33);
-            this.bunifuMaterialTextbox10.TabIndex = 7;
+            this.bunifuMaterialTextbox10.TabIndex = 43;
             this.bunifuMaterialTextbox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label11
@@ -414,10 +464,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label11.Location = new System.Drawing.Point(64, 16);
+            this.label11.Location = new System.Drawing.Point(94, 10);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 23);
-            this.label11.TabIndex = 2;
+            this.label11.TabIndex = 40;
             this.label11.Text = "DPI";
             // 
             // label9
@@ -427,69 +477,99 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label9.Location = new System.Drawing.Point(222, 13);
+            this.label9.Location = new System.Drawing.Point(252, 7);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 23);
-            this.label9.TabIndex = 4;
+            this.label9.TabIndex = 42;
             this.label9.Text = "Dirección";
             // 
-            // label15
+            // panel2
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label15.Location = new System.Drawing.Point(481, 369);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 23);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Guardar";
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.comboBox4);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.comboBox6);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Location = new System.Drawing.Point(16, 452);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(419, 152);
+            this.panel2.TabIndex = 48;
             // 
-            // bnt_borrar1
+            // comboBox4
             // 
-            this.bnt_borrar1.BackColor = System.Drawing.Color.Transparent;
-            this.bnt_borrar1.Image = ((System.Drawing.Image)(resources.GetObject("bnt_borrar1.Image")));
-            this.bnt_borrar1.ImageActive = null;
-            this.bnt_borrar1.Location = new System.Drawing.Point(545, 3);
-            this.bnt_borrar1.Name = "bnt_borrar1";
-            this.bnt_borrar1.Size = new System.Drawing.Size(39, 36);
-            this.bnt_borrar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bnt_borrar1.TabIndex = 16;
-            this.bnt_borrar1.TabStop = false;
-            this.bnt_borrar1.Zoom = 10;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(130, 109);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(162, 21);
+            this.comboBox4.TabIndex = 50;
             // 
-            // btn_guardar
+            // label12
             // 
-            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
-            this.btn_guardar.ImageActive = null;
-            this.btn_guardar.Location = new System.Drawing.Point(485, 314);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(55, 52);
-            this.btn_guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_guardar.TabIndex = 29;
-            this.btn_guardar.TabStop = false;
-            this.btn_guardar.Zoom = 10;
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label12.Location = new System.Drawing.Point(116, 74);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(185, 23);
+            this.label12.TabIndex = 49;
+            this.label12.Text = "Municipio de Residencia";
             // 
-            // btn_borrar2
+            // comboBox6
             // 
-            this.btn_borrar2.BackColor = System.Drawing.Color.Transparent;
-            this.btn_borrar2.Image = ((System.Drawing.Image)(resources.GetObject("btn_borrar2.Image")));
-            this.btn_borrar2.ImageActive = null;
-            this.btn_borrar2.Location = new System.Drawing.Point(375, 3);
-            this.btn_borrar2.Name = "btn_borrar2";
-            this.btn_borrar2.Size = new System.Drawing.Size(39, 36);
-            this.btn_borrar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_borrar2.TabIndex = 16;
-            this.btn_borrar2.TabStop = false;
-            this.btn_borrar2.Zoom = 10;
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(130, 39);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(162, 21);
+            this.comboBox6.TabIndex = 48;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label13.Location = new System.Drawing.Point(100, 7);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(216, 23);
+            this.label13.TabIndex = 47;
+            this.label13.Text = "Departamento de Residencia";
+            // 
+            // lbl_codigo
+            // 
+            this.lbl_codigo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_codigo.AutoSize = true;
+            this.lbl_codigo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_codigo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_codigo.ForeColor = System.Drawing.Color.DarkGray;
+            this.lbl_codigo.Location = new System.Drawing.Point(114, 75);
+            this.lbl_codigo.Name = "lbl_codigo";
+            this.lbl_codigo.Size = new System.Drawing.Size(0, 23);
+            this.lbl_codigo.TabIndex = 50;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label18.Location = new System.Drawing.Point(45, 75);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(63, 23);
+            this.label18.TabIndex = 49;
+            this.label18.Text = "Codigo:";
             // 
             // Ingresar_Encargado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 483);
+            this.ClientSize = new System.Drawing.Size(629, 625);
+            this.Controls.Add(this.lbl_codigo);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.panel3);
@@ -505,9 +585,9 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bnt_borrar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_borrar2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -525,7 +605,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox6;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuImageButton bnt_borrar1;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox4;
         private System.Windows.Forms.Label label1;
@@ -534,15 +613,21 @@
         private System.Windows.Forms.Label label6;
         private Bunifu.Framework.UI.BunifuImageButton btn_guardar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private Bunifu.Framework.UI.BunifuImageButton btn_borrar2;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox7;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox8;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox9;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbl_codigo;
+        private System.Windows.Forms.Label label18;
     }
 }

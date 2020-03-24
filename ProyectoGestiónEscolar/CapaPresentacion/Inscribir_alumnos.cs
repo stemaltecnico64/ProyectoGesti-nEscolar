@@ -15,9 +15,10 @@ namespace CapaPresentacion
         public Inscribir_alumnos()
         {
             InitializeComponent();
+           
         }
 
-        private void btn_agregar_encargado_Click(object sender, EventArgs e)
+        private void btn_agregar_encargado_Click_1(object sender, EventArgs e)
         {
             Ingresar_Encargado ventanEncargado = new Ingresar_Encargado();
             ventanEncargado.Show();
