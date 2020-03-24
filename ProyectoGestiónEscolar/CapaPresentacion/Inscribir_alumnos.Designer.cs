@@ -43,8 +43,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_borrar2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_agregar_encargado = new Bunifu.Framework.UI.BunifuImageButton();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -65,18 +67,16 @@
             this.bunifuMaterialTextbox6 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_borrar2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_agregar_encargado = new Bunifu.Framework.UI.BunifuImageButton();
             this.bnt_borrar1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelTitleBar.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_borrar2)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregar_encargado)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnt_borrar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuDragControl1
@@ -245,6 +245,19 @@
             this.panel3.Size = new System.Drawing.Size(419, 231);
             this.panel3.TabIndex = 22;
             // 
+            // btn_borrar2
+            // 
+            this.btn_borrar2.BackColor = System.Drawing.Color.Transparent;
+            this.btn_borrar2.Image = ((System.Drawing.Image)(resources.GetObject("btn_borrar2.Image")));
+            this.btn_borrar2.ImageActive = null;
+            this.btn_borrar2.Location = new System.Drawing.Point(375, 3);
+            this.btn_borrar2.Name = "btn_borrar2";
+            this.btn_borrar2.Size = new System.Drawing.Size(39, 36);
+            this.btn_borrar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_borrar2.TabIndex = 16;
+            this.btn_borrar2.TabStop = false;
+            this.btn_borrar2.Zoom = 10;
+            // 
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -274,6 +287,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(592, 169);
             this.panel2.TabIndex = 23;
+            // 
+            // btn_agregar_encargado
+            // 
+            this.btn_agregar_encargado.BackColor = System.Drawing.Color.Transparent;
+            this.btn_agregar_encargado.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar_encargado.Image")));
+            this.btn_agregar_encargado.ImageActive = null;
+            this.btn_agregar_encargado.Location = new System.Drawing.Point(478, 119);
+            this.btn_agregar_encargado.Name = "btn_agregar_encargado";
+            this.btn_agregar_encargado.Size = new System.Drawing.Size(39, 36);
+            this.btn_agregar_encargado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_agregar_encargado.TabIndex = 18;
+            this.btn_agregar_encargado.TabStop = false;
+            this.btn_agregar_encargado.Zoom = 10;
+            this.btn_agregar_encargado.Click += new System.EventHandler(this.btn_agregar_encargado_Click);
             // 
             // comboBox5
             // 
@@ -559,45 +586,6 @@
             this.panel1.Size = new System.Drawing.Size(592, 172);
             this.panel1.TabIndex = 21;
             // 
-            // btn_guardar
-            // 
-            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
-            this.btn_guardar.ImageActive = null;
-            this.btn_guardar.Location = new System.Drawing.Point(642, 334);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(55, 52);
-            this.btn_guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_guardar.TabIndex = 24;
-            this.btn_guardar.TabStop = false;
-            this.btn_guardar.Zoom = 10;
-            // 
-            // btn_borrar2
-            // 
-            this.btn_borrar2.BackColor = System.Drawing.Color.Transparent;
-            this.btn_borrar2.Image = ((System.Drawing.Image)(resources.GetObject("btn_borrar2.Image")));
-            this.btn_borrar2.ImageActive = null;
-            this.btn_borrar2.Location = new System.Drawing.Point(375, 3);
-            this.btn_borrar2.Name = "btn_borrar2";
-            this.btn_borrar2.Size = new System.Drawing.Size(39, 36);
-            this.btn_borrar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_borrar2.TabIndex = 16;
-            this.btn_borrar2.TabStop = false;
-            this.btn_borrar2.Zoom = 10;
-            // 
-            // btn_agregar_encargado
-            // 
-            this.btn_agregar_encargado.BackColor = System.Drawing.Color.Transparent;
-            this.btn_agregar_encargado.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar_encargado.Image")));
-            this.btn_agregar_encargado.ImageActive = null;
-            this.btn_agregar_encargado.Location = new System.Drawing.Point(478, 119);
-            this.btn_agregar_encargado.Name = "btn_agregar_encargado";
-            this.btn_agregar_encargado.Size = new System.Drawing.Size(39, 36);
-            this.btn_agregar_encargado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_agregar_encargado.TabIndex = 18;
-            this.btn_agregar_encargado.TabStop = false;
-            this.btn_agregar_encargado.Zoom = 10;
-            // 
             // bnt_borrar1
             // 
             this.bnt_borrar1.BackColor = System.Drawing.Color.Transparent;
@@ -610,6 +598,19 @@
             this.bnt_borrar1.TabIndex = 16;
             this.bnt_borrar1.TabStop = false;
             this.bnt_borrar1.Zoom = 10;
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
+            this.btn_guardar.ImageActive = null;
+            this.btn_guardar.Location = new System.Drawing.Point(642, 334);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(55, 52);
+            this.btn_guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_guardar.TabIndex = 24;
+            this.btn_guardar.TabStop = false;
+            this.btn_guardar.Zoom = 10;
             // 
             // Inscribir_alumnos
             // 
@@ -630,14 +631,14 @@
             this.panelTitleBar.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_borrar2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_agregar_encargado)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_borrar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_agregar_encargado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnt_borrar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

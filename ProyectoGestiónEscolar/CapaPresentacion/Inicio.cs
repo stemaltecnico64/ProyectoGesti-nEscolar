@@ -20,14 +20,14 @@ namespace CapaPresentacion
 
         private void btn_Inicio_Click(object sender, EventArgs e)
         {
-            menu_alumnos1.BringToFront();
-            lblTitle.Text = "ALUMNOS";
+            menu_inicio1.BringToFront();
+            lblTitle.Text = "INICIO";
         }
 
         private void btn_alumnos_Click(object sender, EventArgs e)
         {
-            menu_inicio1.BringToFront();
-            lblTitle.Text = "INICIO";
+            menu_alumnos1.BringToFront();
+            lblTitle.Text = "ALUMNOS";
         }
     }
 }

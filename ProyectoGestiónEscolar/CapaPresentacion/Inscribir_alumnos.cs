@@ -16,5 +16,11 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void btn_agregar_encargado_Click(object sender, EventArgs e)
+        {
+            Ingresar_Encargado ventanEncargado = new Ingresar_Encargado();
+            ventanEncargado.Show();
+        }
     }
 }

@@ -16,5 +16,11 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Inscribir_alumnos VenInscribir = new Inscribir_alumnos();
+            VenInscribir.Show();
+        }
     }
 }

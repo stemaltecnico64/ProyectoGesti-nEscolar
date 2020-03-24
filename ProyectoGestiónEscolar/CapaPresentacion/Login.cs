@@ -16,5 +16,12 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void btn_ingresar_Click(object sender, EventArgs e)
+        {
+            Pantalla_Carga VenCarga = new Pantalla_Carga();
+            this.Hide();
+            VenCarga.Show();
+        }
     }
 }
