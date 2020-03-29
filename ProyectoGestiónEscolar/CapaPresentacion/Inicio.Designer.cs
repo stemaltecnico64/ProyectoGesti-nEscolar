@@ -37,14 +37,14 @@
             this.btn_empleados = new System.Windows.Forms.Button();
             this.btn_alumnos = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menu_alumnos1 = new CapaPresentacion.menu_alumnos();
             this.menu_inicio1 = new CapaPresentacion.menu_inicio();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
-            this.panelTitleBar.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -151,8 +151,16 @@
             this.btn_alumnos.UseVisualStyleBackColor = true;
             this.btn_alumnos.Click += new System.EventHandler(this.btn_alumnos_Click);
             // 
-            // menu_inicio1
+            // panelLogo
             // 
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(200, 100);
+            this.panelLogo.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panelTitleBar);
             this.panel1.Controls.Add(this.menu_alumnos1);
             this.panel1.Controls.Add(this.menu_inicio1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -175,21 +183,43 @@
             this.menu_inicio1.Size = new System.Drawing.Size(658, 429);
             this.menu_inicio1.TabIndex = 0;
             // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panelTitleBar.Controls.Add(this.lblTitle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(859, 82);
+            this.panelTitleBar.TabIndex = 22;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(481, 32);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(60, 26);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Inicio";
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 514);
             this.Controls.Add(this.panelMenu);
-            this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panel1);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.panelMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -204,10 +234,10 @@
         private System.Windows.Forms.Button btn_empleados;
         private System.Windows.Forms.Button btn_alumnos;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel1;
         private menu_alumnos menu_alumnos1;
         private menu_inicio menu_inicio1;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

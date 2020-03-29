@@ -19,7 +19,7 @@ namespace CapaPresentacion
 
         private void btn_agregar_encargado_Click(object sender, EventArgs e)
         {
-            Ingresar_alumnos ventanalumno = new Ingresar_alumnos();
+            Ingresar_Alumno ventanalumno = new Ingresar_Alumno();
             ventanalumno.Show();
         }
     }
