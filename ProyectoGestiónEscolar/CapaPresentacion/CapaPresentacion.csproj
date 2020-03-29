@@ -48,12 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmPaginaPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPaginaPrincipal.Designer.cs">
-      <DependentUpon>FrmPaginaPrincipal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Ingresar_Encargado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,11 +60,17 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inscribir_alumnos.cs">
+    <Compile Include="Ingresar_alumnos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inscribir_alumnos.Designer.cs">
-      <DependentUpon>Inscribir_alumnos.cs</DependentUpon>
+    <Compile Include="Ingresar_alumnos.Designer.cs">
+      <DependentUpon>Ingresar_alumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripcion_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripcion_alumno.Designer.cs">
+      <DependentUpon>Inscripcion_alumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -84,11 +84,23 @@
     <Compile Include="menu_alumnos.Designer.cs">
       <DependentUpon>menu_alumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu_Empleados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu_Empleados.Designer.cs">
+      <DependentUpon>Menu_Empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="menu_inicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="menu_inicio.Designer.cs">
       <DependentUpon>menu_inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Usuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu_Usuarios.Designer.cs">
+      <DependentUpon>Menu_Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantalla_Carga.cs">
       <SubType>Form</SubType>
@@ -110,17 +122,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmPaginaPrincipal.resx">
-      <DependentUpon>FrmPaginaPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Encargado.resx">
       <DependentUpon>Ingresar_Encargado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inscribir_alumnos.resx">
-      <DependentUpon>Inscribir_alumnos.cs</DependentUpon>
+    <EmbeddedResource Include="Ingresar_alumnos.resx">
+      <DependentUpon>Ingresar_alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripcion_alumno.resx">
+      <DependentUpon>Inscripcion_alumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -128,8 +140,14 @@
     <EmbeddedResource Include="menu_alumnos.resx">
       <DependentUpon>menu_alumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Empleados.resx">
+      <DependentUpon>Menu_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="menu_inicio.resx">
       <DependentUpon>menu_inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Usuarios.resx">
+      <DependentUpon>Menu_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla_Carga.resx">
       <DependentUpon>Pantalla_Carga.cs</DependentUpon>

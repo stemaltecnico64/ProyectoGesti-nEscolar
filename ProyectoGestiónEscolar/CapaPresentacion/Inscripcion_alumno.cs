@@ -10,18 +10,17 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Inscribir_alumnos : Form
+    public partial class Inscripcion_alumno : Form
     {
-        public Inscribir_alumnos()
+        public Inscripcion_alumno()
         {
             InitializeComponent();
-           
         }
 
-        private void btn_agregar_encargado_Click_1(object sender, EventArgs e)
+        private void btn_agregar_encargado_Click(object sender, EventArgs e)
         {
-            Ingresar_Encargado ventanEncargado = new Ingresar_Encargado();
-            ventanEncargado.Show();
+            Ingresar_alumnos ventanalumno = new Ingresar_alumnos();
+            ventanalumno.Show();
         }
     }
 }

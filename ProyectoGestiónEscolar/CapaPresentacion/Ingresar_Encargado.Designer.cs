@@ -47,8 +47,6 @@
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuMaterialTextbox7 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuMaterialTextbox8 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label16 = new System.Windows.Forms.Label();
@@ -57,18 +55,28 @@
             this.bunifuMaterialTextbox10 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.lbl_codigo = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btn_add_foto = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.lbl_codigo = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_add_foto)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuDragControl1
@@ -80,12 +88,12 @@
             // 
             // panelTitleBar
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(192)))));
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(629, 61);
+            this.panelTitleBar.Size = new System.Drawing.Size(737, 61);
             this.panelTitleBar.TabIndex = 26;
             // 
             // lblTitle
@@ -95,7 +103,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(231, 21);
+            this.lblTitle.Location = new System.Drawing.Point(285, 21);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(164, 26);
             this.lblTitle.TabIndex = 0;
@@ -329,32 +337,6 @@
             this.panel3.Size = new System.Drawing.Size(419, 152);
             this.panel3.TabIndex = 28;
             // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label15.Location = new System.Drawing.Point(496, 477);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 23);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Guardar";
-            // 
-            // btn_guardar
-            // 
-            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
-            this.btn_guardar.ImageActive = null;
-            this.btn_guardar.Location = new System.Drawing.Point(500, 405);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(55, 52);
-            this.btn_guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_guardar.TabIndex = 29;
-            this.btn_guardar.TabStop = false;
-            this.btn_guardar.Zoom = 10;
-            // 
             // bunifuMaterialTextbox7
             // 
             this.bunifuMaterialTextbox7.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -483,6 +465,32 @@
             this.label9.TabIndex = 42;
             this.label9.Text = "Dirección";
             // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label15.Location = new System.Drawing.Point(635, 205);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 23);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Guardar";
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
+            this.btn_guardar.ImageActive = null;
+            this.btn_guardar.Location = new System.Drawing.Point(639, 139);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(55, 52);
+            this.btn_guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_guardar.TabIndex = 29;
+            this.btn_guardar.TabStop = false;
+            this.btn_guardar.Zoom = 10;
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -537,18 +545,6 @@
             this.label13.TabIndex = 47;
             this.label13.Text = "Departamento de Residencia";
             // 
-            // lbl_codigo
-            // 
-            this.lbl_codigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_codigo.AutoSize = true;
-            this.lbl_codigo.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_codigo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_codigo.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbl_codigo.Location = new System.Drawing.Point(114, 75);
-            this.lbl_codigo.Name = "lbl_codigo";
-            this.lbl_codigo.Size = new System.Drawing.Size(0, 23);
-            this.lbl_codigo.TabIndex = 50;
-            // 
             // label18
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -556,18 +552,83 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label18.Location = new System.Drawing.Point(45, 75);
+            this.label18.Location = new System.Drawing.Point(99, 75);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 23);
             this.label18.TabIndex = 49;
             this.label18.Text = "Codigo:";
             // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label8.Location = new System.Drawing.Point(573, 558);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 23);
+            this.label8.TabIndex = 76;
+            this.label8.Text = "Agregar Foto";
+            // 
+            // btn_add_foto
+            // 
+            this.btn_add_foto.BackColor = System.Drawing.Color.Transparent;
+            this.btn_add_foto.Image = ((System.Drawing.Image)(resources.GetObject("btn_add_foto.Image")));
+            this.btn_add_foto.ImageActive = null;
+            this.btn_add_foto.Location = new System.Drawing.Point(488, 538);
+            this.btn_add_foto.Name = "btn_add_foto";
+            this.btn_add_foto.Size = new System.Drawing.Size(67, 60);
+            this.btn_add_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_add_foto.TabIndex = 75;
+            this.btn_add_foto.TabStop = false;
+            this.btn_add_foto.Zoom = 10;
+            this.btn_add_foto.Click += new System.EventHandler(this.btn_add_foto_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Location = new System.Drawing.Point(441, 294);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(289, 238);
+            this.panel4.TabIndex = 74;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(281, 228);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 70;
+            this.pictureBox1.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // lbl_codigo
+            // 
+            this.lbl_codigo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_codigo.AutoSize = true;
+            this.lbl_codigo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_codigo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_codigo.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_codigo.Location = new System.Drawing.Point(168, 75);
+            this.lbl_codigo.Name = "lbl_codigo";
+            this.lbl_codigo.Size = new System.Drawing.Size(121, 23);
+            this.lbl_codigo.TabIndex = 77;
+            this.lbl_codigo.Text = "Primer Nombre";
+            // 
             // Ingresar_Encargado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 625);
+            this.ClientSize = new System.Drawing.Size(737, 625);
             this.Controls.Add(this.lbl_codigo);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.btn_add_foto);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -588,6 +649,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_add_foto)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -627,7 +691,12 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lbl_codigo;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label8;
+        private Bunifu.Framework.UI.BunifuImageButton btn_add_foto;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label lbl_codigo;
     }
 }
