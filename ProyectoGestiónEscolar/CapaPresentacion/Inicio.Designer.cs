@@ -151,38 +151,7 @@
             this.btn_alumnos.UseVisualStyleBackColor = true;
             this.btn_alumnos.Click += new System.EventHandler(this.btn_alumnos_Click);
             // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(201, 88);
-            this.panelLogo.TabIndex = 1;
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(192)))));
-            this.panelTitleBar.Controls.Add(this.lblTitle);
-            this.panelTitleBar.Location = new System.Drawing.Point(201, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(658, 85);
-            this.panelTitleBar.TabIndex = 4;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(279, 33);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(83, 26);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "INICIO";
-            // 
-            // panel1
+            // menu_inicio1
             // 
             this.panel1.Controls.Add(this.menu_alumnos1);
             this.panel1.Controls.Add(this.menu_inicio1);

@@ -41,7 +41,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.ForeColor = System.Drawing.Color.Aqua;
             this.label2.Location = new System.Drawing.Point(136, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
@@ -53,7 +53,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.ForeColor = System.Drawing.Color.Aqua;
             this.label1.Location = new System.Drawing.Point(136, 315);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 20);
@@ -78,7 +78,7 @@
             this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.White;
             this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
             this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.Teal;
             this.bunifuCircleProgressbar1.LabelVisible = true;
             this.bunifuCircleProgressbar1.LineProgressThickness = 8;
             this.bunifuCircleProgressbar1.LineThickness = 5;
@@ -87,7 +87,7 @@
             this.bunifuCircleProgressbar1.MaxValue = 100;
             this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
             this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.Transparent;
-            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.Blue;
+            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(215, 215);
             this.bunifuCircleProgressbar1.TabIndex = 39;
             this.bunifuCircleProgressbar1.Value = 0;
