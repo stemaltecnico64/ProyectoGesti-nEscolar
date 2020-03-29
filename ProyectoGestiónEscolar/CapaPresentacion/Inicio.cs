@@ -29,5 +29,11 @@ namespace CapaPresentacion
             menu_alumnos1.BringToFront();
             lblTitle.Text = "ALUMNOS";
         }
+
+        private void btn_usuarios_Click(object sender, EventArgs e)
+        {
+            menu_Usuarios1.BringToFront();
+            lblTitle.Text = "USUARIOS";
+        }
     }
 }

@@ -30,18 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btn_Inicio = new System.Windows.Forms.Button();
-            this.btn_usuarios = new System.Windows.Forms.Button();
-            this.btn_acercaDe = new System.Windows.Forms.Button();
-            this.btn_ajustes = new System.Windows.Forms.Button();
-            this.btn_empleados = new System.Windows.Forms.Button();
-            this.btn_alumnos = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menu_alumnos1 = new CapaPresentacion.menu_alumnos();
             this.menu_inicio1 = new CapaPresentacion.menu_inicio();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btn_Inicio = new System.Windows.Forms.Button();
+            this.btn_usuarios = new System.Windows.Forms.Button();
+            this.btn_acercaDe = new System.Windows.Forms.Button();
+            this.btn_ajustes = new System.Windows.Forms.Button();
+            this.btn_empleados = new System.Windows.Forms.Button();
+            this.btn_alumnos = new System.Windows.Forms.Button();
+            this.menu_Usuarios1 = new CapaPresentacion.Menu_Usuarios();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -62,6 +63,62 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(201, 514);
             this.panelMenu.TabIndex = 3;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(200, 100);
+            this.panelLogo.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.menu_Usuarios1);
+            this.panel1.Controls.Add(this.panelTitleBar);
+            this.panel1.Controls.Add(this.menu_alumnos1);
+            this.panel1.Controls.Add(this.menu_inicio1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(859, 514);
+            this.panel1.TabIndex = 5;
+            // 
+            // menu_alumnos1
+            // 
+            this.menu_alumnos1.Location = new System.Drawing.Point(201, 85);
+            this.menu_alumnos1.Name = "menu_alumnos1";
+            this.menu_alumnos1.Size = new System.Drawing.Size(658, 429);
+            this.menu_alumnos1.TabIndex = 1;
+            // 
+            // menu_inicio1
+            // 
+            this.menu_inicio1.Location = new System.Drawing.Point(201, 85);
+            this.menu_inicio1.Name = "menu_inicio1";
+            this.menu_inicio1.Size = new System.Drawing.Size(658, 429);
+            this.menu_inicio1.TabIndex = 0;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panelTitleBar.Controls.Add(this.lblTitle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(859, 82);
+            this.panelTitleBar.TabIndex = 22;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(481, 32);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(83, 26);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "INICIO";
             // 
             // btn_Inicio
             // 
@@ -93,6 +150,7 @@
             this.btn_usuarios.TabIndex = 7;
             this.btn_usuarios.Text = "Usuarios";
             this.btn_usuarios.UseVisualStyleBackColor = true;
+            this.btn_usuarios.Click += new System.EventHandler(this.btn_usuarios_Click);
             // 
             // btn_acercaDe
             // 
@@ -151,60 +209,12 @@
             this.btn_alumnos.UseVisualStyleBackColor = true;
             this.btn_alumnos.Click += new System.EventHandler(this.btn_alumnos_Click);
             // 
-            // panelLogo
+            // menu_Usuarios1
             // 
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(200, 100);
-            this.panelLogo.TabIndex = 9;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panelTitleBar);
-            this.panel1.Controls.Add(this.menu_alumnos1);
-            this.panel1.Controls.Add(this.menu_inicio1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(859, 514);
-            this.panel1.TabIndex = 5;
-            // 
-            // menu_alumnos1
-            // 
-            this.menu_alumnos1.Location = new System.Drawing.Point(201, 85);
-            this.menu_alumnos1.Name = "menu_alumnos1";
-            this.menu_alumnos1.Size = new System.Drawing.Size(658, 429);
-            this.menu_alumnos1.TabIndex = 1;
-            // 
-            // menu_inicio1
-            // 
-            this.menu_inicio1.Location = new System.Drawing.Point(201, 85);
-            this.menu_inicio1.Name = "menu_inicio1";
-            this.menu_inicio1.Size = new System.Drawing.Size(658, 429);
-            this.menu_inicio1.TabIndex = 0;
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panelTitleBar.Controls.Add(this.lblTitle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(859, 82);
-            this.panelTitleBar.TabIndex = 22;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(481, 32);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(60, 26);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Inicio";
+            this.menu_Usuarios1.Location = new System.Drawing.Point(201, 82);
+            this.menu_Usuarios1.Name = "menu_Usuarios1";
+            this.menu_Usuarios1.Size = new System.Drawing.Size(658, 429);
+            this.menu_Usuarios1.TabIndex = 23;
             // 
             // Inicio
             // 
@@ -239,5 +249,6 @@
         private menu_inicio menu_inicio1;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label lblTitle;
+        private Menu_Usuarios menu_Usuarios1;
     }
 }
