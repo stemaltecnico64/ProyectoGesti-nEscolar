@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inscripcion_alumno));
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.label15 = new System.Windows.Forms.Label();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregar_encargado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
@@ -194,6 +196,13 @@
             this.label15.TabIndex = 48;
             this.label15.Text = "Guardar";
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panelTitleBar;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // Inscripcion_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,5 +248,6 @@
         private System.Windows.Forms.ComboBox comboBox5;
         private Bunifu.Framework.UI.BunifuImageButton btn_guardar;
         private System.Windows.Forms.Label label15;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

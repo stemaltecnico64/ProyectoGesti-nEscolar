@@ -78,26 +78,26 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="menu_alumnos.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Menu_Alumnos.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menu_alumnos.Designer.cs">
-      <DependentUpon>menu_alumnos.cs</DependentUpon>
+    <Compile Include="Menu_Alumnos.Designer.cs">
+      <DependentUpon>Menu_Alumnos.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu_Empleados.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu_Empleados.Designer.cs">
       <DependentUpon>Menu_Empleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="menu_inicio.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Menu_Inicio.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menu_inicio.Designer.cs">
-      <DependentUpon>menu_inicio.cs</DependentUpon>
+    <Compile Include="Menu_Inicio.Designer.cs">
+      <DependentUpon>Menu_Inicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu_Usuarios.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu_Usuarios.Designer.cs">
       <DependentUpon>Menu_Usuarios.cs</DependentUpon>
@@ -137,14 +137,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menu_alumnos.resx">
-      <DependentUpon>menu_alumnos.cs</DependentUpon>
+    <EmbeddedResource Include="Menu_Alumnos.resx">
+      <DependentUpon>Menu_Alumnos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Empleados.resx">
       <DependentUpon>Menu_Empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menu_inicio.resx">
-      <DependentUpon>menu_inicio.cs</DependentUpon>
+    <EmbeddedResource Include="Menu_Inicio.resx">
+      <DependentUpon>Menu_Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Usuarios.resx">
       <DependentUpon>Menu_Usuarios.cs</DependentUpon>
