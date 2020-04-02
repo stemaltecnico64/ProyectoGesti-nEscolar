@@ -34,7 +34,6 @@ namespace CapaPresentacion
             DesktopPanel.Tag = ChildForm;
             ChildForm.BringToFront();
             ChildForm.Show();
-                       
         }
 
         private void btn_inicio_Click(object sender, EventArgs e)
