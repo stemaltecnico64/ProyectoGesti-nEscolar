@@ -68,7 +68,6 @@
             this.txtDireccion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label9 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.txtIdAlumno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -81,6 +80,7 @@
             this.btn_agregar_encargado = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btExit = new System.Windows.Forms.Button();
+            this.txtIdAlumno = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -617,25 +617,6 @@
             this.label18.TabIndex = 89;
             this.label18.Text = "Codigo:";
             // 
-            // txtIdAlumno
-            // 
-            this.txtIdAlumno.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtIdAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtIdAlumno.HintForeColor = System.Drawing.Color.Empty;
-            this.txtIdAlumno.HintText = "";
-            this.txtIdAlumno.isPassword = false;
-            this.txtIdAlumno.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtIdAlumno.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtIdAlumno.LineMouseHoverColor = System.Drawing.Color.RoyalBlue;
-            this.txtIdAlumno.LineThickness = 3;
-            this.txtIdAlumno.Location = new System.Drawing.Point(117, 64);
-            this.txtIdAlumno.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIdAlumno.Name = "txtIdAlumno";
-            this.txtIdAlumno.Size = new System.Drawing.Size(162, 33);
-            this.txtIdAlumno.TabIndex = 15;
-            this.txtIdAlumno.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // cbSexo
             // 
             this.cbSexo.FormattingEnabled = true;
@@ -788,18 +769,26 @@
             this.btExit.UseVisualStyleBackColor = false;
             this.btExit.Click += new System.EventHandler(this.BtExit_Click);
             // 
+            // txtIdAlumno
+            // 
+            this.txtIdAlumno.BackColor = System.Drawing.Color.LightGray;
+            this.txtIdAlumno.Location = new System.Drawing.Point(105, 77);
+            this.txtIdAlumno.Name = "txtIdAlumno";
+            this.txtIdAlumno.Size = new System.Drawing.Size(100, 20);
+            this.txtIdAlumno.TabIndex = 50;
+            // 
             // Ingresar_Alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 671);
+            this.Controls.Add(this.txtIdAlumno);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtIdAlumno);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_add_foto);
@@ -876,7 +865,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label18;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtIdAlumno;
         private Bunifu.Framework.UI.BunifuDatepicker dtFecha_Nac;
         private System.Windows.Forms.ComboBox cbSexo;
         private System.Windows.Forms.Label label10;
@@ -886,5 +874,6 @@
         private System.Windows.Forms.Label label20;
         private Bunifu.Framework.UI.BunifuImageButton btnCancelar;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtIdAlumno;
     }
 }
