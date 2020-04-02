@@ -28,13 +28,18 @@ namespace CapaPresentacion
                 this.openFileDialog1.ShowDialog();
                 if (this.openFileDialog1.FileName.Equals("") == false)
                 {
-                    pictureBox1.Load(this.openFileDialog1.FileName);
+                    pxFoto.Load(this.openFileDialog1.FileName);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo cargar la Imagen");
             }
+        }
+
+        private void BtExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

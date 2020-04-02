@@ -160,5 +160,14 @@
   <ItemGroup>
     <None Include="Resources\Fondo Proyecto.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Close_Window_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Add_List_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_48px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
