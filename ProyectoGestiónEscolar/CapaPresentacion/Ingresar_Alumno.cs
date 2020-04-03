@@ -41,5 +41,10 @@ namespace CapaPresentacion
         {
             this.Close();
         }
+
+        private void btn_agregar_encargado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
