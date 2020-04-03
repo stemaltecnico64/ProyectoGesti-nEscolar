@@ -39,6 +39,15 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
+            this.btn_buscar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_nuevo_encargado = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txt_encargado = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txt_dpi_encargado = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txt_codigo_encargado = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label22 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -47,6 +56,7 @@
             this.btExit = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbSexo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtApellido3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,12 +72,11 @@
             this.txtNombre3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cbSexo = new System.Windows.Forms.ComboBox();
             this.dtFecha_Nac = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.txtTelefono = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.txtDireccion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtTelefono = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label9 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -79,17 +88,11 @@
             this.btn_add_foto = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtIdAlumno = new System.Windows.Forms.TextBox();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.btn_buscar = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_nuevo_encargado)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -97,8 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_add_foto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -108,7 +109,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Sienna;
-            this.label8.Location = new System.Drawing.Point(786, 391);
+            this.label8.Location = new System.Drawing.Point(776, 391);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 23);
             this.label8.TabIndex = 87;
@@ -179,15 +180,16 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btn_buscar);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox3);
-            this.panel2.Controls.Add(this.label24);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox2);
-            this.panel2.Controls.Add(this.label23);
-            this.panel2.Controls.Add(this.bunifuImageButton1);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox1);
-            this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.btn_buscar);
+            this.panel2.Controls.Add(this.btn_nuevo_encargado);
+            this.panel2.Controls.Add(this.label25);
+            this.panel2.Controls.Add(this.txt_encargado);
+            this.panel2.Controls.Add(this.label24);
+            this.panel2.Controls.Add(this.txt_dpi_encargado);
+            this.panel2.Controls.Add(this.label23);
+            this.panel2.Controls.Add(this.txt_codigo_encargado);
+            this.panel2.Controls.Add(this.label22);
             this.panel2.Location = new System.Drawing.Point(27, 492);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(603, 152);
@@ -200,11 +202,147 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Sienna;
-            this.label14.Location = new System.Drawing.Point(225, -1);
+            this.label14.Location = new System.Drawing.Point(394, 13);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 23);
-            this.label14.TabIndex = 57;
-            this.label14.Text = "Encargado";
+            this.label14.Size = new System.Drawing.Size(135, 23);
+            this.label14.TabIndex = 102;
+            this.label14.Text = "Nuevo Encargado";
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar.Image")));
+            this.btn_buscar.ImageActive = null;
+            this.btn_buscar.Location = new System.Drawing.Point(91, 4);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(39, 36);
+            this.btn_buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_buscar.TabIndex = 101;
+            this.btn_buscar.TabStop = false;
+            this.btn_buscar.Zoom = 10;
+            // 
+            // btn_nuevo_encargado
+            // 
+            this.btn_nuevo_encargado.BackColor = System.Drawing.Color.Transparent;
+            this.btn_nuevo_encargado.Image = ((System.Drawing.Image)(resources.GetObject("btn_nuevo_encargado.Image")));
+            this.btn_nuevo_encargado.ImageActive = null;
+            this.btn_nuevo_encargado.Location = new System.Drawing.Point(332, 4);
+            this.btn_nuevo_encargado.Name = "btn_nuevo_encargado";
+            this.btn_nuevo_encargado.Size = new System.Drawing.Size(39, 36);
+            this.btn_nuevo_encargado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_nuevo_encargado.TabIndex = 100;
+            this.btn_nuevo_encargado.TabStop = false;
+            this.btn_nuevo_encargado.Zoom = 10;
+            this.btn_nuevo_encargado.Click += new System.EventHandler(this.btn_nuevo_encargado_Click);
+            // 
+            // label25
+            // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Sienna;
+            this.label25.Location = new System.Drawing.Point(148, 13);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(139, 23);
+            this.label25.TabIndex = 99;
+            this.label25.Text = "Buscar Encargado";
+            // 
+            // txt_encargado
+            // 
+            this.txt_encargado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_encargado.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_encargado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_encargado.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_encargado.HintText = "";
+            this.txt_encargado.isPassword = false;
+            this.txt_encargado.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txt_encargado.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_encargado.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txt_encargado.LineThickness = 3;
+            this.txt_encargado.Location = new System.Drawing.Point(344, 79);
+            this.txt_encargado.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_encargado.Name = "txt_encargado";
+            this.txt_encargado.Size = new System.Drawing.Size(230, 33);
+            this.txt_encargado.TabIndex = 66;
+            this.txt_encargado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label24
+            // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Sienna;
+            this.label24.Location = new System.Drawing.Point(373, 52);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(175, 23);
+            this.label24.TabIndex = 65;
+            this.label24.Text = "Nombre del Encargado";
+            // 
+            // txt_dpi_encargado
+            // 
+            this.txt_dpi_encargado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_dpi_encargado.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_dpi_encargado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_dpi_encargado.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_dpi_encargado.HintText = "";
+            this.txt_dpi_encargado.isPassword = false;
+            this.txt_dpi_encargado.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txt_dpi_encargado.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_dpi_encargado.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txt_dpi_encargado.LineThickness = 3;
+            this.txt_dpi_encargado.Location = new System.Drawing.Point(152, 79);
+            this.txt_dpi_encargado.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_dpi_encargado.Name = "txt_dpi_encargado";
+            this.txt_dpi_encargado.Size = new System.Drawing.Size(162, 33);
+            this.txt_dpi_encargado.TabIndex = 64;
+            this.txt_dpi_encargado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Sienna;
+            this.label23.Location = new System.Drawing.Point(207, 52);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(39, 23);
+            this.label23.TabIndex = 63;
+            this.label23.Text = "DPI";
+            // 
+            // txt_codigo_encargado
+            // 
+            this.txt_codigo_encargado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_codigo_encargado.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_codigo_encargado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_codigo_encargado.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_codigo_encargado.HintText = "";
+            this.txt_codigo_encargado.isPassword = false;
+            this.txt_codigo_encargado.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txt_codigo_encargado.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_codigo_encargado.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txt_codigo_encargado.LineThickness = 3;
+            this.txt_codigo_encargado.Location = new System.Drawing.Point(23, 79);
+            this.txt_codigo_encargado.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_codigo_encargado.Name = "txt_codigo_encargado";
+            this.txt_codigo_encargado.Size = new System.Drawing.Size(97, 33);
+            this.txt_codigo_encargado.TabIndex = 61;
+            this.txt_codigo_encargado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Sienna;
+            this.label22.Location = new System.Drawing.Point(38, 52);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(58, 23);
+            this.label22.TabIndex = 60;
+            this.label22.Text = "Código";
             // 
             // label7
             // 
@@ -241,7 +379,7 @@
             // 
             // panelTitleBar
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.Sienna;
+            this.panelTitleBar.BackColor = System.Drawing.Color.SaddleBrown;
             this.panelTitleBar.Controls.Add(this.btExit);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -300,6 +438,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(607, 208);
             this.panel1.TabIndex = 79;
+            // 
+            // cbSexo
+            // 
+            this.cbSexo.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Items.AddRange(new object[] {
+            "MASCULINO",
+            "FEMENINO"});
+            this.cbSexo.Location = new System.Drawing.Point(211, 49);
+            this.cbSexo.Name = "cbSexo";
+            this.cbSexo.Size = new System.Drawing.Size(162, 23);
+            this.cbSexo.TabIndex = 57;
             // 
             // label2
             // 
@@ -543,18 +693,6 @@
             this.panel3.Size = new System.Drawing.Size(607, 159);
             this.panel3.TabIndex = 80;
             // 
-            // cbSexo
-            // 
-            this.cbSexo.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSexo.FormattingEnabled = true;
-            this.cbSexo.Items.AddRange(new object[] {
-            "MASCULINO",
-            "FEMENINO"});
-            this.cbSexo.Location = new System.Drawing.Point(211, 49);
-            this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(162, 23);
-            this.cbSexo.TabIndex = 57;
-            // 
             // dtFecha_Nac
             // 
             this.dtFecha_Nac.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -568,25 +706,6 @@
             this.dtFecha_Nac.TabIndex = 56;
             this.dtFecha_Nac.Value = new System.DateTime(2020, 4, 2, 13, 46, 8, 900);
             // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTelefono.HintForeColor = System.Drawing.Color.Empty;
-            this.txtTelefono.HintText = "";
-            this.txtTelefono.isPassword = false;
-            this.txtTelefono.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtTelefono.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtTelefono.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtTelefono.LineThickness = 3;
-            this.txtTelefono.Location = new System.Drawing.Point(429, 36);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(162, 33);
-            this.txtTelefono.TabIndex = 55;
-            this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label16
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -599,19 +718,6 @@
             this.label16.Size = new System.Drawing.Size(160, 23);
             this.label16.TabIndex = 52;
             this.label16.Text = "Fecha de Nacimiento";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Sienna;
-            this.label17.Location = new System.Drawing.Point(474, 7);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 23);
-            this.label17.TabIndex = 54;
-            this.label17.Text = "Telefono";
             // 
             // txtDireccion
             // 
@@ -632,6 +738,38 @@
             this.txtDireccion.TabIndex = 51;
             this.txtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Sienna;
+            this.label17.Location = new System.Drawing.Point(474, 7);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(74, 23);
+            this.label17.TabIndex = 54;
+            this.label17.Text = "Telefono";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTelefono.HintForeColor = System.Drawing.Color.Empty;
+            this.txtTelefono.HintText = "";
+            this.txtTelefono.isPassword = false;
+            this.txtTelefono.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtTelefono.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtTelefono.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtTelefono.LineThickness = 3;
+            this.txtTelefono.Location = new System.Drawing.Point(429, 36);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(162, 33);
+            this.txtTelefono.TabIndex = 55;
+            this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -639,7 +777,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Sienna;
-            this.label9.Location = new System.Drawing.Point(32, 7);
+            this.label9.Location = new System.Drawing.Point(179, 7);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 23);
             this.label9.TabIndex = 50;
@@ -677,7 +815,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label19.ForeColor = System.Drawing.Color.Gray;
             this.label19.Location = new System.Drawing.Point(382, 74);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(72, 23);
@@ -743,7 +881,7 @@
             this.btn_add_foto.ImageActive = null;
             this.btn_add_foto.Location = new System.Drawing.Point(704, 357);
             this.btn_add_foto.Name = "btn_add_foto";
-            this.btn_add_foto.Size = new System.Drawing.Size(76, 79);
+            this.btn_add_foto.Size = new System.Drawing.Size(66, 78);
             this.btn_add_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_add_foto.TabIndex = 86;
             this.btn_add_foto.TabStop = false;
@@ -770,128 +908,6 @@
             this.txtIdAlumno.Name = "txtIdAlumno";
             this.txtIdAlumno.Size = new System.Drawing.Size(100, 20);
             this.txtIdAlumno.TabIndex = 50;
-            // 
-            // bunifuMaterialTextbox1
-            // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(23, 79);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(97, 33);
-            this.bunifuMaterialTextbox1.TabIndex = 61;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Sienna;
-            this.label22.Location = new System.Drawing.Point(38, 52);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(58, 23);
-            this.label22.TabIndex = 60;
-            this.label22.Text = "Código";
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(478, -1);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(39, 36);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 62;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
-            // bunifuMaterialTextbox2
-            // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(152, 79);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(162, 33);
-            this.bunifuMaterialTextbox2.TabIndex = 64;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label23
-            // 
-            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Sienna;
-            this.label23.Location = new System.Drawing.Point(207, 52);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(39, 23);
-            this.label23.TabIndex = 63;
-            this.label23.Text = "DPI";
-            // 
-            // bunifuMaterialTextbox3
-            // 
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox3.HintText = "";
-            this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(344, 79);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(230, 33);
-            this.bunifuMaterialTextbox3.TabIndex = 66;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label24
-            // 
-            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Sienna;
-            this.label24.Location = new System.Drawing.Point(373, 52);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(175, 23);
-            this.label24.TabIndex = 65;
-            this.label24.Text = "Nombre del Encargado";
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar.Image")));
-            this.btn_buscar.ImageActive = null;
-            this.btn_buscar.Location = new System.Drawing.Point(344, 3);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(39, 36);
-            this.btn_buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_buscar.TabIndex = 67;
-            this.btn_buscar.TabStop = false;
-            this.btn_buscar.Zoom = 10;
             // 
             // Ingresar_Alumno
             // 
@@ -923,6 +939,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_nuevo_encargado)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -933,8 +951,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_add_foto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -978,7 +994,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtDireccion;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label18;
         private Bunifu.Framework.UI.BunifuDatepicker dtFecha_Nac;
         private System.Windows.Forms.ComboBox cbSexo;
@@ -990,13 +1005,15 @@
         private Bunifu.Framework.UI.BunifuImageButton btnCancelar;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtIdAlumno;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_encargado;
         private System.Windows.Forms.Label label24;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_dpi_encargado;
         private System.Windows.Forms.Label label23;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_codigo_encargado;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label14;
         private Bunifu.Framework.UI.BunifuImageButton btn_buscar;
+        private Bunifu.Framework.UI.BunifuImageButton btn_nuevo_encargado;
+        private System.Windows.Forms.Label label25;
     }
 }

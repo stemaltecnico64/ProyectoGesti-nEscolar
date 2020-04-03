@@ -42,9 +42,10 @@ namespace CapaPresentacion
             this.Close();
         }
 
-        private void btn_agregar_encargado_Click(object sender, EventArgs e)
+        private void btn_nuevo_encargado_Click(object sender, EventArgs e)
         {
-
+            Ingresar_Encargado ventanaEncargado = new Ingresar_Encargado();
+            ventanaEncargado.Show();
         }
     }
 }

@@ -152,7 +152,7 @@
             // 
             // TopSidePanel
             // 
-            this.TopSidePanel.BackColor = System.Drawing.Color.Teal;
+            this.TopSidePanel.BackColor = System.Drawing.Color.SaddleBrown;
             this.TopSidePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopSidePanel.Location = new System.Drawing.Point(0, 0);
             this.TopSidePanel.Name = "TopSidePanel";
@@ -161,7 +161,7 @@
             // 
             // TitlePanel
             // 
-            this.TitlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.TitlePanel.BackColor = System.Drawing.Color.Sienna;
             this.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitlePanel.Location = new System.Drawing.Point(205, 0);
             this.TitlePanel.Name = "TitlePanel";

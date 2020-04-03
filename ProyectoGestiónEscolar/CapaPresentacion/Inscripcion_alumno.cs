@@ -17,7 +17,12 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void btn_agregar_encargado_Click(object sender, EventArgs e)
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_nuevo_alumno_Click(object sender, EventArgs e)
         {
             Ingresar_Alumno ventanalumno = new Ingresar_Alumno();
             ventanalumno.Show();
