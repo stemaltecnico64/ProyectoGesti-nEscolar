@@ -32,11 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingresar_Alumno));
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pxFoto = new System.Windows.Forms.PictureBox();
             this.cbMunicipio = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_agregar_encargado = new Bunifu.Framework.UI.BunifuImageButton();
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,6 +46,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btExit = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,6 +64,7 @@
             this.txtNombre3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbSexo = new System.Windows.Forms.ComboBox();
             this.dtFecha_Nac = new Bunifu.Framework.UI.BunifuDatepicker();
             this.txtTelefono = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label16 = new System.Windows.Forms.Label();
@@ -68,7 +72,6 @@
             this.txtDireccion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label9 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.cbSexo = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -76,21 +79,18 @@
             this.btnCancelar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_add_foto = new Bunifu.Framework.UI.BunifuImageButton();
-            this.pxFoto = new System.Windows.Forms.PictureBox();
-            this.btn_agregar_encargado = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btExit = new System.Windows.Forms.Button();
             this.txtIdAlumno = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_agregar_encargado)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_add_foto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_agregar_encargado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,6 +115,15 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(289, 238);
             this.panel4.TabIndex = 85;
+            // 
+            // pxFoto
+            // 
+            this.pxFoto.Location = new System.Drawing.Point(3, 3);
+            this.pxFoto.Name = "pxFoto";
+            this.pxFoto.Size = new System.Drawing.Size(281, 228);
+            this.pxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pxFoto.TabIndex = 70;
+            this.pxFoto.TabStop = false;
             // 
             // cbMunicipio
             // 
@@ -169,6 +178,19 @@
             this.panel2.Size = new System.Drawing.Size(603, 152);
             this.panel2.TabIndex = 83;
             // 
+            // btn_agregar_encargado
+            // 
+            this.btn_agregar_encargado.BackColor = System.Drawing.Color.Transparent;
+            this.btn_agregar_encargado.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar_encargado.Image")));
+            this.btn_agregar_encargado.ImageActive = null;
+            this.btn_agregar_encargado.Location = new System.Drawing.Point(549, 17);
+            this.btn_agregar_encargado.Name = "btn_agregar_encargado";
+            this.btn_agregar_encargado.Size = new System.Drawing.Size(39, 36);
+            this.btn_agregar_encargado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_agregar_encargado.TabIndex = 59;
+            this.btn_agregar_encargado.TabStop = false;
+            this.btn_agregar_encargado.Zoom = 10;
+            // 
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -185,7 +207,7 @@
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(221, 52);
+            this.comboBox5.Location = new System.Drawing.Point(215, 43);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(162, 21);
             this.comboBox5.TabIndex = 58;
@@ -225,15 +247,28 @@
             // 
             // panelTitleBar
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panelTitleBar.BackColor = System.Drawing.Color.Sienna;
             this.panelTitleBar.Controls.Add(this.btExit);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panelTitleBar.ForeColor = System.Drawing.Color.SaddleBrown;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(940, 61);
             this.panelTitleBar.TabIndex = 78;
+            // 
+            // btExit
+            // 
+            this.btExit.BackColor = System.Drawing.Color.Red;
+            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
+            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btExit.ForeColor = System.Drawing.Color.Red;
+            this.btExit.Location = new System.Drawing.Point(902, 3);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(35, 35);
+            this.btExit.TabIndex = 1;
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.BtExit_Click);
             // 
             // lblTitle
             // 
@@ -436,7 +471,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label11.ForeColor = System.Drawing.Color.Sienna;
             this.label11.Location = new System.Drawing.Point(30, 23);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 23);
@@ -513,6 +548,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(603, 159);
             this.panel3.TabIndex = 80;
+            // 
+            // cbSexo
+            // 
+            this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Items.AddRange(new object[] {
+            "MASCULINO",
+            "FEMENINO"});
+            this.cbSexo.Location = new System.Drawing.Point(215, 38);
+            this.cbSexo.Name = "cbSexo";
+            this.cbSexo.Size = new System.Drawing.Size(162, 21);
+            this.cbSexo.TabIndex = 57;
+            this.cbSexo.Text = "MASCULINO";
             // 
             // dtFecha_Nac
             // 
@@ -610,24 +657,12 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label18.ForeColor = System.Drawing.Color.Sienna;
             this.label18.Location = new System.Drawing.Point(47, 74);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 23);
             this.label18.TabIndex = 89;
             this.label18.Text = "Codigo:";
-            // 
-            // cbSexo
-            // 
-            this.cbSexo.FormattingEnabled = true;
-            this.cbSexo.Items.AddRange(new object[] {
-            "MASCULINO",
-            "FEMENINO"});
-            this.cbSexo.Location = new System.Drawing.Point(215, 38);
-            this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(162, 21);
-            this.cbSexo.TabIndex = 57;
-            this.cbSexo.Text = "MASCULINO";
             // 
             // label10
             // 
@@ -635,7 +670,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label10.ForeColor = System.Drawing.Color.Sienna;
             this.label10.Location = new System.Drawing.Point(317, 74);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 23);
@@ -721,28 +756,6 @@
             this.btn_add_foto.Zoom = 10;
             this.btn_add_foto.Click += new System.EventHandler(this.btn_add_foto_Click);
             // 
-            // pxFoto
-            // 
-            this.pxFoto.Location = new System.Drawing.Point(3, 3);
-            this.pxFoto.Name = "pxFoto";
-            this.pxFoto.Size = new System.Drawing.Size(281, 228);
-            this.pxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pxFoto.TabIndex = 70;
-            this.pxFoto.TabStop = false;
-            // 
-            // btn_agregar_encargado
-            // 
-            this.btn_agregar_encargado.BackColor = System.Drawing.Color.Transparent;
-            this.btn_agregar_encargado.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar_encargado.Image")));
-            this.btn_agregar_encargado.ImageActive = null;
-            this.btn_agregar_encargado.Location = new System.Drawing.Point(291, 79);
-            this.btn_agregar_encargado.Name = "btn_agregar_encargado";
-            this.btn_agregar_encargado.Size = new System.Drawing.Size(39, 36);
-            this.btn_agregar_encargado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_agregar_encargado.TabIndex = 59;
-            this.btn_agregar_encargado.TabStop = false;
-            this.btn_agregar_encargado.Zoom = 10;
-            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
@@ -755,19 +768,6 @@
             this.btnGuardar.TabIndex = 81;
             this.btnGuardar.TabStop = false;
             this.btnGuardar.Zoom = 10;
-            // 
-            // btExit
-            // 
-            this.btExit.BackColor = System.Drawing.Color.Red;
-            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
-            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btExit.ForeColor = System.Drawing.Color.Red;
-            this.btExit.Location = new System.Drawing.Point(902, 3);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(35, 35);
-            this.btExit.TabIndex = 1;
-            this.btExit.UseVisualStyleBackColor = false;
-            this.btExit.Click += new System.EventHandler(this.BtExit_Click);
             // 
             // txtIdAlumno
             // 
@@ -804,8 +804,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingresar_Alumno";
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_agregar_encargado)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -815,8 +817,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_add_foto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_agregar_encargado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
