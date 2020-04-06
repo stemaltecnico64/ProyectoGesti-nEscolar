@@ -74,6 +74,7 @@
             this.Btn_All_Users.TabIndex = 48;
             this.Btn_All_Users.TabStop = false;
             this.Btn_All_Users.Zoom = 10;
+            this.Btn_All_Users.Click += new System.EventHandler(this.Btn_All_Users_Click);
             // 
             // Btn_Crear
             // 
@@ -88,6 +89,7 @@
             this.Btn_Crear.TabIndex = 47;
             this.Btn_Crear.TabStop = false;
             this.Btn_Crear.Zoom = 10;
+            this.Btn_Crear.Click += new System.EventHandler(this.Btn_Crear_Click);
             // 
             // Menu_Empleados
             // 

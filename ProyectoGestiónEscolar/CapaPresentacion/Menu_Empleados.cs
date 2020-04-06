@@ -16,5 +16,17 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void Btn_Crear_Click(object sender, EventArgs e)
+        {
+            Ingresar_Empleado ventanaEmpleado = new Ingresar_Empleado();
+            ventanaEmpleado.Show();
+        }
+
+        private void Btn_All_Users_Click(object sender, EventArgs e)
+        {
+            Listado_Empleados ventanalistadoempleados = new Listado_Empleados();
+            ventanalistadoempleados.Show();
+        }
     }
 }

@@ -16,5 +16,17 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void Btn_Crear_Click(object sender, EventArgs e)
+        {
+            Ingresar_Usuario ventanaUsuario = new Ingresar_Usuario();
+            ventanaUsuario.Show();
+        }
+
+        private void Btn_All_Users_Click(object sender, EventArgs e)
+        {
+            Listado_Usuarios listausuarios = new Listado_Usuarios();
+            listausuarios.Show();
+        }
     }
 }
