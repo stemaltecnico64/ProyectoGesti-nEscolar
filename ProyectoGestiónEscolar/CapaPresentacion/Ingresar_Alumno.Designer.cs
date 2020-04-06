@@ -38,6 +38,8 @@
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtApellidoEncargado = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label26 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btn_buscar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_nuevo_encargado = new Bunifu.Framework.UI.BunifuImageButton();
@@ -56,7 +58,6 @@
             this.btExit = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbSexo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtApellido3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,13 +72,14 @@
             this.txtApellido1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtNombre3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
+            this.cbSexo = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtFechaNac = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.label16 = new System.Windows.Forms.Label();
             this.txtDireccion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtTelefono = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtTelefono = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label18 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -87,8 +89,6 @@
             this.btn_add_foto = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtIdAlumno = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txtApellidoEncargado = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
@@ -201,6 +201,38 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(607, 141);
             this.panel2.TabIndex = 83;
+            // 
+            // txtApellidoEncargado
+            // 
+            this.txtApellidoEncargado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtApellidoEncargado.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtApellidoEncargado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtApellidoEncargado.HintForeColor = System.Drawing.Color.Empty;
+            this.txtApellidoEncargado.HintText = "";
+            this.txtApellidoEncargado.isPassword = false;
+            this.txtApellidoEncargado.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtApellidoEncargado.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtApellidoEncargado.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtApellidoEncargado.LineThickness = 3;
+            this.txtApellidoEncargado.Location = new System.Drawing.Point(444, 98);
+            this.txtApellidoEncargado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellidoEncargado.Name = "txtApellidoEncargado";
+            this.txtApellidoEncargado.Size = new System.Drawing.Size(145, 33);
+            this.txtApellidoEncargado.TabIndex = 104;
+            this.txtApellidoEncargado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Sienna;
+            this.label26.Location = new System.Drawing.Point(477, 71);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(71, 23);
+            this.label26.TabIndex = 103;
+            this.label26.Text = "Apellido";
             // 
             // label14
             // 
@@ -445,18 +477,6 @@
             this.panel1.Size = new System.Drawing.Size(607, 208);
             this.panel1.TabIndex = 79;
             // 
-            // cbSexo
-            // 
-            this.cbSexo.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSexo.FormattingEnabled = true;
-            this.cbSexo.Items.AddRange(new object[] {
-            "MASCULINO",
-            "FEMENINO"});
-            this.cbSexo.Location = new System.Drawing.Point(23, 36);
-            this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(162, 23);
-            this.cbSexo.TabIndex = 57;
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -681,6 +701,18 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Primer Apellido";
             // 
+            // cbSexo
+            // 
+            this.cbSexo.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Items.AddRange(new object[] {
+            "MASCULINO",
+            "FEMENINO"});
+            this.cbSexo.Location = new System.Drawing.Point(23, 36);
+            this.cbSexo.Name = "cbSexo";
+            this.cbSexo.Size = new System.Drawing.Size(162, 23);
+            this.cbSexo.TabIndex = 57;
+            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -714,19 +746,6 @@
             this.dtFechaNac.TabIndex = 56;
             this.dtFechaNac.Value = new System.DateTime(2020, 4, 2, 13, 46, 8, 900);
             // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Sienna;
-            this.label16.Location = new System.Drawing.Point(225, 10);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(160, 23);
-            this.label16.TabIndex = 52;
-            this.label16.Text = "Fecha de Nacimiento";
-            // 
             // txtDireccion
             // 
             this.txtDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -746,6 +765,19 @@
             this.txtDireccion.TabIndex = 51;
             this.txtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Sienna;
+            this.label16.Location = new System.Drawing.Point(225, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(160, 23);
+            this.label16.TabIndex = 52;
+            this.label16.Text = "Fecha de Nacimiento";
+            // 
             // label17
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -758,6 +790,19 @@
             this.label17.Size = new System.Drawing.Size(74, 23);
             this.label17.TabIndex = 54;
             this.label17.Text = "Telefono";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Sienna;
+            this.label9.Location = new System.Drawing.Point(71, 70);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 23);
+            this.label9.TabIndex = 50;
+            this.label9.Text = "Dirección";
             // 
             // txtTelefono
             // 
@@ -777,19 +822,6 @@
             this.txtTelefono.Size = new System.Drawing.Size(162, 33);
             this.txtTelefono.TabIndex = 55;
             this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Sienna;
-            this.label9.Location = new System.Drawing.Point(71, 70);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 23);
-            this.label9.TabIndex = 50;
-            this.label9.Text = "Dirección";
             // 
             // label18
             // 
@@ -904,38 +936,6 @@
             this.txtIdAlumno.Size = new System.Drawing.Size(100, 20);
             this.txtIdAlumno.TabIndex = 50;
             // 
-            // label26
-            // 
-            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Sienna;
-            this.label26.Location = new System.Drawing.Point(477, 71);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(71, 23);
-            this.label26.TabIndex = 103;
-            this.label26.Text = "Apellido";
-            // 
-            // txtApellidoEncargado
-            // 
-            this.txtApellidoEncargado.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtApellidoEncargado.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtApellidoEncargado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtApellidoEncargado.HintForeColor = System.Drawing.Color.Empty;
-            this.txtApellidoEncargado.HintText = "";
-            this.txtApellidoEncargado.isPassword = false;
-            this.txtApellidoEncargado.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtApellidoEncargado.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtApellidoEncargado.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtApellidoEncargado.LineThickness = 3;
-            this.txtApellidoEncargado.Location = new System.Drawing.Point(444, 98);
-            this.txtApellidoEncargado.Margin = new System.Windows.Forms.Padding(4);
-            this.txtApellidoEncargado.Name = "txtApellidoEncargado";
-            this.txtApellidoEncargado.Size = new System.Drawing.Size(145, 33);
-            this.txtApellidoEncargado.TabIndex = 104;
-            this.txtApellidoEncargado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // cbEstado
             // 
             this.cbEstado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -943,7 +943,7 @@
             this.cbEstado.Items.AddRange(new object[] {
             "ACTIVO",
             "DESACTIVO"});
-            this.cbEstado.Location = new System.Drawing.Point(378, 74);
+            this.cbEstado.Location = new System.Drawing.Point(377, 74);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(86, 23);
             this.cbEstado.TabIndex = 58;
