@@ -60,6 +60,12 @@
     <Compile Include="Ingresar_Empleado.Designer.cs">
       <DependentUpon>Ingresar_Empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ingresar_Encargado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingresar_Encargado.Designer.cs">
+      <DependentUpon>Ingresar_Encargado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingresar_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Empleado.resx">
       <DependentUpon>Ingresar_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingresar_Encargado.resx">
+      <DependentUpon>Ingresar_Encargado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Usuario.resx">
       <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
