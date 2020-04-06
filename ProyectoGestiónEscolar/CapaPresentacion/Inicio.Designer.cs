@@ -44,7 +44,7 @@
             // 
             // SideMenuPanel
             // 
-            this.SideMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
+            this.SideMenuPanel.BackColor = System.Drawing.Color.SaddleBrown;
             this.SideMenuPanel.Controls.Add(this.btn_inicio);
             this.SideMenuPanel.Controls.Add(this.btn_usuarios);
             this.SideMenuPanel.Controls.Add(this.btn_acercaDe);
@@ -161,7 +161,7 @@
             // 
             // TitlePanel
             // 
-            this.TitlePanel.BackColor = System.Drawing.Color.Sienna;
+            this.TitlePanel.BackColor = System.Drawing.Color.SaddleBrown;
             this.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitlePanel.Location = new System.Drawing.Point(205, 0);
             this.TitlePanel.Name = "TitlePanel";
