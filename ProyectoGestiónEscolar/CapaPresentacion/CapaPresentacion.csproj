@@ -54,11 +54,23 @@
     <Compile Include="Ingresar_Alumno.Designer.cs">
       <DependentUpon>Ingresar_Alumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ingresar_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingresar_Empleado.Designer.cs">
+      <DependentUpon>Ingresar_Empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingresar_Encargado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ingresar_Encargado.Designer.cs">
       <DependentUpon>Ingresar_Encargado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ingresar_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingresar_Usuario.Designer.cs">
+      <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -71,6 +83,30 @@
     </Compile>
     <Compile Include="Inscripcion_alumno.Designer.cs">
       <DependentUpon>Inscripcion_alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listado_Alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado_Alumnos.Designer.cs">
+      <DependentUpon>Listado_Alumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listado_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado_Empleados.Designer.cs">
+      <DependentUpon>Listado_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listado_Encargados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado_Encargados.Designer.cs">
+      <DependentUpon>Listado_Encargados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listado_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado_Usuarios.Designer.cs">
+      <DependentUpon>Listado_Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -125,14 +161,32 @@
     <EmbeddedResource Include="Ingresar_Alumno.resx">
       <DependentUpon>Ingresar_Alumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ingresar_Empleado.resx">
+      <DependentUpon>Ingresar_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Encargado.resx">
       <DependentUpon>Ingresar_Encargado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingresar_Usuario.resx">
+      <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inscripcion_alumno.resx">
       <DependentUpon>Inscripcion_alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado_Alumnos.resx">
+      <DependentUpon>Listado_Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado_Empleados.resx">
+      <DependentUpon>Listado_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado_Encargados.resx">
+      <DependentUpon>Listado_Encargados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado_Usuarios.resx">
+      <DependentUpon>Listado_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

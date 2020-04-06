@@ -22,5 +22,17 @@ namespace CapaPresentacion
             Inscripcion_alumno VenAlumnos = new Inscripcion_alumno();
             VenAlumnos.Show();
         }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            Listado_Alumnos ventanalistadoalumnos = new Listado_Alumnos();
+            ventanalistadoalumnos.Show();
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            Listado_Encargados ventanalistadoencargados = new Listado_Encargados();
+            ventanalistadoencargados.Show();
+        }
     }
 }
