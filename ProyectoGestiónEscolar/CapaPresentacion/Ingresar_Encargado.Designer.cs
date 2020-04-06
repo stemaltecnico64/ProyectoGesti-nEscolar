@@ -35,6 +35,7 @@
             this.btExit = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,14 +60,19 @@
             this.label9 = new System.Windows.Forms.Label();
 =======
 >>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
+=======
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
             this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.lbl_codigo = new System.Windows.Forms.Label();
 =======
+=======
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
             this.btn_add_foto = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
 >>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
@@ -74,12 +80,15 @@
             this.label21 = new System.Windows.Forms.Label();
             this.btnCancelar = new Bunifu.Framework.UI.BunifuImageButton();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_add_foto = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
 =======
+=======
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.txtIdAlumno = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -112,6 +121,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.txtTelefono = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label19 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
+=======
 >>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
             this.panelTitleBar.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -126,6 +138,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+<<<<<<< HEAD
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
+=======
 >>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
             this.SuspendLayout();
             // 
@@ -175,6 +190,7 @@
             this.lblTitle.Text = "Nuevo Encargado";
             this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             // label4
             // 
@@ -549,6 +565,8 @@
             // 
 =======
 >>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
+=======
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
             // label15
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -563,6 +581,7 @@
             this.label15.Text = "Guardar";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             // panel2
             // 
@@ -641,6 +660,8 @@
             // 
 =======
 >>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
+=======
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -681,6 +702,7 @@
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // lbl_codigo
             // 
             this.lbl_codigo.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -695,6 +717,8 @@
             this.lbl_codigo.Text = "Primer Nombre";
             this.lbl_codigo.Click += new System.EventHandler(this.lbl_codigo_Click);
 =======
+=======
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
             // btn_add_foto
             // 
             this.btn_add_foto.BackColor = System.Drawing.Color.Transparent;
@@ -779,6 +803,7 @@
             this.btnCancelar.TabStop = false;
             this.btnCancelar.Zoom = 10;
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             // btnNuevo
             // 
@@ -889,6 +914,55 @@
             this.label7.TabIndex = 99;
             this.label7.Text = "Codigo:";
             // 
+=======
+            // cbEstado
+            // 
+            this.cbEstado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "ACTIVO",
+            "DESACTIVO"});
+            this.cbEstado.Location = new System.Drawing.Point(289, 67);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(86, 23);
+            this.cbEstado.TabIndex = 98;
+            this.cbEstado.Text = "ACTIVO";
+            // 
+            // txtIdAlumno
+            // 
+            this.txtIdAlumno.BackColor = System.Drawing.Color.LightGray;
+            this.txtIdAlumno.Location = new System.Drawing.Point(79, 69);
+            this.txtIdAlumno.Name = "txtIdAlumno";
+            this.txtIdAlumno.Size = new System.Drawing.Size(100, 20);
+            this.txtIdAlumno.TabIndex = 96;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Sienna;
+            this.label10.Location = new System.Drawing.Point(227, 67);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 23);
+            this.label10.TabIndex = 97;
+            this.label10.Text = "Estado:";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Sienna;
+            this.label7.Location = new System.Drawing.Point(20, 67);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 23);
+            this.label7.TabIndex = 99;
+            this.label7.Text = "Codigo:";
+            // 
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1313,6 +1387,9 @@
             this.label19.Size = new System.Drawing.Size(46, 23);
             this.label19.TabIndex = 56;
             this.label19.Text = "Sexo";
+<<<<<<< HEAD
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
+=======
 >>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
             // 
             // Ingresar_Encargado
@@ -1356,6 +1433,9 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+<<<<<<< HEAD
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
+=======
 >>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1369,6 +1449,7 @@
         private System.Windows.Forms.Label lblTitle;
         private Bunifu.Framework.UI.BunifuImageButton btn_guardar;
         private System.Windows.Forms.Label label15;
+<<<<<<< HEAD
 <<<<<<< HEAD
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox8;
         private System.Windows.Forms.Label label16;
@@ -1385,6 +1466,8 @@
         private System.Windows.Forms.Label label18;
 =======
 >>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
+=======
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuImageButton btn_add_foto;
         private System.Windows.Forms.Panel panel4;
@@ -1396,10 +1479,13 @@
         private Bunifu.Framework.UI.BunifuImageButton btnCancelar;
         private System.Windows.Forms.Button btExit;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private Bunifu.Framework.UI.BunifuDatepicker dtFecha_Nac;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
 =======
+=======
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.TextBox txtIdAlumno;
         private System.Windows.Forms.Label label10;
@@ -1432,6 +1518,9 @@
         private System.Windows.Forms.Label label18;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtTelefono;
         private System.Windows.Forms.Label label19;
+<<<<<<< HEAD
+>>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
+=======
 >>>>>>> 2c24528175c1628c63a9579c72380ed8389afa3a
     }
 }
