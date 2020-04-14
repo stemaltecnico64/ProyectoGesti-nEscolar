@@ -48,6 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigDepartamento.Designer.cs">
+      <DependentUpon>ConfigDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigMunicipio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigMunicipio.Designer.cs">
+      <DependentUpon>ConfigMunicipio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigTipoEncargado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigTipoEncargado.Designer.cs">
+      <DependentUpon>ConfigTipoEncargado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingresar_Alumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +162,7 @@
     <Compile Include="Pantalla_Carga.Designer.cs">
       <DependentUpon>Pantalla_Carga.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -158,6 +177,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ConfigDepartamento.resx">
+      <DependentUpon>ConfigDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigMunicipio.resx">
+      <DependentUpon>ConfigMunicipio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigTipoEncargado.resx">
+      <DependentUpon>ConfigTipoEncargado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Alumno.resx">
       <DependentUpon>Ingresar_Alumno.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +250,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Delete_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Save_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Save_48px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_48px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Edit_Property_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Print_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feliz-nino-lindo-nino-nina-mama-papa_97632-1964.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Stop_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Cancel_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

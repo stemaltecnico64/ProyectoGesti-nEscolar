@@ -42,6 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NAlumno.cs" />
+    <Compile Include="NDepartamento.cs" />
+    <Compile Include="NEncargado.cs" />
+    <Compile Include="NMunicipio.cs" />
+    <Compile Include="NTipo_Encargado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

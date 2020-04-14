@@ -105,6 +105,7 @@
             this.Name = "Pantalla_Carga";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla_Carga";
+            this.Load += new System.EventHandler(this.Pantalla_Carga_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

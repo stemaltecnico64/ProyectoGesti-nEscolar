@@ -21,7 +21,7 @@ namespace CapaPresentacion
 
         public void fn_probar()
         {
-            progress += 1;
+            progress += 5;
             if (progress >= 100)
             {
                 Timer_Loader.Enabled = false;
@@ -45,6 +45,11 @@ namespace CapaPresentacion
         private void Timer_Fecha_Hora_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void Pantalla_Carga_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

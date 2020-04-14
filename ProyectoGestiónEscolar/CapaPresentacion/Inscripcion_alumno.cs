@@ -24,7 +24,7 @@ namespace CapaPresentacion
 
         private void btn_nuevo_alumno_Click(object sender, EventArgs e)
         {
-            Ingresar_Alumno ventanalumno = new Ingresar_Alumno();
+            Ingresar_Alumno ventanalumno =  Ingresar_Alumno.GetInstancia();
             ventanalumno.Show();
         }
     }

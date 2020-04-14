@@ -73,135 +73,128 @@ namespace CapaDatos
             this.TextoBuscar = textobuscar;
         }
 
-        public string Insertar(DAlumno Alumno)
+        public string Insertar(DEncargado Encargado)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
             {
-                //Código
+
                 SqlCon.ConnectionString = Conexion.Cn;
                 SqlCon.Open();
-                //Establecer el Comando
+
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "spinsertar_alumno";
+                SqlCmd.CommandText = "spinsertar_encargado";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter ParIdAlumno = new SqlParameter();
-                ParIdAlumno.ParameterName = "@Id_Alumno";
-                ParIdAlumno.SqlDbType = SqlDbType.Int;
-                ParIdAlumno.Direction = ParameterDirection.Output;
-                SqlCmd.Parameters.Add(ParIdAlumno);
+                SqlParameter ParIdEncargado = new SqlParameter();
+                ParIdEncargado.ParameterName = "@Id_Encargado";
+                ParIdEncargado.SqlDbType = SqlDbType.Int;
+                ParIdEncargado.Direction = ParameterDirection.Output;
+                SqlCmd.Parameters.Add(ParIdEncargado);
 
-                SqlParameter ParCodigo = new SqlParameter();
-                ParCodigo.ParameterName = "@Codigo_Alumno";
-                ParCodigo.SqlDbType = SqlDbType.VarChar;
-                ParCodigo.Size = 50;
-                ParCodigo.Value = Alumno.Codigo_Alumno;
-                SqlCmd.Parameters.Add(ParCodigo);
-
-                SqlParameter ParCUI = new SqlParameter();
-                ParCUI.ParameterName = "@Cui";
-                ParCUI.SqlDbType = SqlDbType.VarChar;
-                ParCUI.Size = 50;
-                ParCUI.Value = Alumno.CUI;
-                SqlCmd.Parameters.Add(ParCUI);
+                SqlParameter ParDpi = new SqlParameter();
+                ParDpi.ParameterName = "@Dpi";
+                ParDpi.SqlDbType = SqlDbType.VarChar;
+                ParDpi.Size = 50;
+                ParDpi.Value = Encargado.DPI;
+                SqlCmd.Parameters.Add(ParDpi);
 
                 SqlParameter ParNombre1 = new SqlParameter();
                 ParNombre1.ParameterName = "@Nombre1";
                 ParNombre1.SqlDbType = SqlDbType.VarChar;
                 ParNombre1.Size = 50;
-                ParNombre1.Value = Alumno.Nombre1;
+                ParNombre1.Value = Encargado.Nombre1;
                 SqlCmd.Parameters.Add(ParNombre1);
 
                 SqlParameter ParNombre2 = new SqlParameter();
                 ParNombre2.ParameterName = "@Nombre2";
                 ParNombre2.SqlDbType = SqlDbType.VarChar;
                 ParNombre2.Size = 50;
-                ParNombre2.Value = Alumno.Nombre2;
+                ParNombre2.Value = Encargado.Nombre2;
                 SqlCmd.Parameters.Add(ParNombre2);
 
                 SqlParameter ParNombre3 = new SqlParameter();
                 ParNombre3.ParameterName = "@Nombre3";
                 ParNombre3.SqlDbType = SqlDbType.VarChar;
                 ParNombre3.Size = 50;
-                ParNombre3.Value = Alumno.Nombre3;
+                ParNombre3.Value = Encargado.Nombre3;
                 SqlCmd.Parameters.Add(ParNombre3);
 
                 SqlParameter ParApellido1 = new SqlParameter();
                 ParApellido1.ParameterName = "@Apellido1";
                 ParApellido1.SqlDbType = SqlDbType.VarChar;
                 ParApellido1.Size = 50;
-                ParApellido1.Value = Alumno.Apellido1;
+                ParApellido1.Value = Encargado.Apellido1;
                 SqlCmd.Parameters.Add(ParApellido1);
 
                 SqlParameter ParApellido2 = new SqlParameter();
                 ParApellido2.ParameterName = "@Apellido2";
                 ParApellido2.SqlDbType = SqlDbType.VarChar;
                 ParApellido2.Size = 50;
-                ParApellido2.Value = Alumno.Apellido2;
+                ParApellido2.Value = Encargado.Apellido2;
                 SqlCmd.Parameters.Add(ParApellido2);
 
                 SqlParameter ParApellido3 = new SqlParameter();
                 ParApellido3.ParameterName = "@Apellido3";
                 ParApellido3.SqlDbType = SqlDbType.VarChar;
                 ParApellido3.Size = 50;
-                ParApellido3.Value = Alumno.Apellido3;
+                ParApellido3.Value = Encargado.Apellido3;
                 SqlCmd.Parameters.Add(ParApellido3);
 
                 SqlParameter ParFecha_Nacimiento = new SqlParameter();
                 ParFecha_Nacimiento.ParameterName = "@Fecha_Nac";
                 ParFecha_Nacimiento.SqlDbType = SqlDbType.VarChar;
                 ParFecha_Nacimiento.Size = 50;
-                ParFecha_Nacimiento.Value = Alumno.Fecha_Nac;
+                ParFecha_Nacimiento.Value = Encargado.Fecha_Nac;
                 SqlCmd.Parameters.Add(ParFecha_Nacimiento);
 
                 SqlParameter ParSexo = new SqlParameter();
                 ParSexo.ParameterName = "@Sexo";
                 ParSexo.SqlDbType = SqlDbType.VarChar;
                 ParSexo.Size = 50;
-                ParSexo.Value = Alumno.Sexo;
+                ParSexo.Value = Encargado.Sexo;
                 SqlCmd.Parameters.Add(ParSexo);
 
                 SqlParameter ParDireccion = new SqlParameter();
                 ParDireccion.ParameterName = "@Direccion";
                 ParDireccion.SqlDbType = SqlDbType.VarChar;
                 ParDireccion.Size = 2054;
-                ParDireccion.Value = Alumno.Direccion;
+                ParDireccion.Value = Encargado.Direccion;
                 SqlCmd.Parameters.Add(ParDireccion);
 
 
                 SqlParameter ParIdMunicipio = new SqlParameter();
-                ParIdMunicipio.ParameterName = "@Id_Minicipio";
-                ParIdMunicipio.SqlDbType = SqlDbType.VarChar;
-                ParIdMunicipio.Value = Alumno.Id_Municipio;
+                ParIdMunicipio.ParameterName = "@Id_Municipio";
+                ParIdMunicipio.SqlDbType = SqlDbType.Int;
+                ParIdMunicipio.Value = Encargado.Id_Municipio;
                 SqlCmd.Parameters.Add(ParIdMunicipio);
 
                 SqlParameter ParTelefono = new SqlParameter();
                 ParTelefono.ParameterName = "@Telefono";
                 ParTelefono.SqlDbType = SqlDbType.VarChar;
                 ParTelefono.Size = 2054;
-                ParTelefono.Value = Alumno.Telefono;
+                ParTelefono.Value = Encargado.Telefono;
                 SqlCmd.Parameters.Add(ParTelefono);
 
                 SqlParameter ParFoto = new SqlParameter();
                 ParFoto.ParameterName = "@Foto";
                 ParFoto.SqlDbType = SqlDbType.Image;
-                ParFoto.Value = Alumno.Foto;
+                ParFoto.Value = Encargado.Foto;
                 SqlCmd.Parameters.Add(ParFoto);
 
-                SqlParameter ParIdEncargado = new SqlParameter();
-                ParIdEncargado.ParameterName = "@Id_Encargado";
-                ParIdEncargado.SqlDbType = SqlDbType.VarChar;
-                ParIdEncargado.Value = Alumno.Id_Encargado;
-                SqlCmd.Parameters.Add(ParIdEncargado);
+                SqlParameter ParIdTipoEncargado = new SqlParameter();
+                ParIdTipoEncargado.ParameterName = "@Id_Tipo_Encargado";
+                ParIdTipoEncargado.SqlDbType = SqlDbType.Int;
+                ParIdTipoEncargado.Value = Encargado.Id_Tipo_Encargado;
+                SqlCmd.Parameters.Add(ParIdTipoEncargado);
 
                 SqlParameter ParEstado = new SqlParameter();
                 ParEstado.ParameterName = "@Estado";
                 ParEstado.SqlDbType = SqlDbType.VarChar;
                 ParTelefono.Size = 50;
-                ParEstado.Value = Alumno.Estado;
+                ParEstado.Value = Encargado.Estado;
                 SqlCmd.Parameters.Add(ParEstado);
 
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
@@ -219,6 +212,232 @@ namespace CapaDatos
 
         }
 
+        public string Editar(DEncargado Encargado)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "speditar_encargado";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIdEncargado = new SqlParameter();
+                ParIdEncargado.ParameterName = "@Id_Encargado";
+                ParIdEncargado.SqlDbType = SqlDbType.Int;
+                ParIdEncargado.Value = Encargado.Id_Encargado;
+                SqlCmd.Parameters.Add(ParIdEncargado);
+
+                SqlParameter ParDpi = new SqlParameter();
+                ParDpi.ParameterName = "@Dpi";
+                ParDpi.SqlDbType = SqlDbType.VarChar;
+                ParDpi.Size = 50;
+                ParDpi.Value = Encargado.DPI;
+                SqlCmd.Parameters.Add(ParDpi);
+
+                SqlParameter ParNombre1 = new SqlParameter();
+                ParNombre1.ParameterName = "@Nombre1";
+                ParNombre1.SqlDbType = SqlDbType.VarChar;
+                ParNombre1.Size = 50;
+                ParNombre1.Value = Encargado.Nombre1;
+                SqlCmd.Parameters.Add(ParNombre1);
+
+                SqlParameter ParNombre2 = new SqlParameter();
+                ParNombre2.ParameterName = "@Nombre2";
+                ParNombre2.SqlDbType = SqlDbType.VarChar;
+                ParNombre2.Size = 50;
+                ParNombre2.Value = Encargado.Nombre2;
+                SqlCmd.Parameters.Add(ParNombre2);
+
+                SqlParameter ParNombre3 = new SqlParameter();
+                ParNombre3.ParameterName = "@Nombre3";
+                ParNombre3.SqlDbType = SqlDbType.VarChar;
+                ParNombre3.Size = 50;
+                ParNombre3.Value = Encargado.Nombre3;
+                SqlCmd.Parameters.Add(ParNombre3);
+
+                SqlParameter ParApellido1 = new SqlParameter();
+                ParApellido1.ParameterName = "@Apellido1";
+                ParApellido1.SqlDbType = SqlDbType.VarChar;
+                ParApellido1.Size = 50;
+                ParApellido1.Value = Encargado.Apellido1;
+                SqlCmd.Parameters.Add(ParApellido1);
+
+                SqlParameter ParApellido2 = new SqlParameter();
+                ParApellido2.ParameterName = "@Apellido2";
+                ParApellido2.SqlDbType = SqlDbType.VarChar;
+                ParApellido2.Size = 50;
+                ParApellido2.Value = Encargado.Apellido2;
+                SqlCmd.Parameters.Add(ParApellido2);
+
+                SqlParameter ParApellido3 = new SqlParameter();
+                ParApellido3.ParameterName = "@Apellido3";
+                ParApellido3.SqlDbType = SqlDbType.VarChar;
+                ParApellido3.Size = 50;
+                ParApellido3.Value = Encargado.Apellido3;
+                SqlCmd.Parameters.Add(ParApellido3);
+
+                SqlParameter ParFecha_Nacimiento = new SqlParameter();
+                ParFecha_Nacimiento.ParameterName = "@Fecha_Nac";
+                ParFecha_Nacimiento.SqlDbType = SqlDbType.VarChar;
+                ParFecha_Nacimiento.Size = 50;
+                ParFecha_Nacimiento.Value = Encargado.Fecha_Nac;
+                SqlCmd.Parameters.Add(ParFecha_Nacimiento);
+
+                SqlParameter ParSexo = new SqlParameter();
+                ParSexo.ParameterName = "@Sexo";
+                ParSexo.SqlDbType = SqlDbType.VarChar;
+                ParSexo.Size = 50;
+                ParSexo.Value = Encargado.Sexo;
+                SqlCmd.Parameters.Add(ParSexo);
+
+                SqlParameter ParDireccion = new SqlParameter();
+                ParDireccion.ParameterName = "@Direccion";
+                ParDireccion.SqlDbType = SqlDbType.VarChar;
+                ParDireccion.Size = 2054;
+                ParDireccion.Value = Encargado.Direccion;
+                SqlCmd.Parameters.Add(ParDireccion);
+
+
+                SqlParameter ParIdMunicipio = new SqlParameter();
+                ParIdMunicipio.ParameterName = "@Id_Minicipio";
+                ParIdMunicipio.SqlDbType = SqlDbType.VarChar;
+                ParIdMunicipio.Value = Encargado.Id_Municipio;
+                SqlCmd.Parameters.Add(ParIdMunicipio);
+
+                SqlParameter ParTelefono = new SqlParameter();
+                ParTelefono.ParameterName = "@Telefono";
+                ParTelefono.SqlDbType = SqlDbType.VarChar;
+                ParTelefono.Size = 2054;
+                ParTelefono.Value = Encargado.Telefono;
+                SqlCmd.Parameters.Add(ParTelefono);
+
+                SqlParameter ParFoto = new SqlParameter();
+                ParFoto.ParameterName = "@Foto";
+                ParFoto.SqlDbType = SqlDbType.Image;
+                ParFoto.Value = Encargado.Foto;
+                SqlCmd.Parameters.Add(ParFoto);
+
+                SqlParameter ParIdTipoEncargado = new SqlParameter();
+                ParIdTipoEncargado.ParameterName = "@Id_Tipo_Encargado";
+                ParIdTipoEncargado.SqlDbType = SqlDbType.VarChar;
+                ParIdTipoEncargado.Value = Encargado.Id_Tipo_Encargado;
+                SqlCmd.Parameters.Add(ParIdTipoEncargado);
+
+                SqlParameter ParEstado = new SqlParameter();
+                ParEstado.ParameterName = "@Estado";
+                ParEstado.SqlDbType = SqlDbType.VarChar;
+                ParTelefono.Size = 50;
+                ParEstado.Value = Encargado.Estado;
+                SqlCmd.Parameters.Add(ParEstado);
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
+
+                //Ejecutamos nuestro comando
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Actualizo el Registro";
+
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+        }
+
+        public DataTable Mostrar()
+        {
+            DataTable DtResultado = new DataTable("Encargado");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spmostrar_encargado";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
+        public DataTable Dpi(DEncargado Encargado)
+        {
+            DataTable DtResultado = new DataTable("Encargado");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spbuscar_dpi_encargado";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = Encargado.TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
+        public DataTable Apellido(DEncargado Encargado)
+        {
+            DataTable DtResultado = new DataTable("Encargado");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spbuscar_apellido_encargado";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = Encargado.TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
 
     }
 }

@@ -177,7 +177,7 @@ namespace CapaDatos
 
 
                 SqlParameter ParIdMunicipio = new SqlParameter();
-                ParIdMunicipio.ParameterName = "@Id_Minicipio";
+                ParIdMunicipio.ParameterName = "@Id_Municipio";
                 ParIdMunicipio.SqlDbType = SqlDbType.VarChar;
                 ParIdMunicipio.Value = Alumno.Id_Municipio;
                 SqlCmd.Parameters.Add(ParIdMunicipio);

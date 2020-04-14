@@ -41,8 +41,8 @@
             this.txtApellidoEncargado = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label26 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btn_buscar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_nuevo_encargado = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnBuscarEncargado = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnNuevoEncargado = new Bunifu.Framework.UI.BunifuImageButton();
             this.label25 = new System.Windows.Forms.Label();
             this.txtNombreEncargado = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label24 = new System.Windows.Forms.Label();
@@ -58,6 +58,8 @@
             this.btExit = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCodigoAlumno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label27 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtApellido3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,7 +76,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dtFechaNac = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.dtFechaNac = new System.Windows.Forms.DateTimePicker();
             this.txtDireccion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -84,27 +86,30 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.btnCancelar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_add_foto = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtIdAlumno = new System.Windows.Forms.TextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BtnQuitarFoto = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnCancelar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
+            this.BtnAgregarFoto = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_nuevo_encargado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarEncargado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevoEncargado)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnQuitarFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_add_foto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnAgregarFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -114,7 +119,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Sienna;
-            this.label8.Location = new System.Drawing.Point(776, 391);
+            this.label8.Location = new System.Drawing.Point(650, 400);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 23);
             this.label8.TabIndex = 87;
@@ -168,6 +173,7 @@
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(162, 23);
             this.cbDepartamento.TabIndex = 48;
+            this.cbDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CbDepartamento_KeyPress);
             // 
             // label13
             // 
@@ -188,8 +194,8 @@
             this.panel2.Controls.Add(this.txtApellidoEncargado);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.btn_buscar);
-            this.panel2.Controls.Add(this.btn_nuevo_encargado);
+            this.panel2.Controls.Add(this.btnBuscarEncargado);
+            this.panel2.Controls.Add(this.btnNuevoEncargado);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.txtNombreEncargado);
             this.panel2.Controls.Add(this.label24);
@@ -247,32 +253,33 @@
             this.label14.TabIndex = 102;
             this.label14.Text = "Nuevo Encargado";
             // 
-            // btn_buscar
+            // btnBuscarEncargado
             // 
-            this.btn_buscar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar.Image")));
-            this.btn_buscar.ImageActive = null;
-            this.btn_buscar.Location = new System.Drawing.Point(44, 16);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(39, 36);
-            this.btn_buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_buscar.TabIndex = 101;
-            this.btn_buscar.TabStop = false;
-            this.btn_buscar.Zoom = 10;
+            this.btnBuscarEncargado.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarEncargado.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarEncargado.Image")));
+            this.btnBuscarEncargado.ImageActive = null;
+            this.btnBuscarEncargado.Location = new System.Drawing.Point(44, 16);
+            this.btnBuscarEncargado.Name = "btnBuscarEncargado";
+            this.btnBuscarEncargado.Size = new System.Drawing.Size(39, 36);
+            this.btnBuscarEncargado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscarEncargado.TabIndex = 101;
+            this.btnBuscarEncargado.TabStop = false;
+            this.btnBuscarEncargado.Zoom = 10;
+            this.btnBuscarEncargado.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
-            // btn_nuevo_encargado
+            // btnNuevoEncargado
             // 
-            this.btn_nuevo_encargado.BackColor = System.Drawing.Color.Transparent;
-            this.btn_nuevo_encargado.Image = ((System.Drawing.Image)(resources.GetObject("btn_nuevo_encargado.Image")));
-            this.btn_nuevo_encargado.ImageActive = null;
-            this.btn_nuevo_encargado.Location = new System.Drawing.Point(268, 16);
-            this.btn_nuevo_encargado.Name = "btn_nuevo_encargado";
-            this.btn_nuevo_encargado.Size = new System.Drawing.Size(39, 36);
-            this.btn_nuevo_encargado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_nuevo_encargado.TabIndex = 100;
-            this.btn_nuevo_encargado.TabStop = false;
-            this.btn_nuevo_encargado.Zoom = 10;
-            this.btn_nuevo_encargado.Click += new System.EventHandler(this.btn_nuevo_encargado_Click);
+            this.btnNuevoEncargado.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevoEncargado.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoEncargado.Image")));
+            this.btnNuevoEncargado.ImageActive = null;
+            this.btnNuevoEncargado.Location = new System.Drawing.Point(268, 16);
+            this.btnNuevoEncargado.Name = "btnNuevoEncargado";
+            this.btnNuevoEncargado.Size = new System.Drawing.Size(39, 36);
+            this.btnNuevoEncargado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNuevoEncargado.TabIndex = 100;
+            this.btnNuevoEncargado.TabStop = false;
+            this.btnNuevoEncargado.Zoom = 10;
+            this.btnNuevoEncargado.Click += new System.EventHandler(this.btn_nuevo_encargado_Click);
             // 
             // label25
             // 
@@ -318,7 +325,6 @@
             this.label24.Size = new System.Drawing.Size(73, 23);
             this.label24.TabIndex = 65;
             this.label24.Text = "Nombre ";
-            this.label24.Click += new System.EventHandler(this.Label24_Click);
             // 
             // txtDpiEncargado
             // 
@@ -404,7 +410,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Sienna;
-            this.label15.Location = new System.Drawing.Point(776, 545);
+            this.label15.Location = new System.Drawing.Point(743, 545);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 23);
             this.label15.TabIndex = 82;
@@ -432,7 +438,7 @@
             // btExit
             // 
             this.btExit.BackColor = System.Drawing.Color.Red;
-            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
+            this.btExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btExit.BackgroundImage")));
             this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btExit.ForeColor = System.Drawing.Color.Red;
             this.btExit.Location = new System.Drawing.Point(902, 3);
@@ -449,7 +455,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(387, 21);
+            this.lblTitle.Location = new System.Drawing.Point(432, 21);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(135, 26);
             this.lblTitle.TabIndex = 0;
@@ -458,6 +464,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtCodigoAlumno);
+            this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtApellido3);
             this.panel1.Controls.Add(this.label1);
@@ -476,6 +484,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(607, 208);
             this.panel1.TabIndex = 79;
+            // 
+            // txtCodigoAlumno
+            // 
+            this.txtCodigoAlumno.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodigoAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCodigoAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCodigoAlumno.HintForeColor = System.Drawing.Color.Empty;
+            this.txtCodigoAlumno.HintText = "";
+            this.txtCodigoAlumno.isPassword = false;
+            this.txtCodigoAlumno.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtCodigoAlumno.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtCodigoAlumno.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCodigoAlumno.LineThickness = 3;
+            this.txtCodigoAlumno.Location = new System.Drawing.Point(15, 39);
+            this.txtCodigoAlumno.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoAlumno.Name = "txtCodigoAlumno";
+            this.txtCodigoAlumno.Size = new System.Drawing.Size(162, 33);
+            this.txtCodigoAlumno.TabIndex = 51;
+            this.txtCodigoAlumno.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCodigoAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCodigoAlumno_KeyPress);
+            // 
+            // label27
+            // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Sienna;
+            this.label27.Location = new System.Drawing.Point(29, 17);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(137, 23);
+            this.label27.TabIndex = 50;
+            this.label27.Text = "Código de Alumno";
             // 
             // label2
             // 
@@ -508,6 +549,7 @@
             this.txtApellido3.Size = new System.Drawing.Size(162, 33);
             this.txtApellido3.TabIndex = 14;
             this.txtApellido3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtApellido3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellido3_KeyPress);
             // 
             // label1
             // 
@@ -540,6 +582,7 @@
             this.txtApellido2.Size = new System.Drawing.Size(162, 33);
             this.txtApellido2.TabIndex = 13;
             this.txtApellido2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtApellido2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellido2_KeyPress);
             // 
             // txtNombre1
             // 
@@ -559,6 +602,7 @@
             this.txtNombre1.Size = new System.Drawing.Size(162, 33);
             this.txtNombre1.TabIndex = 3;
             this.txtNombre1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNombre1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre1_KeyPress);
             // 
             // label4
             // 
@@ -611,12 +655,13 @@
             this.txtCui.LineIdleColor = System.Drawing.Color.Gray;
             this.txtCui.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtCui.LineThickness = 3;
-            this.txtCui.Location = new System.Drawing.Point(15, 41);
+            this.txtCui.Location = new System.Drawing.Point(216, 39);
             this.txtCui.Margin = new System.Windows.Forms.Padding(4);
             this.txtCui.Name = "txtCui";
             this.txtCui.Size = new System.Drawing.Size(162, 33);
             this.txtCui.TabIndex = 49;
             this.txtCui.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCui.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCui_KeyPress);
             // 
             // txtNombre2
             // 
@@ -636,6 +681,7 @@
             this.txtNombre2.Size = new System.Drawing.Size(162, 33);
             this.txtNombre2.TabIndex = 7;
             this.txtNombre2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNombre2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre2_KeyPress);
             // 
             // label11
             // 
@@ -644,7 +690,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Sienna;
-            this.label11.Location = new System.Drawing.Point(71, 23);
+            this.label11.Location = new System.Drawing.Point(272, 17);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 23);
             this.label11.TabIndex = 48;
@@ -668,6 +714,7 @@
             this.txtApellido1.Size = new System.Drawing.Size(162, 33);
             this.txtApellido1.TabIndex = 10;
             this.txtApellido1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtApellido1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellido1_KeyPress);
             // 
             // txtNombre3
             // 
@@ -687,6 +734,7 @@
             this.txtNombre3.Size = new System.Drawing.Size(162, 33);
             this.txtNombre3.TabIndex = 8;
             this.txtNombre3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNombre3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre3_KeyPress);
             // 
             // label6
             // 
@@ -712,6 +760,8 @@
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(162, 23);
             this.cbSexo.TabIndex = 57;
+            this.cbSexo.Text = "MASCULINO";
+            this.cbSexo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CbSexo_KeyPress);
             // 
             // panel3
             // 
@@ -735,16 +785,13 @@
             // 
             // dtFechaNac
             // 
-            this.dtFechaNac.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.dtFechaNac.BorderRadius = 0;
-            this.dtFechaNac.ForeColor = System.Drawing.Color.White;
+            this.dtFechaNac.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.dtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaNac.FormatCustom = null;
-            this.dtFechaNac.Location = new System.Drawing.Point(216, 36);
+            this.dtFechaNac.Location = new System.Drawing.Point(238, 36);
             this.dtFechaNac.Name = "dtFechaNac";
-            this.dtFechaNac.Size = new System.Drawing.Size(162, 24);
-            this.dtFechaNac.TabIndex = 56;
-            this.dtFechaNac.Value = new System.DateTime(2020, 4, 2, 13, 46, 8, 900);
+            this.dtFechaNac.Size = new System.Drawing.Size(140, 23);
+            this.dtFechaNac.TabIndex = 52;
+            this.dtFechaNac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DtFechaNac_KeyPress_1);
             // 
             // txtDireccion
             // 
@@ -764,6 +811,7 @@
             this.txtDireccion.Size = new System.Drawing.Size(547, 35);
             this.txtDireccion.TabIndex = 51;
             this.txtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDireccion_KeyPress);
             // 
             // label16
             // 
@@ -822,6 +870,7 @@
             this.txtTelefono.Size = new System.Drawing.Size(162, 33);
             this.txtTelefono.TabIndex = 55;
             this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
             // 
             // label18
             // 
@@ -856,7 +905,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Sienna;
-            this.label20.Location = new System.Drawing.Point(776, 474);
+            this.label20.Location = new System.Drawing.Point(743, 474);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(55, 23);
             this.label20.TabIndex = 91;
@@ -869,71 +918,20 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Sienna;
-            this.label21.Location = new System.Drawing.Point(776, 621);
+            this.label21.Location = new System.Drawing.Point(743, 621);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(73, 23);
             this.label21.TabIndex = 93;
             this.label21.Text = "Cancelar";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px;
-            this.btnCancelar.ImageActive = null;
-            this.btnCancelar.Location = new System.Drawing.Point(704, 602);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(66, 63);
-            this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCancelar.TabIndex = 92;
-            this.btnCancelar.TabStop = false;
-            this.btnCancelar.Zoom = 10;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.icons8_Add_List_48px;
-            this.btnNuevo.ImageActive = null;
-            this.btnNuevo.Location = new System.Drawing.Point(704, 452);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(66, 63);
-            this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnNuevo.TabIndex = 90;
-            this.btnNuevo.TabStop = false;
-            this.btnNuevo.Zoom = 10;
-            // 
-            // btn_add_foto
-            // 
-            this.btn_add_foto.BackColor = System.Drawing.Color.Transparent;
-            this.btn_add_foto.Image = ((System.Drawing.Image)(resources.GetObject("btn_add_foto.Image")));
-            this.btn_add_foto.ImageActive = null;
-            this.btn_add_foto.Location = new System.Drawing.Point(704, 357);
-            this.btn_add_foto.Name = "btn_add_foto";
-            this.btn_add_foto.Size = new System.Drawing.Size(66, 78);
-            this.btn_add_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_add_foto.TabIndex = 86;
-            this.btn_add_foto.TabStop = false;
-            this.btn_add_foto.Zoom = 10;
-            this.btn_add_foto.Click += new System.EventHandler(this.btn_add_foto_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageActive = null;
-            this.btnGuardar.Location = new System.Drawing.Point(704, 527);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(66, 63);
-            this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnGuardar.TabIndex = 81;
-            this.btnGuardar.TabStop = false;
-            this.btnGuardar.Zoom = 10;
-            // 
             // txtIdAlumno
             // 
             this.txtIdAlumno.BackColor = System.Drawing.Color.LightGray;
+            this.txtIdAlumno.Enabled = false;
+            this.txtIdAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtIdAlumno.Location = new System.Drawing.Point(105, 77);
             this.txtIdAlumno.Name = "txtIdAlumno";
-            this.txtIdAlumno.Size = new System.Drawing.Size(100, 20);
+            this.txtIdAlumno.Size = new System.Drawing.Size(100, 23);
             this.txtIdAlumno.TabIndex = 50;
             // 
             // cbEstado
@@ -957,11 +955,96 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
+            // BtnQuitarFoto
+            // 
+            this.BtnQuitarFoto.BackColor = System.Drawing.Color.Transparent;
+            this.BtnQuitarFoto.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px1;
+            this.BtnQuitarFoto.ImageActive = null;
+            this.BtnQuitarFoto.Location = new System.Drawing.Point(842, 350);
+            this.BtnQuitarFoto.Name = "BtnQuitarFoto";
+            this.BtnQuitarFoto.Size = new System.Drawing.Size(53, 47);
+            this.BtnQuitarFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnQuitarFoto.TabIndex = 94;
+            this.BtnQuitarFoto.TabStop = false;
+            this.BtnQuitarFoto.Zoom = 10;
+            this.BtnQuitarFoto.Click += new System.EventHandler(this.BtnQuitarFoto_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px;
+            this.btnCancelar.ImageActive = null;
+            this.btnCancelar.Location = new System.Drawing.Point(671, 602);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(66, 63);
+            this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCancelar.TabIndex = 92;
+            this.btnCancelar.TabStop = false;
+            this.btnCancelar.Zoom = 10;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.icons8_Add_List_48px;
+            this.btnNuevo.ImageActive = null;
+            this.btnNuevo.Location = new System.Drawing.Point(671, 448);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(66, 63);
+            this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNuevo.TabIndex = 90;
+            this.btnNuevo.TabStop = false;
+            this.btnNuevo.Zoom = 10;
+            this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
+            // 
+            // BtnAgregarFoto
+            // 
+            this.BtnAgregarFoto.BackColor = System.Drawing.Color.Transparent;
+            this.BtnAgregarFoto.Image = ((System.Drawing.Image)(resources.GetObject("BtnAgregarFoto.Image")));
+            this.BtnAgregarFoto.ImageActive = null;
+            this.BtnAgregarFoto.Location = new System.Drawing.Point(671, 350);
+            this.BtnAgregarFoto.Name = "BtnAgregarFoto";
+            this.BtnAgregarFoto.Size = new System.Drawing.Size(53, 47);
+            this.BtnAgregarFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnAgregarFoto.TabIndex = 86;
+            this.BtnAgregarFoto.TabStop = false;
+            this.BtnAgregarFoto.Zoom = 10;
+            this.BtnAgregarFoto.Click += new System.EventHandler(this.btn_add_foto_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageActive = null;
+            this.btnGuardar.Location = new System.Drawing.Point(671, 527);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(66, 63);
+            this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnGuardar.TabIndex = 81;
+            this.btnGuardar.TabStop = false;
+            this.btnGuardar.Zoom = 10;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Sienna;
+            this.label19.Location = new System.Drawing.Point(820, 400);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(98, 23);
+            this.label19.TabIndex = 95;
+            this.label19.Text = "Quitar Foto";
+            // 
             // Ingresar_Alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 671);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.BtnQuitarFoto);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.txtIdAlumno);
             this.Controls.Add(this.label21);
@@ -971,7 +1054,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btn_add_foto);
+            this.Controls.Add(this.BtnAgregarFoto);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnGuardar);
@@ -988,19 +1071,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_nuevo_encargado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarEncargado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevoEncargado)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnQuitarFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_add_foto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnAgregarFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1009,7 +1093,7 @@
         #endregion
         private System.Windows.Forms.PictureBox pxFoto;
         private System.Windows.Forms.Label label8;
-        private Bunifu.Framework.UI.BunifuImageButton btn_add_foto;
+        private Bunifu.Framework.UI.BunifuImageButton BtnAgregarFoto;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cbMunicipio;
         private System.Windows.Forms.Label label12;
@@ -1045,7 +1129,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label18;
-        private Bunifu.Framework.UI.BunifuDatepicker dtFechaNac;
         private System.Windows.Forms.ComboBox cbSexo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btExit;
@@ -1061,13 +1144,18 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtIdEncargado;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label14;
-        private Bunifu.Framework.UI.BunifuImageButton btn_buscar;
-        private Bunifu.Framework.UI.BunifuImageButton btn_nuevo_encargado;
+        private Bunifu.Framework.UI.BunifuImageButton btnBuscarEncargado;
+        private Bunifu.Framework.UI.BunifuImageButton btnNuevoEncargado;
         private System.Windows.Forms.Label label25;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtApellidoEncargado;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.ErrorProvider errorIcono;
+        private Bunifu.Framework.UI.BunifuImageButton BtnQuitarFoto;
+        private System.Windows.Forms.Label label19;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCodigoAlumno;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.DateTimePicker dtFechaNac;
     }
 }
