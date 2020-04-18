@@ -39,12 +39,20 @@
             this.TopSidePanel = new System.Windows.Forms.Panel();
             this.TitlePanel = new System.Windows.Forms.Panel();
             this.DesktopPanel = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.btn_reportes = new System.Windows.Forms.Button();
+            this.btn_asistencia = new System.Windows.Forms.Button();
+            this.btn_pensum = new System.Windows.Forms.Button();
             this.SideMenuPanel.SuspendLayout();
+            this.TitlePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // SideMenuPanel
             // 
-            this.SideMenuPanel.BackColor = System.Drawing.Color.SaddleBrown;
+            this.SideMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SideMenuPanel.Controls.Add(this.btn_reportes);
+            this.SideMenuPanel.Controls.Add(this.btn_asistencia);
+            this.SideMenuPanel.Controls.Add(this.btn_pensum);
             this.SideMenuPanel.Controls.Add(this.btn_inicio);
             this.SideMenuPanel.Controls.Add(this.btn_usuarios);
             this.SideMenuPanel.Controls.Add(this.btn_acercaDe);
@@ -82,7 +90,7 @@
             this.btn_usuarios.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_usuarios.Image = ((System.Drawing.Image)(resources.GetObject("btn_usuarios.Image")));
             this.btn_usuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_usuarios.Location = new System.Drawing.Point(1, 262);
+            this.btn_usuarios.Location = new System.Drawing.Point(1, 265);
             this.btn_usuarios.Name = "btn_usuarios";
             this.btn_usuarios.Size = new System.Drawing.Size(201, 58);
             this.btn_usuarios.TabIndex = 13;
@@ -126,7 +134,7 @@
             this.btn_empleados.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_empleados.Image = ((System.Drawing.Image)(resources.GetObject("btn_empleados.Image")));
             this.btn_empleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_empleados.Location = new System.Drawing.Point(1, 202);
+            this.btn_empleados.Location = new System.Drawing.Point(1, 204);
             this.btn_empleados.Name = "btn_empleados";
             this.btn_empleados.Size = new System.Drawing.Size(201, 58);
             this.btn_empleados.TabIndex = 10;
@@ -142,7 +150,7 @@
             this.btn_alumnos.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_alumnos.Image = ((System.Drawing.Image)(resources.GetObject("btn_alumnos.Image")));
             this.btn_alumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_alumnos.Location = new System.Drawing.Point(1, 142);
+            this.btn_alumnos.Location = new System.Drawing.Point(1, 143);
             this.btn_alumnos.Name = "btn_alumnos";
             this.btn_alumnos.Size = new System.Drawing.Size(201, 58);
             this.btn_alumnos.TabIndex = 9;
@@ -161,7 +169,8 @@
             // 
             // TitlePanel
             // 
-            this.TitlePanel.BackColor = System.Drawing.Color.SaddleBrown;
+            this.TitlePanel.BackColor = System.Drawing.Color.Sienna;
+            this.TitlePanel.Controls.Add(this.lblTitle);
             this.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitlePanel.Location = new System.Drawing.Point(205, 0);
             this.TitlePanel.Name = "TitlePanel";
@@ -176,6 +185,67 @@
             this.DesktopPanel.Size = new System.Drawing.Size(739, 498);
             this.DesktopPanel.TabIndex = 2;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(329, 29);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(60, 26);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "Inicio";
+            // 
+            // btn_reportes
+            // 
+            this.btn_reportes.FlatAppearance.BorderSize = 0;
+            this.btn_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reportes.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reportes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_reportes.Image = ((System.Drawing.Image)(resources.GetObject("btn_reportes.Image")));
+            this.btn_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reportes.Location = new System.Drawing.Point(2, 448);
+            this.btn_reportes.Name = "btn_reportes";
+            this.btn_reportes.Size = new System.Drawing.Size(201, 58);
+            this.btn_reportes.TabIndex = 21;
+            this.btn_reportes.Text = "Reportes";
+            this.btn_reportes.UseVisualStyleBackColor = true;
+            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
+            // 
+            // btn_asistencia
+            // 
+            this.btn_asistencia.FlatAppearance.BorderSize = 0;
+            this.btn_asistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_asistencia.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_asistencia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_asistencia.Image = ((System.Drawing.Image)(resources.GetObject("btn_asistencia.Image")));
+            this.btn_asistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_asistencia.Location = new System.Drawing.Point(1, 387);
+            this.btn_asistencia.Name = "btn_asistencia";
+            this.btn_asistencia.Size = new System.Drawing.Size(201, 58);
+            this.btn_asistencia.TabIndex = 20;
+            this.btn_asistencia.Text = "Asistencia";
+            this.btn_asistencia.UseVisualStyleBackColor = true;
+            this.btn_asistencia.Click += new System.EventHandler(this.btn_asistencia_Click);
+            // 
+            // btn_pensum
+            // 
+            this.btn_pensum.FlatAppearance.BorderSize = 0;
+            this.btn_pensum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_pensum.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pensum.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_pensum.Image = ((System.Drawing.Image)(resources.GetObject("btn_pensum.Image")));
+            this.btn_pensum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_pensum.Location = new System.Drawing.Point(2, 326);
+            this.btn_pensum.Name = "btn_pensum";
+            this.btn_pensum.Size = new System.Drawing.Size(201, 58);
+            this.btn_pensum.TabIndex = 19;
+            this.btn_pensum.Text = "Pensum ";
+            this.btn_pensum.UseVisualStyleBackColor = true;
+            this.btn_pensum.Click += new System.EventHandler(this.btn_pensum_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +259,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.SideMenuPanel.ResumeLayout(false);
+            this.TitlePanel.ResumeLayout(false);
+            this.TitlePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -205,5 +277,9 @@
         private System.Windows.Forms.Button btn_empleados;
         private System.Windows.Forms.Button btn_alumnos;
         private System.Windows.Forms.Button btn_inicio;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button btn_reportes;
+        private System.Windows.Forms.Button btn_asistencia;
+        private System.Windows.Forms.Button btn_pensum;
     }
 }

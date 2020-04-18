@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Menu_Inicio : Form
+    public partial class Editar_Encargado : Form
     {
-        public Menu_Inicio()
+        public Editar_Encargado()
         {
             InitializeComponent();
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
