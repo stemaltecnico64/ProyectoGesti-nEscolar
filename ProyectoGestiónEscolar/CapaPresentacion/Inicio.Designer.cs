@@ -161,7 +161,7 @@
             // 
             // TitlePanel
             // 
-            this.TitlePanel.BackColor = System.Drawing.Color.SaddleBrown;
+            this.TitlePanel.BackColor = System.Drawing.Color.Tomato;
             this.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitlePanel.Location = new System.Drawing.Point(205, 0);
             this.TitlePanel.Name = "TitlePanel";
