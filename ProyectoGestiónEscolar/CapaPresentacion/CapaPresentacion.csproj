@@ -48,9 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="Asistencias_Empleados.cs">
-=======
     <Compile Include="ConfigDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,65 +67,10 @@
       <DependentUpon>ConfigTipoEncargado.cs</DependentUpon>
     </Compile>
     <Compile Include="Ingresar_Alumno.cs">
->>>>>>> fadb001702462c3e7c50f8c0ced06e10060d15c0
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Asistencias_Empleados.Designer.cs">
-      <DependentUpon>Asistencias_Empleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Asistencia_Alumnos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Asistencia_Alumnos.Designer.cs">
-      <DependentUpon>Asistencia_Alumnos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Crear_Pensum.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Crear_Pensum.Designer.cs">
-      <DependentUpon>Crear_Pensum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Editar_Alumno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Editar_Alumno.Designer.cs">
-      <DependentUpon>Editar_Alumno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Editar_Empleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Editar_Empleado.Designer.cs">
-      <DependentUpon>Editar_Empleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Editar_Encargado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Editar_Encargado.Designer.cs">
-      <DependentUpon>Editar_Encargado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Editar_Usuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Editar_Usuario.Designer.cs">
-      <DependentUpon>Editar_Usuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inacistencia_Alumnos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inacistencia_Alumnos.Designer.cs">
-      <DependentUpon>Inacistencia_Alumnos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inasistencia_Empleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inasistencia_Empleados.Designer.cs">
-      <DependentUpon>Inasistencia_Empleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ingresar_Carrera.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ingresar_Carrera.Designer.cs">
-      <DependentUpon>Ingresar_Carrera.cs</DependentUpon>
+    <Compile Include="Ingresar_Alumno.Designer.cs">
+      <DependentUpon>Ingresar_Alumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Ingresar_Empleado.cs">
       <SubType>Form</SubType>
@@ -166,12 +108,6 @@
     <Compile Include="Listado_Alumnos.Designer.cs">
       <DependentUpon>Listado_Alumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Listado_Carreras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Listado_Carreras.Designer.cs">
-      <DependentUpon>Listado_Carreras.cs</DependentUpon>
-    </Compile>
     <Compile Include="Listado_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,35 +138,29 @@
     <Compile Include="Menu_Alumnos.Designer.cs">
       <DependentUpon>Menu_Alumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Asistencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu_Asistencia.Designer.cs">
-      <DependentUpon>Menu_Asistencia.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menu_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu_Empleados.Designer.cs">
       <DependentUpon>Menu_Empleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Pensum.cs">
+    <Compile Include="Menu_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Pensum.Designer.cs">
-      <DependentUpon>Menu_Pensum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menu_reportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu_reportes.Designer.cs">
-      <DependentUpon>Menu_reportes.cs</DependentUpon>
+    <Compile Include="Menu_Inicio.Designer.cs">
+      <DependentUpon>Menu_Inicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu_Usuarios.Designer.cs">
       <DependentUpon>Menu_Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantalla_Carga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalla_Carga.Designer.cs">
+      <DependentUpon>Pantalla_Carga.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -247,37 +177,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Asistencias_Empleados.resx">
-      <DependentUpon>Asistencias_Empleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Asistencia_Alumnos.resx">
-      <DependentUpon>Asistencia_Alumnos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Crear_Pensum.resx">
-      <DependentUpon>Crear_Pensum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Editar_Alumno.resx">
-      <DependentUpon>Editar_Alumno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Editar_Empleado.resx">
-      <DependentUpon>Editar_Empleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Editar_Encargado.resx">
-      <DependentUpon>Editar_Encargado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Editar_Usuario.resx">
-      <DependentUpon>Editar_Usuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inacistencia_Alumnos.resx">
-      <DependentUpon>Inacistencia_Alumnos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inasistencia_Empleados.resx">
-      <DependentUpon>Inasistencia_Empleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ingresar_Carrera.resx">
-      <DependentUpon>Ingresar_Carrera.cs</DependentUpon>
-=======
     <EmbeddedResource Include="ConfigDepartamento.resx">
       <DependentUpon>ConfigDepartamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,7 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Alumno.resx">
       <DependentUpon>Ingresar_Alumno.cs</DependentUpon>
->>>>>>> fadb001702462c3e7c50f8c0ced06e10060d15c0
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Empleado.resx">
       <DependentUpon>Ingresar_Empleado.cs</DependentUpon>
@@ -309,9 +207,6 @@
     <EmbeddedResource Include="Listado_Alumnos.resx">
       <DependentUpon>Listado_Alumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Listado_Carreras.resx">
-      <DependentUpon>Listado_Carreras.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Listado_Empleados.resx">
       <DependentUpon>Listado_Empleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,20 +222,17 @@
     <EmbeddedResource Include="Menu_Alumnos.resx">
       <DependentUpon>Menu_Alumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Asistencia.resx">
-      <DependentUpon>Menu_Asistencia.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Menu_Empleados.resx">
       <DependentUpon>Menu_Empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Pensum.resx">
-      <DependentUpon>Menu_Pensum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu_reportes.resx">
-      <DependentUpon>Menu_reportes.cs</DependentUpon>
+    <EmbeddedResource Include="Menu_Inicio.resx">
+      <DependentUpon>Menu_Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Usuarios.resx">
       <DependentUpon>Menu_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalla_Carga.resx">
+      <DependentUpon>Pantalla_Carga.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
