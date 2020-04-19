@@ -156,8 +156,7 @@ namespace CapaDatos
 
                 SqlParameter ParFecha_Nacimiento = new SqlParameter();
                 ParFecha_Nacimiento.ParameterName = "@Fecha_Nac";
-                ParFecha_Nacimiento.SqlDbType = SqlDbType.VarChar;
-                ParFecha_Nacimiento.Size = 50;
+                ParFecha_Nacimiento.SqlDbType = SqlDbType.DateTime;
                 ParFecha_Nacimiento.Value = Alumno.Fecha_Nac;
                 SqlCmd.Parameters.Add(ParFecha_Nacimiento);
 
@@ -296,8 +295,7 @@ namespace CapaDatos
 
                 SqlParameter ParFecha_Nacimiento = new SqlParameter();
                 ParFecha_Nacimiento.ParameterName = "@Fecha_Nac";
-                ParFecha_Nacimiento.SqlDbType = SqlDbType.VarChar;
-                ParFecha_Nacimiento.Size = 50;
+                ParFecha_Nacimiento.SqlDbType = SqlDbType.DateTime;
                 ParFecha_Nacimiento.Value = Alumno.Fecha_Nac;
                 SqlCmd.Parameters.Add(ParFecha_Nacimiento);
 

@@ -357,5 +357,11 @@ namespace CapaPresentacion
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
                 this.btnGuardar.Focus();
         }
+
+        private void DtFechaNac_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                this.txtDireccion.Focus();
+        }
     }
 }

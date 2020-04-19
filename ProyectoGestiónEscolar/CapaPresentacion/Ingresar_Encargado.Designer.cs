@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingresar_Encargado));
             this.label15 = new System.Windows.Forms.Label();
-            this.dtFechaNac = new Bunifu.Framework.UI.BunifuDatepicker();
             this.txtTelefono = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -86,6 +85,7 @@
             this.BtnAgregarFoto = new Bunifu.Framework.UI.BunifuImageButton();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dtFechaNac = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).BeginInit();
@@ -112,20 +112,6 @@
             this.label15.Size = new System.Drawing.Size(70, 23);
             this.label15.TabIndex = 100;
             this.label15.Text = "Guardar";
-            // 
-            // dtFechaNac
-            // 
-            this.dtFechaNac.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.dtFechaNac.BorderRadius = 0;
-            this.dtFechaNac.ForeColor = System.Drawing.Color.White;
-            this.dtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaNac.FormatCustom = null;
-            this.dtFechaNac.Location = new System.Drawing.Point(10, 99);
-            this.dtFechaNac.Name = "dtFechaNac";
-            this.dtFechaNac.Size = new System.Drawing.Size(162, 24);
-            this.dtFechaNac.TabIndex = 57;
-            this.dtFechaNac.Value = new System.DateTime(2020, 4, 2, 13, 46, 8, 900);
-            this.dtFechaNac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DtFechaNac_KeyPress);
             // 
             // txtTelefono
             // 
@@ -658,9 +644,9 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.dtFechaNac);
             this.panel3.Controls.Add(this.cbSexo);
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.dtFechaNac);
             this.panel3.Controls.Add(this.txtTelefono);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.txtDireccion);
@@ -852,6 +838,16 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
+            // dtFechaNac
+            // 
+            this.dtFechaNac.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.dtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaNac.Location = new System.Drawing.Point(16, 98);
+            this.dtFechaNac.Name = "dtFechaNac";
+            this.dtFechaNac.Size = new System.Drawing.Size(140, 23);
+            this.dtFechaNac.TabIndex = 60;
+            this.dtFechaNac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DtFechaNac_KeyPress_1);
+            // 
             // Ingresar_Encargado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -907,7 +903,6 @@
         #endregion
 
         private System.Windows.Forms.Label label15;
-        private Bunifu.Framework.UI.BunifuDatepicker dtFechaNac;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtTelefono;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel2;
@@ -962,5 +957,6 @@
         private Bunifu.Framework.UI.BunifuImageButton BtnAgregarFoto;
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.ErrorProvider errorIcono;
+        private System.Windows.Forms.DateTimePicker dtFechaNac;
     }
 }
