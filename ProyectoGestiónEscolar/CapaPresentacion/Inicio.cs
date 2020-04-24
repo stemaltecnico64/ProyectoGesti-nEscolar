@@ -55,5 +55,10 @@ namespace CapaPresentacion
         {
             OpenChilForm(new Menu_Usuarios());
         }
+
+        private void btn_reportes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

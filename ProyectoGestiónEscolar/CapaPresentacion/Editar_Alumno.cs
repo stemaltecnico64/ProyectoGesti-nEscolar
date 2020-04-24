@@ -16,10 +16,5 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
-
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

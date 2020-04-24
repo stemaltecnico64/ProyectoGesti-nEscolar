@@ -66,11 +66,41 @@
     <Compile Include="ConfigTipoEncargado.Designer.cs">
       <DependentUpon>ConfigTipoEncargado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editar_Alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_Alumno.Designer.cs">
+      <DependentUpon>Editar_Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_Empleado.Designer.cs">
+      <DependentUpon>Editar_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_Encargado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_Encargado.Designer.cs">
+      <DependentUpon>Editar_Encargado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_Usuario.Designer.cs">
+      <DependentUpon>Editar_Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingresar_Alumno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ingresar_Alumno.Designer.cs">
       <DependentUpon>Ingresar_Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ingresar_Carrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingresar_Carrera.Designer.cs">
+      <DependentUpon>Ingresar_Carrera.cs</DependentUpon>
     </Compile>
     <Compile Include="Ingresar_Empleado.cs">
       <SubType>Form</SubType>
@@ -138,6 +168,12 @@
     <Compile Include="Menu_Alumnos.Designer.cs">
       <DependentUpon>Menu_Alumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu_Asistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Asistencia.Designer.cs">
+      <DependentUpon>Menu_Asistencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,8 +222,23 @@
     <EmbeddedResource Include="ConfigTipoEncargado.resx">
       <DependentUpon>ConfigTipoEncargado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Editar_Alumno.resx">
+      <DependentUpon>Editar_Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_Empleado.resx">
+      <DependentUpon>Editar_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_Encargado.resx">
+      <DependentUpon>Editar_Encargado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_Usuario.resx">
+      <DependentUpon>Editar_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Alumno.resx">
       <DependentUpon>Ingresar_Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingresar_Carrera.resx">
+      <DependentUpon>Ingresar_Carrera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Empleado.resx">
       <DependentUpon>Ingresar_Empleado.cs</DependentUpon>
@@ -221,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Alumnos.resx">
       <DependentUpon>Menu_Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Asistencia.resx">
+      <DependentUpon>Menu_Asistencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Empleados.resx">
       <DependentUpon>Menu_Empleados.cs</DependentUpon>
