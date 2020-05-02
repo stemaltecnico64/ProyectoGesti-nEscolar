@@ -66,6 +66,18 @@
     <Compile Include="ConfigTipoEncargado.Designer.cs">
       <DependentUpon>ConfigTipoEncargado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Creacion_Carreras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creacion_Carreras.Designer.cs">
+      <DependentUpon>Creacion_Carreras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crear_Ciclo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crear_Ciclo.Designer.cs">
+      <DependentUpon>Crear_Ciclo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Editar_Alumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +204,17 @@
     <Compile Include="Menu_Usuarios.Designer.cs">
       <DependentUpon>Menu_Usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nuevo_Pemsum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevo_Pemsum.Designer.cs">
+      <DependentUpon>Nuevo_Pemsum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevo_Pemsum1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Nuevo_Pemsum.resx</DependentUpon>
+    </Compile>
     <Compile Include="Pantalla_Carga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +244,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfigTipoEncargado.resx">
       <DependentUpon>ConfigTipoEncargado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creacion_Carreras.resx">
+      <DependentUpon>Creacion_Carreras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crear_Ciclo.resx">
+      <DependentUpon>Crear_Ciclo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editar_Alumno.resx">
       <DependentUpon>Editar_Alumno.cs</DependentUpon>
@@ -284,6 +313,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Usuarios.resx">
       <DependentUpon>Menu_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevo_Pemsum.resx">
+      <DependentUpon>Nuevo_Pemsum.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Nuevo_Pemsum1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla_Carga.resx">
       <DependentUpon>Pantalla_Carga.cs</DependentUpon>
