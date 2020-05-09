@@ -48,6 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ajustes_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajustes_Admin.Designer.cs">
+      <DependentUpon>Ajustes_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cambiar_Contra_Usuario_Normal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cambiar_Contra_Usuario_Normal.Designer.cs">
+      <DependentUpon>Cambiar_Contra_Usuario_Normal.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConfigDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,12 @@
     <Compile Include="Editar_Usuario.Designer.cs">
       <DependentUpon>Editar_Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editar_Usuario_normal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_Usuario_normal.Designer.cs">
+      <DependentUpon>Editar_Usuario_normal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingresar_Alumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +143,12 @@
     </Compile>
     <Compile Include="Ingresar_Encargado.Designer.cs">
       <DependentUpon>Ingresar_Encargado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ingresar_Notas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingresar_Notas.Designer.cs">
+      <DependentUpon>Ingresar_Notas.cs</DependentUpon>
     </Compile>
     <Compile Include="Ingresar_Usuario.cs">
       <SubType>Form</SubType>
@@ -198,6 +222,12 @@
     <Compile Include="Menu_Inicio.Designer.cs">
       <DependentUpon>Menu_Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu_Pemsum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Pemsum.Designer.cs">
+      <DependentUpon>Menu_Pemsum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,11 +239,6 @@
     </Compile>
     <Compile Include="Nuevo_Pemsum.Designer.cs">
       <DependentUpon>Nuevo_Pemsum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Nuevo_Pemsum1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Nuevo_Pemsum.resx</DependentUpon>
     </Compile>
     <Compile Include="Pantalla_Carga.cs">
       <SubType>Form</SubType>
@@ -228,6 +253,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reporte_Notas_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Notas_Admin.Designer.cs">
+      <DependentUpon>Reporte_Notas_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Smenu_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Smenu_Usuarios.Designer.cs">
+      <DependentUpon>Smenu_Usuarios.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaNegocios\CapaNegocios.csproj">
@@ -236,6 +273,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ajustes_Admin.resx">
+      <DependentUpon>Ajustes_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cambiar_Contra_Usuario_Normal.resx">
+      <DependentUpon>Cambiar_Contra_Usuario_Normal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfigDepartamento.resx">
       <DependentUpon>ConfigDepartamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +306,9 @@
     <EmbeddedResource Include="Editar_Usuario.resx">
       <DependentUpon>Editar_Usuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Editar_Usuario_normal.resx">
+      <DependentUpon>Editar_Usuario_normal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Alumno.resx">
       <DependentUpon>Ingresar_Alumno.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Encargado.resx">
       <DependentUpon>Ingresar_Encargado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingresar_Notas.resx">
+      <DependentUpon>Ingresar_Notas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Usuario.resx">
       <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
@@ -311,13 +360,14 @@
     <EmbeddedResource Include="Menu_Inicio.resx">
       <DependentUpon>Menu_Inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Pemsum.resx">
+      <DependentUpon>Menu_Pemsum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu_Usuarios.resx">
       <DependentUpon>Menu_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nuevo_Pemsum.resx">
       <DependentUpon>Nuevo_Pemsum.cs</DependentUpon>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Nuevo_Pemsum1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla_Carga.resx">
       <DependentUpon>Pantalla_Carga.cs</DependentUpon>
@@ -325,6 +375,12 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Notas_Admin.resx">
+      <DependentUpon>Reporte_Notas_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Smenu_Usuarios.resx">
+      <DependentUpon>Smenu_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

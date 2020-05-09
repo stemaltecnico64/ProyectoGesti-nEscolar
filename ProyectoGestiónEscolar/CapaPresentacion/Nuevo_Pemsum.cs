@@ -16,15 +16,5 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
-
-        private void Nuevo_Pemsum_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

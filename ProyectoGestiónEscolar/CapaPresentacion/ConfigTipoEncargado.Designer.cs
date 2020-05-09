@@ -32,7 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigTipoEncargado));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataListado = new System.Windows.Forms.DataGridView();
@@ -59,9 +62,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtIdTipoParentesco = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
+            this.panelTitleBar.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -71,32 +73,53 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // errorIcono
             // 
-            this.panel1.Controls.Add(this.tabControl1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(428, 450);
-            this.panel1.TabIndex = 0;
+            this.errorIcono.ContainerControl = this;
+            // 
+            // ttMensaje
+            // 
+            this.ttMensaje.IsBalloon = true;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panelTitleBar.Controls.Add(this.label8);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(452, 61);
+            this.panelTitleBar.TabIndex = 201;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(90, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(259, 26);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Configuracion de Parentesco";
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.tabControl1.Location = new System.Drawing.Point(-8, 3);
+            this.tabControl1.Location = new System.Drawing.Point(3, 64);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(443, 455);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabIndex = 200;
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Controls.Add(this.dataListado);
             this.tabPage1.Controls.Add(this.lblTotal);
             this.tabPage1.Controls.Add(this.BtnImprimir);
@@ -140,8 +163,6 @@
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListado.Size = new System.Drawing.Size(405, 268);
             this.dataListado.TabIndex = 199;
-            this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataListado_CellContentClick);
-            this.dataListado.DoubleClick += new System.EventHandler(this.DataListado_DoubleClick);
             // 
             // Eliminar
             // 
@@ -170,7 +191,7 @@
             this.BtnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.BtnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnImprimir.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnImprimir.ForeColor = System.Drawing.Color.White;
+            this.BtnImprimir.ForeColor = System.Drawing.Color.Maroon;
             this.BtnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnImprimir.Location = new System.Drawing.Point(298, 56);
             this.BtnImprimir.Name = "BtnImprimir";
@@ -187,7 +208,7 @@
             this.btnElimnar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnElimnar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnElimnar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElimnar.ForeColor = System.Drawing.Color.White;
+            this.btnElimnar.ForeColor = System.Drawing.Color.Maroon;
             this.btnElimnar.Image = ((System.Drawing.Image)(resources.GetObject("btnElimnar.Image")));
             this.btnElimnar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnElimnar.Location = new System.Drawing.Point(298, 6);
@@ -197,7 +218,6 @@
             this.btnElimnar.Text = "Eliminar";
             this.btnElimnar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnElimnar.UseVisualStyleBackColor = true;
-            this.btnElimnar.Click += new System.EventHandler(this.BtnElimnar_Click);
             // 
             // label3
             // 
@@ -214,7 +234,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(16, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 20);
@@ -242,11 +262,10 @@
             this.chkEliminar.TabIndex = 196;
             this.chkEliminar.Text = "Eliminar";
             this.chkEliminar.UseVisualStyleBackColor = true;
-            this.chkEliminar.CheckedChanged += new System.EventHandler(this.ChkEliminar_CheckedChanged);
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.btnCancelar);
             this.tabPage2.Controls.Add(this.label5);
@@ -257,6 +276,7 @@
             this.tabPage2.Controls.Add(this.btnNuevo);
             this.tabPage2.Controls.Add(this.lblTitle);
             this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.ForeColor = System.Drawing.Color.White;
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -270,7 +290,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Maroon;
             this.label6.Location = new System.Drawing.Point(217, 347);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 23);
@@ -289,7 +309,6 @@
             this.btnCancelar.TabIndex = 105;
             this.btnCancelar.TabStop = false;
             this.btnCancelar.Zoom = 10;
-            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // label5
             // 
@@ -297,7 +316,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Maroon;
             this.label5.Location = new System.Drawing.Point(97, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 23);
@@ -316,7 +335,6 @@
             this.btnEditar.TabIndex = 103;
             this.btnEditar.TabStop = false;
             this.btnEditar.Zoom = 10;
-            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // label2
             // 
@@ -324,7 +342,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
             this.label2.Location = new System.Drawing.Point(332, 272);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 23);
@@ -343,7 +361,6 @@
             this.btnGuardar.TabIndex = 101;
             this.btnGuardar.TabStop = false;
             this.btnGuardar.Zoom = 10;
-            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // label20
             // 
@@ -351,7 +368,7 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.ForeColor = System.Drawing.Color.Maroon;
             this.label20.Location = new System.Drawing.Point(212, 272);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(70, 23);
@@ -370,7 +387,6 @@
             this.btnNuevo.TabIndex = 99;
             this.btnNuevo.TabStop = false;
             this.btnNuevo.Zoom = 10;
-            this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // lblTitle
             // 
@@ -378,7 +394,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.ForeColor = System.Drawing.Color.Maroon;
             this.lblTitle.Location = new System.Drawing.Point(168, 62);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(108, 26);
@@ -412,7 +428,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Maroon;
             this.label4.Location = new System.Drawing.Point(22, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 23);
@@ -434,34 +450,29 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.ForeColor = System.Drawing.Color.Maroon;
             this.label18.Location = new System.Drawing.Point(22, 18);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 23);
             this.label18.TabIndex = 91;
             this.label18.Text = "Código:";
             // 
-            // errorIcono
-            // 
-            this.errorIcono.ContainerControl = this;
-            // 
-            // ttMensaje
-            // 
-            this.ttMensaje.IsBalloon = true;
-            // 
             // ConfigTipoEncargado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(428, 450);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(452, 524);
+            this.Controls.Add(this.panelTitleBar);
+            this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConfigTipoEncargado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuraciones Parentesco";
             this.Load += new System.EventHandler(this.ConfigTipoEncargado_Load);
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -474,17 +485,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ErrorProvider errorIcono;
+        private System.Windows.Forms.ToolTip ttMensaje;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataListado;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
         private System.Windows.Forms.Label lblTotal;
@@ -494,6 +505,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.CheckBox chkEliminar;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label6;
+        private Bunifu.Framework.UI.BunifuImageButton btnCancelar;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuImageButton btnEditar;
         private System.Windows.Forms.Label label2;
@@ -506,9 +520,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIdTipoParentesco;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ErrorProvider errorIcono;
-        private System.Windows.Forms.ToolTip ttMensaje;
-        private System.Windows.Forms.Label label6;
-        private Bunifu.Framework.UI.BunifuImageButton btnCancelar;
     }
 }

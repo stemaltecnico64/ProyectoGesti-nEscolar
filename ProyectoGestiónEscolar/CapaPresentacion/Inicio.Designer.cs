@@ -41,8 +41,18 @@
             this.btn_alumnos = new System.Windows.Forms.Button();
             this.TopSidePanel = new System.Windows.Forms.Panel();
             this.TitlePanel = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.DesktopPanel = new System.Windows.Forms.Panel();
+            this.Btn_Cerrar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_maximizar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_minimizar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_restaurar = new Bunifu.Framework.UI.BunifuImageButton();
             this.SideMenuPanel.SuspendLayout();
+            this.TitlePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).BeginInit();
             this.SuspendLayout();
             // 
             // SideMenuPanel
@@ -94,6 +104,7 @@
             this.btn_asistencia.TabIndex = 23;
             this.btn_asistencia.Text = "Asistencia";
             this.btn_asistencia.UseVisualStyleBackColor = true;
+            this.btn_asistencia.Click += new System.EventHandler(this.btn_asistencia_Click);
             // 
             // btn_pensum
             // 
@@ -169,6 +180,7 @@
             this.btn_ajustes.Size = new System.Drawing.Size(37, 40);
             this.btn_ajustes.TabIndex = 11;
             this.btn_ajustes.UseVisualStyleBackColor = true;
+            this.btn_ajustes.Click += new System.EventHandler(this.btn_ajustes_Click);
             // 
             // btn_empleados
             // 
@@ -214,11 +226,30 @@
             // TitlePanel
             // 
             this.TitlePanel.BackColor = System.Drawing.Color.Tomato;
+            this.TitlePanel.Controls.Add(this.btn_restaurar);
+            this.TitlePanel.Controls.Add(this.btn_minimizar);
+            this.TitlePanel.Controls.Add(this.btn_maximizar);
+            this.TitlePanel.Controls.Add(this.Btn_Cerrar);
+            this.TitlePanel.Controls.Add(this.lblTitle);
             this.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitlePanel.Location = new System.Drawing.Point(205, 0);
             this.TitlePanel.Name = "TitlePanel";
             this.TitlePanel.Size = new System.Drawing.Size(739, 82);
             this.TitlePanel.TabIndex = 1;
+            this.TitlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseDown);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(342, 26);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(80, 26);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "Ingreso";
             // 
             // DesktopPanel
             // 
@@ -227,6 +258,66 @@
             this.DesktopPanel.Name = "DesktopPanel";
             this.DesktopPanel.Size = new System.Drawing.Size(739, 498);
             this.DesktopPanel.TabIndex = 2;
+            // 
+            // Btn_Cerrar
+            // 
+            this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Cerrar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
+            this.Btn_Cerrar.ImageActive = null;
+            this.Btn_Cerrar.Location = new System.Drawing.Point(706, 3);
+            this.Btn_Cerrar.Name = "Btn_Cerrar";
+            this.Btn_Cerrar.Size = new System.Drawing.Size(30, 24);
+            this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Cerrar.TabIndex = 48;
+            this.Btn_Cerrar.TabStop = false;
+            this.Btn_Cerrar.Zoom = 10;
+            this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
+            // 
+            // btn_maximizar
+            // 
+            this.btn_maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_maximizar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_maximizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_maximizar.Image")));
+            this.btn_maximizar.ImageActive = null;
+            this.btn_maximizar.Location = new System.Drawing.Point(679, 3);
+            this.btn_maximizar.Name = "btn_maximizar";
+            this.btn_maximizar.Size = new System.Drawing.Size(30, 24);
+            this.btn_maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_maximizar.TabIndex = 49;
+            this.btn_maximizar.TabStop = false;
+            this.btn_maximizar.Zoom = 10;
+            this.btn_maximizar.Click += new System.EventHandler(this.btn_maximizar_Click);
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_minimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
+            this.btn_minimizar.ImageActive = null;
+            this.btn_minimizar.Location = new System.Drawing.Point(652, 3);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(30, 24);
+            this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_minimizar.TabIndex = 50;
+            this.btn_minimizar.TabStop = false;
+            this.btn_minimizar.Zoom = 10;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
+            // 
+            // btn_restaurar
+            // 
+            this.btn_restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_restaurar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_restaurar.Image = ((System.Drawing.Image)(resources.GetObject("btn_restaurar.Image")));
+            this.btn_restaurar.ImageActive = null;
+            this.btn_restaurar.Location = new System.Drawing.Point(679, 3);
+            this.btn_restaurar.Name = "btn_restaurar";
+            this.btn_restaurar.Size = new System.Drawing.Size(30, 24);
+            this.btn_restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_restaurar.TabIndex = 51;
+            this.btn_restaurar.TabStop = false;
+            this.btn_restaurar.Zoom = 10;
+            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
             // 
             // Inicio
             // 
@@ -241,6 +332,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.SideMenuPanel.ResumeLayout(false);
+            this.TitlePanel.ResumeLayout(false);
+            this.TitlePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,5 +357,10 @@
         private System.Windows.Forms.Button btn_reportes;
         private System.Windows.Forms.Button btn_asistencia;
         private System.Windows.Forms.Button btn_pensum;
+        private System.Windows.Forms.Label lblTitle;
+        private Bunifu.Framework.UI.BunifuImageButton Btn_Cerrar;
+        private Bunifu.Framework.UI.BunifuImageButton btn_minimizar;
+        private Bunifu.Framework.UI.BunifuImageButton btn_maximizar;
+        private Bunifu.Framework.UI.BunifuImageButton btn_restaurar;
     }
 }
