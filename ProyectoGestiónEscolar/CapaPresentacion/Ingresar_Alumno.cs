@@ -226,7 +226,7 @@ namespace CapaPresentacion
                     if (this.IsNuevo)
                     {
                         rpta = NAlumno.Insertar(this.txtCodigoAlumno.Text, this.txtCui.Text, this.txtNombre1.Text, this.txtNombre2.Text, this.txtNombre3.Text, this.txtApellido1.Text, this.txtApellido2.Text, this.txtApellido3.Text,
-                            Convert.ToDateTime(this.dtFechaNac.Value), this.cbSexo.Text, this.txtDireccion.Text, Convert.ToInt32(this.cbMunicipio.SelectedValue), this.txtTelefono.Text, imagen, Convert.ToInt32(this.txtIdEncargado.Text),
+                            this.dtFechaNac.Value, this.cbSexo.Text, this.txtDireccion.Text, Convert.ToInt32(this.cbMunicipio.SelectedValue), this.txtTelefono.Text, imagen, Convert.ToInt32(this.txtIdEncargado.Text),
                             this.cbEstado.Text);                            
                     }
                     else
@@ -368,6 +368,11 @@ namespace CapaPresentacion
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
                 this.txtTelefono.Focus();
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

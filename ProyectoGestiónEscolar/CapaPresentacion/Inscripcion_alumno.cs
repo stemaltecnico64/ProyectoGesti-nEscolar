@@ -12,9 +12,23 @@ namespace CapaPresentacion
 {
     public partial class Inscripcion_alumno : Form
     {
+        private bool IsNuevo = false;
+        private static Inscripcion_alumno _instancia;
+        public static Inscripcion_alumno GetInstancia()
+        {
+            if (_instancia == null)
+            {
+                _instancia = new Inscripcion_alumno();
+            }
+            return _instancia;
+        }
         public Inscripcion_alumno()
         {
             InitializeComponent();
+            this.ttMensaje.SetToolTip(this.txtNombreAlumno, "Ingrese un Alumno");
+            this.ttMensaje.SetToolTip(this.txtCui_Alumno, "Ingrese un número del comprobante");
+            this.ttMensaje.SetToolTip(this.cbTipo_Inscripcion, "Ingrese la Cantidad del Artículo a Vender");
+            this.ttMensaje.SetToolTip(this.txtArticulo, "Seleccione un Artículo");
         }
 
         private void btExit_Click(object sender, EventArgs e)
@@ -26,6 +40,11 @@ namespace CapaPresentacion
         {
             Ingresar_Alumno ventanalumno =  Ingresar_Alumno.GetInstancia();
             ventanalumno.Show();
+        }
+
+        private void Inscripcion_alumno_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

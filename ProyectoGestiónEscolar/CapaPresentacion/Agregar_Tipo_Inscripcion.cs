@@ -10,18 +10,16 @@ using System.Windows.Forms;
 using CapaNegocios;
 namespace CapaPresentacion
 {
-    public partial class Ingresar_Carrera : Form
+    public partial class Agregar_Tipo_Inscripcion : Form
     {
         private bool IsNuevo = false;
 
         private bool IsEditar = false;
-        public Ingresar_Carrera()
+        public Agregar_Tipo_Inscripcion()
         {
             InitializeComponent();
-            this.ttMensaje.SetToolTip(this.txtCarrera, "Ingrese el nombre de la carrera cuidadosamente");
+            this.ttMensaje.SetToolTip(this.txtTipo_Inscripcion, "Debe ingresas un Tipo de Inscripción, Ejemplo: Ordinario, ExtraOrdinario");
         }
-
-
         private void MensajeOk(string mensaje)
         {
             MessageBox.Show(mensaje, "SEGURIDAD DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -35,8 +33,8 @@ namespace CapaPresentacion
 
         private void Limpiar()
         {
-            this.txtId_Carrera.Text = string.Empty;
-            this.txtCarrera.Text = string.Empty;
+            this.txtId_Tipo_Inscripcion.Text = string.Empty;
+            this.txtTipo_Inscripcion.Text = string.Empty;
 
         }
 
@@ -44,8 +42,8 @@ namespace CapaPresentacion
 
         private void Habilitar(bool valor)
         {
-            this.txtId_Carrera.ReadOnly = !valor;
-            this.txtCarrera.Enabled = valor;
+            this.txtId_Tipo_Inscripcion.ReadOnly = !valor;
+            this.txtTipo_Inscripcion.Enabled = valor;
 
         }
         private void Botones()
@@ -74,16 +72,16 @@ namespace CapaPresentacion
 
         private void Mostrar()
         {
-            this.dataListado.DataSource = NCarrera.Mostrar();
+            this.dataListado.DataSource = NTipo_Inscripcion.Mostrar();
             this.OcultarColumnas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
-        private void Ingresar_Carrera_Load(object sender, EventArgs e)
+
+        private void Agregar_Tipo_Inscripcion_Load(object sender, EventArgs e)
         {
             this.Mostrar();
             this.Habilitar(false);
             this.Botones();
-
         }
 
         private void BtnNuevo_Click(object sender, EventArgs e)
@@ -93,7 +91,7 @@ namespace CapaPresentacion
             this.Botones();
             this.Limpiar();
             this.Habilitar(true);
-            this.txtCarrera.Focus();
+            this.txtTipo_Inscripcion.Focus();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -101,23 +99,23 @@ namespace CapaPresentacion
             try
             {
                 string rpta = "";
-                if (this.txtCarrera.Text == string.Empty)
+                if (this.txtTipo_Inscripcion.Text == string.Empty)
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
-                    errorIcono.SetError(txtCarrera, "Ingrese un Valor");
+                    errorIcono.SetError(txtTipo_Inscripcion, "Ingrese un Valor");
 
                 }
                 else
                 {
                     if (this.IsNuevo)
                     {
-                        rpta = NCarrera.Insertar(this.txtCarrera.Text);
+                        rpta = NTipo_Inscripcion.Insertar(this.txtTipo_Inscripcion.Text);
 
                     }
                     else
                     {
-                        rpta = NCarrera.Editar(Convert.ToInt32(this.txtId_Carrera.Text),
-                            this.txtCarrera.Text);
+                        rpta = NTipo_Inscripcion.Editar(Convert.ToInt32(this.txtId_Tipo_Inscripcion.Text),
+                            this.txtTipo_Inscripcion.Text);
                     }
 
                     if (rpta.Equals("OK"))
@@ -152,7 +150,7 @@ namespace CapaPresentacion
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            if (!this.txtCarrera.Text.Equals(""))
+            if (!this.txtTipo_Inscripcion.Text.Equals(""))
             {
                 this.IsEditar = true;
                 this.Botones();
@@ -166,18 +164,17 @@ namespace CapaPresentacion
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-
             this.IsNuevo = false;
             this.IsEditar = false;
             this.Botones();
             this.Limpiar();
-            this.txtCarrera.Text = string.Empty;
+            this.txtTipo_Inscripcion.Text = string.Empty;
         }
 
         private void DataListado_DoubleClick(object sender, EventArgs e)
         {
-            this.txtId_Carrera.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Código"].Value);
-            this.txtCarrera.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Nombre de la Carrera"].Value);
+            this.txtId_Tipo_Inscripcion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Código"].Value);
+            this.txtTipo_Inscripcion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Tipo de Inscripción"].Value);
         }
 
         private void BtExit_Click(object sender, EventArgs e)

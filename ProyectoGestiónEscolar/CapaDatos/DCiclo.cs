@@ -33,6 +33,7 @@ namespace CapaDatos
             this.Ciclo = ciclo;
             this.Descripcion = descripcion;
             this.Fecha_G = fecha_g;
+            this.Estado = estado;
         }
 
 
@@ -71,12 +72,19 @@ namespace CapaDatos
                 ParDescripcion.Value = Ciclo.Descripcion;
                 SqlCmd.Parameters.Add(ParDescripcion);
 
+                SqlParameter ParFecha = new SqlParameter();
+                ParFecha.ParameterName = "@Fecha_G";
+                ParFecha.SqlDbType = SqlDbType.VarChar;
+                ParFecha.Size = 256;
+                ParFecha.Value = Ciclo.Fecha_G;
+                SqlCmd.Parameters.Add(ParFecha);
+
                 SqlParameter ParEstado = new SqlParameter();
                 ParEstado.ParameterName = "@Estado";
                 ParEstado.SqlDbType = SqlDbType.VarChar;
                 ParEstado.Size = 256;
-                ParEstado.Value = Ciclo.Descripcion;
-                SqlCmd.Parameters.Add(ParDescripcion);
+                ParEstado.Value = Ciclo.Estado;
+                SqlCmd.Parameters.Add(ParEstado);
 
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
             }
@@ -91,6 +99,6 @@ namespace CapaDatos
             return rpta;
 
         }
-
+        
     }
 }

@@ -3,57 +3,56 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
+
 namespace CapaDatos
 {
-    public class DCarrera
+   public  class DGrado
     {
-        private int _IdCarrera;
+        private int _IdGrado;
         private string _Nombre;
 
-        public int IdCarrera { get => _IdCarrera; set => _IdCarrera = value; }
+        public int IdGrado { get => _IdGrado; set => _IdGrado = value; }
         public string Nombre { get => _Nombre; set => _Nombre = value; }
 
-
-        public DCarrera()
+        public DGrado()
         {
 
         }
 
-        public DCarrera(int idcarrera, string nombre, string tipo, string textobuscar)
+        public DGrado(int idgrado, string nombre)
         {
-            this.IdCarrera = idcarrera;
+            this.IdGrado = idgrado;
             this.Nombre = nombre;
-
         }
 
-
-        public string Insertar(DCarrera Carrera)
+        public string Insertar(DGrado Grado)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
             {
+
                 SqlCon.ConnectionString = Conexion.Cn;
                 SqlCon.Open();
 
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "spinsertar_carrera";
+                SqlCmd.CommandText = "spinsertar_grado";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter ParIdCarrera = new SqlParameter();
-                ParIdCarrera.ParameterName = "@Id_Carrera";
-                ParIdCarrera.SqlDbType = SqlDbType.Int;
-                ParIdCarrera.Direction = ParameterDirection.Output;
-                SqlCmd.Parameters.Add(ParIdCarrera);
+                SqlParameter ParIdGrado= new SqlParameter();
+                ParIdGrado.ParameterName = "@Id_Grado";
+                ParIdGrado.SqlDbType = SqlDbType.Int;
+                ParIdGrado.Direction = ParameterDirection.Output;
+                SqlCmd.Parameters.Add(ParIdGrado);
 
                 SqlParameter ParNombre = new SqlParameter();
                 ParNombre.ParameterName = "@Nombre";
                 ParNombre.SqlDbType = SqlDbType.VarChar;
                 ParNombre.Size = 50;
-                ParNombre.Value = Carrera.Nombre;
+                ParNombre.Value = Grado.Nombre;
                 SqlCmd.Parameters.Add(ParNombre);
 
 
@@ -68,9 +67,11 @@ namespace CapaDatos
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return rpta;
+
         }
 
-        public string Editar(DCarrera Carrera)
+
+        public string Editar(DGrado Grado)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -82,21 +83,23 @@ namespace CapaDatos
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "speditar_carrera";
+                SqlCmd.CommandText = "spinsertar_grado";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter ParIdCarrera= new SqlParameter();
-                ParIdCarrera.ParameterName = "@Id_Carrera";
-                ParIdCarrera.SqlDbType = SqlDbType.Int;
-                ParIdCarrera.Value = Carrera.IdCarrera;
-                SqlCmd.Parameters.Add(ParIdCarrera);
+                SqlParameter ParIdGrado = new SqlParameter();
+                ParIdGrado.ParameterName = "@Id_Grado";
+                ParIdGrado.SqlDbType = SqlDbType.Int;
+                ParIdGrado.Value = Grado.IdGrado;
+                SqlCmd.Parameters.Add(ParIdGrado);
 
                 SqlParameter ParNombre = new SqlParameter();
                 ParNombre.ParameterName = "@Nombre";
                 ParNombre.SqlDbType = SqlDbType.VarChar;
                 ParNombre.Size = 50;
-                ParNombre.Value = Carrera.Nombre;
+                ParNombre.Value = Grado.Nombre;
                 SqlCmd.Parameters.Add(ParNombre);
+
+                //Ejecutamos nuestro comando
 
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Actualizo el Registro";
 
@@ -113,49 +116,18 @@ namespace CapaDatos
             return rpta;
         }
 
+
         public DataTable Mostrar()
         {
-            DataTable DtResultado = new DataTable("Carrera");
+            DataTable DtResultado = new DataTable("Grado");
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon.ConnectionString = Conexion.Cn;
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "spmostrar_carrera";
+                SqlCmd.CommandText = "spmostrar_grado";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
-                SqlDat.Fill(DtResultado);
-
-            }
-            catch (Exception ex)
-            {
-                DtResultado = null;
-            }
-            return DtResultado;
-
-        }
-
-
-        public DataTable Buscar(DMunicipio Municipio)
-        {
-            DataTable DtResultado = new DataTable("Carrera");
-            SqlConnection SqlCon = new SqlConnection();
-            try
-            {
-                SqlCon.ConnectionString = Conexion.Cn;
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "spbuscar_carrera";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlParameter ParTextoBuscar = new SqlParameter();
-                ParTextoBuscar.ParameterName = "@textobuscar";
-                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
-                ParTextoBuscar.Size = 50;
-                ParTextoBuscar.Value = Municipio.TextoBuscar;
-                SqlCmd.Parameters.Add(ParTextoBuscar);
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);

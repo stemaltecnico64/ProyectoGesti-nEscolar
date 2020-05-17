@@ -10,17 +10,17 @@ using System.Windows.Forms;
 using CapaNegocios;
 namespace CapaPresentacion
 {
-    public partial class Ingresar_Carrera : Form
+    public partial class Ingreso_de_Grados : Form
     {
         private bool IsNuevo = false;
 
         private bool IsEditar = false;
-        public Ingresar_Carrera()
+        public Ingreso_de_Grados()
         {
             InitializeComponent();
-            this.ttMensaje.SetToolTip(this.txtCarrera, "Ingrese el nombre de la carrera cuidadosamente");
-        }
+            this.ttMensaje.SetToolTip(this.txtGrado, "Debe ingresas un grado, Ejemplo: 4to. 5to. 6to.");
 
+        }
 
         private void MensajeOk(string mensaje)
         {
@@ -35,8 +35,8 @@ namespace CapaPresentacion
 
         private void Limpiar()
         {
-            this.txtId_Carrera.Text = string.Empty;
-            this.txtCarrera.Text = string.Empty;
+            this.txtId_Grado.Text = string.Empty;
+            this.txtGrado.Text = string.Empty;
 
         }
 
@@ -44,13 +44,13 @@ namespace CapaPresentacion
 
         private void Habilitar(bool valor)
         {
-            this.txtId_Carrera.ReadOnly = !valor;
-            this.txtCarrera.Enabled = valor;
-
+            this.txtId_Grado.ReadOnly = !valor;
+            this.txtGrado.Enabled = valor;
+          
         }
         private void Botones()
         {
-            if (this.IsNuevo || this.IsEditar)
+            if (this.IsNuevo || this.IsEditar) 
             {
                 this.Habilitar(true);
                 this.btnNuevo.Enabled = false;
@@ -74,16 +74,16 @@ namespace CapaPresentacion
 
         private void Mostrar()
         {
-            this.dataListado.DataSource = NCarrera.Mostrar();
+            this.dataListado.DataSource = NGrado.Mostrar();
             this.OcultarColumnas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
-        private void Ingresar_Carrera_Load(object sender, EventArgs e)
+
+        private void Ingreso_de_Grados_Load(object sender, EventArgs e)
         {
             this.Mostrar();
             this.Habilitar(false);
             this.Botones();
-
         }
 
         private void BtnNuevo_Click(object sender, EventArgs e)
@@ -93,31 +93,32 @@ namespace CapaPresentacion
             this.Botones();
             this.Limpiar();
             this.Habilitar(true);
-            this.txtCarrera.Focus();
+            this.txtGrado.Focus();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+
             try
             {
                 string rpta = "";
-                if (this.txtCarrera.Text == string.Empty)
+                if (this.txtGrado.Text == string.Empty)
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
-                    errorIcono.SetError(txtCarrera, "Ingrese un Valor");
+                    errorIcono.SetError(txtGrado, "Ingrese un Valor");
 
                 }
                 else
                 {
                     if (this.IsNuevo)
                     {
-                        rpta = NCarrera.Insertar(this.txtCarrera.Text);
+                        rpta = NGrado.Insertar(this.txtGrado.Text);
 
                     }
                     else
                     {
-                        rpta = NCarrera.Editar(Convert.ToInt32(this.txtId_Carrera.Text),
-                            this.txtCarrera.Text);
+                        rpta = NGrado.Editar(Convert.ToInt32(this.txtGrado.Text),
+                            this.txtGrado.Text);
                     }
 
                     if (rpta.Equals("OK"))
@@ -148,11 +149,12 @@ namespace CapaPresentacion
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            if (!this.txtCarrera.Text.Equals(""))
+            if (!this.txtGrado.Text.Equals(""))
             {
                 this.IsEditar = true;
                 this.Botones();
@@ -166,18 +168,23 @@ namespace CapaPresentacion
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-
             this.IsNuevo = false;
             this.IsEditar = false;
             this.Botones();
             this.Limpiar();
-            this.txtCarrera.Text = string.Empty;
+            this.txtGrado.Text = string.Empty;
+        }
+
+        private void DataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            
         }
 
         private void DataListado_DoubleClick(object sender, EventArgs e)
         {
-            this.txtId_Carrera.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Código"].Value);
-            this.txtCarrera.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Nombre de la Carrera"].Value);
+            this.txtId_Grado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Código"].Value);
+            this.txtGrado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Grado"].Value);
         }
 
         private void BtExit_Click(object sender, EventArgs e)

@@ -35,20 +35,27 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox_carrera = new System.Windows.Forms.ComboBox();
+            this.cbCarrera = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_buscar = new Bunifu.Framework.UI.BunifuImageButton();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox_tipo_inscripcion = new System.Windows.Forms.ComboBox();
+            this.cbTipo_Inscripcion = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox_grado = new System.Windows.Forms.ComboBox();
+            this.cbGrado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_nuevo_alumno = new Bunifu.Framework.UI.BunifuImageButton();
-            this.comboBox_seccion = new System.Windows.Forms.ComboBox();
+            this.cbSeccion = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNombreAlumno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCui_Alumno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtId_Alumno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txt_nombre_alumno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label24 = new System.Windows.Forms.Label();
             this.txt_cui_alumno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -59,13 +66,21 @@
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
             this.label21 = new System.Windows.Forms.Label();
             this.btnCancelar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_nuevo_alumno)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -76,7 +91,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(629, 61);
+            this.panelTitleBar.Size = new System.Drawing.Size(629, 45);
             this.panelTitleBar.TabIndex = 21;
             // 
             // btExit
@@ -99,7 +114,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(272, 21);
+            this.lblTitle.Location = new System.Drawing.Point(272, 13);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(88, 26);
             this.lblTitle.TabIndex = 0;
@@ -125,14 +140,14 @@
             this.label2.TabIndex = 108;
             this.label2.Text = "Carrera";
             // 
-            // comboBox_carrera
+            // cbCarrera
             // 
-            this.comboBox_carrera.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_carrera.FormattingEnabled = true;
-            this.comboBox_carrera.Location = new System.Drawing.Point(229, 275);
-            this.comboBox_carrera.Name = "comboBox_carrera";
-            this.comboBox_carrera.Size = new System.Drawing.Size(213, 23);
-            this.comboBox_carrera.TabIndex = 109;
+            this.cbCarrera.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCarrera.FormattingEnabled = true;
+            this.cbCarrera.Location = new System.Drawing.Point(229, 275);
+            this.cbCarrera.Name = "cbCarrera";
+            this.cbCarrera.Size = new System.Drawing.Size(213, 23);
+            this.cbCarrera.TabIndex = 109;
             // 
             // label1
             // 
@@ -180,20 +195,20 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Sienna;
-            this.label15.Location = new System.Drawing.Point(402, 332);
+            this.label15.Location = new System.Drawing.Point(399, 332);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 23);
             this.label15.TabIndex = 107;
             this.label15.Text = "Guardar";
             // 
-            // comboBox_tipo_inscripcion
+            // cbTipo_Inscripcion
             // 
-            this.comboBox_tipo_inscripcion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_tipo_inscripcion.FormattingEnabled = true;
-            this.comboBox_tipo_inscripcion.Location = new System.Drawing.Point(25, 275);
-            this.comboBox_tipo_inscripcion.Name = "comboBox_tipo_inscripcion";
-            this.comboBox_tipo_inscripcion.Size = new System.Drawing.Size(181, 23);
-            this.comboBox_tipo_inscripcion.TabIndex = 105;
+            this.cbTipo_Inscripcion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipo_Inscripcion.FormattingEnabled = true;
+            this.cbTipo_Inscripcion.Location = new System.Drawing.Point(25, 275);
+            this.cbTipo_Inscripcion.Name = "cbTipo_Inscripcion";
+            this.cbTipo_Inscripcion.Size = new System.Drawing.Size(181, 23);
+            this.cbTipo_Inscripcion.TabIndex = 105;
             // 
             // label7
             // 
@@ -208,14 +223,14 @@
             this.label7.TabIndex = 101;
             this.label7.Text = "Sección";
             // 
-            // comboBox_grado
+            // cbGrado
             // 
-            this.comboBox_grado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_grado.FormattingEnabled = true;
-            this.comboBox_grado.Location = new System.Drawing.Point(455, 275);
-            this.comboBox_grado.Name = "comboBox_grado";
-            this.comboBox_grado.Size = new System.Drawing.Size(162, 23);
-            this.comboBox_grado.TabIndex = 103;
+            this.cbGrado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGrado.FormattingEnabled = true;
+            this.cbGrado.Location = new System.Drawing.Point(455, 275);
+            this.cbGrado.Name = "cbGrado";
+            this.cbGrado.Size = new System.Drawing.Size(162, 23);
+            this.cbGrado.TabIndex = 103;
             // 
             // label8
             // 
@@ -244,14 +259,14 @@
             this.btn_nuevo_alumno.Zoom = 10;
             this.btn_nuevo_alumno.Click += new System.EventHandler(this.btn_nuevo_alumno_Click);
             // 
-            // comboBox_seccion
+            // cbSeccion
             // 
-            this.comboBox_seccion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_seccion.FormattingEnabled = true;
-            this.comboBox_seccion.Location = new System.Drawing.Point(57, 334);
-            this.comboBox_seccion.Name = "comboBox_seccion";
-            this.comboBox_seccion.Size = new System.Drawing.Size(119, 23);
-            this.comboBox_seccion.TabIndex = 104;
+            this.cbSeccion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSeccion.FormattingEnabled = true;
+            this.cbSeccion.Location = new System.Drawing.Point(57, 334);
+            this.cbSeccion.Name = "cbSeccion";
+            this.cbSeccion.Size = new System.Drawing.Size(119, 23);
+            this.cbSeccion.TabIndex = 104;
             // 
             // label10
             // 
@@ -282,6 +297,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.txt_nombre_alumno);
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.txt_cui_alumno);
@@ -292,6 +308,116 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(603, 81);
             this.panel2.TabIndex = 99;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtNombreAlumno);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtCui_Alumno);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtId_Alumno);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(603, 81);
+            this.panel1.TabIndex = 100;
+            // 
+            // txtNombreAlumno
+            // 
+            this.txtNombreAlumno.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombreAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtNombreAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombreAlumno.HintForeColor = System.Drawing.Color.Empty;
+            this.txtNombreAlumno.HintText = "";
+            this.txtNombreAlumno.isPassword = false;
+            this.txtNombreAlumno.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtNombreAlumno.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtNombreAlumno.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtNombreAlumno.LineThickness = 3;
+            this.txtNombreAlumno.Location = new System.Drawing.Point(335, 36);
+            this.txtNombreAlumno.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreAlumno.Name = "txtNombreAlumno";
+            this.txtNombreAlumno.Size = new System.Drawing.Size(262, 33);
+            this.txtNombreAlumno.TabIndex = 72;
+            this.txtNombreAlumno.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Sienna;
+            this.label3.Location = new System.Drawing.Point(385, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 23);
+            this.label3.TabIndex = 71;
+            this.label3.Text = "Nombre del Alumno";
+            // 
+            // txtCui_Alumno
+            // 
+            this.txtCui_Alumno.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCui_Alumno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCui_Alumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCui_Alumno.HintForeColor = System.Drawing.Color.Empty;
+            this.txtCui_Alumno.HintText = "";
+            this.txtCui_Alumno.isPassword = false;
+            this.txtCui_Alumno.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtCui_Alumno.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtCui_Alumno.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCui_Alumno.LineThickness = 3;
+            this.txtCui_Alumno.Location = new System.Drawing.Point(148, 36);
+            this.txtCui_Alumno.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCui_Alumno.Name = "txtCui_Alumno";
+            this.txtCui_Alumno.Size = new System.Drawing.Size(162, 33);
+            this.txtCui_Alumno.TabIndex = 70;
+            this.txtCui_Alumno.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Sienna;
+            this.label4.Location = new System.Drawing.Point(210, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 23);
+            this.label4.TabIndex = 69;
+            this.label4.Text = "CUI";
+            // 
+            // txtId_Alumno
+            // 
+            this.txtId_Alumno.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtId_Alumno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtId_Alumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtId_Alumno.HintForeColor = System.Drawing.Color.Empty;
+            this.txtId_Alumno.HintText = "";
+            this.txtId_Alumno.isPassword = false;
+            this.txtId_Alumno.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtId_Alumno.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtId_Alumno.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtId_Alumno.LineThickness = 3;
+            this.txtId_Alumno.Location = new System.Drawing.Point(25, 36);
+            this.txtId_Alumno.Margin = new System.Windows.Forms.Padding(4);
+            this.txtId_Alumno.Name = "txtId_Alumno";
+            this.txtId_Alumno.Size = new System.Drawing.Size(97, 33);
+            this.txtId_Alumno.TabIndex = 68;
+            this.txtId_Alumno.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Sienna;
+            this.label5.Location = new System.Drawing.Point(40, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 23);
+            this.label5.TabIndex = 67;
+            this.label5.Text = "Código";
             // 
             // txt_nombre_alumno
             // 
@@ -396,7 +522,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Sienna;
-            this.label20.Location = new System.Drawing.Point(279, 330);
+            this.label20.Location = new System.Drawing.Point(266, 332);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(55, 23);
             this.label20.TabIndex = 111;
@@ -422,7 +548,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Sienna;
-            this.label21.Location = new System.Drawing.Point(562, 332);
+            this.label21.Location = new System.Drawing.Point(558, 332);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(73, 23);
             this.label21.TabIndex = 113;
@@ -441,27 +567,87 @@
             this.btnCancelar.TabStop = false;
             this.btnCancelar.Zoom = 10;
             // 
+            // cbEstado
+            // 
+            this.cbEstado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "ACTIVO",
+            "DESACTIVO"});
+            this.cbEstado.Location = new System.Drawing.Point(540, 52);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(86, 23);
+            this.cbEstado.TabIndex = 115;
+            this.cbEstado.Text = "ACTIVO";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Sienna;
+            this.label6.Location = new System.Drawing.Point(480, 54);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 23);
+            this.label6.TabIndex = 114;
+            this.label6.Text = "Estado:";
+            // 
+            // dtFechaNac
+            // 
+            this.dtFechaNac.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.dtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaNac.Location = new System.Drawing.Point(62, 49);
+            this.dtFechaNac.Name = "dtFechaNac";
+            this.dtFechaNac.Size = new System.Drawing.Size(114, 23);
+            this.dtFechaNac.TabIndex = 116;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Sienna;
+            this.label9.Location = new System.Drawing.Point(1, 49);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 23);
+            this.label9.TabIndex = 117;
+            this.label9.Text = "Fecha:";
+            // 
+            // ttMensaje
+            // 
+            this.ttMensaje.IsBalloon = true;
+            // 
+            // errorIcono
+            // 
+            this.errorIcono.ContainerControl = this;
+            // 
             // Inscripcion_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 380);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.dtFechaNac);
+            this.Controls.Add(this.cbEstado);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox_carrera);
+            this.Controls.Add(this.cbCarrera);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.comboBox_tipo_inscripcion);
+            this.Controls.Add(this.cbTipo_Inscripcion);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox_grado);
+            this.Controls.Add(this.cbGrado);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_nuevo_alumno);
-            this.Controls.Add(this.comboBox_seccion);
+            this.Controls.Add(this.cbSeccion);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel2);
@@ -470,6 +656,7 @@
             this.Name = "Inscripcion_alumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inscripcion_alumno";
+            this.Load += new System.EventHandler(this.Inscripcion_alumno_Load);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).EndInit();
@@ -477,8 +664,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_nuevo_alumno)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,17 +680,17 @@
         private System.Windows.Forms.Label lblTitle;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox_carrera;
+        private System.Windows.Forms.ComboBox cbCarrera;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuImageButton btn_guardar;
         private Bunifu.Framework.UI.BunifuImageButton btn_buscar;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox_tipo_inscripcion;
+        private System.Windows.Forms.ComboBox cbTipo_Inscripcion;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox_grado;
+        private System.Windows.Forms.ComboBox cbGrado;
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuImageButton btn_nuevo_alumno;
-        private System.Windows.Forms.ComboBox comboBox_seccion;
+        private System.Windows.Forms.ComboBox cbSeccion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel2;
@@ -515,5 +705,18 @@
         private System.Windows.Forms.Label label21;
         private Bunifu.Framework.UI.BunifuImageButton btnCancelar;
         private System.Windows.Forms.Button btExit;
+        private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombreAlumno;
+        private System.Windows.Forms.Label label3;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCui_Alumno;
+        private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtId_Alumno;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtFechaNac;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ToolTip ttMensaje;
+        private System.Windows.Forms.ErrorProvider errorIcono;
     }
 }

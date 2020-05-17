@@ -484,6 +484,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(607, 208);
             this.panel1.TabIndex = 79;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // txtCodigoAlumno
             // 

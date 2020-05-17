@@ -34,19 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reporte_Notas_Admin));
             this.Tabla_Usuarios = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btExit = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.cbBuscar = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.Nombre_Maestro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +43,19 @@
             this.Bloque_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bloque_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bloque_4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btExit = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.cbBuscar = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Tabla_Usuarios)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
@@ -116,6 +116,51 @@
             this.Tabla_Usuarios.TabIndex = 160;
             this.Tabla_Usuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Tabla_Usuarios_CellContentClick);
             // 
+            // Nombre_Maestro
+            // 
+            this.Nombre_Maestro.HeaderText = "Nombre del Maestro";
+            this.Nombre_Maestro.Name = "Nombre_Maestro";
+            // 
+            // Nombre_Alumno
+            // 
+            this.Nombre_Alumno.HeaderText = "Nombre del Alumno";
+            this.Nombre_Alumno.Name = "Nombre_Alumno";
+            // 
+            // Grado
+            // 
+            this.Grado.HeaderText = "Grado";
+            this.Grado.Name = "Grado";
+            // 
+            // Seccion
+            // 
+            this.Seccion.HeaderText = "Sección";
+            this.Seccion.Name = "Seccion";
+            // 
+            // Curso
+            // 
+            this.Curso.HeaderText = "Curso";
+            this.Curso.Name = "Curso";
+            // 
+            // Bloque_1
+            // 
+            this.Bloque_1.HeaderText = "Bloque 1";
+            this.Bloque_1.Name = "Bloque_1";
+            // 
+            // Bloque_2
+            // 
+            this.Bloque_2.HeaderText = "Bloque 2";
+            this.Bloque_2.Name = "Bloque_2";
+            // 
+            // Bloque_3
+            // 
+            this.Bloque_3.HeaderText = "Bloque 3";
+            this.Bloque_3.Name = "Bloque_3";
+            // 
+            // Bloque_4
+            // 
+            this.Bloque_4.HeaderText = "Bloque 4";
+            this.Bloque_4.Name = "Bloque_4";
+            // 
             // btExit
             // 
             this.btExit.BackColor = System.Drawing.Color.Red;
@@ -151,6 +196,19 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1120, 54);
             this.panelTitleBar.TabIndex = 159;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(433, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(256, 26);
+            this.label2.TabIndex = 218;
+            this.label2.Text = "Reporte de Notas Escolares";
             // 
             // bunifuDragControl1
             // 
@@ -234,19 +292,6 @@
             this.label1.TabIndex = 166;
             this.label1.Text = "Ingresar Nota";
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(433, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 26);
-            this.label2.TabIndex = 218;
-            this.label2.Text = "Reporte de Notas Escolares";
-            // 
             // comboBox3
             // 
             this.comboBox3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -274,51 +319,6 @@
             this.comboBox4.Size = new System.Drawing.Size(172, 31);
             this.comboBox4.TabIndex = 219;
             this.comboBox4.Text = "CARRERA";
-            // 
-            // Nombre_Maestro
-            // 
-            this.Nombre_Maestro.HeaderText = "Nombre del Maestro";
-            this.Nombre_Maestro.Name = "Nombre_Maestro";
-            // 
-            // Nombre_Alumno
-            // 
-            this.Nombre_Alumno.HeaderText = "Nombre del Alumno";
-            this.Nombre_Alumno.Name = "Nombre_Alumno";
-            // 
-            // Grado
-            // 
-            this.Grado.HeaderText = "Grado";
-            this.Grado.Name = "Grado";
-            // 
-            // Seccion
-            // 
-            this.Seccion.HeaderText = "Sección";
-            this.Seccion.Name = "Seccion";
-            // 
-            // Curso
-            // 
-            this.Curso.HeaderText = "Curso";
-            this.Curso.Name = "Curso";
-            // 
-            // Bloque_1
-            // 
-            this.Bloque_1.HeaderText = "Bloque 1";
-            this.Bloque_1.Name = "Bloque_1";
-            // 
-            // Bloque_2
-            // 
-            this.Bloque_2.HeaderText = "Bloque 2";
-            this.Bloque_2.Name = "Bloque_2";
-            // 
-            // Bloque_3
-            // 
-            this.Bloque_3.HeaderText = "Bloque 3";
-            this.Bloque_3.Name = "Bloque_3";
-            // 
-            // Bloque_4
-            // 
-            this.Bloque_4.HeaderText = "Bloque 4";
-            this.Bloque_4.Name = "Bloque_4";
             // 
             // Reporte_Notas_Admin
             // 

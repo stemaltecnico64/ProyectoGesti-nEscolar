@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agregar_Tipo_Inscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar_Tipo_Inscripcion.Designer.cs">
+      <DependentUpon>Agregar_Tipo_Inscripcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ajustes_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,18 @@
     </Compile>
     <Compile Include="Ingresar_Usuario.Designer.cs">
       <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ingreso_de_Grados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_de_Grados.Designer.cs">
+      <DependentUpon>Ingreso_de_Grados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ingreso_de_Sección.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_de_Sección.Designer.cs">
+      <DependentUpon>Ingreso_de_Sección.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -273,6 +291,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Agregar_Tipo_Inscripcion.resx">
+      <DependentUpon>Agregar_Tipo_Inscripcion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ajustes_Admin.resx">
       <DependentUpon>Ajustes_Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +347,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Usuario.resx">
       <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_de_Grados.resx">
+      <DependentUpon>Ingreso_de_Grados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_de_Sección.resx">
+      <DependentUpon>Ingreso_de_Sección.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -421,6 +448,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Cancel_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Edit_Property_48px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
