@@ -28,5 +28,15 @@ namespace CapaPresentacion
             Listado_Empleados ventanalistadoempleados = new Listado_Empleados();
             ventanalistadoempleados.Show();
         }
+
+        private void Menu_Empleados_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_asignar_Click(object sender, EventArgs e)
+        {
+            Crear_Asignacion_Cursos cac = new Crear_Asignacion_Cursos();
+            cac.Show();
+        }
     }
 }

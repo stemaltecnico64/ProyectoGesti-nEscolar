@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Creacion_Carreras : Form
+    public partial class Inicio_Secretarios : Form
     {
-        public Creacion_Carreras()
+        public Inicio_Secretarios()
         {
             InitializeComponent();
-        }
-
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

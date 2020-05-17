@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Crear_Ciclo : Form
+    public partial class Inicio_Director : Form
     {
-        public Crear_Ciclo()
+        public Inicio_Director()
         {
             InitializeComponent();
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

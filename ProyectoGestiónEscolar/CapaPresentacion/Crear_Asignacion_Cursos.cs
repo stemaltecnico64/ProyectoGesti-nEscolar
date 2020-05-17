@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Nuevo_Pemsum : Form
+    public partial class Crear_Asignacion_Cursos : Form
     {
-        public Nuevo_Pemsum()
+        public Crear_Asignacion_Cursos()
         {
             InitializeComponent();
         }

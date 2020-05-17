@@ -18,22 +18,77 @@ namespace CapaPresentacion
         }
 
         int progress = 0;
-
+        
         public void fn_probar()
         {
+            
             progress += 5;
-            if (progress >= 100)
+            
+            if (Login.nivel_x.Equals("1"))
             {
-                Timer_Loader.Enabled = false;
-                Timer_Loader.Stop();
-                this.Timer_Loader.Stop();
-                this.Hide();
-                Inicio ventanaInicio = new Inicio();
-                ventanaInicio.Show();
+                if (progress >= 100)
+                {
+                    Timer_Loader.Enabled = false;
+                    Timer_Loader.Stop();
+                    this.Timer_Loader.Stop();
+                    this.Hide();
+                    Inicio ventanaInicio = new Inicio();
+                    ventanaInicio.Show();
+                }
+                else
+                {
+                    bunifuCircleProgressbar1.Value = progress;
+                }
             }
-            else
+
+            else if (Login.nivel_x.Equals("2"))
             {
-                bunifuCircleProgressbar1.Value = progress;
+                if (progress >= 100)
+                {
+                    Timer_Loader.Enabled = false;
+                    Timer_Loader.Stop();
+                    this.Timer_Loader.Stop();
+                    this.Hide();
+                    Inicio_Director ventanaInicioD = new Inicio_Director();
+                    ventanaInicioD.Show();
+                }
+                else
+                {
+                    bunifuCircleProgressbar1.Value = progress;
+                }
+            }
+
+            else if (Login.nivel_x.Equals("3"))
+            {
+                if (progress >= 100)
+                {
+                    Timer_Loader.Enabled = false;
+                    Timer_Loader.Stop();
+                    this.Timer_Loader.Stop();
+                    this.Hide();
+                    Inicio_Maestro ventanaInicioM = new Inicio_Maestro();
+                    ventanaInicioM.Show();
+                }
+                else
+                {
+                    bunifuCircleProgressbar1.Value = progress;
+                }
+            }
+            else if (Login.nivel_x.Equals("4"))
+            {
+                if (progress >= 100)
+                {
+                    Timer_Loader.Enabled = false;
+                    Timer_Loader.Stop();
+                    this.Timer_Loader.Stop();
+                    this.Hide();
+                    Inicio_Secretarios ventanaInicioS = new Inicio_Secretarios();
+                    ventanaInicioS.Show();
+                }
+                else
+                {
+                    bunifuCircleProgressbar1.Value = progress;
+                }
             }
         }
 

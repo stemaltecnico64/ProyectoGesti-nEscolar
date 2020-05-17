@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,13 @@ namespace CapaPresentacion
             InitializeComponent();
             OpenChilForm(new Smenu_Usuarios());
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         private Form activeForm = null;
         private void OpenChilForm(Form ChildForm)
         {
@@ -33,24 +41,44 @@ namespace CapaPresentacion
             ChildForm.Show();
         }
 
-        private void btn_inicio_Click(object sender, EventArgs e)
+        private void btn_Departamentos_Click(object sender, EventArgs e)
         {
             OpenChilForm(new ConfigDepartamento());
         }
 
-        private void btn_alumnos_Click(object sender, EventArgs e)
+        private void btn_municipios_Click(object sender, EventArgs e)
         {
             OpenChilForm(new ConfigMunicipio());
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_encargados_Click(object sender, EventArgs e)
         {
             OpenChilForm(new ConfigTipoEncargado());
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_cuenta_Click(object sender, EventArgs e)
         {
             OpenChilForm(new Smenu_Usuarios());
+        }
+
+        private void btn_puestos_Click(object sender, EventArgs e)
+        {
+            OpenChilForm(new ConfigPuestos());
+        }
+
+        private void Btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_ciclo_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

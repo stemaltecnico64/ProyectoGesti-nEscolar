@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class Menu_Reportes
+    partial class Inicio_Director
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Menu_Reportes
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 382);
-            this.Name = "Menu_Reportes";
-            this.Text = "Menu_Reportes";
-            this.ResumeLayout(false);
-
+            this.Text = "Inicio_Director";
         }
 
         #endregion
