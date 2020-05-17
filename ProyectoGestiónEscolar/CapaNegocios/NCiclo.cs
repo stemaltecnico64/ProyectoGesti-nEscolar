@@ -19,5 +19,10 @@ namespace CapaNegocios
             Obj.Estado = estado;
             return Obj.Insertar(Obj);
         }
+
+        public static DataTable Mostrar()
+        {
+            return new DCiclo().Mostrar();
+        }
     }
 }

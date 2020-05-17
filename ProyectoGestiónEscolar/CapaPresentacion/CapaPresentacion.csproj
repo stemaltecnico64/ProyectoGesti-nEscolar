@@ -60,6 +60,12 @@
     <Compile Include="Ajustes_Admin.Designer.cs">
       <DependentUpon>Ajustes_Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuscarAlumnoInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarAlumnoInscripcion.Designer.cs">
+      <DependentUpon>BuscarAlumnoInscripcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cambiar_Contra_Usuario_Normal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ajustes_Admin.resx">
       <DependentUpon>Ajustes_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarAlumnoInscripcion.resx">
+      <DependentUpon>BuscarAlumnoInscripcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cambiar_Contra_Usuario_Normal.resx">
       <DependentUpon>Cambiar_Contra_Usuario_Normal.cs</DependentUpon>

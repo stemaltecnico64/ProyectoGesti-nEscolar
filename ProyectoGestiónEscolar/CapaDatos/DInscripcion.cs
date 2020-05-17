@@ -50,7 +50,7 @@ namespace CapaDatos
             this.TextoBuscar = textobuscar;
         }
 
-        /*  public string Insertar(DInscripcion Inscripcion)
+         public string Insertar(DInscripcion Inscripcion)
           {
               string rpta = "";
               SqlConnection SqlCon = new SqlConnection();
@@ -103,7 +103,7 @@ namespace CapaDatos
                   IdGrado.ParameterName = "@Id_Grado";
                   IdGrado.SqlDbType = SqlDbType.VarChar;
                   IdGrado.Size = 50;
-                  IdGrado.Value = Inscripcion.IdAlumno;
+                  IdGrado.Value = Inscripcion.IdGrado;
                   SqlCmd.Parameters.Add(IdGrado);
 
                   SqlParameter IdSeccion = new SqlParameter();
@@ -141,11 +141,11 @@ namespace CapaDatos
               }
               return rpta;
 
-          } */
+          } 
 
 
 
-        public string Insertar(DInscripcion Inscripcion)
+      /*  public string Insertar(DInscripcion Inscripcion)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -228,12 +228,6 @@ namespace CapaDatos
 
                 if (rpta.Equals("OK"))
                 {
-                    //Obtener el código del ingreso generado
-                    this.IdInscripcion = Convert.ToInt32(SqlCmd.Parameters["@Id_Inscripcion"].Value);
-
-                }
-                if (rpta.Equals("OK"))
-                {
                     SqlTra.Commit();
                 }
                 else
@@ -253,6 +247,6 @@ namespace CapaDatos
             }
             return rpta;
 
-        }
+        }*/
     }
 }

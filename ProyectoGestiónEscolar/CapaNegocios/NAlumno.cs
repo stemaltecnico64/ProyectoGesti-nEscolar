@@ -56,5 +56,29 @@ namespace CapaNegocios
             Obj.Estado = Estado;
             return Obj.Editar(Obj);
         }
+
+        public static DataTable Mostrar()
+        {
+            return new DAlumno().Mostrar();
+        }
+        public static DataTable Apellido(string textobuscar)
+        {
+            DAlumno Obj = new DAlumno();
+            Obj.TextoBuscar = textobuscar;
+            return Obj.Apellido(Obj);
+        }
+        public static DataTable Nombre(string textobuscar)
+        {
+            DAlumno Obj = new DAlumno();
+            Obj.TextoBuscar = textobuscar;
+            return Obj.Nombre(Obj);
+        }
+
+        public static DataTable cui(string textobuscar)
+        {
+            DAlumno Obj = new DAlumno();
+            Obj.TextoBuscar = textobuscar;
+            return Obj.cui(Obj);
+        }
     }
 }

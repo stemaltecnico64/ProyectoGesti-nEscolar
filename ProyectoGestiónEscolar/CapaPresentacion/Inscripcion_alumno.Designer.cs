@@ -35,17 +35,13 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.cbCarrera = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_buscar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnBuscar = new Bunifu.Framework.UI.BunifuImageButton();
             this.label15 = new System.Windows.Forms.Label();
-            this.cbTipo_Inscripcion = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbGrado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.btn_nuevo_alumno = new Bunifu.Framework.UI.BunifuImageButton();
-            this.cbSeccion = new System.Windows.Forms.ComboBox();
+            this.btnNuevoAlumno = new Bunifu.Framework.UI.BunifuImageButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -72,10 +68,17 @@
             this.label9 = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbCiclo = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.cbTipo_Inscripcion = new System.Windows.Forms.ComboBox();
+            this.cbCarrera = new System.Windows.Forms.ComboBox();
+            this.cbGrado = new System.Windows.Forms.ComboBox();
+            this.cbSeccion = new System.Windows.Forms.ComboBox();
             this.panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_nuevo_alumno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevoAlumno)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
@@ -134,20 +137,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Sienna;
-            this.label2.Location = new System.Drawing.Point(302, 237);
+            this.label2.Location = new System.Drawing.Point(310, 249);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 23);
             this.label2.TabIndex = 108;
             this.label2.Text = "Carrera";
-            // 
-            // cbCarrera
-            // 
-            this.cbCarrera.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCarrera.FormattingEnabled = true;
-            this.cbCarrera.Location = new System.Drawing.Point(229, 275);
-            this.cbCarrera.Name = "cbCarrera";
-            this.cbCarrera.Size = new System.Drawing.Size(213, 23);
-            this.cbCarrera.TabIndex = 109;
             // 
             // label1
             // 
@@ -162,31 +156,33 @@
             this.label1.TabIndex = 98;
             this.label1.Text = "Nuevo Alumno";
             // 
-            // btn_guardar
+            // btnGuardar
             // 
-            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
-            this.btn_guardar.ImageActive = null;
-            this.btn_guardar.Location = new System.Drawing.Point(342, 319);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(54, 49);
-            this.btn_guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_guardar.TabIndex = 106;
-            this.btn_guardar.TabStop = false;
-            this.btn_guardar.Zoom = 10;
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageActive = null;
+            this.btnGuardar.Location = new System.Drawing.Point(342, 319);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(54, 49);
+            this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnGuardar.TabIndex = 106;
+            this.btnGuardar.TabStop = false;
+            this.btnGuardar.Zoom = 10;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
-            // btn_buscar
+            // btnBuscar
             // 
-            this.btn_buscar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar.Image")));
-            this.btn_buscar.ImageActive = null;
-            this.btn_buscar.Location = new System.Drawing.Point(116, 93);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(39, 36);
-            this.btn_buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_buscar.TabIndex = 97;
-            this.btn_buscar.TabStop = false;
-            this.btn_buscar.Zoom = 10;
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageActive = null;
+            this.btnBuscar.Location = new System.Drawing.Point(116, 93);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(39, 36);
+            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscar.TabIndex = 97;
+            this.btnBuscar.TabStop = false;
+            this.btnBuscar.Zoom = 10;
+            this.btnBuscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // label15
             // 
@@ -201,15 +197,6 @@
             this.label15.TabIndex = 107;
             this.label15.Text = "Guardar";
             // 
-            // cbTipo_Inscripcion
-            // 
-            this.cbTipo_Inscripcion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTipo_Inscripcion.FormattingEnabled = true;
-            this.cbTipo_Inscripcion.Location = new System.Drawing.Point(25, 275);
-            this.cbTipo_Inscripcion.Name = "cbTipo_Inscripcion";
-            this.cbTipo_Inscripcion.Size = new System.Drawing.Size(181, 23);
-            this.cbTipo_Inscripcion.TabIndex = 105;
-            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -223,15 +210,6 @@
             this.label7.TabIndex = 101;
             this.label7.Text = "Sección";
             // 
-            // cbGrado
-            // 
-            this.cbGrado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGrado.FormattingEnabled = true;
-            this.cbGrado.Location = new System.Drawing.Point(455, 275);
-            this.cbGrado.Name = "cbGrado";
-            this.cbGrado.Size = new System.Drawing.Size(162, 23);
-            this.cbGrado.TabIndex = 103;
-            // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -239,34 +217,25 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Sienna;
-            this.label8.Location = new System.Drawing.Point(501, 237);
+            this.label8.Location = new System.Drawing.Point(526, 249);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 23);
             this.label8.TabIndex = 100;
             this.label8.Text = "Grado";
             // 
-            // btn_nuevo_alumno
+            // btnNuevoAlumno
             // 
-            this.btn_nuevo_alumno.BackColor = System.Drawing.Color.Transparent;
-            this.btn_nuevo_alumno.Image = ((System.Drawing.Image)(resources.GetObject("btn_nuevo_alumno.Image")));
-            this.btn_nuevo_alumno.ImageActive = null;
-            this.btn_nuevo_alumno.Location = new System.Drawing.Point(357, 93);
-            this.btn_nuevo_alumno.Name = "btn_nuevo_alumno";
-            this.btn_nuevo_alumno.Size = new System.Drawing.Size(39, 36);
-            this.btn_nuevo_alumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_nuevo_alumno.TabIndex = 96;
-            this.btn_nuevo_alumno.TabStop = false;
-            this.btn_nuevo_alumno.Zoom = 10;
-            this.btn_nuevo_alumno.Click += new System.EventHandler(this.btn_nuevo_alumno_Click);
-            // 
-            // cbSeccion
-            // 
-            this.cbSeccion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSeccion.FormattingEnabled = true;
-            this.cbSeccion.Location = new System.Drawing.Point(57, 334);
-            this.cbSeccion.Name = "cbSeccion";
-            this.cbSeccion.Size = new System.Drawing.Size(119, 23);
-            this.cbSeccion.TabIndex = 104;
+            this.btnNuevoAlumno.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevoAlumno.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoAlumno.Image")));
+            this.btnNuevoAlumno.ImageActive = null;
+            this.btnNuevoAlumno.Location = new System.Drawing.Point(357, 93);
+            this.btnNuevoAlumno.Name = "btnNuevoAlumno";
+            this.btnNuevoAlumno.Size = new System.Drawing.Size(39, 36);
+            this.btnNuevoAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNuevoAlumno.TabIndex = 96;
+            this.btnNuevoAlumno.TabStop = false;
+            this.btnNuevoAlumno.Zoom = 10;
+            this.btnNuevoAlumno.Click += new System.EventHandler(this.btn_nuevo_alumno_Click);
             // 
             // label10
             // 
@@ -275,7 +244,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Sienna;
-            this.label10.Location = new System.Drawing.Point(40, 237);
+            this.label10.Location = new System.Drawing.Point(34, 249);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(153, 23);
             this.label10.TabIndex = 102;
@@ -540,6 +509,7 @@
             this.btnNuevo.TabIndex = 110;
             this.btnNuevo.TabStop = false;
             this.btnNuevo.Zoom = 10;
+            this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // label21
             // 
@@ -566,15 +536,17 @@
             this.btnCancelar.TabIndex = 112;
             this.btnCancelar.TabStop = false;
             this.btnCancelar.Zoom = 10;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // cbEstado
             // 
+            this.cbEstado.Enabled = false;
             this.cbEstado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
             "ACTIVO",
             "DESACTIVO"});
-            this.cbEstado.Location = new System.Drawing.Point(540, 52);
+            this.cbEstado.Location = new System.Drawing.Point(540, 49);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(86, 23);
             this.cbEstado.TabIndex = 115;
@@ -587,7 +559,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Sienna;
-            this.label6.Location = new System.Drawing.Point(480, 54);
+            this.label6.Location = new System.Drawing.Point(470, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 23);
             this.label6.TabIndex = 114;
@@ -595,6 +567,7 @@
             // 
             // dtFechaNac
             // 
+            this.dtFechaNac.Enabled = false;
             this.dtFechaNac.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.dtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaNac.Location = new System.Drawing.Point(62, 49);
@@ -623,11 +596,76 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
+            // cbCiclo
+            // 
+            this.cbCiclo.Enabled = false;
+            this.cbCiclo.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCiclo.FormattingEnabled = true;
+            this.cbCiclo.Location = new System.Drawing.Point(314, 49);
+            this.cbCiclo.Name = "cbCiclo";
+            this.cbCiclo.Size = new System.Drawing.Size(118, 23);
+            this.cbCiclo.TabIndex = 118;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Sienna;
+            this.label11.Location = new System.Drawing.Point(203, 49);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(110, 23);
+            this.label11.TabIndex = 119;
+            this.label11.Text = "Ciclo Escolar:";
+            // 
+            // cbTipo_Inscripcion
+            // 
+            this.cbTipo_Inscripcion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.cbTipo_Inscripcion.FormattingEnabled = true;
+            this.cbTipo_Inscripcion.Location = new System.Drawing.Point(25, 275);
+            this.cbTipo_Inscripcion.Name = "cbTipo_Inscripcion";
+            this.cbTipo_Inscripcion.Size = new System.Drawing.Size(168, 23);
+            this.cbTipo_Inscripcion.TabIndex = 120;
+            // 
+            // cbCarrera
+            // 
+            this.cbCarrera.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.cbCarrera.FormattingEnabled = true;
+            this.cbCarrera.Location = new System.Drawing.Point(207, 275);
+            this.cbCarrera.Name = "cbCarrera";
+            this.cbCarrera.Size = new System.Drawing.Size(267, 23);
+            this.cbCarrera.TabIndex = 121;
+            // 
+            // cbGrado
+            // 
+            this.cbGrado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.cbGrado.FormattingEnabled = true;
+            this.cbGrado.Location = new System.Drawing.Point(495, 275);
+            this.cbGrado.Name = "cbGrado";
+            this.cbGrado.Size = new System.Drawing.Size(130, 23);
+            this.cbGrado.TabIndex = 122;
+            // 
+            // cbSeccion
+            // 
+            this.cbSeccion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.cbSeccion.FormattingEnabled = true;
+            this.cbSeccion.Location = new System.Drawing.Point(46, 332);
+            this.cbSeccion.Name = "cbSeccion";
+            this.cbSeccion.Size = new System.Drawing.Size(130, 23);
+            this.cbSeccion.TabIndex = 123;
+            // 
             // Inscripcion_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 380);
+            this.Controls.Add(this.cbSeccion);
+            this.Controls.Add(this.cbGrado);
+            this.Controls.Add(this.cbCarrera);
+            this.Controls.Add(this.cbTipo_Inscripcion);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.cbCiclo);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dtFechaNac);
             this.Controls.Add(this.cbEstado);
@@ -637,31 +675,30 @@
             this.Controls.Add(this.label20);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbCarrera);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_guardar);
-            this.Controls.Add(this.btn_buscar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.cbTipo_Inscripcion);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbGrado);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btn_nuevo_alumno);
-            this.Controls.Add(this.cbSeccion);
+            this.Controls.Add(this.btnNuevoAlumno);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Inscripcion_alumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inscripcion_alumno";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Inscripcion_alumno_FormClosing);
             this.Load += new System.EventHandler(this.Inscripcion_alumno_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Inscripcion_alumno_KeyDown);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_nuevo_alumno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevoAlumno)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -680,17 +717,13 @@
         private System.Windows.Forms.Label lblTitle;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbCarrera;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuImageButton btn_guardar;
-        private Bunifu.Framework.UI.BunifuImageButton btn_buscar;
+        private Bunifu.Framework.UI.BunifuImageButton btnGuardar;
+        private Bunifu.Framework.UI.BunifuImageButton btnBuscar;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox cbTipo_Inscripcion;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbGrado;
         private System.Windows.Forms.Label label8;
-        private Bunifu.Framework.UI.BunifuImageButton btn_nuevo_alumno;
-        private System.Windows.Forms.ComboBox cbSeccion;
+        private Bunifu.Framework.UI.BunifuImageButton btnNuevoAlumno;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel2;
@@ -718,5 +751,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.ErrorProvider errorIcono;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbCiclo;
+        private System.Windows.Forms.ComboBox cbTipo_Inscripcion;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ComboBox cbGrado;
+        private System.Windows.Forms.ComboBox cbCarrera;
+        private System.Windows.Forms.ComboBox cbSeccion;
     }
 }
