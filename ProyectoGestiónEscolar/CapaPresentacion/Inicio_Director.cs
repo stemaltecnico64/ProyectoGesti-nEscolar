@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Nuevo_Pemsum : Form
+    public partial class Inicio_Director : Form
     {
-        public Nuevo_Pemsum()
+        public Inicio_Director()
         {
             InitializeComponent();
-        }
-
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

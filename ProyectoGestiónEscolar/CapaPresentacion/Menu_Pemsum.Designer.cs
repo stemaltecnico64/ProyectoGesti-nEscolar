@@ -45,9 +45,9 @@
             this.label3.ForeColor = System.Drawing.Color.Sienna;
             this.label3.Location = new System.Drawing.Point(332, 233);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(181, 26);
+            this.label3.Size = new System.Drawing.Size(192, 26);
             this.label3.TabIndex = 50;
-            this.label3.Text = "Todos Los Usuarios";
+            this.label3.Text = "Catalogo de Pensums";
             // 
             // label1
             // 
@@ -55,11 +55,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Sienna;
-            this.label1.Location = new System.Drawing.Point(140, 233);
+            this.label1.Location = new System.Drawing.Point(138, 233);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 26);
+            this.label1.Size = new System.Drawing.Size(136, 26);
             this.label1.TabIndex = 49;
-            this.label1.Text = "Crear Usuario";
+            this.label1.Text = "Nuevo Pensum";
             // 
             // Btn_All_Users
             // 
@@ -67,7 +67,7 @@
             this.Btn_All_Users.BackColor = System.Drawing.Color.Transparent;
             this.Btn_All_Users.Image = ((System.Drawing.Image)(resources.GetObject("Btn_All_Users.Image")));
             this.Btn_All_Users.ImageActive = null;
-            this.Btn_All_Users.Location = new System.Drawing.Point(377, 146);
+            this.Btn_All_Users.Location = new System.Drawing.Point(388, 146);
             this.Btn_All_Users.Name = "Btn_All_Users";
             this.Btn_All_Users.Size = new System.Drawing.Size(74, 71);
             this.Btn_All_Users.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -88,6 +88,7 @@
             this.Btn_Crear.TabIndex = 47;
             this.Btn_Crear.TabStop = false;
             this.Btn_Crear.Zoom = 10;
+            this.Btn_Crear.Click += new System.EventHandler(this.Btn_Crear_Click);
             // 
             // Menu_Pemsum
             // 

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Creacion_Carreras : Form
+    public partial class Listado_Asignacion_Cursos : Form
     {
-        public Creacion_Carreras()
+        public Listado_Asignacion_Cursos()
         {
             InitializeComponent();
-        }
-
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
