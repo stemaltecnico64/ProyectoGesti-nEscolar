@@ -25,7 +25,7 @@ namespace CapaPresentacion
         public static string ID_USER = "";
 
 
-        public static DataSet Conexion(string cmd)
+        public static DataSet Conexion_GX(string cmd)
         {
             SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
             con.Open();
@@ -45,7 +45,7 @@ namespace CapaPresentacion
             try
             {
                 string CMD = String.Format("Select * from Usuarios where NOMBRE_USUARIO='{0}' and PASSWORD_USUARIO='{1}'",txt_usuario.Text.Trim(),txt_password.Text.Trim());
-                DataSet ds = Conexion(CMD);
+                DataSet ds = Conexion_GX(CMD);
 
                 string usuario = ds.Tables[0].Rows[0]["NOMBRE_USUARIO"].ToString().Trim();
                 string password = ds.Tables[0].Rows[0]["PASSWORD_USUARIO"].ToString().Trim();

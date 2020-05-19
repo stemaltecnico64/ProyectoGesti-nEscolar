@@ -70,6 +70,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dtFechaNac = new System.Windows.Forms.DateTimePicker();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtDireccion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -85,7 +86,6 @@
             this.BtnAgregarFoto = new Bunifu.Framework.UI.BunifuImageButton();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dtFechaNac = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).BeginInit();
@@ -217,6 +217,7 @@
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(162, 21);
             this.cbDepartamento.TabIndex = 48;
+            this.cbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cbDepartamento_SelectedIndexChanged);
             this.cbDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CbDepartamento_KeyPress);
             // 
             // label13
@@ -657,6 +658,16 @@
             this.panel3.Size = new System.Drawing.Size(419, 130);
             this.panel3.TabIndex = 98;
             // 
+            // dtFechaNac
+            // 
+            this.dtFechaNac.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.dtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaNac.Location = new System.Drawing.Point(16, 98);
+            this.dtFechaNac.Name = "dtFechaNac";
+            this.dtFechaNac.Size = new System.Drawing.Size(140, 23);
+            this.dtFechaNac.TabIndex = 60;
+            this.dtFechaNac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DtFechaNac_KeyPress_1);
+            // 
             // cbSexo
             // 
             this.cbSexo.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -837,16 +848,6 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // dtFechaNac
-            // 
-            this.dtFechaNac.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.dtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaNac.Location = new System.Drawing.Point(16, 98);
-            this.dtFechaNac.Name = "dtFechaNac";
-            this.dtFechaNac.Size = new System.Drawing.Size(140, 23);
-            this.dtFechaNac.TabIndex = 60;
-            this.dtFechaNac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DtFechaNac_KeyPress_1);
             // 
             // Ingresar_Encargado
             // 

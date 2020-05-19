@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocios;
+using System.Data.SqlClient;
 namespace CapaPresentacion
 {
     public partial class Ingresar_Encargado : Form
@@ -35,33 +36,67 @@ namespace CapaPresentacion
 
             this.LlenarComboTipoEncargado();
             this.LlenarComboDepartamento();
-            this.LlenarComboMunicipio();
             this.cbEstado.Visible = false;
             this.label10.Visible = false;
         }
 
+
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+
         private void LlenarComboTipoEncargado()
         {
-            cbTipoEncargado.DataSource = NTipo_Encargado.Mostrar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Id_Tipo_Encargado, Nombre from Tipo_Encargado", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["Nombre"] = "Seleccione un Parentezco";
+            dt.Rows.InsertAt(fila, 0);
+
             cbTipoEncargado.ValueMember = "Id_Tipo_Encargado";
             cbTipoEncargado.DisplayMember = "Nombre";
-
+            cbTipoEncargado.DataSource = dt;
         }
 
-        private void LlenarComboMunicipio()
+        private void LlenarComboMunicipio(string id_departamento)
         {
-            cbMunicipio.DataSource = NMunicipio.Mostrar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Id_Municipio, Nombre_Muni from Municipio where Id_Departamento = @Id_Departamento", con);
+            cmd.Parameters.AddWithValue("Id_Departamento", id_departamento);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["Nombre_Muni"] = "Seleccione un Municipio";
+            dt.Rows.InsertAt(fila, 0);
+
             cbMunicipio.ValueMember = "Id_Municipio";
-            cbMunicipio.DisplayMember = "Municipio";
+            cbMunicipio.DisplayMember = "Nombre_Muni";
+            cbMunicipio.DataSource = dt;
         }
 
         private void LlenarComboDepartamento()
         {
-            cbDepartamento.DataSource = NDepartamento.Mostrar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Id_Departamento, Nombre_Dep from Departamento", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["Nombre_Dep"] = "Seleccione un Departamento";
+            dt.Rows.InsertAt(fila, 0);
+
             cbDepartamento.ValueMember = "Id_Departamento";
             cbDepartamento.DisplayMember = "Nombre_Dep";
+            cbDepartamento.DataSource = dt;
         }
-
 
         private void MensajeOk(string mensaje)
         {
@@ -362,6 +397,15 @@ namespace CapaPresentacion
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
                 this.txtDireccion.Focus();
+        }
+
+        private void cbDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbDepartamento.SelectedValue.ToString() != null)
+            {
+                string id_departamento = cbDepartamento.SelectedValue.ToString();
+                LlenarComboMunicipio(id_departamento);
+            }
         }
     }
 }

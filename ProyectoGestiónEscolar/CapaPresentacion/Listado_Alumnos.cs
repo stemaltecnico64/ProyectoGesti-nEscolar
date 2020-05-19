@@ -16,6 +16,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             this.txtBuscar.Focus();
+           
         }
 
         private void OcultarColumnas()
@@ -25,7 +26,6 @@ namespace CapaPresentacion
         private void Mostrar()
         {
             this.dataListado.DataSource = NAlumno.Mostrar();
-            this.OcultarColumnas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
@@ -56,8 +56,8 @@ namespace CapaPresentacion
 
         private void Listado_Alumnos_Load(object sender, EventArgs e)
         {
-            this.txtBuscar.Focus();
             this.Mostrar();
+            this.txtBuscar.Focus();
         }
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)

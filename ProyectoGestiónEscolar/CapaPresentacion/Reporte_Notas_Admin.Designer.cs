@@ -50,12 +50,9 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.cbBuscar = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.Tabla_Usuarios)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
@@ -238,34 +235,6 @@
             this.cbBuscar.TabIndex = 215;
             this.cbBuscar.Text = "GRADO";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Maroon;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "No. Dpi",
-            "Primer Apellido"});
-            this.comboBox1.Location = new System.Drawing.Point(320, 78);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(172, 31);
-            this.comboBox1.TabIndex = 216;
-            this.comboBox1.Text = "SECCION";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Maroon;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "No. Dpi",
-            "Primer Apellido"});
-            this.comboBox2.Location = new System.Drawing.Point(511, 78);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(172, 31);
-            this.comboBox2.TabIndex = 217;
-            this.comboBox2.Text = "CURSO";
-            // 
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
@@ -292,44 +261,12 @@
             this.label1.TabIndex = 166;
             this.label1.Text = "Ingresar Nota";
             // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.Maroon;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "No. Dpi",
-            "Primer Apellido"});
-            this.comboBox3.Location = new System.Drawing.Point(689, 78);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(172, 31);
-            this.comboBox3.TabIndex = 218;
-            this.comboBox3.Text = "MAESTRO";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.ForeColor = System.Drawing.Color.Maroon;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "No. Dpi",
-            "Primer Apellido"});
-            this.comboBox4.Location = new System.Drawing.Point(867, 78);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(172, 31);
-            this.comboBox4.TabIndex = 219;
-            this.comboBox4.Text = "CARRERA";
-            // 
             // Reporte_Notas_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 573);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cbBuscar);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.label1);
@@ -357,13 +294,9 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.ComboBox cbBuscar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuImageButton btnNuevo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Maestro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grado;
@@ -373,5 +306,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Bloque_2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bloque_3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bloque_4;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

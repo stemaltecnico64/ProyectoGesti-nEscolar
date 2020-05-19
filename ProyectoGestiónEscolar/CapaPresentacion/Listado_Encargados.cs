@@ -30,31 +30,31 @@ namespace CapaPresentacion
         }
         private void OcultarColumnas()
         {
-            this.dataListado.Columns[0].Visible = false;
-            this.dataListado.Columns[7].Visible = false;
+            this.dataListadoE.Columns[0].Visible = false;
+            this.dataListadoE.Columns[7].Visible = false;
         }
 
         private void Mostrar()
         {
-            this.dataListado.DataSource = NEncargado.Mostrar();
+            this.dataListadoE.DataSource = NEncargado.Mostrar();
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoE.Rows.Count);
         }
 
         //Método BuscarApellidos
         private void BuscarApellido()
         {
-            this.dataListado.DataSource = NEncargado.Apellido(this.txtBuscar.Text);
+            this.dataListadoE.DataSource = NEncargado.Apellido(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoE.Rows.Count);
         }
 
 
         private void BuscarDPI()
         {
-            this.dataListado.DataSource = NEncargado.Dpi(this.txtBuscar.Text);
+            this.dataListadoE.DataSource = NEncargado.Dpi(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoE.Rows.Count);
         }
         private void btExit_Click(object sender, EventArgs e)
         {
@@ -100,14 +100,15 @@ namespace CapaPresentacion
 
         private void DataListado_DoubleClick(object sender, EventArgs e)
         {
-            Ingresar_Alumno from = Ingresar_Alumno.GetInstancia();
-            string a, b, c, d;
-            a = Convert.ToString(this.dataListado.CurrentRow.Cells["Id_Encargado"].Value);
-            b = Convert.ToString(this.dataListado.CurrentRow.Cells["DPI"].Value);
-            c = Convert.ToString(this.dataListado.CurrentRow.Cells["Primer Nombre"].Value);
-            d = Convert.ToString(this.dataListado.CurrentRow.Cells["Primer Apellido"].Value);
-            from.SetEncargado(a, b, c, d);
-            this.Hide();
+            if(dataListadoE.Rows.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                this.Hide();
+            }
         }
     }
 }

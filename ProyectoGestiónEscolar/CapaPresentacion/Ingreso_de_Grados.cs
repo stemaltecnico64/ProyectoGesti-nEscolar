@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocios;
+using System.Data.SqlClient;
 namespace CapaPresentacion
 {
     public partial class Ingreso_de_Grados : Form
@@ -19,7 +20,29 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             this.ttMensaje.SetToolTip(this.txtGrado, "Debe ingresas un grado, Ejemplo: 4to. 5to. 6to.");
+            this.LlenarComboCarrera();
+        }
 
+
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+
+
+        private void LlenarComboCarrera()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Id_Carrera, Nombre from Carrera", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["Nombre"] = "Seleccione una Carrera";
+            dt.Rows.InsertAt(fila, 0);
+
+            cbCarrera.ValueMember = "Id_Carrera";
+            cbCarrera.DisplayMember = "Nombre";
+            cbCarrera.DataSource = dt;
         }
 
         private void MensajeOk(string mensaje)
@@ -112,7 +135,7 @@ namespace CapaPresentacion
                 {
                     if (this.IsNuevo)
                     {
-                        rpta = NGrado.Insertar(this.txtGrado.Text);
+                        rpta = NGrado.Insertar(this.txtGrado.Text, Convert.ToInt32(this.cbCarrera.Text));
 
                     }
                     else

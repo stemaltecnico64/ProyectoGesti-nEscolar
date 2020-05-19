@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocios;
+using System.Data.SqlClient;
 namespace CapaPresentacion
 {
     public partial class Inscripcion_alumno : Form
@@ -33,12 +34,15 @@ namespace CapaPresentacion
             this.ttMensaje.SetToolTip(this.cbSeccion, "Seleccione una Sección");
 
 
-            this.LlenarCiclo();
+            this.LlenarComboCiclo();
             this.LlenarTipoIns();
-            this.LlenarCarrera();
-            this.LlenarGrado();
-            this.LlenarSeccion();
+            this.LlenarComboCarrera();
+            this.LlenarComboSeccion();
         }
+
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+
+
         public void SetAlumno(string idalumno, string cui, string nombresyapellidos)
         {
             this.txtId_Alumno.Text = idalumno;
@@ -46,39 +50,91 @@ namespace CapaPresentacion
             this.txtNombreAlumno.Text = nombresyapellidos;
         }
 
-        private void LlenarCiclo()
+        private void LlenarComboCiclo()
         {
-            cbCiclo.DataSource = NCiclo.Mostrar();
-            cbCiclo.ValueMember = "Código";
-            cbCiclo.DisplayMember = "Ciclo o Año";
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Id_Ciclo, Ciclo from Ciclo", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            cbCiclo.ValueMember = "Id_Ciclo";
+            cbCiclo.DisplayMember = "Ciclo";
+            cbCiclo.DataSource = dt;
         }
 
         private void LlenarTipoIns()
         {
-            cbTipo_Inscripcion.DataSource = NTipo_Inscripcion.Mostrar();
-            cbTipo_Inscripcion.ValueMember = "Código";
-            cbTipo_Inscripcion.DisplayMember = "Tipo de Inscripción";
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Id_Tipo_Inscripcion, Nombre from Tipo_Inscripcion", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["Nombre"] = "Eliga un Tipo de Inscripción ";
+            dt.Rows.InsertAt(fila, 0);
+
+            cbTipo_Inscripcion.ValueMember = "Id_Tipo_Inscripcion";
+            cbTipo_Inscripcion.DisplayMember = "Nombre";
+            cbTipo_Inscripcion.DataSource = dt;
         }
 
-        private void LlenarCarrera()
+        private void LlenarComboCarrera()
         {
-            cbCarrera.DataSource = NCarrera.Mostrar();
-            cbCarrera.ValueMember = "Código";
-            cbCarrera.DisplayMember = "Nombre de la Carrera";
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Id_Carrera, Nombre from Carrera", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["Nombre"] = "Seleccione una Carrera";
+            dt.Rows.InsertAt(fila, 0);
+
+            cbCarrera.ValueMember = "Id_Carrera";
+            cbCarrera.DisplayMember = "Nombre";
+            cbCarrera.DataSource = dt;
         }
 
-        private void LlenarGrado()
-        {
-            cbGrado.DataSource = NGrado.Mostrar();
-            cbGrado.ValueMember = "Código";
-            cbGrado.DisplayMember = "Grado";
-        }
 
-        private void LlenarSeccion()
+        private void LlenarComboGrado(string id_carrera)
         {
-            cbSeccion.DataSource = NSeccion.Mostrar();
-            cbSeccion.ValueMember = "Código";
-            cbSeccion.DisplayMember = "Sección";
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Id_Carrera, Nombre from Grado where Id_Carrera = @Id_Carrera", con);
+            cmd.Parameters.AddWithValue("Id_Carrera", id_carrera);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["Nombre"] = "Seleccione un Grado";
+            dt.Rows.InsertAt(fila, 0);
+
+            cbGrado.ValueMember = "Id_Carrera";
+            cbGrado.DisplayMember = "Nombre";
+            cbGrado.DataSource = dt;
+        }
+        private void LlenarComboSeccion()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Id_Seccion, Nombre from Seccion", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["Nombre"] = "Seleccione una Seccion";
+            dt.Rows.InsertAt(fila, 0);
+
+            cbSeccion.ValueMember = "Id_Seccion";
+            cbSeccion.DisplayMember = "Nombre";
+            cbSeccion.DataSource = dt;
         }
 
         private void MensajeOk(string mensaje)
@@ -140,7 +196,7 @@ namespace CapaPresentacion
 
         private void btn_nuevo_alumno_Click(object sender, EventArgs e)
         {
-            Ingresar_Alumno ventanalumno =  Ingresar_Alumno.GetInstancia();
+            Ingresar_Alumno ventanalumno = new Ingresar_Alumno();
             ventanalumno.Show();
         }
 
@@ -238,6 +294,15 @@ namespace CapaPresentacion
             {
                 Listado_Alumnos ver = new Listado_Alumnos();
                 ver.Show();
+            }
+        }
+
+        private void cbCarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbCarrera.SelectedValue.ToString() != null)
+            {
+                string id_carrera = cbCarrera.SelectedValue.ToString();
+                LlenarComboGrado(id_carrera);
             }
         }
     }

@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ajustes_Admin));
             this.DesktopPanel = new System.Windows.Forms.Panel();
             this.SideMenuPanel = new System.Windows.Forms.Panel();
+            this.btn_ciclo = new System.Windows.Forms.Button();
             this.btn_minimizar = new Bunifu.Framework.UI.BunifuImageButton();
             this.Btn_Cerrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_puestos = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             this.btn_Departamentos = new System.Windows.Forms.Button();
             this.btn_municipios = new System.Windows.Forms.Button();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.btn_ciclo = new System.Windows.Forms.Button();
+            this.btn_inscripcion = new System.Windows.Forms.Button();
             this.SideMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
@@ -57,6 +58,7 @@
             // SideMenuPanel
             // 
             this.SideMenuPanel.BackColor = System.Drawing.Color.SaddleBrown;
+            this.SideMenuPanel.Controls.Add(this.btn_inscripcion);
             this.SideMenuPanel.Controls.Add(this.btn_ciclo);
             this.SideMenuPanel.Controls.Add(this.btn_minimizar);
             this.SideMenuPanel.Controls.Add(this.Btn_Cerrar);
@@ -70,6 +72,23 @@
             this.SideMenuPanel.Name = "SideMenuPanel";
             this.SideMenuPanel.Size = new System.Drawing.Size(183, 526);
             this.SideMenuPanel.TabIndex = 1;
+            // 
+            // btn_ciclo
+            // 
+            this.btn_ciclo.FlatAppearance.BorderSize = 0;
+            this.btn_ciclo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ciclo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ciclo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_ciclo.Image = ((System.Drawing.Image)(resources.GetObject("btn_ciclo.Image")));
+            this.btn_ciclo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ciclo.Location = new System.Drawing.Point(0, 406);
+            this.btn_ciclo.Name = "btn_ciclo";
+            this.btn_ciclo.Size = new System.Drawing.Size(179, 43);
+            this.btn_ciclo.TabIndex = 54;
+            this.btn_ciclo.Text = "Ciclo Escolar";
+            this.btn_ciclo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_ciclo.UseVisualStyleBackColor = true;
+            this.btn_ciclo.Click += new System.EventHandler(this.btn_ciclo_Click);
             // 
             // btn_minimizar
             // 
@@ -107,9 +126,9 @@
             this.btn_puestos.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_puestos.Image = ((System.Drawing.Image)(resources.GetObject("btn_puestos.Image")));
             this.btn_puestos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_puestos.Location = new System.Drawing.Point(2, 384);
+            this.btn_puestos.Location = new System.Drawing.Point(2, 336);
             this.btn_puestos.Name = "btn_puestos";
-            this.btn_puestos.Size = new System.Drawing.Size(180, 55);
+            this.btn_puestos.Size = new System.Drawing.Size(179, 43);
             this.btn_puestos.TabIndex = 23;
             this.btn_puestos.Text = "Puestos";
             this.btn_puestos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -124,9 +143,9 @@
             this.btn_cuenta.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_cuenta.Image = ((System.Drawing.Image)(resources.GetObject("btn_cuenta.Image")));
             this.btn_cuenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cuenta.Location = new System.Drawing.Point(3, 312);
+            this.btn_cuenta.Location = new System.Drawing.Point(2, 266);
             this.btn_cuenta.Name = "btn_cuenta";
-            this.btn_cuenta.Size = new System.Drawing.Size(179, 55);
+            this.btn_cuenta.Size = new System.Drawing.Size(179, 43);
             this.btn_cuenta.TabIndex = 22;
             this.btn_cuenta.Text = "Cuenta";
             this.btn_cuenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,9 +160,9 @@
             this.btn_encargados.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_encargados.Image = ((System.Drawing.Image)(resources.GetObject("btn_encargados.Image")));
             this.btn_encargados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_encargados.Location = new System.Drawing.Point(5, 240);
+            this.btn_encargados.Location = new System.Drawing.Point(3, 196);
             this.btn_encargados.Name = "btn_encargados";
-            this.btn_encargados.Size = new System.Drawing.Size(180, 55);
+            this.btn_encargados.Size = new System.Drawing.Size(179, 43);
             this.btn_encargados.TabIndex = 21;
             this.btn_encargados.Text = "Encargados";
             this.btn_encargados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -158,9 +177,9 @@
             this.btn_Departamentos.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_Departamentos.Image = ((System.Drawing.Image)(resources.GetObject("btn_Departamentos.Image")));
             this.btn_Departamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Departamentos.Location = new System.Drawing.Point(3, 97);
+            this.btn_Departamentos.Location = new System.Drawing.Point(2, 60);
             this.btn_Departamentos.Name = "btn_Departamentos";
-            this.btn_Departamentos.Size = new System.Drawing.Size(179, 54);
+            this.btn_Departamentos.Size = new System.Drawing.Size(179, 39);
             this.btn_Departamentos.TabIndex = 20;
             this.btn_Departamentos.Text = "Departamentos";
             this.btn_Departamentos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -175,9 +194,9 @@
             this.btn_municipios.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_municipios.Image = ((System.Drawing.Image)(resources.GetObject("btn_municipios.Image")));
             this.btn_municipios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_municipios.Location = new System.Drawing.Point(3, 168);
+            this.btn_municipios.Location = new System.Drawing.Point(3, 126);
             this.btn_municipios.Name = "btn_municipios";
-            this.btn_municipios.Size = new System.Drawing.Size(179, 55);
+            this.btn_municipios.Size = new System.Drawing.Size(179, 43);
             this.btn_municipios.TabIndex = 19;
             this.btn_municipios.Text = "Municipios";
             this.btn_municipios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,22 +210,22 @@
             this.bunifuDragControl1.TargetControl = this.SideMenuPanel;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // btn_ciclo
+            // btn_inscripcion
             // 
-            this.btn_ciclo.FlatAppearance.BorderSize = 0;
-            this.btn_ciclo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ciclo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ciclo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_ciclo.Image = ((System.Drawing.Image)(resources.GetObject("btn_ciclo.Image")));
-            this.btn_ciclo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ciclo.Location = new System.Drawing.Point(2, 456);
-            this.btn_ciclo.Name = "btn_ciclo";
-            this.btn_ciclo.Size = new System.Drawing.Size(180, 55);
-            this.btn_ciclo.TabIndex = 54;
-            this.btn_ciclo.Text = "Ciclo Escolar";
-            this.btn_ciclo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_ciclo.UseVisualStyleBackColor = true;
-            this.btn_ciclo.Click += new System.EventHandler(this.btn_ciclo_Click);
+            this.btn_inscripcion.FlatAppearance.BorderSize = 0;
+            this.btn_inscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_inscripcion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_inscripcion.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_inscripcion.Image = ((System.Drawing.Image)(resources.GetObject("btn_inscripcion.Image")));
+            this.btn_inscripcion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_inscripcion.Location = new System.Drawing.Point(1, 476);
+            this.btn_inscripcion.Name = "btn_inscripcion";
+            this.btn_inscripcion.Size = new System.Drawing.Size(179, 43);
+            this.btn_inscripcion.TabIndex = 55;
+            this.btn_inscripcion.Text = "Inscripción";
+            this.btn_inscripcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_inscripcion.UseVisualStyleBackColor = true;
+            this.btn_inscripcion.Click += new System.EventHandler(this.btn_inscripcion_Click);
             // 
             // Ajustes_Admin
             // 
@@ -238,5 +257,6 @@
         private Bunifu.Framework.UI.BunifuImageButton Btn_Cerrar;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Button btn_ciclo;
+        private System.Windows.Forms.Button btn_inscripcion;
     }
 }

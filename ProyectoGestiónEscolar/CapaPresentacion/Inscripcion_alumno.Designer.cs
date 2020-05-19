@@ -636,6 +636,7 @@
             this.cbCarrera.Name = "cbCarrera";
             this.cbCarrera.Size = new System.Drawing.Size(267, 23);
             this.cbCarrera.TabIndex = 121;
+            this.cbCarrera.SelectedIndexChanged += new System.EventHandler(this.cbCarrera_SelectedIndexChanged);
             // 
             // cbGrado
             // 
@@ -650,9 +651,9 @@
             // 
             this.cbSeccion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
             this.cbSeccion.FormattingEnabled = true;
-            this.cbSeccion.Location = new System.Drawing.Point(46, 332);
+            this.cbSeccion.Location = new System.Drawing.Point(25, 332);
             this.cbSeccion.Name = "cbSeccion";
-            this.cbSeccion.Size = new System.Drawing.Size(130, 23);
+            this.cbSeccion.Size = new System.Drawing.Size(168, 23);
             this.cbSeccion.TabIndex = 123;
             // 
             // Inscripcion_alumno

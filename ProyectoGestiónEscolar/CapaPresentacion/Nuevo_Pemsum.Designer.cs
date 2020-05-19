@@ -38,16 +38,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbPeriodos = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.comboBox_grado = new System.Windows.Forms.ComboBox();
+            this.cbGrado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox_carrera = new System.Windows.Forms.ComboBox();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.cbCarrera = new System.Windows.Forms.ComboBox();
+            this.txtCurso = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCui = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtPensum = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label18 = new System.Windows.Forms.Label();
             this.Tabla_Usuarios = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Nombre_Curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,6 +116,7 @@
             this.btnNuevo.TabIndex = 251;
             this.btnNuevo.TabStop = false;
             this.btnNuevo.Zoom = 10;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btn_guardar
             // 
@@ -130,14 +131,21 @@
             this.btn_guardar.TabStop = false;
             this.btn_guardar.Zoom = 10;
             // 
-            // comboBox1
+            // cbPeriodos
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(720, 170);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 23);
-            this.comboBox1.TabIndex = 249;
+            this.cbPeriodos.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPeriodos.FormattingEnabled = true;
+            this.cbPeriodos.Items.AddRange(new object[] {
+            "Seleccione No. de Periodos",
+            "1 Periodo",
+            "2 Periodos",
+            "3 Periodos",
+            "4 Periodos",
+            "5 Periodos"});
+            this.cbPeriodos.Location = new System.Drawing.Point(689, 170);
+            this.cbPeriodos.Name = "cbPeriodos";
+            this.cbPeriodos.Size = new System.Drawing.Size(201, 23);
+            this.cbPeriodos.TabIndex = 249;
             // 
             // label4
             // 
@@ -165,14 +173,14 @@
             this.btnGuardar.TabStop = false;
             this.btnGuardar.Zoom = 10;
             // 
-            // comboBox_grado
+            // cbGrado
             // 
-            this.comboBox_grado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_grado.FormattingEnabled = true;
-            this.comboBox_grado.Location = new System.Drawing.Point(517, 170);
-            this.comboBox_grado.Name = "comboBox_grado";
-            this.comboBox_grado.Size = new System.Drawing.Size(162, 23);
-            this.comboBox_grado.TabIndex = 246;
+            this.cbGrado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGrado.FormattingEnabled = true;
+            this.cbGrado.Location = new System.Drawing.Point(499, 170);
+            this.cbGrado.Name = "cbGrado";
+            this.cbGrado.Size = new System.Drawing.Size(184, 23);
+            this.cbGrado.TabIndex = 246;
             // 
             // label3
             // 
@@ -181,7 +189,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Sienna;
-            this.label3.Location = new System.Drawing.Point(571, 134);
+            this.label3.Location = new System.Drawing.Point(563, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 23);
             this.label3.TabIndex = 245;
@@ -194,39 +202,40 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Sienna;
-            this.label1.Location = new System.Drawing.Point(361, 134);
+            this.label1.Location = new System.Drawing.Point(351, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 23);
             this.label1.TabIndex = 243;
             this.label1.Text = "Carrera";
             // 
-            // comboBox_carrera
+            // cbCarrera
             // 
-            this.comboBox_carrera.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_carrera.FormattingEnabled = true;
-            this.comboBox_carrera.Location = new System.Drawing.Point(287, 169);
-            this.comboBox_carrera.Name = "comboBox_carrera";
-            this.comboBox_carrera.Size = new System.Drawing.Size(193, 23);
-            this.comboBox_carrera.TabIndex = 244;
+            this.cbCarrera.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCarrera.FormattingEnabled = true;
+            this.cbCarrera.Location = new System.Drawing.Point(276, 169);
+            this.cbCarrera.Name = "cbCarrera";
+            this.cbCarrera.Size = new System.Drawing.Size(217, 23);
+            this.cbCarrera.TabIndex = 244;
+            this.cbCarrera.SelectedIndexChanged += new System.EventHandler(this.cbCarrera_SelectedIndexChanged);
             // 
-            // bunifuMaterialTextbox2
+            // txtCurso
             // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(8, 159);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(261, 33);
-            this.bunifuMaterialTextbox2.TabIndex = 242;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCurso.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCurso.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCurso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCurso.HintForeColor = System.Drawing.Color.Empty;
+            this.txtCurso.HintText = "";
+            this.txtCurso.isPassword = false;
+            this.txtCurso.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtCurso.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtCurso.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCurso.LineThickness = 3;
+            this.txtCurso.Location = new System.Drawing.Point(8, 159);
+            this.txtCurso.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCurso.Name = "txtCurso";
+            this.txtCurso.Size = new System.Drawing.Size(261, 33);
+            this.txtCurso.TabIndex = 242;
+            this.txtCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label2
             // 
@@ -241,24 +250,24 @@
             this.label2.TabIndex = 241;
             this.label2.Text = "Nombre del Curso:";
             // 
-            // txtCui
+            // txtPensum
             // 
-            this.txtCui.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCui.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtCui.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCui.HintForeColor = System.Drawing.Color.Empty;
-            this.txtCui.HintText = "";
-            this.txtCui.isPassword = false;
-            this.txtCui.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtCui.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtCui.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCui.LineThickness = 3;
-            this.txtCui.Location = new System.Drawing.Point(179, 69);
-            this.txtCui.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCui.Name = "txtCui";
-            this.txtCui.Size = new System.Drawing.Size(240, 33);
-            this.txtCui.TabIndex = 240;
-            this.txtCui.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPensum.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPensum.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtPensum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPensum.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPensum.HintText = "";
+            this.txtPensum.isPassword = false;
+            this.txtPensum.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtPensum.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPensum.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtPensum.LineThickness = 3;
+            this.txtPensum.Location = new System.Drawing.Point(179, 69);
+            this.txtPensum.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPensum.Name = "txtPensum";
+            this.txtPensum.Size = new System.Drawing.Size(240, 33);
+            this.txtPensum.TabIndex = 240;
+            this.txtPensum.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label18
             // 
@@ -269,9 +278,9 @@
             this.label18.ForeColor = System.Drawing.Color.Sienna;
             this.label18.Location = new System.Drawing.Point(22, 79);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(144, 23);
+            this.label18.Size = new System.Drawing.Size(141, 23);
             this.label18.TabIndex = 239;
-            this.label18.Text = "Pemsum del Grado:";
+            this.label18.Text = "Pensum del Grado:";
             // 
             // Tabla_Usuarios
             // 
@@ -380,11 +389,11 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(344, 12);
+            this.label8.Location = new System.Drawing.Point(378, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(212, 26);
+            this.label8.Size = new System.Drawing.Size(207, 26);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Nuevo Pemsum Escolar";
+            this.label8.Text = "Nuevo Pensum Escolar";
             // 
             // Nuevo_Pemsum
             // 
@@ -396,16 +405,16 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btn_guardar);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbPeriodos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.comboBox_grado);
+            this.Controls.Add(this.cbGrado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox_carrera);
-            this.Controls.Add(this.bunifuMaterialTextbox2);
+            this.Controls.Add(this.cbCarrera);
+            this.Controls.Add(this.txtCurso);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtCui);
+            this.Controls.Add(this.txtPensum);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.Tabla_Usuarios);
             this.Controls.Add(this.panelTitleBar);
@@ -431,16 +440,16 @@
         private System.Windows.Forms.Label label6;
         private Bunifu.Framework.UI.BunifuImageButton btnNuevo;
         private Bunifu.Framework.UI.BunifuImageButton btn_guardar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbPeriodos;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuImageButton btnGuardar;
-        private System.Windows.Forms.ComboBox comboBox_grado;
+        private System.Windows.Forms.ComboBox cbGrado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox_carrera;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private System.Windows.Forms.ComboBox cbCarrera;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCurso;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCui;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPensum;
         private System.Windows.Forms.Label label18;
         private Bunifu.Framework.UI.BunifuCustomDataGrid Tabla_Usuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Curso;

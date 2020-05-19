@@ -11,10 +11,11 @@ namespace CapaNegocios
    public class NGrado
     {
 
-        public static string Insertar(string nombre)
+        public static string Insertar(string nombre, int idcarrera)
         {
             DGrado Obj = new DGrado();
             Obj.Nombre = nombre;
+            Obj.IdCarrera = idcarrera;
             return Obj.Insertar(Obj);
         }
 

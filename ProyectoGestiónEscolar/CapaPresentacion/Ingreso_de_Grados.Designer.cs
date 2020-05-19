@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingreso_de_Grados));
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.btExit = new System.Windows.Forms.Button();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.txtGrado = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,6 +52,8 @@
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.cbCarrera = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
@@ -69,7 +70,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(272, 12);
+            this.lblTitle.Location = new System.Drawing.Point(188, 19);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(74, 26);
             this.lblTitle.TabIndex = 0;
@@ -78,26 +79,12 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panelTitleBar.Controls.Add(this.btExit);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(552, 61);
+            this.panelTitleBar.Size = new System.Drawing.Size(452, 61);
             this.panelTitleBar.TabIndex = 206;
-            // 
-            // btExit
-            // 
-            this.btExit.BackColor = System.Drawing.Color.Red;
-            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
-            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btExit.ForeColor = System.Drawing.Color.Red;
-            this.btExit.Location = new System.Drawing.Point(514, 3);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(35, 35);
-            this.btExit.TabIndex = 114;
-            this.btExit.UseVisualStyleBackColor = false;
-            this.btExit.Click += new System.EventHandler(this.BtExit_Click);
             // 
             // bunifuDragControl1
             // 
@@ -118,10 +105,10 @@
             this.txtGrado.LineIdleColor = System.Drawing.Color.Gray;
             this.txtGrado.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtGrado.LineThickness = 3;
-            this.txtGrado.Location = new System.Drawing.Point(72, 122);
+            this.txtGrado.Location = new System.Drawing.Point(77, 122);
             this.txtGrado.Margin = new System.Windows.Forms.Padding(4);
             this.txtGrado.Name = "txtGrado";
-            this.txtGrado.Size = new System.Drawing.Size(312, 33);
+            this.txtGrado.Size = new System.Drawing.Size(169, 33);
             this.txtGrado.TabIndex = 214;
             this.txtGrado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -132,7 +119,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Sienna;
-            this.label1.Location = new System.Drawing.Point(12, 125);
+            this.label1.Location = new System.Drawing.Point(11, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 23);
             this.label1.TabIndex = 213;
@@ -145,7 +132,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Sienna;
-            this.label21.Location = new System.Drawing.Point(454, 192);
+            this.label21.Location = new System.Drawing.Point(348, 217);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(73, 23);
             this.label21.TabIndex = 212;
@@ -158,7 +145,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Sienna;
-            this.label20.Location = new System.Drawing.Point(73, 192);
+            this.label20.Location = new System.Drawing.Point(23, 217);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(55, 23);
             this.label20.TabIndex = 210;
@@ -171,7 +158,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Sienna;
-            this.label15.Location = new System.Drawing.Point(197, 192);
+            this.label15.Location = new System.Drawing.Point(147, 217);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 23);
             this.label15.TabIndex = 208;
@@ -194,7 +181,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Sienna;
-            this.label18.Location = new System.Drawing.Point(12, 81);
+            this.label18.Location = new System.Drawing.Point(11, 79);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 23);
             this.label18.TabIndex = 216;
@@ -202,12 +189,12 @@
             // 
             // dataListado
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            this.dataListado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dataListado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataListado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -215,23 +202,23 @@
             this.dataListado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataListado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataListado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataListado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataListado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataListado.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataListado.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataListado.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataListado.DoubleBuffered = true;
             this.dataListado.EnableHeadersVisualStyles = false;
             this.dataListado.HeaderBgColor = System.Drawing.Color.Maroon;
@@ -241,7 +228,7 @@
             this.dataListado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataListado.RowHeadersVisible = false;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(511, 158);
+            this.dataListado.Size = new System.Drawing.Size(411, 158);
             this.dataListado.TabIndex = 217;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.DataListado_DoubleClick);
@@ -261,7 +248,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Sienna;
-            this.label2.Location = new System.Drawing.Point(334, 192);
+            this.label2.Location = new System.Drawing.Point(258, 217);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 23);
             this.label2.TabIndex = 219;
@@ -272,7 +259,7 @@
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
             this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.icons8_Edit_Property_48px1;
             this.btnEditar.ImageActive = null;
-            this.btnEditar.Location = new System.Drawing.Point(277, 175);
+            this.btnEditar.Location = new System.Drawing.Point(262, 162);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(51, 52);
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -286,7 +273,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px;
             this.btnCancelar.ImageActive = null;
-            this.btnCancelar.Location = new System.Drawing.Point(401, 180);
+            this.btnCancelar.Location = new System.Drawing.Point(352, 162);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(51, 47);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -300,7 +287,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
             this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.icons8_Add_List_48px;
             this.btnNuevo.ImageActive = null;
-            this.btnNuevo.Location = new System.Drawing.Point(16, 175);
+            this.btnNuevo.Location = new System.Drawing.Point(27, 162);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(51, 52);
             this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -314,7 +301,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageActive = null;
-            this.btnGuardar.Location = new System.Drawing.Point(144, 178);
+            this.btnGuardar.Location = new System.Drawing.Point(151, 162);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(51, 49);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -328,18 +315,43 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lblTotal.Location = new System.Drawing.Point(383, 254);
+            this.lblTotal.Location = new System.Drawing.Point(53, 254);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(56, 23);
             this.lblTotal.TabIndex = 220;
             this.lblTotal.Text = "label3";
             // 
+            // cbCarrera
+            // 
+            this.cbCarrera.FormattingEnabled = true;
+            this.cbCarrera.Items.AddRange(new object[] {
+            "Quetzaltenango"});
+            this.cbCarrera.Location = new System.Drawing.Point(265, 112);
+            this.cbCarrera.Name = "cbCarrera";
+            this.cbCarrera.Size = new System.Drawing.Size(162, 21);
+            this.cbCarrera.TabIndex = 221;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Sienna;
+            this.label13.Location = new System.Drawing.Point(279, 79);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(142, 23);
+            this.label13.TabIndex = 222;
+            this.label13.Text = "Carrera a Asignar";
+            // 
             // Ingreso_de_Grados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 450);
+            this.ClientSize = new System.Drawing.Size(452, 524);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.cbCarrera);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnEditar);
@@ -377,7 +389,6 @@
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.Button btExit;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtGrado;
         private System.Windows.Forms.Label label1;
@@ -395,5 +406,7 @@
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuImageButton btnEditar;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.ComboBox cbCarrera;
+        private System.Windows.Forms.Label label13;
     }
 }

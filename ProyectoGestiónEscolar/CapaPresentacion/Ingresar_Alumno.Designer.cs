@@ -173,6 +173,7 @@
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(162, 23);
             this.cbDepartamento.TabIndex = 48;
+            this.cbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cbDepartamento_SelectedIndexChanged);
             this.cbDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CbDepartamento_KeyPress);
             // 
             // label13

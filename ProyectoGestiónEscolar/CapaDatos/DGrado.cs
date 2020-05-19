@@ -12,19 +12,23 @@ namespace CapaDatos
     {
         private int _IdGrado;
         private string _Nombre;
+        private int _IdCarrera;
+
 
         public int IdGrado { get => _IdGrado; set => _IdGrado = value; }
         public string Nombre { get => _Nombre; set => _Nombre = value; }
+        public int IdCarrera { get => _IdCarrera; set => _IdCarrera = value; }
 
         public DGrado()
         {
 
         }
 
-        public DGrado(int idgrado, string nombre)
+        public DGrado(int idgrado, string nombre, int idcarrera)
         {
             this.IdGrado = idgrado;
             this.Nombre = nombre;
+            this.IdCarrera = idcarrera;
         }
 
         public string Insertar(DGrado Grado)
@@ -54,6 +58,12 @@ namespace CapaDatos
                 ParNombre.Size = 50;
                 ParNombre.Value = Grado.Nombre;
                 SqlCmd.Parameters.Add(ParNombre);
+
+                SqlParameter ParIdCarrera = new SqlParameter();
+                ParIdGrado.ParameterName = "@Id_Carrera";
+                ParIdGrado.SqlDbType = SqlDbType.Int;
+                ParIdGrado.Direction = ParameterDirection.Output;
+                SqlCmd.Parameters.Add(ParIdCarrera);
 
 
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
