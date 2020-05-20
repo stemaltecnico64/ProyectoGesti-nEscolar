@@ -16,7 +16,7 @@ namespace ProyectoGestiónEscolar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run (new Nuevo_Pemsum());
+            Application.Run (new Inicio());
         }
     }
 }
