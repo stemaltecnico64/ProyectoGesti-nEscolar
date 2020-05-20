@@ -19,8 +19,11 @@ namespace CapaPresentacion
 
         private void Btn_Crear_Click(object sender, EventArgs e)
         {
-            Nuevo_Pemsum np = new Nuevo_Pemsum();
-            np.Show();
+        }
+
+        private void Btn_All_Users_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
