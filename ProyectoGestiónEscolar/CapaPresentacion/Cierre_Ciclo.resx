@@ -117,50 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icons8_Save_48px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Save_48px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Stop_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Stop_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Print_48px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Print_48px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Add_List_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Add_List_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="file" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\file.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Edit_Property_48px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Edit_Property_48px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="feliz-nino-lindo-nino-nina-mama-papa_97632-1964" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\feliz-nino-lindo-nino-nina-mama-papa_97632-1964.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Save_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Save_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Delete_48px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Delete_48px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Edit_Property_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Edit_Property_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Cancel_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Cancel_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Delete_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Delete_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fondo Proyecto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fondo Proyecto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Close_Window_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Close_Window_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Search_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Search_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="ttMensaje.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>370, 9</value>
+  </metadata>
+  <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>475, 9</value>
+  </metadata>
+  <metadata name="errorIcono.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>635, 9</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAo9JREFUaEPtmN1r02AUh3sr+j95ZeNWZRd+IQ4VkQ3US2+8mhfVpq0fbNpJYZYq
+        Xk0ZQ9SJoAaFvNmWdbPOKV3rcHXVIhRl07UDd3xPPlgWwkyavUkY+cFDIG3P+T2lJCWRMEFJNCH1RHky
+        /F8SYlWF/OAS4go9/mkbntT0eRxPPtJj5vB1cZdWyVk4Xsyezs5A/HFlS+gihY6UBOcflODicMU1Z4Zm
+        4cjAFEVuxlLkVVsSKIAFF36ubwmWj6XH4fKTKjwrr28LyRff4exQEd7VWnBisLDakZSkvX2v92jV7MWJ
+        wIFr48pSqzLtoAvg/LYlvBDAz+g/QfN5XQCZXmrC8cxUszNFiG2JIAkgjiWCJoA4kgiiAGJbIqgCiCJx
+        W251piVxX3pmt1Z5c4IsgOgSsbQkWN4ngi6AyNVVODogt2hXXqu9ES8ERubWID+5rGA8b1cAwY7YVau9
+        EbsCB2l5vBPHx5Y2lXDDFTrrXH7Wcp8Z1wKXHpaAS0rQdXMSro7VlG/PDTjjUL8MWeGr5T4zrgU+1Nfo
+        kM9w7JYMXTcmXIF/Hntz7yHzsgrlxl/LfWZcC/hNKOA3oYDfOBIQF36DML/sK9jB2MmRQM/dIn2zeuv3
+        C+xg7ORIoDdXhKfTdfAruBs7GDuFAl4mFLASqP9qQunbChNwtjFMBE7eKdAB1lcMt5yis41hIuBlQoEd
+        KUDmG8o5FkjlhrZFDZ7bdoG+R5/gQr7IBJxtDBMBLxMK7EiBnPAF4qMlJuSERW2LGiYC994sQv/zChPu
+        v61qW9QwEfAyoUAo4DKOBboHC8rDWx18/ol3SKsrhhfgbuxg7IQdLQX2J0g3vmAkypMJLinO+YnSwdQL
+        u2q1w/icSOQf0IR8d8w6EUwAAAAASUVORK5CYII=
+</value>
   </data>
 </root>

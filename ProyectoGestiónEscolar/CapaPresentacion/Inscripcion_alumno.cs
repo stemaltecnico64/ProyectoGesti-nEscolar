@@ -152,8 +152,8 @@ namespace CapaPresentacion
         private void Habilitar(bool valor)
         {
             this.txtId_Alumno.Enabled = !valor;
-            this.txtCui_Alumno.Enabled = valor;
-            this.txtNombreAlumno.Enabled = valor;
+            this.txtCui_Alumno.Enabled = !valor;
+            this.txtNombreAlumno.Enabled = !valor;
             this.cbTipo_Inscripcion.Enabled = valor;
             this.cbCarrera.Enabled = valor;
             this.cbGrado.Enabled = valor;
@@ -220,51 +220,59 @@ namespace CapaPresentacion
         {
             try
             {
-                DialogResult Opcion;
-                Opcion = MessageBox.Show("¿Está seguro de guardar estos datos?", "SEGURIDAD DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (Opcion == DialogResult.Yes)
+                if (this.cbCiclo.Text == string.Empty)
                 {
-                    string rpta = "";
-                    if (this.txtNombreAlumno.Text == string.Empty )
+                    MensajeError("Estimado Usuario no tiene un ciclo activo");
+                }
+                else
+                {
+                    DialogResult Opcion;
+                    Opcion = MessageBox.Show("¿Está seguro de guardar estos datos?", "SEGURIDAD DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (Opcion == DialogResult.Yes)
                     {
-                        MensajeError("Falta ingresar algunos datos, serán remarcados");
-                        errorIcono.SetError(txtNombreAlumno, "Ingrese a un alumno");
+                        string rpta = "";
+                        if (this.txtNombreAlumno.Text == string.Empty)
+                        {
+                            MensajeError("Falta ingresar algunos datos, serán remarcados");
+                            errorIcono.SetError(txtNombreAlumno, "Ingrese a un alumno");
 
+                        }
+                        else
+                        {
+
+                            if (this.IsNuevo)
+                            {
+                                rpta = NInscripcion.Insertar(Convert.ToInt32(this.cbCiclo.SelectedValue), Convert.ToInt32(this.cbCarrera.SelectedValue), Convert.ToInt32(this.cbTipo_Inscripcion.SelectedValue), Convert.ToInt32(this.txtId_Alumno.Text),
+                                    Convert.ToInt32(this.cbGrado.SelectedValue), Convert.ToInt32(this.cbSeccion.SelectedValue), this.dtFechaNac.Value, this.cbEstado.Text);
+                            }
+                            if (rpta.Equals("OK"))
+                            {
+                                if (this.IsNuevo)
+                                {
+                                    this.MensajeOk("Se Insertó de forma correcta el registro");
+                                }
+                                else
+                                {
+                                    this.MensajeOk("Se Actualizó de forma correcta el registro");
+                                }
+                            }
+                            else
+                            {
+                                this.MensajeError(rpta);
+                            }
+                            this.IsNuevo = false;
+                            this.Botones();
+                            this.Limpiar();
+
+                        }
                     }
                     else
                     {
 
-                        if (this.IsNuevo)
-                        {
-                            rpta = NInscripcion.Insertar(Convert.ToInt32(this.cbCiclo.SelectedValue), Convert.ToInt32(this.cbCarrera.SelectedValue), Convert.ToInt32(this.cbTipo_Inscripcion.SelectedValue), Convert.ToInt32(this.txtId_Alumno.Text),
-                                Convert.ToInt32(this.cbGrado.SelectedValue), Convert.ToInt32(this.cbSeccion.SelectedValue), this.dtFechaNac.Value, this.cbEstado.Text);
-                        }
-                        if (rpta.Equals("OK"))
-                        {
-                            if (this.IsNuevo)
-                            {
-                                this.MensajeOk("Se Insertó de forma correcta el registro");
-                            }
-                            else
-                            {
-                                this.MensajeOk("Se Actualizó de forma correcta el registro");
-                            }
-                        }
-                        else
-                        {
-                            this.MensajeError(rpta);
-                        }
-                        this.IsNuevo = false;
-                        this.Botones();
-                        this.Limpiar();
-
                     }
                 }
-                else
-                {
-
-                }
             }
+              
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
