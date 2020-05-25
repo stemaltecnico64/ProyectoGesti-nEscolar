@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listado_Empleados));
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btExit = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.Tabla_Empleados = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btn_buscar = new System.Windows.Forms.Button();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.txt_buscar = new Bunifu.Framework.UI.BunifuTextbox();
             this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.cbBuscar = new System.Windows.Forms.ComboBox();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tabla_Empleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
@@ -90,12 +90,12 @@
             // 
             // Tabla_Empleados
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.Tabla_Empleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.Tabla_Empleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Tabla_Empleados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Tabla_Empleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -103,23 +103,23 @@
             this.Tabla_Empleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Tabla_Empleados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Tabla_Empleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Tabla_Empleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Tabla_Empleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Tabla_Empleados.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Tabla_Empleados.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Tabla_Empleados.DefaultCellStyle = dataGridViewCellStyle3;
             this.Tabla_Empleados.DoubleBuffered = true;
             this.Tabla_Empleados.EnableHeadersVisualStyles = false;
             this.Tabla_Empleados.HeaderBgColor = System.Drawing.Color.Maroon;
@@ -131,19 +131,7 @@
             this.Tabla_Empleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Tabla_Empleados.Size = new System.Drawing.Size(824, 273);
             this.Tabla_Empleados.TabIndex = 142;
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.BackColor = System.Drawing.Color.Maroon;
-            this.btn_buscar.FlatAppearance.BorderSize = 0;
-            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscar.ForeColor = System.Drawing.Color.White;
-            this.btn_buscar.Location = new System.Drawing.Point(371, 77);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(147, 32);
-            this.btn_buscar.TabIndex = 144;
-            this.btn_buscar.Text = "Buscar";
-            this.btn_buscar.UseVisualStyleBackColor = false;
+            this.Tabla_Empleados.DoubleClick += new System.EventHandler(this.Tabla_Empleados_DoubleClick);
             // 
             // bunifuDragControl1
             // 
@@ -185,19 +173,6 @@
             this.vScrollBar1.Size = new System.Drawing.Size(26, 219);
             this.vScrollBar1.TabIndex = 147;
             // 
-            // txt_buscar
-            // 
-            this.txt_buscar.BackColor = System.Drawing.Color.White;
-            this.txt_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_buscar.BackgroundImage")));
-            this.txt_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txt_buscar.ForeColor = System.Drawing.Color.Maroon;
-            this.txt_buscar.Icon = ((System.Drawing.Image)(resources.GetObject("txt_buscar.Icon")));
-            this.txt_buscar.Location = new System.Drawing.Point(27, 67);
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(323, 42);
-            this.txt_buscar.TabIndex = 143;
-            this.txt_buscar.text = "";
-            // 
             // btn_guardar
             // 
             this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
@@ -224,15 +199,38 @@
             this.btnNuevo.TabStop = false;
             this.btnNuevo.Zoom = 10;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(303, 82);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(226, 28);
+            this.txtBuscar.TabIndex = 178;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // cbBuscar
+            // 
+            this.cbBuscar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBuscar.FormattingEnabled = true;
+            this.cbBuscar.Items.AddRange(new object[] {
+            "Código",
+            "DPI",
+            "Empleado",
+            "Dirección"});
+            this.cbBuscar.Location = new System.Drawing.Point(27, 82);
+            this.cbBuscar.Name = "cbBuscar";
+            this.cbBuscar.Size = new System.Drawing.Size(233, 28);
+            this.cbBuscar.TabIndex = 177;
+            // 
             // Listado_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 450);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.cbBuscar);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.Tabla_Empleados);
-            this.Controls.Add(this.btn_buscar);
-            this.Controls.Add(this.txt_buscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.vScrollBar1);
@@ -259,13 +257,13 @@
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Label lblTitle;
         private Bunifu.Framework.UI.BunifuCustomDataGrid Tabla_Empleados;
-        private System.Windows.Forms.Button btn_buscar;
-        private Bunifu.Framework.UI.BunifuTextbox txt_buscar;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private Bunifu.Framework.UI.BunifuImageButton btn_guardar;
         private Bunifu.Framework.UI.BunifuImageButton btnNuevo;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.ComboBox cbBuscar;
     }
 }

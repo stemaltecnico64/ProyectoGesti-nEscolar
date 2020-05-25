@@ -19,13 +19,13 @@ namespace CapaPresentacion
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            Inscripcion_alumno VenAlumnos = new Inscripcion_alumno();
+            Inscripcion_alumno VenAlumnos = Inscripcion_alumno.GetInstancia();
             VenAlumnos.Show();
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            d ventanalistadoalumnos = new d();
+            Listado_Alumnos ventanalistadoalumnos = new Listado_Alumnos();
             ventanalistadoalumnos.Show();
         }
 

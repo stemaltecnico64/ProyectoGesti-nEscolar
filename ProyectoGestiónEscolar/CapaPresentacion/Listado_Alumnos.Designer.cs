@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class d
+    partial class Listado_Alumnos
     {
         /// <summary>
         /// Required designer variable.
@@ -187,7 +187,7 @@
             this.vScrollBar1.Size = new System.Drawing.Size(26, 219);
             this.vScrollBar1.TabIndex = 217;
             // 
-            // d
+            // Listado_Alumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -199,7 +199,7 @@
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.panelTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "d";
+            this.Name = "Listado_Alumnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Listado_Alumnos_Load);
             this.panelTitleBar.ResumeLayout(false);

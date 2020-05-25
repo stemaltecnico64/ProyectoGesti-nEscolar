@@ -40,7 +40,7 @@ namespace CapaPresentacion
             this.LlenarComboSeccion();
         }
 
-        SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuela; Integrated Security = true ");
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
 
 
         public void SetAlumno(string idalumno, string cui, string nombresyapellidos)
@@ -55,7 +55,6 @@ namespace CapaPresentacion
             cbCiclo.DataSource = NCiclo.Mostrar();
             cbCiclo.ValueMember = "Código";
             cbCiclo.DisplayMember = "Ciclo o año";
-
         }
 
         private void LlenarTipoIns()
@@ -273,7 +272,7 @@ namespace CapaPresentacion
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            d vista = new d();
+            Listado_Alumnos vista = new Listado_Alumnos();
             vista.ShowDialog();
         }
 
@@ -286,7 +285,7 @@ namespace CapaPresentacion
         {
             if (e.KeyCode == Keys.F2)
             {
-                d ver = new d();
+                Listado_Alumnos ver = new Listado_Alumnos();
                 ver.Show();
             }
         }

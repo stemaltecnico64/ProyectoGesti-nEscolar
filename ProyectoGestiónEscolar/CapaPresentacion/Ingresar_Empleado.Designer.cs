@@ -61,6 +61,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bunifuMaterialTextbox7 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label7 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.dtFecha_Nac = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label12 = new System.Windows.Forms.Label();
@@ -73,8 +75,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox7 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_add_foto)).BeginInit();
@@ -489,6 +489,7 @@
             this.btn_guardar.TabIndex = 99;
             this.btn_guardar.TabStop = false;
             this.btn_guardar.Zoom = 10;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // panel3
             // 
@@ -511,6 +512,38 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(521, 314);
             this.panel3.TabIndex = 98;
+            // 
+            // bunifuMaterialTextbox7
+            // 
+            this.bunifuMaterialTextbox7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMaterialTextbox7.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMaterialTextbox7.HintForeColor = System.Drawing.Color.Empty;
+            this.bunifuMaterialTextbox7.HintText = "";
+            this.bunifuMaterialTextbox7.isPassword = false;
+            this.bunifuMaterialTextbox7.LineFocusedColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox7.LineIdleColor = System.Drawing.Color.Gray;
+            this.bunifuMaterialTextbox7.LineMouseHoverColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuMaterialTextbox7.LineThickness = 3;
+            this.bunifuMaterialTextbox7.Location = new System.Drawing.Point(72, 268);
+            this.bunifuMaterialTextbox7.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox7.Name = "bunifuMaterialTextbox7";
+            this.bunifuMaterialTextbox7.Size = new System.Drawing.Size(317, 33);
+            this.bunifuMaterialTextbox7.TabIndex = 126;
+            this.bunifuMaterialTextbox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Sienna;
+            this.label7.Location = new System.Drawing.Point(155, 241);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(148, 23);
+            this.label7.TabIndex = 125;
+            this.label7.Text = "Correo Electronico";
             // 
             // comboBox4
             // 
@@ -677,38 +710,6 @@
             this.label9.Size = new System.Drawing.Size(80, 23);
             this.label9.TabIndex = 117;
             this.label9.Text = "Dirección";
-            // 
-            // bunifuMaterialTextbox7
-            // 
-            this.bunifuMaterialTextbox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox7.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox7.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox7.HintText = "";
-            this.bunifuMaterialTextbox7.isPassword = false;
-            this.bunifuMaterialTextbox7.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox7.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox7.LineMouseHoverColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuMaterialTextbox7.LineThickness = 3;
-            this.bunifuMaterialTextbox7.Location = new System.Drawing.Point(72, 268);
-            this.bunifuMaterialTextbox7.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox7.Name = "bunifuMaterialTextbox7";
-            this.bunifuMaterialTextbox7.Size = new System.Drawing.Size(317, 33);
-            this.bunifuMaterialTextbox7.TabIndex = 126;
-            this.bunifuMaterialTextbox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Sienna;
-            this.label7.Location = new System.Drawing.Point(155, 241);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(148, 23);
-            this.label7.TabIndex = 125;
-            this.label7.Text = "Correo Electronico";
             // 
             // Ingresar_Empleado
             // 
