@@ -12,22 +12,22 @@ namespace CapaDatos
         private int _IdCiclo;
         private string _Ciclo;
         private string _Descripcion;
-        private string _Fecha_G;
+        private DateTime _Fecha_G;
         private string _Estado;
 
         public int IdCiclo { get => _IdCiclo; set => _IdCiclo = value; }
         public string Ciclo { get => _Ciclo; set => _Ciclo = value; }
         public string Descripcion { get => _Descripcion; set => _Descripcion = value; }
-        public string Fecha_G { get => _Fecha_G; set => _Fecha_G = value; }
+
         public string Estado { get => _Estado; set => _Estado = value; }
-       
+        public DateTime Fecha_G { get => _Fecha_G; set => _Fecha_G = value; }
 
         public DCiclo()
         {
 
         }
 
-        public DCiclo(int idciclo, string ciclo, string descripcion, string fecha_g, string estado)
+        public DCiclo(int idciclo, string ciclo, string descripcion, DateTime fecha_g, string estado)
         {
             this.IdCiclo = idciclo;
             this.Ciclo = ciclo;

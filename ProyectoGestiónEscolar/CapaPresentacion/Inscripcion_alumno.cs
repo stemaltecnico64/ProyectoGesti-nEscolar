@@ -52,16 +52,10 @@ namespace CapaPresentacion
 
         private void LlenarComboCiclo()
         {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select Id_Ciclo, Ciclo from Ciclo", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            con.Close();
+            cbCiclo.DataSource = NCiclo.Mostrar();
+            cbCiclo.ValueMember = "Código";
+            cbCiclo.DisplayMember = "Ciclo o año";
 
-            cbCiclo.ValueMember = "Id_Ciclo";
-            cbCiclo.DisplayMember = "Ciclo";
-            cbCiclo.DataSource = dt;
         }
 
         private void LlenarTipoIns()

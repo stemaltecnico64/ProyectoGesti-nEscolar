@@ -61,6 +61,12 @@
     <Compile Include="Ajustes_Admin.Designer.cs">
       <DependentUpon>Ajustes_Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apertura_Ciclo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apertura_Ciclo.Designer.cs">
+      <DependentUpon>Apertura_Ciclo.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuscarAlumnoInscripcion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ajustes_Admin.resx">
       <DependentUpon>Ajustes_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apertura_Ciclo.resx">
+      <DependentUpon>Apertura_Ciclo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarAlumnoInscripcion.resx">
       <DependentUpon>BuscarAlumnoInscripcion.cs</DependentUpon>

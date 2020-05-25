@@ -201,7 +201,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Listado_Alumnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado_Alumnos";
+            this.Text = "ssssssssssssssssssssssssssssssssssssssssssssssssssss";
             this.Load += new System.EventHandler(this.Listado_Alumnos_Load);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();

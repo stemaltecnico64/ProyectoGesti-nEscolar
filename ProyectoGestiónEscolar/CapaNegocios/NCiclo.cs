@@ -10,7 +10,7 @@ namespace CapaNegocios
 {
     public class NCiclo
     {
-        public static string Insertar(string ciclo, string descripcion, string fecha_g, string estado)
+        public static string Insertar(string ciclo, string descripcion, DateTime fecha_g, string estado)
         {
             DCiclo Obj = new DCiclo();
             Obj.Ciclo = ciclo;
