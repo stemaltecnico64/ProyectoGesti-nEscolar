@@ -27,7 +27,7 @@ namespace CapaPresentacion
         {
             SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
             con.Open();
-            SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_cursos_a_empleados", con);
+            SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_empleados", con);
             DataTable dt = new DataTable();
 
             DP.Fill(dt);
@@ -35,5 +35,9 @@ namespace CapaPresentacion
             Tabla_Empleados.DataSource = dt;
         }
 
+        private void Listado_Empleados_Load(object sender, EventArgs e)
+        {
+            cargarTablaEmpleados();
+        }
     }
 }
