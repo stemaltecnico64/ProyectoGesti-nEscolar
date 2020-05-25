@@ -96,17 +96,17 @@
     <Compile Include="ConfigPuestos.Designer.cs">
       <DependentUpon>ConfigPuestos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfigTipoEncargado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConfigTipoEncargado.Designer.cs">
-      <DependentUpon>ConfigTipoEncargado.cs</DependentUpon>
-    </Compile>
     <Compile Include="Crear_Asignacion_Cursos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Crear_Asignacion_Cursos.Designer.cs">
       <DependentUpon>Crear_Asignacion_Cursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos_Pensum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos_Pensum.Designer.cs">
+      <DependentUpon>Cursos_Pensum.cs</DependentUpon>
     </Compile>
     <Compile Include="Editar_Alumno.cs">
       <SubType>Form</SubType>
@@ -288,12 +288,6 @@
     <Compile Include="Menu_Usuarios.Designer.cs">
       <DependentUpon>Menu_Usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nuevo_Pemsum.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Nuevo_Pemsum.Designer.cs">
-      <DependentUpon>Nuevo_Pemsum.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pantalla_Carga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,11 +345,11 @@
     <EmbeddedResource Include="ConfigPuestos.resx">
       <DependentUpon>ConfigPuestos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfigTipoEncargado.resx">
-      <DependentUpon>ConfigTipoEncargado.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Crear_Asignacion_Cursos.resx">
       <DependentUpon>Crear_Asignacion_Cursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos_Pensum.resx">
+      <DependentUpon>Cursos_Pensum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editar_Alumno.resx">
       <DependentUpon>Editar_Alumno.cs</DependentUpon>
@@ -440,9 +434,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Usuarios.resx">
       <DependentUpon>Menu_Usuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Nuevo_Pemsum.resx">
-      <DependentUpon>Nuevo_Pemsum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla_Carga.resx">
       <DependentUpon>Pantalla_Carga.cs</DependentUpon>

@@ -74,6 +74,7 @@
             this.Btn_All_Users.TabIndex = 48;
             this.Btn_All_Users.TabStop = false;
             this.Btn_All_Users.Zoom = 10;
+            this.Btn_All_Users.Click += new System.EventHandler(this.Btn_All_Users_Click);
             // 
             // Btn_Crear
             // 
