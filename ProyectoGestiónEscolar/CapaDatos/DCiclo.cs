@@ -100,6 +100,71 @@ namespace CapaDatos
 
         }
 
+        public string Editar(DCiclo Ciclo)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "speditar_ciclo";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIdCiclo = new SqlParameter();
+                ParIdCiclo.ParameterName = "@Id_Ciclo";
+                ParIdCiclo.SqlDbType = SqlDbType.Int;
+                ParIdCiclo.Value = Ciclo.IdCiclo;
+                SqlCmd.Parameters.Add(ParIdCiclo);
+
+                SqlParameter ParCiclo = new SqlParameter();
+                ParCiclo.ParameterName = "@Ciclo";
+                ParCiclo.SqlDbType = SqlDbType.VarChar;
+                ParCiclo.Size = 50;
+                ParCiclo.Value = Ciclo.Ciclo;
+                SqlCmd.Parameters.Add(ParCiclo);
+
+                SqlParameter ParDescripcion = new SqlParameter();
+                ParDescripcion.ParameterName = "@Descrip";
+                ParDescripcion.SqlDbType = SqlDbType.VarChar;
+                ParDescripcion.Size = 256;
+                ParDescripcion.Value = Ciclo.Descripcion;
+                SqlCmd.Parameters.Add(ParDescripcion);
+
+                SqlParameter ParFecha = new SqlParameter();
+                ParFecha.ParameterName = "@Fecha_G";
+                ParFecha.SqlDbType = SqlDbType.VarChar;
+                ParFecha.Size = 256;
+                ParFecha.Value = Ciclo.Fecha_G;
+                SqlCmd.Parameters.Add(ParFecha);
+
+                SqlParameter ParEstado = new SqlParameter();
+                ParEstado.ParameterName = "@Estado";
+                ParEstado.SqlDbType = SqlDbType.VarChar;
+                ParEstado.Size = 256;
+                ParEstado.Value = Ciclo.Estado;
+                SqlCmd.Parameters.Add(ParEstado);
+
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Actualizo el Registro";
+
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+        }
+
         public DataTable Mostrar()
         {
             DataTable DtResultado = new DataTable("Ciclo");
@@ -121,7 +186,31 @@ namespace CapaDatos
                 DtResultado = null;
             }
             return DtResultado;
+        }
 
+
+
+        public DataTable MostrarCicloActivos()
+        {
+            DataTable DtResultado = new DataTable("Ciclo");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spmostrar_ciclos_activos";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
         }
     }
 }

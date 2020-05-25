@@ -79,6 +79,12 @@
     <Compile Include="Cambiar_Contra_Usuario_Normal.Designer.cs">
       <DependentUpon>Cambiar_Contra_Usuario_Normal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cierre_Ciclo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cierre_Ciclo.Designer.cs">
+      <DependentUpon>Cierre_Ciclo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConfigDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +283,12 @@
     <Compile Include="Listado_Usuarios.Designer.cs">
       <DependentUpon>Listado_Usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lista_Ciclos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_Ciclos.Designer.cs">
+      <DependentUpon>Lista_Ciclos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -373,6 +385,9 @@
     <EmbeddedResource Include="Cambiar_Contra_Usuario_Normal.resx">
       <DependentUpon>Cambiar_Contra_Usuario_Normal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cierre_Ciclo.resx">
+      <DependentUpon>Cierre_Ciclo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfigDepartamento.resx">
       <DependentUpon>ConfigDepartamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -466,6 +481,9 @@
     <EmbeddedResource Include="Listado_Usuarios.resx">
       <DependentUpon>Listado_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lista_Ciclos.resx">
+      <DependentUpon>Lista_Ciclos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -545,6 +563,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Edit_Property_48px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Search_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -117,11 +117,11 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(272, 13);
+            this.lblTitle.Location = new System.Drawing.Point(265, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(88, 26);
+            this.lblTitle.Size = new System.Drawing.Size(108, 26);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Inscribir";
+            this.lblTitle.Text = "Inscripción";
             // 
             // bunifuDragControl1
             // 
@@ -295,8 +295,9 @@
             // txtNombreAlumno
             // 
             this.txtNombreAlumno.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombreAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNombreAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombreAlumno.Enabled = false;
+            this.txtNombreAlumno.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreAlumno.ForeColor = System.Drawing.Color.Black;
             this.txtNombreAlumno.HintForeColor = System.Drawing.Color.Empty;
             this.txtNombreAlumno.HintText = "";
             this.txtNombreAlumno.isPassword = false;
@@ -326,9 +327,11 @@
             // 
             // txtCui_Alumno
             // 
+            this.txtCui_Alumno.BackColor = System.Drawing.SystemColors.Control;
             this.txtCui_Alumno.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCui_Alumno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtCui_Alumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCui_Alumno.Enabled = false;
+            this.txtCui_Alumno.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCui_Alumno.ForeColor = System.Drawing.Color.Black;
             this.txtCui_Alumno.HintForeColor = System.Drawing.Color.Empty;
             this.txtCui_Alumno.HintText = "";
             this.txtCui_Alumno.isPassword = false;
@@ -359,8 +362,9 @@
             // txtId_Alumno
             // 
             this.txtId_Alumno.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtId_Alumno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtId_Alumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtId_Alumno.Enabled = false;
+            this.txtId_Alumno.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId_Alumno.ForeColor = System.Drawing.Color.Black;
             this.txtId_Alumno.HintForeColor = System.Drawing.Color.Empty;
             this.txtId_Alumno.HintText = "";
             this.txtId_Alumno.isPassword = false;
@@ -621,7 +625,10 @@
             // 
             // cbTipo_Inscripcion
             // 
+            this.cbTipo_Inscripcion.BackColor = System.Drawing.Color.White;
+            this.cbTipo_Inscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbTipo_Inscripcion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.cbTipo_Inscripcion.ForeColor = System.Drawing.Color.Black;
             this.cbTipo_Inscripcion.FormattingEnabled = true;
             this.cbTipo_Inscripcion.Location = new System.Drawing.Point(25, 275);
             this.cbTipo_Inscripcion.Name = "cbTipo_Inscripcion";
@@ -630,7 +637,10 @@
             // 
             // cbCarrera
             // 
+            this.cbCarrera.BackColor = System.Drawing.Color.White;
+            this.cbCarrera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbCarrera.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.cbCarrera.ForeColor = System.Drawing.Color.Black;
             this.cbCarrera.FormattingEnabled = true;
             this.cbCarrera.Location = new System.Drawing.Point(207, 275);
             this.cbCarrera.Name = "cbCarrera";
@@ -640,7 +650,10 @@
             // 
             // cbGrado
             // 
+            this.cbGrado.BackColor = System.Drawing.Color.White;
+            this.cbGrado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbGrado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.cbGrado.ForeColor = System.Drawing.Color.Black;
             this.cbGrado.FormattingEnabled = true;
             this.cbGrado.Location = new System.Drawing.Point(495, 275);
             this.cbGrado.Name = "cbGrado";
@@ -649,7 +662,10 @@
             // 
             // cbSeccion
             // 
+            this.cbSeccion.BackColor = System.Drawing.Color.White;
+            this.cbSeccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbSeccion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.cbSeccion.ForeColor = System.Drawing.Color.Black;
             this.cbSeccion.FormattingEnabled = true;
             this.cbSeccion.Location = new System.Drawing.Point(25, 332);
             this.cbSeccion.Name = "cbSeccion";
