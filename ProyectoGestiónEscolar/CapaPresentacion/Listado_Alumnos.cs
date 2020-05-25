@@ -55,7 +55,7 @@ namespace CapaPresentacion
 
         private void Listado_Alumnos_Load(object sender, EventArgs e)
         {
-            dataListadoA.DataSource = Login.Conexion_GX("select * from Alumno").Tables[0];
+            this.Mostrar();
             this.txtBuscar.Focus();
         }
 
