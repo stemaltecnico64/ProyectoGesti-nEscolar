@@ -28,5 +28,14 @@ namespace CapaPresentacion
             Cambiar_Contra_Usuario_Normal cu = new Cambiar_Contra_Usuario_Normal();
             cu.Show();
         }
+
+        private void Smenu_Usuarios_Load(object sender, EventArgs e)
+        {
+            string cmd = "Select * from Empleados where ID_EMPLEADO=" + Login.ID_EMPLEADO;
+
+            DataSet DS = Login.Conexion_GX(cmd);
+
+
+        }
     }
 }

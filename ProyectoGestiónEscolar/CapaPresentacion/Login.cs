@@ -24,6 +24,8 @@ namespace CapaPresentacion
 
         public static string ID_USER = "";
 
+        public static string ID_EMPLEADO = "";
+
 
         public static DataSet Conexion_GX(string cmd)
         {
@@ -51,6 +53,7 @@ namespace CapaPresentacion
                 string password = ds.Tables[0].Rows[0]["PASSWORD_USUARIO"].ToString().Trim();
                 nivel_x = ds.Tables[0].Rows[0]["ID_NIVEL_USUARIO"].ToString().Trim();
                 ID_USER = ds.Tables[0].Rows[0]["ID_USUARIO"].ToString().Trim();
+                ID_EMPLEADO = ds.Tables[0].Rows[0]["ID_EMPLEADO"].ToString().Trim();
 
                 if (nivel_x.Equals("1"))
                 {
