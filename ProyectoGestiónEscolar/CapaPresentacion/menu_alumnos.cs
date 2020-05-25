@@ -25,7 +25,7 @@ namespace CapaPresentacion
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            Listado_Alumnos ventanalistadoalumnos = new Listado_Alumnos();
+            d ventanalistadoalumnos = new d();
             ventanalistadoalumnos.Show();
         }
 
