@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using CapaNegocios;
 namespace CapaPresentacion
 {
-    public partial class Listado_Alumnos : Form
+    public partial class d : Form
     {
-        public Listado_Alumnos()
+        public d()
         {
             InitializeComponent();
             this.txtBuscar.Focus();
@@ -24,28 +24,28 @@ namespace CapaPresentacion
 
         private void Mostrar()
         {
-            this.dataListadoA.DataSource = NAlumno.Mostrar();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoA.Rows.Count);
+            this.dataListado.DataSource = NAlumno.Mostrar();
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
         private void BuscarApellido()
         {
-            this.dataListadoA.DataSource = NAlumno.Apellido(this.txtBuscar.Text);
+            this.dataListado.DataSource = NAlumno.Apellido(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoA.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
         private void BuscarNombre()
         {
-            this.dataListadoA.DataSource = NAlumno.Nombre(this.txtBuscar.Text);
+            this.dataListado.DataSource = NAlumno.Nombre(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoA.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
         private void BuscarCUI()
         {
-            this.dataListadoA.DataSource = NAlumno.cui(this.txtBuscar.Text);
+            this.dataListado.DataSource = NAlumno.cui(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoA.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
         private void btExit_Click(object sender, EventArgs e)
@@ -77,16 +77,13 @@ namespace CapaPresentacion
 
         private void DataListado_DoubleClick(object sender, EventArgs e)
         {
-            if (dataListadoA.Rows.Count == 0)
-            {
-                return;
-            }
-            else
-            {
-                DialogResult = DialogResult.OK;
-                this.Hide();
-            }
-
+            Inscripcion_alumno form = Inscripcion_alumno.GetInstancia();
+            string par1, par2, par3;
+            par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["Código"].Value);
+            par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["CUI"].Value);
+            par3 = Convert.ToString(this.dataListado.CurrentRow.Cells["Nombres y Apellidos"].Value);
+            form.SetAlumno(par1, par2, par3);
+            this.Hide();
         }
     }
 }

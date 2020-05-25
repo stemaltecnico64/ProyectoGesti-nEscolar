@@ -273,7 +273,7 @@ namespace CapaPresentacion
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            Listado_Alumnos vista = new Listado_Alumnos();
+            d vista = new d();
             vista.ShowDialog();
         }
 
@@ -286,7 +286,7 @@ namespace CapaPresentacion
         {
             if (e.KeyCode == Keys.F2)
             {
-                Listado_Alumnos ver = new Listado_Alumnos();
+                d ver = new d();
                 ver.Show();
             }
         }
