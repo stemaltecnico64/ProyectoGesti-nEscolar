@@ -16,5 +16,17 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void btn_asistencia_alumnos_Click(object sender, EventArgs e)
+        {
+            Ingresar_Asistencia_Alumnos ia = new Ingresar_Asistencia_Alumnos();
+            ia.Show();
+        }
+
+        private void btn_asistencia_empleados_Click(object sender, EventArgs e)
+        {
+            Ingresar_Asistencia_Empleados iae = new Ingresar_Asistencia_Empleados();
+            iae.Show();
+        }
     }
 }

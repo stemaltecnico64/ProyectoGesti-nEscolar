@@ -53,7 +53,7 @@ namespace CapaPresentacion
 
         private void btn_encargados_Click(object sender, EventArgs e)
         {
-            OpenChilForm(new ConfigTipoEncargado());
+            OpenChilForm(new Agregar_Tipo_Inscripcion());
         }
 
         private void btn_cuenta_Click(object sender, EventArgs e)

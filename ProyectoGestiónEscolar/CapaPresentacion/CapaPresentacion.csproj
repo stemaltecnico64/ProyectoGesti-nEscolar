@@ -40,6 +40,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -90,6 +91,12 @@
     <Compile Include="ConfigPuestos.Designer.cs">
       <DependentUpon>ConfigPuestos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Crear_Asignacion_Alumnos_Cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crear_Asignacion_Alumnos_Cursos.Designer.cs">
+      <DependentUpon>Crear_Asignacion_Alumnos_Cursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Crear_Asignacion_Cursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +144,18 @@
     </Compile>
     <Compile Include="Ingresar_Alumno.Designer.cs">
       <DependentUpon>Ingresar_Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ingresar_Asistencia_Alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingresar_Asistencia_Alumnos.Designer.cs">
+      <DependentUpon>Ingresar_Asistencia_Alumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ingresar_Asistencia_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingresar_Asistencia_Empleados.Designer.cs">
+      <DependentUpon>Ingresar_Asistencia_Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Ingresar_Empleado.cs">
       <SubType>Form</SubType>
@@ -210,11 +229,17 @@
     <Compile Include="Listado_Alumnos.Designer.cs">
       <DependentUpon>Listado_Alumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Listado_Asignacion_Cursos.cs">
+    <Compile Include="Listado_Cursos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Listado_Asignacion_Cursos.Designer.cs">
-      <DependentUpon>Listado_Asignacion_Cursos.cs</DependentUpon>
+    <Compile Include="Listado_Cursos.Designer.cs">
+      <DependentUpon>Listado_Cursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listado_Cursos_Asignados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado_Cursos_Asignados.Designer.cs">
+      <DependentUpon>Listado_Cursos_Asignados.cs</DependentUpon>
     </Compile>
     <Compile Include="Listado_Empleados.cs">
       <SubType>Form</SubType>
@@ -227,6 +252,18 @@
     </Compile>
     <Compile Include="Listado_Encargados.Designer.cs">
       <DependentUpon>Listado_Encargados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listado_Inscripciones_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado_Inscripciones_Admin.Designer.cs">
+      <DependentUpon>Listado_Inscripciones_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listado_Maestros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado_Maestros.Designer.cs">
+      <DependentUpon>Listado_Maestros.cs</DependentUpon>
     </Compile>
     <Compile Include="Listado_Usuarios.cs">
       <SubType>Form</SubType>
@@ -252,6 +289,12 @@
     <Compile Include="Menu_Asistencia.Designer.cs">
       <DependentUpon>Menu_Asistencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu_Cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Cursos.Designer.cs">
+      <DependentUpon>Menu_Cursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,17 +307,11 @@
     <Compile Include="Menu_Inicio.Designer.cs">
       <DependentUpon>Menu_Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Pemsum.cs">
+    <Compile Include="Menu_Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Pemsum.Designer.cs">
-      <DependentUpon>Menu_Pemsum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menu_reportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu_reportes.Designer.cs">
-      <DependentUpon>Menu_reportes.cs</DependentUpon>
+    <Compile Include="Menu_Reportes.Designer.cs">
+      <DependentUpon>Menu_Reportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu_Usuarios.cs">
       <SubType>Form</SubType>
@@ -336,6 +373,9 @@
     <EmbeddedResource Include="ConfigPuestos.resx">
       <DependentUpon>ConfigPuestos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Crear_Asignacion_Alumnos_Cursos.resx">
+      <DependentUpon>Crear_Asignacion_Alumnos_Cursos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Crear_Asignacion_Cursos.resx">
       <DependentUpon>Crear_Asignacion_Cursos.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +399,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Alumno.resx">
       <DependentUpon>Ingresar_Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingresar_Asistencia_Alumnos.resx">
+      <DependentUpon>Ingresar_Asistencia_Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingresar_Asistencia_Empleados.resx">
+      <DependentUpon>Ingresar_Asistencia_Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Empleado.resx">
       <DependentUpon>Ingresar_Empleado.cs</DependentUpon>
@@ -390,14 +436,23 @@
     <EmbeddedResource Include="Listado_Alumnos.resx">
       <DependentUpon>Listado_Alumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Listado_Asignacion_Cursos.resx">
-      <DependentUpon>Listado_Asignacion_Cursos.cs</DependentUpon>
+    <EmbeddedResource Include="Listado_Cursos.resx">
+      <DependentUpon>Listado_Cursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado_Cursos_Asignados.resx">
+      <DependentUpon>Listado_Cursos_Asignados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listado_Empleados.resx">
       <DependentUpon>Listado_Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listado_Encargados.resx">
       <DependentUpon>Listado_Encargados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado_Inscripciones_Admin.resx">
+      <DependentUpon>Listado_Inscripciones_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado_Maestros.resx">
+      <DependentUpon>Listado_Maestros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listado_Usuarios.resx">
       <DependentUpon>Listado_Usuarios.cs</DependentUpon>
@@ -411,17 +466,17 @@
     <EmbeddedResource Include="Menu_Asistencia.resx">
       <DependentUpon>Menu_Asistencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Cursos.resx">
+      <DependentUpon>Menu_Cursos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu_Empleados.resx">
       <DependentUpon>Menu_Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Inicio.resx">
       <DependentUpon>Menu_Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Pemsum.resx">
-      <DependentUpon>Menu_Pemsum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu_reportes.resx">
-      <DependentUpon>Menu_reportes.cs</DependentUpon>
+    <EmbeddedResource Include="Menu_Reportes.resx">
+      <DependentUpon>Menu_Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Usuarios.resx">
       <DependentUpon>Menu_Usuarios.cs</DependentUpon>

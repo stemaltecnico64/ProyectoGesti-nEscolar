@@ -38,5 +38,11 @@ namespace CapaPresentacion
             Crear_Asignacion_Cursos cac = new Crear_Asignacion_Cursos();
             cac.Show();
         }
+
+        private void btn_listado_C_asignados_Click(object sender, EventArgs e)
+        {
+            Listado_Cursos_Asignados lc = new Listado_Cursos_Asignados();
+            lc.Show();
+        }
     }
 }

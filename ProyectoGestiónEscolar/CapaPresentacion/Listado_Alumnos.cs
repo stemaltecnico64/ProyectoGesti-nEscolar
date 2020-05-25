@@ -16,7 +16,6 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             this.txtBuscar.Focus();
-           
         }
 
         private void OcultarColumnas()
@@ -25,28 +24,28 @@ namespace CapaPresentacion
 
         private void Mostrar()
         {
-            this.dataListado.DataSource = NAlumno.Mostrar();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            this.dataListadoA.DataSource = NAlumno.Mostrar();
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoA.Rows.Count);
         }
 
         private void BuscarApellido()
         {
-            this.dataListado.DataSource = NAlumno.Apellido(this.txtBuscar.Text);
+            this.dataListadoA.DataSource = NAlumno.Apellido(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoA.Rows.Count);
         }
         private void BuscarNombre()
         {
-            this.dataListado.DataSource = NAlumno.Nombre(this.txtBuscar.Text);
+            this.dataListadoA.DataSource = NAlumno.Nombre(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoA.Rows.Count);
         }
 
         private void BuscarCUI()
         {
-            this.dataListado.DataSource = NAlumno.cui(this.txtBuscar.Text);
+            this.dataListadoA.DataSource = NAlumno.cui(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoA.Rows.Count);
         }
 
         private void btExit_Click(object sender, EventArgs e)
@@ -56,7 +55,7 @@ namespace CapaPresentacion
 
         private void Listado_Alumnos_Load(object sender, EventArgs e)
         {
-            this.Mostrar();
+            dataListadoA.DataSource = Login.Conexion_GX("select * from Alumno").Tables[0];
             this.txtBuscar.Focus();
         }
 
@@ -78,13 +77,15 @@ namespace CapaPresentacion
 
         private void DataListado_DoubleClick(object sender, EventArgs e)
         {
-            Inscripcion_alumno from = Inscripcion_alumno.GetInstancia();
-            string a, b, c;
-            a = Convert.ToString(this.dataListado.CurrentRow.Cells["Código"].Value);
-            b = Convert.ToString(this.dataListado.CurrentRow.Cells["CUI"].Value);
-            c = Convert.ToString(this.dataListado.CurrentRow.Cells["Nombres y Apellidos"].Value);
-            from.SetAlumno(a, b, c);
-            this.Hide();
+            if (dataListadoA.Rows.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                this.Hide();
+            }
 
         }
     }

@@ -40,7 +40,7 @@ namespace CapaPresentacion
             this.LlenarComboSeccion();
         }
 
-        SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuela; Integrated Security = true ");
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
 
 
         public void SetAlumno(string idalumno, string cui, string nombresyapellidos)
@@ -104,7 +104,7 @@ namespace CapaPresentacion
         private void LlenarComboGrado(string id_carrera)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("select Id_Carrera, Nombre from Grado where Id_Carrera = @Id_Carrera", con);
+            SqlCommand cmd = new SqlCommand("select Id_Grado, Nombre from Grado where Id_Carrera = @Id_Carrera", con);
             cmd.Parameters.AddWithValue("Id_Carrera", id_carrera);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -115,7 +115,7 @@ namespace CapaPresentacion
             fila["Nombre"] = "Seleccione un Grado";
             dt.Rows.InsertAt(fila, 0);
 
-            cbGrado.ValueMember = "Id_Carrera";
+            cbGrado.ValueMember = "Id_Grado";
             cbGrado.DisplayMember = "Nombre";
             cbGrado.DataSource = dt;
         }

@@ -73,7 +73,7 @@ namespace CapaPresentacion
 
         private void btn_reportes_Click(object sender, EventArgs e)
         {
-
+            OpenChilForm(new Menu_Reportes());
         }
 
         private void btn_asistencia_Click(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace CapaPresentacion
 
         private void btn_pensum_Click(object sender, EventArgs e)
         {
-            OpenChilForm(new Menu_Pemsum());
+            OpenChilForm(new Menu_Cursos());
             lblTitle.Text = "Pensum de Estudios";
         }
     }

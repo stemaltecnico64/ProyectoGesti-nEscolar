@@ -118,7 +118,7 @@
             this.btn_pensum.Name = "btn_pensum";
             this.btn_pensum.Size = new System.Drawing.Size(201, 58);
             this.btn_pensum.TabIndex = 22;
-            this.btn_pensum.Text = "Pensum ";
+            this.btn_pensum.Text = "Cursos";
             this.btn_pensum.UseVisualStyleBackColor = true;
             this.btn_pensum.Click += new System.EventHandler(this.btn_pensum_Click);
             // 

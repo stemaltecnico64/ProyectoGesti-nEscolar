@@ -16,5 +16,11 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void Btn_Crear_Click(object sender, EventArgs e)
+        {
+            Reporte_Notas_Admin rn = new Reporte_Notas_Admin();
+            rn.Show();
+        }
     }
 }
