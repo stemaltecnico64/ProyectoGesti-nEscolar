@@ -51,9 +51,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(131, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(93, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 154);
+            this.pictureBox1.Size = new System.Drawing.Size(246, 154);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -261,6 +261,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Smenu_Usuarios";
             this.Text = "Smenu_Usuarios";
+            this.Load += new System.EventHandler(this.Smenu_Usuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
