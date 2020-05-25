@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CapaPresentacion
 {
@@ -21,5 +22,18 @@ namespace CapaPresentacion
         {
             this.Close();
         }
+
+        private void cargarTablaEmpleados()
+        {
+            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+            con.Open();
+            SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_cursos_a_empleados", con);
+            DataTable dt = new DataTable();
+
+            DP.Fill(dt);
+
+            Tabla_Empleados.DataSource = dt;
+        }
+
     }
 }

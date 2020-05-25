@@ -36,12 +36,7 @@
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btExit = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.Tabla_Usuarios = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tabla_Empleados = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -51,7 +46,7 @@
             this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Tabla_Usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tabla_Empleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +59,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(827, 61);
+            this.panelTitleBar.Size = new System.Drawing.Size(839, 61);
             this.panelTitleBar.TabIndex = 141;
             // 
             // btExit
@@ -87,27 +82,27 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(319, 22);
+            this.lblTitle.Location = new System.Drawing.Point(325, 22);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(199, 26);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Listado de Empleados";
             // 
-            // Tabla_Usuarios
+            // Tabla_Empleados
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.Tabla_Usuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.Tabla_Usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Tabla_Empleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Tabla_Empleados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tabla_Usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Tabla_Usuarios.BackgroundColor = System.Drawing.Color.White;
-            this.Tabla_Usuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Tabla_Usuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.Tabla_Usuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Tabla_Empleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Tabla_Empleados.BackgroundColor = System.Drawing.Color.White;
+            this.Tabla_Empleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Tabla_Empleados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.Tabla_Empleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,14 +110,8 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Tabla_Usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.Tabla_Usuarios.ColumnHeadersHeight = 50;
-            this.Tabla_Usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Numero,
-            this.Nombre_Empleado,
-            this.Direccion,
-            this.Telefono,
-            this.Puesto});
+            this.Tabla_Empleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.Tabla_Empleados.ColumnHeadersHeight = 50;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,43 +119,18 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Tabla_Usuarios.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Tabla_Usuarios.DoubleBuffered = true;
-            this.Tabla_Usuarios.EnableHeadersVisualStyles = false;
-            this.Tabla_Usuarios.HeaderBgColor = System.Drawing.Color.Maroon;
-            this.Tabla_Usuarios.HeaderForeColor = System.Drawing.Color.White;
-            this.Tabla_Usuarios.Location = new System.Drawing.Point(5, 115);
-            this.Tabla_Usuarios.Name = "Tabla_Usuarios";
-            this.Tabla_Usuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.Tabla_Usuarios.RowHeadersVisible = false;
-            this.Tabla_Usuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Tabla_Usuarios.Size = new System.Drawing.Size(819, 273);
-            this.Tabla_Usuarios.TabIndex = 142;
-            // 
-            // Numero
-            // 
-            this.Numero.HeaderText = "No.";
-            this.Numero.Name = "Numero";
-            // 
-            // Nombre_Empleado
-            // 
-            this.Nombre_Empleado.HeaderText = "Nombre del Empleado";
-            this.Nombre_Empleado.Name = "Nombre_Empleado";
-            // 
-            // Direccion
-            // 
-            this.Direccion.HeaderText = "Dirección";
-            this.Direccion.Name = "Direccion";
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            // 
-            // Puesto
-            // 
-            this.Puesto.HeaderText = "Puesto";
-            this.Puesto.Name = "Puesto";
+            this.Tabla_Empleados.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Tabla_Empleados.DoubleBuffered = true;
+            this.Tabla_Empleados.EnableHeadersVisualStyles = false;
+            this.Tabla_Empleados.HeaderBgColor = System.Drawing.Color.Maroon;
+            this.Tabla_Empleados.HeaderForeColor = System.Drawing.Color.White;
+            this.Tabla_Empleados.Location = new System.Drawing.Point(12, 116);
+            this.Tabla_Empleados.Name = "Tabla_Empleados";
+            this.Tabla_Empleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Tabla_Empleados.RowHeadersVisible = false;
+            this.Tabla_Empleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Tabla_Empleados.Size = new System.Drawing.Size(824, 273);
+            this.Tabla_Empleados.TabIndex = 142;
             // 
             // btn_buscar
             // 
@@ -195,7 +159,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Sienna;
-            this.label2.Location = new System.Drawing.Point(482, 405);
+            this.label2.Location = new System.Drawing.Point(488, 405);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 23);
             this.label2.TabIndex = 149;
@@ -208,7 +172,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Sienna;
-            this.label1.Location = new System.Drawing.Point(266, 405);
+            this.label1.Location = new System.Drawing.Point(272, 405);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 23);
             this.label1.TabIndex = 148;
@@ -264,9 +228,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 450);
+            this.ClientSize = new System.Drawing.Size(839, 450);
             this.Controls.Add(this.panelTitleBar);
-            this.Controls.Add(this.Tabla_Usuarios);
+            this.Controls.Add(this.Tabla_Empleados);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.txt_buscar);
             this.Controls.Add(this.label2);
@@ -280,7 +244,7 @@
             this.Text = "Listado_Empleados";
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Tabla_Usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tabla_Empleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
             this.ResumeLayout(false);
@@ -293,7 +257,7 @@
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Label lblTitle;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid Tabla_Usuarios;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid Tabla_Empleados;
         private System.Windows.Forms.Button btn_buscar;
         private Bunifu.Framework.UI.BunifuTextbox txt_buscar;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
@@ -302,10 +266,5 @@
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private Bunifu.Framework.UI.BunifuImageButton btn_guardar;
         private Bunifu.Framework.UI.BunifuImageButton btnNuevo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Empleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Puesto;
     }
 }
