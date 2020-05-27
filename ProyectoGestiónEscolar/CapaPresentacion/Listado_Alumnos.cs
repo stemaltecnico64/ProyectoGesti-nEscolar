@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using CapaNegocios;
 namespace CapaPresentacion
 {
-    public partial class d : Form
+    public partial class Listado_Alumnos : Form
     {
-        public d()
+        public Listado_Alumnos()
         {
             InitializeComponent();
             this.txtBuscar.Focus();

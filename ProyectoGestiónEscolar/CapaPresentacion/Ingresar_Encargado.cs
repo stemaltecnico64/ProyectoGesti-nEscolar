@@ -41,7 +41,7 @@ namespace CapaPresentacion
         }
 
 
-        SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuela; Integrated Security = true ");
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
 
         private void LlenarComboTipoEncargado()
         {

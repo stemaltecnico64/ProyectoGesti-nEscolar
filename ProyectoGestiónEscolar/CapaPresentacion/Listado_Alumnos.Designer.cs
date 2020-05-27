@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class d
+    partial class Listado_Alumnos
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btExit = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.dataListado = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -41,7 +42,6 @@
             this.cbBuscar = new System.Windows.Forms.ComboBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.btExit = new System.Windows.Forms.Button();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,19 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(850, 54);
             this.panelTitleBar.TabIndex = 150;
+            // 
+            // btExit
+            // 
+            this.btExit.BackColor = System.Drawing.Color.Red;
+            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
+            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btExit.ForeColor = System.Drawing.Color.Red;
+            this.btExit.Location = new System.Drawing.Point(812, 3);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(35, 35);
+            this.btExit.TabIndex = 114;
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // lblTitle
             // 
@@ -174,20 +187,7 @@
             this.vScrollBar1.Size = new System.Drawing.Size(26, 219);
             this.vScrollBar1.TabIndex = 217;
             // 
-            // btExit
-            // 
-            this.btExit.BackColor = System.Drawing.Color.Red;
-            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
-            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btExit.ForeColor = System.Drawing.Color.Red;
-            this.btExit.Location = new System.Drawing.Point(812, 3);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(35, 35);
-            this.btExit.TabIndex = 114;
-            this.btExit.UseVisualStyleBackColor = false;
-            this.btExit.Click += new System.EventHandler(this.btExit_Click);
-            // 
-            // d
+            // Listado_Alumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -199,7 +199,7 @@
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.panelTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "d";
+            this.Name = "Listado_Alumnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Listado_Alumnos_Load);
             this.panelTitleBar.ResumeLayout(false);
@@ -213,6 +213,7 @@
         #endregion
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Panel panelTitleBar;
+        private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Label lblTitle;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataListado;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
@@ -220,6 +221,5 @@
         private System.Windows.Forms.ComboBox cbBuscar;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.Button btExit;
     }
 }
