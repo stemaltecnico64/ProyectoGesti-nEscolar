@@ -16,7 +16,7 @@ namespace ProyectoGestiónEscolar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run (Cierre_Ciclo.GetInstancia());
+            Application.Run (new Cierre_Ciclo());
         }
     }
 }
