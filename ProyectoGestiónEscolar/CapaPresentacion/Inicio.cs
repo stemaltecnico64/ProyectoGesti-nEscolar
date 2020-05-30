@@ -74,6 +74,7 @@ namespace CapaPresentacion
         private void btn_reportes_Click(object sender, EventArgs e)
         {
             OpenChilForm(new Menu_Reportes());
+            lblTitle.Text = "Reportes";
         }
 
         private void btn_asistencia_Click(object sender, EventArgs e)
@@ -96,7 +97,18 @@ namespace CapaPresentacion
 
         private void Btn_Cerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult Opcion;
+            Opcion = MessageBox.Show("Realmente Desea Salir", "SEGURIDAD DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (Opcion == DialogResult.Yes)
+            {
+                this.Hide();
+                Login l = new Login();
+                l.Show(); 
+            }
+            else
+            {
+
+            }
         }
 
         private void btn_restaurar_Click(object sender, EventArgs e)
@@ -123,6 +135,12 @@ namespace CapaPresentacion
         {
             OpenChilForm(new Menu_Cursos());
             lblTitle.Text = "Pensum de Estudios";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChilForm(new Menu_Mantenimiento());
+            lblTitle.Text = "Mantenimiento";
         }
     }
 }

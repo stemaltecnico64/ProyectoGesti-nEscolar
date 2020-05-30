@@ -61,5 +61,33 @@ namespace CapaPresentacion
                 MessageBox.Show("Ha ocurrido un Error!" + error);
             }
         }
+
+        private void btnBuscarEncargado_Click(object sender, EventArgs e)
+        {
+            Listado_Empleados le = new Listado_Empleados();
+            le.ShowDialog();
+
+            if (le.DialogResult == DialogResult.OK)
+            {
+                txtCodigo.Text = le.Tabla_Empleados.Rows[le.Tabla_Empleados.CurrentRow.Index].Cells[0].Value.ToString();
+                txtempleado.Text = le.Tabla_Empleados.Rows[le.Tabla_Empleados.CurrentRow.Index].Cells[2].Value.ToString();
+                txtpuesto.Text = le.Tabla_Empleados.Rows[le.Tabla_Empleados.CurrentRow.Index].Cells[1].Value.ToString();
+                txtdpi.Text = le.Tabla_Empleados.Rows[le.Tabla_Empleados.CurrentRow.Index].Cells[5].Value.ToString();
+            }
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string cmd = string.Format("Execute insertar_asistencia_empleados '{0}'", Convert.ToInt32(txtCodigo.Text));
+                Conexion_GX(cmd);
+                MessageBox.Show("Asistencia del Empleado Guardada Exitosamente..!");
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un Error!" + error);
+            }
+        }
     }
 }

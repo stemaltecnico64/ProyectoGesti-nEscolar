@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CapaPresentacion
 {
@@ -35,7 +36,7 @@ namespace CapaPresentacion
 
             DataSet DS = Login.Conexion_GX(cmd);
 
-
+            
         }
     }
 }

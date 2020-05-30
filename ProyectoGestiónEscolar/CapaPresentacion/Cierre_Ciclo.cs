@@ -63,7 +63,19 @@ namespace CapaPresentacion
 
         }
 
-        private void BtnGuardar_Click(object sender, EventArgs e)
+        
+        private void BtExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnBuscarCiclo_Click(object sender, EventArgs e)
+        {
+            Lista_Ciclos ver = new Lista_Ciclos();
+            ver.ShowDialog();
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -121,19 +133,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
-        }
-
-   
-
-        private void BunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            Lista_Ciclos ver = new Lista_Ciclos();
-            ver.ShowDialog();
-        }
-
-        private void BtExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

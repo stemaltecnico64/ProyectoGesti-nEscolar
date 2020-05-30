@@ -42,11 +42,87 @@ namespace CapaPresentacion
             return DS;
         }
 
-        private void btn_ingresar_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txt_usuario.Focus();
+        }
+
+        private void txt_usuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                txt_password.Focus();
+        }
+
+        private void txt_password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+                    string CMD = String.Format("Select * from Usuarios where NOMBRE_USUARIO='{0}' and PASSWORD_USUARIO='{1}'", txt_usuario.Text.Trim(), txt_password.Text.Trim());
+                    DataSet ds = Conexion_GX(CMD);
+
+                    string usuario = ds.Tables[0].Rows[0]["NOMBRE_USUARIO"].ToString().Trim();
+                    string password = ds.Tables[0].Rows[0]["PASSWORD_USUARIO"].ToString().Trim();
+                    nivel_x = ds.Tables[0].Rows[0]["ID_NIVEL_USUARIO"].ToString().Trim();
+                    ID_USER = ds.Tables[0].Rows[0]["ID_USUARIO"].ToString().Trim();
+                    ID_EMPLEADO = ds.Tables[0].Rows[0]["ID_EMPLEADO"].ToString().Trim();
+
+                    if (nivel_x.Equals("1"))
+                    {
+                        if (usuario == txt_usuario.Text.Trim() && password == txt_password.Text.Trim())
+                        {
+                            Pantalla_Carga VenCarga = new Pantalla_Carga();
+                            this.Hide();
+                            VenCarga.Show();
+                        }
+                    }
+                    else if (nivel_x.Equals("2"))
+                    {
+                        if (usuario == txt_usuario.Text.Trim() && password == txt_password.Text.Trim())
+                        {
+                            Pantalla_Carga VenCarga = new Pantalla_Carga();
+                            this.Hide();
+                            VenCarga.Show();
+                        }
+                    }
+                    else if (nivel_x.Equals("3"))
+                    {
+                        if (usuario == txt_usuario.Text.Trim() && password == txt_password.Text.Trim())
+                        {
+                            Pantalla_Carga VenCarga = new Pantalla_Carga();
+                            this.Hide();
+                            VenCarga.Show();
+                        }
+                    }
+                    else if (nivel_x.Equals("4"))
+                    {
+                        if (usuario == txt_usuario.Text.Trim() && password == txt_password.Text.Trim())
+                        {
+                            Pantalla_Carga VenCarga = new Pantalla_Carga();
+                            this.Hide();
+                            VenCarga.Show();
+                        }
+                    }
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Usuario o Contraseña incorrecta...!");
+                }
+
+            }
+        }
+
+        private void btn_ingresar_Click_1(object sender, EventArgs e)
         {
             try
             {
-                string CMD = String.Format("Select * from Usuarios where NOMBRE_USUARIO='{0}' and PASSWORD_USUARIO='{1}'",txt_usuario.Text.Trim(),txt_password.Text.Trim());
+                string CMD = String.Format("Select * from Usuarios where NOMBRE_USUARIO='{0}' and PASSWORD_USUARIO='{1}'", txt_usuario.Text.Trim(), txt_password.Text.Trim());
                 DataSet ds = Conexion_GX(CMD);
 
                 string usuario = ds.Tables[0].Rows[0]["NOMBRE_USUARIO"].ToString().Trim();
@@ -96,7 +172,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Usuario o Contraseña incorrecta...!");
             }
-            
         }
     }
 }

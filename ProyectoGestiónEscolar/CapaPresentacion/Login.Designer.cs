@@ -30,18 +30,40 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_usuario = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_password = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_ingresar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.txt_password = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txt_usuario = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel1;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Maroon;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Maroon;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(272, 431);
+            this.bunifuGradientPanel1.TabIndex = 2;
             // 
             // panel1
             // 
@@ -56,7 +78,43 @@
             this.panel1.Location = new System.Drawing.Point(271, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 431);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 4;
+            // 
+            // txt_usuario
+            // 
+            this.txt_usuario.BorderColorFocused = System.Drawing.Color.Red;
+            this.txt_usuario.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_usuario.BorderColorMouseHover = System.Drawing.Color.IndianRed;
+            this.txt_usuario.BorderThickness = 3;
+            this.txt_usuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_usuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_usuario.isPassword = false;
+            this.txt_usuario.Location = new System.Drawing.Point(29, 146);
+            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.Size = new System.Drawing.Size(221, 44);
+            this.txt_usuario.TabIndex = 15;
+            this.txt_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_usuario_KeyPress);
+            // 
+            // txt_password
+            // 
+            this.txt_password.BorderColorFocused = System.Drawing.Color.Red;
+            this.txt_password.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_password.BorderColorMouseHover = System.Drawing.Color.IndianRed;
+            this.txt_password.BorderThickness = 3;
+            this.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_password.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_password.isPassword = false;
+            this.txt_password.Location = new System.Drawing.Point(29, 250);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(221, 44);
+            this.txt_password.TabIndex = 14;
+            this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_password_KeyPress);
             // 
             // label3
             // 
@@ -114,7 +172,7 @@
             this.btn_ingresar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_ingresar.Textcolor = System.Drawing.Color.White;
             this.btn_ingresar.TextFont = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ingresar.Click += new System.EventHandler(this.btn_ingresar_Click);
+            this.btn_ingresar.Click += new System.EventHandler(this.btn_ingresar_Click_1);
             // 
             // bunifuSeparator1
             // 
@@ -139,62 +197,6 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Iniciar Sesión";
             // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel1;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // bunifuGradientPanel1
-            // 
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Maroon;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Maroon;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(272, 431);
-            this.bunifuGradientPanel1.TabIndex = 2;
-            // 
-            // txt_password
-            // 
-            this.txt_password.BorderColorFocused = System.Drawing.Color.Red;
-            this.txt_password.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_password.BorderColorMouseHover = System.Drawing.Color.IndianRed;
-            this.txt_password.BorderThickness = 3;
-            this.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_password.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_password.isPassword = false;
-            this.txt_password.Location = new System.Drawing.Point(29, 250);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(221, 44);
-            this.txt_password.TabIndex = 14;
-            this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txt_usuario
-            // 
-            this.txt_usuario.BorderColorFocused = System.Drawing.Color.Red;
-            this.txt_usuario.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_usuario.BorderColorMouseHover = System.Drawing.Color.IndianRed;
-            this.txt_usuario.BorderThickness = 3;
-            this.txt_usuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_usuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_usuario.isPassword = false;
-            this.txt_usuario.Location = new System.Drawing.Point(29, 146);
-            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_usuario.Name = "txt_usuario";
-            this.txt_usuario.Size = new System.Drawing.Size(221, 44);
-            this.txt_usuario.TabIndex = 15;
-            this.txt_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +208,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -213,16 +216,15 @@
         }
 
         #endregion
-
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_usuario;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_password;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton btn_ingresar;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txt_usuario;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txt_password;
     }
 }

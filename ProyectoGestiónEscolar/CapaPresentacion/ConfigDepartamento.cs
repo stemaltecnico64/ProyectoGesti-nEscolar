@@ -94,8 +94,43 @@ namespace CapaPresentacion
             this.Botones();
             this.txtBuscar.Focus();
         }
+        
+        private void ChkEliminar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkEliminar.Checked)
+            {
+                this.dataListado.Columns[0].Visible = true;
+            }
+            else
+            {
+                this.dataListado.Columns[0].Visible = false;
+            }
+        }
 
-        private void BtnNuevo_Click(object sender, EventArgs e)
+        private void BtnElimnar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void DataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataListado.Columns["Eliminar"].Index)
+            {
+                DataGridViewCheckBoxCell ChkEliminar = (DataGridViewCheckBoxCell)dataListado.Rows[e.RowIndex].Cells["Eliminar"];
+                ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
+            }
+        }
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            this.BuscarNombre();
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             this.IsNuevo = true;
             this.IsEditar = false;
@@ -103,9 +138,10 @@ namespace CapaPresentacion
             this.Limpiar();
             this.Habilitar(true);
             this.txtNombre.Focus();
+
         }
 
-        private void BtnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -156,7 +192,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void BtnEditar_Click(object sender, EventArgs e)
+        private void btnEditar_Click_1(object sender, EventArgs e)
         {
             if (!this.txtIdDepartamento.Text.Equals(""))
             {
@@ -170,7 +206,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void BtnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             this.IsNuevo = false;
             this.IsEditar = false;
@@ -179,19 +215,7 @@ namespace CapaPresentacion
             this.Habilitar(false);
         }
 
-        private void ChkEliminar_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkEliminar.Checked)
-            {
-                this.dataListado.Columns[0].Visible = true;
-            }
-            else
-            {
-                this.dataListado.Columns[0].Visible = false;
-            }
-        }
-
-        private void BtnElimnar_Click(object sender, EventArgs e)
+        private void btnElimnar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -231,34 +255,20 @@ namespace CapaPresentacion
             }
         }
 
-        private void DataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void BtnImprimir_Click(object sender, EventArgs e)
         {
-            if (e.ColumnIndex == dataListado.Columns["Eliminar"].Index)
-            {
-                DataGridViewCheckBoxCell ChkEliminar = (DataGridViewCheckBoxCell)dataListado.Rows[e.RowIndex].Cells["Eliminar"];
-                ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
-            }
+
         }
 
-        private void DataListado_DoubleClick(object sender, EventArgs e)
+        private void dataListado_DoubleClick_1(object sender, EventArgs e)
         {
-
             this.txtIdDepartamento.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Id_Departamento"].Value);
             this.txtNombre.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Nombre_Dep"].Value);
             this.txtDes.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Des"].Value);
 
 
             this.tabControl1.SelectedIndex = 1;
-        }
 
-        private void TxtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            this.BuscarNombre();
-        }
-
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

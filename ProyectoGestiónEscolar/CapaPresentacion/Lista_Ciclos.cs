@@ -19,7 +19,7 @@ namespace CapaPresentacion
 
         private void OcultarColumnas()
         {
-            this.dataListado.Columns[2].Visible = false;
+            
         }
 
         private void Mostrar()

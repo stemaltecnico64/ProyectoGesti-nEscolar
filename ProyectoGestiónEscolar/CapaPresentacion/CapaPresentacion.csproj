@@ -31,14 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -114,6 +121,12 @@
     </Compile>
     <Compile Include="Crear_Asignacion_Cursos.Designer.cs">
       <DependentUpon>Crear_Asignacion_Cursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cursos.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Cursos_Pensum.cs">
       <SubType>Form</SubType>
@@ -325,6 +338,12 @@
     <Compile Include="Menu_Inicio.Designer.cs">
       <DependentUpon>Menu_Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu_Mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Mantenimiento.Designer.cs">
+      <DependentUpon>Menu_Mantenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu_Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,6 +421,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Crear_Asignacion_Cursos.resx">
       <DependentUpon>Crear_Asignacion_Cursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cursos.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos_Pensum.resx">
       <DependentUpon>Cursos_Pensum.cs</DependentUpon>
@@ -502,6 +525,9 @@
     <EmbeddedResource Include="Menu_Inicio.resx">
       <DependentUpon>Menu_Inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Mantenimiento.resx">
+      <DependentUpon>Menu_Mantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu_Reportes.resx">
       <DependentUpon>Menu_Reportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -566,6 +592,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Search_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reportes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

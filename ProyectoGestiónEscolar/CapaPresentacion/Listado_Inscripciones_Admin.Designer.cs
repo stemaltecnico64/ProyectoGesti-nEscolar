@@ -39,6 +39,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cbBuscar = new System.Windows.Forms.ComboBox();
             this.Tabla_Inscripciones = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tabla_Inscripciones)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +91,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(303, 81);
+            this.txtBuscar.Location = new System.Drawing.Point(369, 81);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(226, 28);
             this.txtBuscar.TabIndex = 176;
@@ -107,7 +108,7 @@
             "Carrera",
             "Grado",
             "Sección"});
-            this.cbBuscar.Location = new System.Drawing.Point(28, 81);
+            this.cbBuscar.Location = new System.Drawing.Point(130, 81);
             this.cbBuscar.Name = "cbBuscar";
             this.cbBuscar.Size = new System.Drawing.Size(233, 28);
             this.cbBuscar.TabIndex = 175;
@@ -157,11 +158,25 @@
             this.Tabla_Inscripciones.TabIndex = 174;
             this.Tabla_Inscripciones.DoubleClick += new System.EventHandler(this.Tabla_Inscripciones_DoubleClick);
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(12, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 26);
+            this.label1.TabIndex = 177;
+            this.label1.Text = "Buscar Por:";
+            // 
             // Listado_Inscripciones_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(878, 422);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.cbBuscar);
@@ -188,5 +203,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ComboBox cbBuscar;
         public Bunifu.Framework.UI.BunifuCustomDataGrid Tabla_Inscripciones;
+        private System.Windows.Forms.Label label1;
     }
 }

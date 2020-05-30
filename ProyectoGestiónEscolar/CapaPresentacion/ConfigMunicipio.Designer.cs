@@ -167,6 +167,7 @@
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListado.Size = new System.Drawing.Size(405, 234);
             this.dataListado.TabIndex = 199;
+            this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick_1);
             // 
             // Eliminar
             // 
@@ -197,7 +198,7 @@
             this.BtnImprimir.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnImprimir.ForeColor = System.Drawing.Color.Maroon;
             this.BtnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnImprimir.Location = new System.Drawing.Point(298, 56);
+            this.BtnImprimir.Location = new System.Drawing.Point(298, 72);
             this.BtnImprimir.Name = "BtnImprimir";
             this.BtnImprimir.Size = new System.Drawing.Size(123, 46);
             this.BtnImprimir.TabIndex = 202;
@@ -215,13 +216,14 @@
             this.btnElimnar.ForeColor = System.Drawing.Color.Maroon;
             this.btnElimnar.Image = ((System.Drawing.Image)(resources.GetObject("btnElimnar.Image")));
             this.btnElimnar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnElimnar.Location = new System.Drawing.Point(298, 6);
+            this.btnElimnar.Location = new System.Drawing.Point(298, 22);
             this.btnElimnar.Name = "btnElimnar";
             this.btnElimnar.Size = new System.Drawing.Size(123, 44);
             this.btnElimnar.TabIndex = 201;
             this.btnElimnar.Text = "Eliminar";
             this.btnElimnar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnElimnar.UseVisualStyleBackColor = true;
+            this.btnElimnar.Click += new System.EventHandler(this.btnElimnar_Click_1);
             // 
             // label3
             // 
@@ -294,7 +296,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Maroon;
-            this.label6.Location = new System.Drawing.Point(218, 326);
+            this.label6.Location = new System.Drawing.Point(217, 353);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 23);
             this.label6.TabIndex = 106;
@@ -320,7 +322,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(330, 274);
+            this.label2.Location = new System.Drawing.Point(233, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 23);
             this.label2.TabIndex = 102;
@@ -333,7 +335,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Maroon;
-            this.label20.Location = new System.Drawing.Point(210, 274);
+            this.label20.Location = new System.Drawing.Point(88, 353);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(70, 23);
             this.label20.TabIndex = 100;
@@ -463,39 +465,42 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Cancel_48px;
             this.btnCancelar.ImageActive = null;
-            this.btnCancelar.Location = new System.Drawing.Point(165, 315);
+            this.btnCancelar.Location = new System.Drawing.Point(164, 342);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(47, 44);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCancelar.TabIndex = 105;
             this.btnCancelar.TabStop = false;
             this.btnCancelar.Zoom = 10;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
             this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.icons8_Edit_Property_48px;
             this.btnEditar.ImageActive = null;
-            this.btnEditar.Location = new System.Drawing.Point(286, 262);
+            this.btnEditar.Location = new System.Drawing.Point(167, 262);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(47, 44);
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditar.TabIndex = 103;
             this.btnEditar.TabStop = false;
             this.btnEditar.Zoom = 10;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.icons8_Save_48px;
             this.btnGuardar.ImageActive = null;
-            this.btnGuardar.Location = new System.Drawing.Point(165, 265);
+            this.btnGuardar.Location = new System.Drawing.Point(36, 344);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(47, 44);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnGuardar.TabIndex = 101;
             this.btnGuardar.TabStop = false;
             this.btnGuardar.Zoom = 10;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // btnNuevo
             // 
@@ -509,6 +514,7 @@
             this.btnNuevo.TabIndex = 99;
             this.btnNuevo.TabStop = false;
             this.btnNuevo.Zoom = 10;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
             // ConfigMunicipio
             // 

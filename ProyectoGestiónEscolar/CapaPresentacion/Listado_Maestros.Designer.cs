@@ -39,6 +39,7 @@
             this.Tabla_Maestros = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.cbBuscar = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tabla_Maestros)).BeginInit();
             this.SuspendLayout();
@@ -140,7 +141,7 @@
             "Código",
             "DPI",
             "Maestro"});
-            this.cbBuscar.Location = new System.Drawing.Point(29, 78);
+            this.cbBuscar.Location = new System.Drawing.Point(143, 78);
             this.cbBuscar.Name = "cbBuscar";
             this.cbBuscar.Size = new System.Drawing.Size(233, 28);
             this.cbBuscar.TabIndex = 171;
@@ -148,17 +149,31 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(303, 78);
+            this.txtBuscar.Location = new System.Drawing.Point(399, 78);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(226, 28);
             this.txtBuscar.TabIndex = 172;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(24, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 26);
+            this.label1.TabIndex = 176;
+            this.label1.Text = "Buscar Por:";
             // 
             // Listado_Maestros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(868, 457);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.cbBuscar);
             this.Controls.Add(this.panelTitleBar);
@@ -184,5 +199,6 @@
         public Bunifu.Framework.UI.BunifuCustomDataGrid Tabla_Maestros;
         private System.Windows.Forms.ComboBox cbBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label label1;
     }
 }

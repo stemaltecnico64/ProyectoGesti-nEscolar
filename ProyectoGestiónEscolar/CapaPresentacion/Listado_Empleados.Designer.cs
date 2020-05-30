@@ -45,6 +45,7 @@
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cbBuscar = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tabla_Empleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
@@ -202,7 +203,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(303, 82);
+            this.txtBuscar.Location = new System.Drawing.Point(432, 82);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(226, 28);
             this.txtBuscar.TabIndex = 178;
@@ -217,16 +218,30 @@
             "DPI",
             "Empleado",
             "Dirección"});
-            this.cbBuscar.Location = new System.Drawing.Point(27, 82);
+            this.cbBuscar.Location = new System.Drawing.Point(193, 82);
             this.cbBuscar.Name = "cbBuscar";
             this.cbBuscar.Size = new System.Drawing.Size(233, 28);
             this.cbBuscar.TabIndex = 177;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Maroon;
+            this.label3.Location = new System.Drawing.Point(62, 81);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 26);
+            this.label3.TabIndex = 179;
+            this.label3.Text = "Buscar Por:";
             // 
             // Listado_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.cbBuscar);
             this.Controls.Add(this.panelTitleBar);
@@ -256,7 +271,6 @@
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Label lblTitle;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid Tabla_Empleados;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -265,5 +279,7 @@
         private Bunifu.Framework.UI.BunifuImageButton btnNuevo;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ComboBox cbBuscar;
+        public Bunifu.Framework.UI.BunifuCustomDataGrid Tabla_Empleados;
+        private System.Windows.Forms.Label label3;
     }
 }

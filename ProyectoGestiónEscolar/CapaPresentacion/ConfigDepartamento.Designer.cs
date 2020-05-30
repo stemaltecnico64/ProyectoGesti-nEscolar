@@ -165,6 +165,7 @@
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListado.Size = new System.Drawing.Size(405, 234);
             this.dataListado.TabIndex = 199;
+            this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick_1);
             // 
             // Eliminar
             // 
@@ -202,6 +203,7 @@
             this.BtnImprimir.Text = "Imprimir";
             this.BtnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnImprimir.UseVisualStyleBackColor = true;
+            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
             // 
             // btnElimnar
             // 
@@ -220,6 +222,7 @@
             this.btnElimnar.Text = "Eliminar";
             this.btnElimnar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnElimnar.UseVisualStyleBackColor = true;
+            this.btnElimnar.Click += new System.EventHandler(this.btnElimnar_Click_1);
             // 
             // label3
             // 
@@ -291,7 +294,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(247, 315);
+            this.label6.Location = new System.Drawing.Point(272, 316);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 23);
             this.label6.TabIndex = 114;
@@ -302,13 +305,14 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Cancel_48px;
             this.btnCancelar.ImageActive = null;
-            this.btnCancelar.Location = new System.Drawing.Point(203, 306);
+            this.btnCancelar.Location = new System.Drawing.Point(207, 306);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(47, 44);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCancelar.TabIndex = 113;
             this.btnCancelar.TabStop = false;
             this.btnCancelar.Zoom = 10;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // label5
             // 
@@ -335,6 +339,7 @@
             this.btnEditar.TabIndex = 111;
             this.btnEditar.TabStop = false;
             this.btnEditar.Zoom = 10;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // label2
             // 
@@ -361,6 +366,7 @@
             this.btnGuardar.TabIndex = 109;
             this.btnGuardar.TabStop = false;
             this.btnGuardar.Zoom = 10;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // label20
             // 
@@ -387,6 +393,7 @@
             this.btnNuevo.TabIndex = 107;
             this.btnNuevo.TabStop = false;
             this.btnNuevo.Zoom = 10;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
             // panel2
             // 

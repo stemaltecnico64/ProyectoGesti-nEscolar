@@ -84,7 +84,18 @@ namespace CapaPresentacion
             this.Botones();
         }
 
-        private void BtnNuevo_Click(object sender, EventArgs e)
+        private void DataListado_DoubleClick(object sender, EventArgs e)
+        {
+            this.txtId_Tipo_Inscripcion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Código"].Value);
+            this.txtTipo_Inscripcion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Tipo de Inscripción"].Value);
+        }
+
+        private void BtExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             this.IsNuevo = true;
             this.IsEditar = false;
@@ -92,9 +103,10 @@ namespace CapaPresentacion
             this.Limpiar();
             this.Habilitar(true);
             this.txtTipo_Inscripcion.Focus();
+
         }
 
-        private void BtnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -148,7 +160,17 @@ namespace CapaPresentacion
             }
         }
 
-        private void BtnEditar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.IsNuevo = false;
+            this.IsEditar = false;
+            this.Botones();
+            this.Limpiar();
+            this.txtTipo_Inscripcion.Text = string.Empty;
+
+        }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
         {
             if (!this.txtTipo_Inscripcion.Text.Equals(""))
             {
@@ -160,26 +182,7 @@ namespace CapaPresentacion
             {
                 this.MensajeError("Debe de seleccionar primero el registro a Modificar");
             }
-        }
 
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            this.IsNuevo = false;
-            this.IsEditar = false;
-            this.Botones();
-            this.Limpiar();
-            this.txtTipo_Inscripcion.Text = string.Empty;
-        }
-
-        private void DataListado_DoubleClick(object sender, EventArgs e)
-        {
-            this.txtId_Tipo_Inscripcion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Código"].Value);
-            this.txtTipo_Inscripcion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Tipo de Inscripción"].Value);
-        }
-
-        private void BtExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

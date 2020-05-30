@@ -265,6 +265,7 @@
             this.btnBuscarEncargado.TabIndex = 135;
             this.btnBuscarEncargado.TabStop = false;
             this.btnBuscarEncargado.Zoom = 10;
+            this.btnBuscarEncargado.Click += new System.EventHandler(this.btnBuscarEncargado_Click);
             // 
             // label25
             // 
@@ -343,6 +344,7 @@
             this.btnGuardar.TabIndex = 173;
             this.btnGuardar.TabStop = false;
             this.btnGuardar.Zoom = 10;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // label15
             // 

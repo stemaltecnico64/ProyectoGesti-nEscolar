@@ -41,6 +41,7 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.cbBuscar = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoE)).BeginInit();
             this.SuspendLayout();
@@ -160,7 +161,7 @@
             this.cbBuscar.Items.AddRange(new object[] {
             "No. Dpi",
             "Primer Apellido"});
-            this.cbBuscar.Location = new System.Drawing.Point(9, 74);
+            this.cbBuscar.Location = new System.Drawing.Point(134, 74);
             this.cbBuscar.Name = "cbBuscar";
             this.cbBuscar.Size = new System.Drawing.Size(193, 31);
             this.cbBuscar.TabIndex = 214;
@@ -171,17 +172,31 @@
             this.txtBuscar.BackColor = System.Drawing.Color.White;
             this.txtBuscar.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.txtBuscar.ForeColor = System.Drawing.Color.Maroon;
-            this.txtBuscar.Location = new System.Drawing.Point(208, 74);
+            this.txtBuscar.Location = new System.Drawing.Point(344, 75);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(282, 30);
+            this.txtBuscar.Size = new System.Drawing.Size(182, 30);
             this.txtBuscar.TabIndex = 215;
             this.txtBuscar.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(15, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 26);
+            this.label1.TabIndex = 216;
+            this.label1.Text = "Buscar Por:";
             // 
             // Listado_Encargados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 439);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.cbBuscar);
             this.Controls.Add(this.lblTotal);
@@ -212,5 +227,6 @@
         private System.Windows.Forms.ComboBox cbBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         public Bunifu.Framework.UI.BunifuCustomDataGrid dataListadoE;
+        private System.Windows.Forms.Label label1;
     }
 }

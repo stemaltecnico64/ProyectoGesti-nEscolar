@@ -64,7 +64,6 @@
             this.bunifuMaterialTextbox7 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.dtFecha_Nac = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox9 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -75,6 +74,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.dtFechaNac = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_add_foto)).BeginInit();
@@ -494,10 +494,10 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.dtFechaNac);
             this.panel3.Controls.Add(this.bunifuMaterialTextbox7);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.comboBox4);
-            this.panel3.Controls.Add(this.dtFecha_Nac);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.bunifuMaterialTextbox9);
@@ -553,19 +553,6 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(198, 28);
             this.comboBox4.TabIndex = 124;
-            // 
-            // dtFecha_Nac
-            // 
-            this.dtFecha_Nac.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.dtFecha_Nac.BorderRadius = 0;
-            this.dtFecha_Nac.ForeColor = System.Drawing.Color.White;
-            this.dtFecha_Nac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha_Nac.FormatCustom = null;
-            this.dtFecha_Nac.Location = new System.Drawing.Point(11, 118);
-            this.dtFecha_Nac.Name = "dtFecha_Nac";
-            this.dtFecha_Nac.Size = new System.Drawing.Size(180, 24);
-            this.dtFecha_Nac.TabIndex = 122;
-            this.dtFecha_Nac.Value = new System.DateTime(2020, 4, 2, 13, 46, 8, 900);
             // 
             // label12
             // 
@@ -711,6 +698,15 @@
             this.label9.TabIndex = 117;
             this.label9.Text = "Dirección";
             // 
+            // dtFechaNac
+            // 
+            this.dtFechaNac.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.dtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaNac.Location = new System.Drawing.Point(20, 118);
+            this.dtFechaNac.Name = "dtFechaNac";
+            this.dtFechaNac.Size = new System.Drawing.Size(156, 23);
+            this.dtFechaNac.TabIndex = 127;
+            // 
             // Ingresar_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -787,7 +783,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox4;
-        private Bunifu.Framework.UI.BunifuDatepicker dtFecha_Nac;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox9;
@@ -798,5 +793,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker dtFechaNac;
     }
 }

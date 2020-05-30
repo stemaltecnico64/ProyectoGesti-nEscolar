@@ -100,18 +100,53 @@ namespace CapaPresentacion
             this.Botones();
             this.txtBuscar.Focus();
         }
-
-        private void BtnNuevo_Click(object sender, EventArgs e)
+        
+        private void ChkEliminar_CheckedChanged(object sender, EventArgs e)
         {
-            this.IsNuevo = true;
-            this.IsEditar = false;
-            this.Botones();
-            this.Limpiar();
-            this.Habilitar(true);
-            this.txtNombre.Focus();
+            if (chkEliminar.Checked)
+            {
+                this.dataListado.Columns[0].Visible = true;
+            }
+            else
+            {
+                this.dataListado.Columns[0].Visible = false;
+            }
+        }
+        
+
+        private void DataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataListado.Columns["Eliminar"].Index)
+            {
+                DataGridViewCheckBoxCell ChkEliminar = (DataGridViewCheckBoxCell)dataListado.Rows[e.RowIndex].Cells["Eliminar"];
+                ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
+            }
         }
 
-        private void BtnGuardar_Click(object sender, EventArgs e)
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            this.BuscarNombre();
+        }
+
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                this.cbIdDepartamento.Focus();
+        }
+
+        private void CbIdDepartamento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                this.txtDes.Focus();
+        }
+
+        private void TxtDes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                this.btnGuardar.Focus();
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -162,42 +197,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void BtnEditar_Click(object sender, EventArgs e)
-        {
-            if (!this.txtIdMunipio.Text.Equals(""))
-            {
-                this.IsEditar = true;
-                this.Botones();
-                this.Habilitar(true);
-            }
-            else
-            {
-                this.MensajeError("Debe de seleccionar primero el registro a Modificar");
-            }
-        }
-
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            this.IsNuevo = false;
-            this.IsEditar = false;
-            this.Botones();
-            this.Limpiar();
-            this.Habilitar(false);
-        }
-
-        private void ChkEliminar_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkEliminar.Checked)
-            {
-                this.dataListado.Columns[0].Visible = true;
-            }
-            else
-            {
-                this.dataListado.Columns[0].Visible = false;
-            }
-        }
-
-        private void BtnElimnar_Click(object sender, EventArgs e)
+        private void btnElimnar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -237,47 +237,51 @@ namespace CapaPresentacion
             }
         }
 
-        private void DataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnNuevo_Click_1(object sender, EventArgs e)
         {
-            if (e.ColumnIndex == dataListado.Columns["Eliminar"].Index)
-            {
-                DataGridViewCheckBoxCell ChkEliminar = (DataGridViewCheckBoxCell)dataListado.Rows[e.RowIndex].Cells["Eliminar"];
-                ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
-            }
+            this.IsNuevo = true;
+            this.IsEditar = false;
+            this.Botones();
+            this.Limpiar();
+            this.Habilitar(true);
+            this.txtNombre.Focus();
+
         }
 
-        private void DataListado_DoubleClick(object sender, EventArgs e)
+        private void btnEditar_Click_1(object sender, EventArgs e)
         {
+            if (!this.txtIdMunipio.Text.Equals(""))
+            {
+                this.IsEditar = true;
+                this.Botones();
+                this.Habilitar(true);
+            }
+            else
+            {
+                this.MensajeError("Debe de seleccionar primero el registro a Modificar");
+            }
 
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.IsNuevo = false;
+            this.IsEditar = false;
+            this.Botones();
+            this.Limpiar();
+            this.Habilitar(false);
+
+        }
+
+        private void dataListado_DoubleClick_1(object sender, EventArgs e)
+        {
             this.txtIdMunipio.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Id_Municipio"].Value);
             this.txtNombre.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Municipio"].Value);
-            this.txtDes.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Dep"].Value);
+            this.txtDes.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Des"].Value);
             this.cbIdDepartamento.SelectedValue = Convert.ToString(this.dataListado.CurrentRow.Cells["Id_Departamento"].Value);
 
             this.tabControl1.SelectedIndex = 1;
-        }
 
-        private void TxtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            this.BuscarNombre();
-        }
-
-        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-                this.cbIdDepartamento.Focus();
-        }
-
-        private void CbIdDepartamento_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-                this.txtDes.Focus();
-        }
-
-        private void TxtDes_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-                this.btnGuardar.Focus();
         }
     }
 }
