@@ -283,5 +283,10 @@ namespace CapaPresentacion
             this.tabControl1.SelectedIndex = 1;
 
         }
+
+        private void BtExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

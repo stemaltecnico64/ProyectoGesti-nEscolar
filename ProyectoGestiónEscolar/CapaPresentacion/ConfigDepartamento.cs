@@ -270,5 +270,23 @@ namespace CapaPresentacion
             this.tabControl1.SelectedIndex = 1;
 
         }
+
+        private void ConfigDepartamento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void ConfigDepartamento_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                this.Close();
+            }
+        }
+
+        private void BtExit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigMunicipio));
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
@@ -66,6 +66,7 @@
             this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -90,6 +91,7 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panelTitleBar.Controls.Add(this.btExit);
             this.panelTitleBar.Controls.Add(this.label9);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
@@ -145,14 +147,14 @@
             this.dataListado.AllowUserToOrderColumns = true;
             this.dataListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataListado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataListado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataListado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Eliminar});
@@ -160,10 +162,10 @@
             this.dataListado.Location = new System.Drawing.Point(16, 135);
             this.dataListado.MultiSelect = false;
             this.dataListado.Name = "dataListado";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dataListado.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dataListado.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListado.Size = new System.Drawing.Size(405, 234);
             this.dataListado.TabIndex = 199;
@@ -180,7 +182,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.ForeColor = System.Drawing.Color.Lime;
-            this.lblTotal.Location = new System.Drawing.Point(175, 107);
+            this.lblTotal.Location = new System.Drawing.Point(113, 107);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(56, 23);
@@ -198,7 +200,7 @@
             this.BtnImprimir.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnImprimir.ForeColor = System.Drawing.Color.Maroon;
             this.BtnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnImprimir.Location = new System.Drawing.Point(298, 72);
+            this.BtnImprimir.Location = new System.Drawing.Point(298, 80);
             this.BtnImprimir.Name = "BtnImprimir";
             this.BtnImprimir.Size = new System.Drawing.Size(123, 46);
             this.BtnImprimir.TabIndex = 202;
@@ -216,7 +218,7 @@
             this.btnElimnar.ForeColor = System.Drawing.Color.Maroon;
             this.btnElimnar.Image = ((System.Drawing.Image)(resources.GetObject("btnElimnar.Image")));
             this.btnElimnar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnElimnar.Location = new System.Drawing.Point(298, 22);
+            this.btnElimnar.Location = new System.Drawing.Point(298, 30);
             this.btnElimnar.Name = "btnElimnar";
             this.btnElimnar.Size = new System.Drawing.Size(123, 44);
             this.btnElimnar.TabIndex = 201;
@@ -516,6 +518,19 @@
             this.btnNuevo.Zoom = 10;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
+            // btExit
+            // 
+            this.btExit.BackColor = System.Drawing.Color.Red;
+            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
+            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btExit.ForeColor = System.Drawing.Color.Red;
+            this.btExit.Location = new System.Drawing.Point(411, 3);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(35, 35);
+            this.btExit.TabIndex = 2;
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.BtExit_Click);
+            // 
             // ConfigMunicipio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -583,5 +598,6 @@
         private Bunifu.Framework.UI.BunifuImageButton btnEditar;
         private Bunifu.Framework.UI.BunifuImageButton btnGuardar;
         private Bunifu.Framework.UI.BunifuImageButton btnNuevo;
+        private System.Windows.Forms.Button btExit;
     }
 }

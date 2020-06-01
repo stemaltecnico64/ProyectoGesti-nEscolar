@@ -110,6 +110,12 @@
     <Compile Include="ConfigPuestos.Designer.cs">
       <DependentUpon>ConfigPuestos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfigTipoEncargados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigTipoEncargados.Designer.cs">
+      <DependentUpon>ConfigTipoEncargados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Crear_Asignacion_Alumnos_Cursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -381,6 +387,18 @@
     <Compile Include="Smenu_Usuarios.Designer.cs">
       <DependentUpon>Smenu_Usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaAlumnoEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaAlumnoEditar.Designer.cs">
+      <DependentUpon>VistaAlumnoEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaEmpleados.Designer.cs">
+      <DependentUpon>VistaEmpleados.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaNegocios\CapaNegocios.csproj">
@@ -415,6 +433,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfigPuestos.resx">
       <DependentUpon>ConfigPuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigTipoEncargados.resx">
+      <DependentUpon>ConfigTipoEncargados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Crear_Asignacion_Alumnos_Cursos.resx">
       <DependentUpon>Crear_Asignacion_Alumnos_Cursos.cs</DependentUpon>
@@ -546,6 +567,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Smenu_Usuarios.resx">
       <DependentUpon>Smenu_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaAlumnoEditar.resx">
+      <DependentUpon>VistaAlumnoEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaEmpleados.resx">
+      <DependentUpon>VistaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

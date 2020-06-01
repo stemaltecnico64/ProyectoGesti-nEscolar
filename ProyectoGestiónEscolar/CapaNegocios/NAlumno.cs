@@ -21,7 +21,7 @@ namespace CapaNegocios
             Obj.Nombre3 = nombre3;
             Obj.Apellido1 = apellido1;
             Obj.Apellido2 = apellido2;
-            Obj.Apellido3 = apellido1;
+            Obj.Apellido3 = apellido3;
             Obj.Fecha_Nac = fecha_nac;
             Obj.Sexo = sexo;
             Obj.Direccion = direccion;
@@ -80,5 +80,26 @@ namespace CapaNegocios
             Obj.TextoBuscar = textobuscar;
             return Obj.cui(Obj);
         }
+
+        public static DataTable ApellidoEditar(string textobuscar)
+        {
+            DAlumno Obj = new DAlumno();
+            Obj.TextoBuscar = textobuscar;
+            return Obj.ApellidoEditar(Obj);
+        }
+        public static DataTable NombreEditar(string textobuscar)
+        {
+            DAlumno Obj = new DAlumno();
+            Obj.TextoBuscar = textobuscar;
+            return Obj.NombreEditar(Obj);
+        }
+
+        public static DataTable cuiEditar(string textobuscar)
+        {
+            DAlumno Obj = new DAlumno();
+            Obj.TextoBuscar = textobuscar;
+            return Obj.cuiEditar(Obj);
+        }
+
     }
 }

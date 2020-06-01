@@ -10,17 +10,16 @@ using System.Windows.Forms;
 using CapaNegocios;
 namespace CapaPresentacion
 {
-    public partial class ConfigPuestos : Form
+    public partial class ConfigTipoEncargados : Form
     {
         private bool IsNuevo = false;
 
         private bool IsEditar = false;
-        public ConfigPuestos()
+        public ConfigTipoEncargados()
         {
             InitializeComponent();
-            this.ttMensaje.SetToolTip(this.txtPuestos, "Ingrese el nombre de un puesto");
+            this.ttMensaje.SetToolTip(this.txtNombre, "Ingrese un tipo de encargado");
         }
-
         private void MensajeOk(string mensaje)
         {
             MessageBox.Show(mensaje, "SEGURIDAD DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -35,14 +34,14 @@ namespace CapaPresentacion
 
         private void Limpiar()
         {
-            this.txtIdPuestos.Text = string.Empty;
-            this.txtPuestos.Text = string.Empty;
+            this.txtIdTipoEncargado.Text = string.Empty;
+            this.txtNombre.Text = string.Empty;
         }
 
 
         private void Habilitar(bool valor)
         {
-            this.txtIdPuestos.ReadOnly = !valor;
+            this.txtNombre.ReadOnly = !valor;
         }
 
 
@@ -73,18 +72,18 @@ namespace CapaPresentacion
         }
         private void Mostrar()
         {
-            this.dataListado.DataSource = NPuesto.Mostrar();
+            this.dataListado.DataSource = NTipo_Encargado.Mostrar();
             this.OcultarColumnas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
         private void BuscarNombre()
         {
-            this.dataListado.DataSource = NPuesto.BuscarNombre(this.txtBuscar.Text);
+            this.dataListado.DataSource = NTipo_Encargado.BuscarNombre(this.txtBuscar.Text);
             this.OcultarColumnas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
-        private void ConfigPuestos_Load(object sender, EventArgs e)
+        private void ConfigTipoEncargados_Load(object sender, EventArgs e)
         {
             this.Mostrar();
             this.Habilitar(false);
@@ -104,7 +103,7 @@ namespace CapaPresentacion
             this.Botones();
             this.Limpiar();
             this.Habilitar(true);
-            this.txtPuestos.Focus();
+            this.txtNombre.Focus();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -112,20 +111,20 @@ namespace CapaPresentacion
             try
             {
                 string rpta = "";
-                if (this.txtPuestos.Text == string.Empty)
+                if (this.txtNombre.Text == string.Empty)
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
-                    errorIcono.SetError(txtPuestos, "Ingrese un Nombre");
+                    errorIcono.SetError(txtNombre, "Ingrese un Nombre");
                 }
                 else
                 {
                     if (this.IsNuevo)
                     {
-                        rpta = NPuesto.Insertar(this.txtPuestos.Text);
+                        rpta = NTipo_Encargado.Insertar(this.txtNombre.Text);
                     }
                     else
                     {
-                        rpta = NPuesto.Editar(Convert.ToInt32(this.txtIdPuestos.Text), this.txtPuestos.Text);
+                        rpta = NTipo_Encargado.Editar(Convert.ToInt32(this.txtIdTipoEncargado.Text), this.txtNombre.Text);
                     }
 
                     if (rpta.Equals("OK"))
@@ -158,7 +157,7 @@ namespace CapaPresentacion
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            if (!this.txtIdPuestos.Text.Equals(""))
+            if (!this.txtNombre.Text.Equals(""))
             {
                 this.IsEditar = true;
                 this.Botones();
@@ -181,8 +180,8 @@ namespace CapaPresentacion
 
         private void DataListado_DoubleClick(object sender, EventArgs e)
         {
-            this.txtIdPuestos.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["ID_PUESTO"].Value);
-            this.txtPuestos.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["PUESTO"].Value);
+            this.txtIdTipoEncargado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Id_Tipo_Encargado"].Value);
+            this.txtNombre.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Nombre"].Value);
 
             this.tabControl1.SelectedIndex = 1;
         }

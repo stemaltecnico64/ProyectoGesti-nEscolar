@@ -48,10 +48,12 @@
     <Compile Include="DCiclo.cs" />
     <Compile Include="DDepartamento.cs" />
     <Compile Include="DAlumno.cs" />
+    <Compile Include="DEmpleado.cs" />
     <Compile Include="DEncargado.cs" />
     <Compile Include="DGrado.cs" />
     <Compile Include="DInscripcion.cs" />
     <Compile Include="DMunicipio.cs" />
+    <Compile Include="DPuesto.cs" />
     <Compile Include="DSeccion.cs" />
     <Compile Include="DTipo_Encargado.cs" />
     <Compile Include="DTipo_Inscripcion.cs" />
