@@ -116,6 +116,34 @@ namespace CapaPresentacion
             Reporte_Encargados_Alumnos rea = new Reporte_Encargados_Alumnos();
             rea.Show();
         }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            if (dataListadoE.Rows.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                DialogResult Opcion;
+                Opcion = MessageBox.Show("Realmente Desea Borrar este Encargado", "SEGURIDAD DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Opcion == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string cmd = string.Format("Execute Delete_Encargado '{0}'", Convert.ToInt32(dataListadoE.Rows[dataListadoE.CurrentRow.Index].Cells[0].Value.ToString()));
+                        Login.Conexion_GX(cmd);
+                        MessageBox.Show("El Encargado se ha Borrado..!");
+                        this.Mostrar();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Ha ocurrido un Error!" + error);
+                    }
+                }
+            }
+        }
     }
 }
 

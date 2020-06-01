@@ -39,17 +39,14 @@
             this.Tabla_Empleados = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cbBuscar = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tabla_Empleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -148,24 +145,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Sienna;
-            this.label2.Location = new System.Drawing.Point(488, 405);
+            this.label2.Location = new System.Drawing.Point(449, 405);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 23);
             this.label2.TabIndex = 149;
             this.label2.Text = "Borrar";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Sienna;
-            this.label1.Location = new System.Drawing.Point(272, 405);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 23);
-            this.label1.TabIndex = 148;
-            this.label1.Text = "Editar";
             // 
             // vScrollBar1
             // 
@@ -179,26 +163,14 @@
             this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
             this.btn_guardar.ImageActive = null;
-            this.btn_guardar.Location = new System.Drawing.Point(422, 395);
+            this.btn_guardar.Location = new System.Drawing.Point(383, 395);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(54, 49);
             this.btn_guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_guardar.TabIndex = 145;
             this.btn_guardar.TabStop = false;
             this.btn_guardar.Zoom = 10;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageActive = null;
-            this.btnNuevo.Location = new System.Drawing.Point(203, 392);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(57, 52);
-            this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnNuevo.TabIndex = 146;
-            this.btnNuevo.TabStop = false;
-            this.btnNuevo.Zoom = 10;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // txtBuscar
             // 
@@ -247,10 +219,8 @@
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.Tabla_Empleados);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.btn_guardar);
-            this.Controls.Add(this.btnNuevo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Listado_Empleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -260,7 +230,6 @@
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tabla_Empleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,10 +242,8 @@
         private System.Windows.Forms.Label lblTitle;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private Bunifu.Framework.UI.BunifuImageButton btn_guardar;
-        private Bunifu.Framework.UI.BunifuImageButton btnNuevo;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ComboBox cbBuscar;
         public Bunifu.Framework.UI.BunifuCustomDataGrid Tabla_Empleados;

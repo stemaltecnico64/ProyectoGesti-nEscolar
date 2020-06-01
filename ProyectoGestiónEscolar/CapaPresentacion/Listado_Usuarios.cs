@@ -122,5 +122,33 @@ namespace CapaPresentacion
                 BuscarNivel();
             }
         }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            if (Tabla_Usuarios.Rows.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                DialogResult Opcion;
+                Opcion = MessageBox.Show("Realmente Desea Borrar este Usuario", "SEGURIDAD DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Opcion == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string cmd = string.Format("Execute Delete_Usuario '{0}'", Convert.ToInt32(Tabla_Usuarios.Rows[Tabla_Usuarios.CurrentRow.Index].Cells[0].Value.ToString()));
+                        Login.Conexion_GX(cmd);
+                        MessageBox.Show("El Usuario se ha Borrado..!");
+                        cargarTablaUsurios();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Ha ocurrido un Error!" + error);
+                    }
+                }
+            }
+        }
     }
 }

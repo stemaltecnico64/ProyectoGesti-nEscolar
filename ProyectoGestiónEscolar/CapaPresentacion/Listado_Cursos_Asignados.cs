@@ -133,5 +133,33 @@ namespace CapaPresentacion
                 Close();
             }
         }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            if (Tabla_Cursos_A.Rows.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                DialogResult Opcion;
+                Opcion = MessageBox.Show("Realmente Desea Borrar esta Asignación", "SEGURIDAD DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Opcion == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string cmd = string.Format("Execute Delete_Asignacion_Curso '{0}'", Convert.ToInt32(Tabla_Cursos_A.Rows[Tabla_Cursos_A.CurrentRow.Index].Cells[0].Value.ToString()));
+                        Login.Conexion_GX(cmd);
+                        MessageBox.Show("Colaborador se ha Borrado..!");
+                        cargarTablaCursos_Asignados();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Ha ocurrido un Error!" + error);
+                    }
+                }
+            }
+        }
     }
 }
