@@ -110,6 +110,12 @@ namespace CapaPresentacion
                 this.Hide();
             }
         }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Reporte_Encargados_Alumnos rea = new Reporte_Encargados_Alumnos();
+            rea.Show();
+        }
     }
 }
 

@@ -68,11 +68,23 @@
     <Compile Include="Ajustes_Admin.Designer.cs">
       <DependentUpon>Ajustes_Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alumnos_Actuales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alumnos_Actuales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Apertura_Ciclo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Apertura_Ciclo.Designer.cs">
       <DependentUpon>Apertura_Ciclo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencia_Empleados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Asistencia_Empleados.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="BuscarAlumnoInscripcion.cs">
       <SubType>Form</SubType>
@@ -164,6 +176,24 @@
     <Compile Include="Editar_Usuario_normal.Designer.cs">
       <DependentUpon>Editar_Usuario_normal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Empleados_Puestos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Empleados_Puestos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Encargados_Alumnos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Encargados_Alumnos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Impresion_Notas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impresion_Notas.Designer.cs">
+      <DependentUpon>Impresion_Notas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingresar_Alumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +272,12 @@
     <Compile Include="Inicio_Secretarios.Designer.cs">
       <DependentUpon>Inicio_Secretarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inscripciones_ano.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inscripciones_ano.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Inscripcion_alumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +344,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Maestros_Cursos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Maestros_Cursos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Menu_Alumnos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +398,12 @@
     <Compile Include="Menu_Usuarios.Designer.cs">
       <DependentUpon>Menu_Usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notas_Impresion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Notas_Impresion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Pantalla_Carga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,11 +417,65 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reporte_Alumnos_Actual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Alumnos_Actual.Designer.cs">
+      <DependentUpon>Reporte_Alumnos_Actual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Asistencia_Alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Asistencia_Alumnos.Designer.cs">
+      <DependentUpon>Reporte_Asistencia_Alumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Asistencia_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Asistencia_Empleados.Designer.cs">
+      <DependentUpon>Reporte_Asistencia_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Cursos.Designer.cs">
+      <DependentUpon>Reporte_Cursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Empleados_Puesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Empleados_Puesto.Designer.cs">
+      <DependentUpon>Reporte_Empleados_Puesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Encargados_Alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Encargados_Alumnos.Designer.cs">
+      <DependentUpon>Reporte_Encargados_Alumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Inscripciones_By_year.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Inscripciones_By_year.Designer.cs">
+      <DependentUpon>Reporte_Inscripciones_By_year.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Maestros_Cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Maestros_Cursos.Designer.cs">
+      <DependentUpon>Reporte_Maestros_Cursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reporte_Notas_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reporte_Notas_Admin.Designer.cs">
       <DependentUpon>Reporte_Notas_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R_Asistencia_Alumnos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_Asistencia_Alumnos.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Smenu_Usuarios.cs">
       <SubType>Form</SubType>
@@ -395,8 +497,16 @@
     <EmbeddedResource Include="Ajustes_Admin.resx">
       <DependentUpon>Ajustes_Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos_Actuales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Alumnos_Actuales.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Apertura_Ciclo.resx">
       <DependentUpon>Apertura_Ciclo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencia_Empleados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Asistencia_Empleados.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarAlumnoInscripcion.resx">
       <DependentUpon>BuscarAlumnoInscripcion.cs</DependentUpon>
@@ -444,6 +554,17 @@
     <EmbeddedResource Include="Editar_Usuario_normal.resx">
       <DependentUpon>Editar_Usuario_normal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Empleados_Puestos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Empleados_Puestos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Encargados_Alumnos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Encargados_Alumnos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Impresion_Notas.resx">
+      <DependentUpon>Impresion_Notas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Alumno.resx">
       <DependentUpon>Ingresar_Alumno.cs</DependentUpon>
     </EmbeddedResource>
@@ -474,8 +595,18 @@
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inicio_Director.resx">
+      <DependentUpon>Inicio_Director.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio_Maestro.resx">
       <DependentUpon>Inicio_Maestro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio_Secretarios.resx">
+      <DependentUpon>Inicio_Secretarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripciones_ano.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Inscripciones_ano.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Inscripcion_alumno.resx">
       <DependentUpon>Inscripcion_alumno.cs</DependentUpon>
@@ -510,6 +641,10 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Maestros_Cursos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Maestros_Cursos.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu_Alumnos.resx">
       <DependentUpon>Menu_Alumnos.cs</DependentUpon>
     </EmbeddedResource>
@@ -534,6 +669,10 @@
     <EmbeddedResource Include="Menu_Usuarios.resx">
       <DependentUpon>Menu_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Notas_Impresion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Notas_Impresion.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantalla_Carga.resx">
       <DependentUpon>Pantalla_Carga.cs</DependentUpon>
     </EmbeddedResource>
@@ -541,8 +680,36 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Alumnos_Actual.resx">
+      <DependentUpon>Reporte_Alumnos_Actual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Asistencia_Alumnos.resx">
+      <DependentUpon>Reporte_Asistencia_Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Asistencia_Empleados.resx">
+      <DependentUpon>Reporte_Asistencia_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Cursos.resx">
+      <DependentUpon>Reporte_Cursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Empleados_Puesto.resx">
+      <DependentUpon>Reporte_Empleados_Puesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Encargados_Alumnos.resx">
+      <DependentUpon>Reporte_Encargados_Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Inscripciones_By_year.resx">
+      <DependentUpon>Reporte_Inscripciones_By_year.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Maestros_Cursos.resx">
+      <DependentUpon>Reporte_Maestros_Cursos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reporte_Notas_Admin.resx">
       <DependentUpon>Reporte_Notas_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Asistencia_Alumnos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_Asistencia_Alumnos.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Smenu_Usuarios.resx">
       <DependentUpon>Smenu_Usuarios.cs</DependentUpon>
@@ -596,8 +763,6 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reportes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

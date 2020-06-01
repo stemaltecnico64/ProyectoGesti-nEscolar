@@ -522,6 +522,7 @@
             this.btExit.Size = new System.Drawing.Size(35, 35);
             this.btExit.TabIndex = 1;
             this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // panel1
             // 

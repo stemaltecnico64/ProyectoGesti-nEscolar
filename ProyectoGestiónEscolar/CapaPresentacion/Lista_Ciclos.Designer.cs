@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.btExit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataListado = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.btExit = new System.Windows.Forms.Button();
+            this.dataListadoCi = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.lblTotal = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListadoCi)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -66,18 +66,6 @@
             this.panelTitleBar.Size = new System.Drawing.Size(456, 54);
             this.panelTitleBar.TabIndex = 151;
             // 
-            // btExit
-            // 
-            this.btExit.BackColor = System.Drawing.Color.Red;
-            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
-            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btExit.ForeColor = System.Drawing.Color.Red;
-            this.btExit.Location = new System.Drawing.Point(812, 3);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(35, 35);
-            this.btExit.TabIndex = 114;
-            this.btExit.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
@@ -91,51 +79,63 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // dataListado
+            // btExit
             // 
-            this.dataListado.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dataListado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataListado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btExit.BackColor = System.Drawing.Color.Red;
+            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
+            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btExit.ForeColor = System.Drawing.Color.Red;
+            this.btExit.Location = new System.Drawing.Point(812, 3);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(35, 35);
+            this.btExit.TabIndex = 114;
+            this.btExit.UseVisualStyleBackColor = false;
+            // 
+            // dataListadoCi
+            // 
+            this.dataListadoCi.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dataListadoCi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataListadoCi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataListado.BackgroundColor = System.Drawing.Color.White;
-            this.dataListado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataListado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataListado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataListado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataListado.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataListado.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataListado.DoubleBuffered = true;
-            this.dataListado.EnableHeadersVisualStyles = false;
-            this.dataListado.HeaderBgColor = System.Drawing.Color.Maroon;
-            this.dataListado.HeaderForeColor = System.Drawing.Color.White;
-            this.dataListado.Location = new System.Drawing.Point(12, 86);
-            this.dataListado.Name = "dataListado";
-            this.dataListado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataListado.RowHeadersVisible = false;
-            this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(432, 373);
-            this.dataListado.TabIndex = 217;
-            this.dataListado.DoubleClick += new System.EventHandler(this.DataListado_DoubleClick);
+            this.dataListadoCi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataListadoCi.BackgroundColor = System.Drawing.Color.White;
+            this.dataListadoCi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataListadoCi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataListadoCi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataListadoCi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataListadoCi.ColumnHeadersHeight = 50;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataListadoCi.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataListadoCi.DoubleBuffered = true;
+            this.dataListadoCi.EnableHeadersVisualStyles = false;
+            this.dataListadoCi.HeaderBgColor = System.Drawing.Color.Maroon;
+            this.dataListadoCi.HeaderForeColor = System.Drawing.Color.White;
+            this.dataListadoCi.Location = new System.Drawing.Point(12, 86);
+            this.dataListadoCi.Name = "dataListadoCi";
+            this.dataListadoCi.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataListadoCi.RowHeadersVisible = false;
+            this.dataListadoCi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataListadoCi.Size = new System.Drawing.Size(432, 373);
+            this.dataListadoCi.TabIndex = 217;
+            this.dataListadoCi.DoubleClick += new System.EventHandler(this.DataListado_DoubleClick);
             // 
             // lblTotal
             // 
@@ -154,7 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 471);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.dataListado);
+            this.Controls.Add(this.dataListadoCi);
             this.Controls.Add(this.panelTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Lista_Ciclos";
@@ -163,7 +163,7 @@
             this.Load += new System.EventHandler(this.Lista_Ciclos_Load);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataListado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListadoCi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,7 +175,7 @@
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Button button1;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dataListado;
         private System.Windows.Forms.Label lblTotal;
+        public Bunifu.Framework.UI.BunifuCustomDataGrid dataListadoCi;
     }
 }

@@ -41,7 +41,7 @@
             this.txtSeccion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtGrado = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCarrera = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtCiclo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtCodigoEscolar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtAlumno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCodigo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnBuscarEncargado = new Bunifu.Framework.UI.BunifuImageButton();
@@ -109,7 +109,7 @@
             this.panel1.Controls.Add(this.txtSeccion);
             this.panel1.Controls.Add(this.txtGrado);
             this.panel1.Controls.Add(this.txtCarrera);
-            this.panel1.Controls.Add(this.txtCiclo);
+            this.panel1.Controls.Add(this.txtCodigoEscolar);
             this.panel1.Controls.Add(this.txtAlumno);
             this.panel1.Controls.Add(this.txtCodigo);
             this.panel1.Controls.Add(this.btnBuscarEncargado);
@@ -230,24 +230,24 @@
             this.txtCarrera.TabIndex = 123;
             this.txtCarrera.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // txtCiclo
+            // txtCodigoEscolar
             // 
-            this.txtCiclo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCiclo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtCiclo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCiclo.HintForeColor = System.Drawing.Color.Empty;
-            this.txtCiclo.HintText = "";
-            this.txtCiclo.isPassword = false;
-            this.txtCiclo.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtCiclo.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtCiclo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCiclo.LineThickness = 3;
-            this.txtCiclo.Location = new System.Drawing.Point(387, 61);
-            this.txtCiclo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCiclo.Name = "txtCiclo";
-            this.txtCiclo.Size = new System.Drawing.Size(126, 33);
-            this.txtCiclo.TabIndex = 122;
-            this.txtCiclo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCodigoEscolar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodigoEscolar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCodigoEscolar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCodigoEscolar.HintForeColor = System.Drawing.Color.Empty;
+            this.txtCodigoEscolar.HintText = "";
+            this.txtCodigoEscolar.isPassword = false;
+            this.txtCodigoEscolar.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtCodigoEscolar.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtCodigoEscolar.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCodigoEscolar.LineThickness = 3;
+            this.txtCodigoEscolar.Location = new System.Drawing.Point(387, 61);
+            this.txtCodigoEscolar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoEscolar.Name = "txtCodigoEscolar";
+            this.txtCodigoEscolar.Size = new System.Drawing.Size(126, 33);
+            this.txtCodigoEscolar.TabIndex = 122;
+            this.txtCodigoEscolar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtAlumno
             // 
@@ -469,7 +469,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtSeccion;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtGrado;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCarrera;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCiclo;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCodigoEscolar;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtAlumno;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCodigo;
         private Bunifu.Framework.UI.BunifuImageButton btnBuscarEncargado;

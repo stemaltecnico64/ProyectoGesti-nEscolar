@@ -33,27 +33,24 @@
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btExit = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btn_mostrar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_mostrar1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.txt_password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIdAlumno = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtNuevoPass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btn_mostrar2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_mostrar3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtConfirmarPass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnCancelar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label21 = new System.Windows.Forms.Label();
             this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.label15 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_mostrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_mostrar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_mostrar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_mostrar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,18 +91,19 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Cambiar Contraseña";
             // 
-            // btn_mostrar
+            // btn_mostrar1
             // 
-            this.btn_mostrar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_mostrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_mostrar.Image")));
-            this.btn_mostrar.ImageActive = null;
-            this.btn_mostrar.Location = new System.Drawing.Point(360, 154);
-            this.btn_mostrar.Name = "btn_mostrar";
-            this.btn_mostrar.Size = new System.Drawing.Size(48, 37);
-            this.btn_mostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_mostrar.TabIndex = 193;
-            this.btn_mostrar.TabStop = false;
-            this.btn_mostrar.Zoom = 10;
+            this.btn_mostrar1.BackColor = System.Drawing.Color.Transparent;
+            this.btn_mostrar1.Image = ((System.Drawing.Image)(resources.GetObject("btn_mostrar1.Image")));
+            this.btn_mostrar1.ImageActive = null;
+            this.btn_mostrar1.Location = new System.Drawing.Point(360, 154);
+            this.btn_mostrar1.Name = "btn_mostrar1";
+            this.btn_mostrar1.Size = new System.Drawing.Size(48, 37);
+            this.btn_mostrar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_mostrar1.TabIndex = 193;
+            this.btn_mostrar1.TabStop = false;
+            this.btn_mostrar1.Zoom = 10;
+            this.btn_mostrar1.Click += new System.EventHandler(this.btn_mostrar1_Click);
             // 
             // txt_password
             // 
@@ -139,13 +137,13 @@
             this.label1.TabIndex = 191;
             this.label1.Text = "Antigua Contraseña:";
             // 
-            // txtIdAlumno
+            // txtId
             // 
-            this.txtIdAlumno.BackColor = System.Drawing.Color.LightGray;
-            this.txtIdAlumno.Location = new System.Drawing.Point(95, 75);
-            this.txtIdAlumno.Name = "txtIdAlumno";
-            this.txtIdAlumno.Size = new System.Drawing.Size(100, 20);
-            this.txtIdAlumno.TabIndex = 194;
+            this.txtId.BackColor = System.Drawing.Color.LightGray;
+            this.txtId.Location = new System.Drawing.Point(95, 75);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 194;
             // 
             // label18
             // 
@@ -160,24 +158,24 @@
             this.label18.TabIndex = 195;
             this.label18.Text = "Codigo:";
             // 
-            // bunifuMaterialTextbox1
+            // txtNuevoPass
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = true;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(63, 227);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(274, 33);
-            this.bunifuMaterialTextbox1.TabIndex = 197;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNuevoPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNuevoPass.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtNuevoPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNuevoPass.HintForeColor = System.Drawing.Color.Empty;
+            this.txtNuevoPass.HintText = "";
+            this.txtNuevoPass.isPassword = true;
+            this.txtNuevoPass.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtNuevoPass.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtNuevoPass.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtNuevoPass.LineThickness = 3;
+            this.txtNuevoPass.Location = new System.Drawing.Point(63, 227);
+            this.txtNuevoPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNuevoPass.Name = "txtNuevoPass";
+            this.txtNuevoPass.Size = new System.Drawing.Size(274, 33);
+            this.txtNuevoPass.TabIndex = 197;
+            this.txtNuevoPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label2
             // 
@@ -192,50 +190,52 @@
             this.label2.TabIndex = 196;
             this.label2.Text = "Nueva Contraseña:";
             // 
-            // bunifuImageButton1
+            // btn_mostrar2
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(360, 227);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(48, 37);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 198;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.btn_mostrar2.BackColor = System.Drawing.Color.Transparent;
+            this.btn_mostrar2.Image = ((System.Drawing.Image)(resources.GetObject("btn_mostrar2.Image")));
+            this.btn_mostrar2.ImageActive = null;
+            this.btn_mostrar2.Location = new System.Drawing.Point(360, 227);
+            this.btn_mostrar2.Name = "btn_mostrar2";
+            this.btn_mostrar2.Size = new System.Drawing.Size(48, 37);
+            this.btn_mostrar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_mostrar2.TabIndex = 198;
+            this.btn_mostrar2.TabStop = false;
+            this.btn_mostrar2.Zoom = 10;
+            this.btn_mostrar2.Click += new System.EventHandler(this.btn_mostrar2_Click);
             // 
-            // bunifuImageButton2
+            // btn_mostrar3
             // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(360, 303);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(48, 37);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 201;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
+            this.btn_mostrar3.BackColor = System.Drawing.Color.Transparent;
+            this.btn_mostrar3.Image = ((System.Drawing.Image)(resources.GetObject("btn_mostrar3.Image")));
+            this.btn_mostrar3.ImageActive = null;
+            this.btn_mostrar3.Location = new System.Drawing.Point(360, 303);
+            this.btn_mostrar3.Name = "btn_mostrar3";
+            this.btn_mostrar3.Size = new System.Drawing.Size(48, 37);
+            this.btn_mostrar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_mostrar3.TabIndex = 201;
+            this.btn_mostrar3.TabStop = false;
+            this.btn_mostrar3.Zoom = 10;
+            this.btn_mostrar3.Click += new System.EventHandler(this.btn_mostrar3_Click);
             // 
-            // bunifuMaterialTextbox2
+            // txtConfirmarPass
             // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = true;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(63, 303);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(274, 33);
-            this.bunifuMaterialTextbox2.TabIndex = 200;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtConfirmarPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmarPass.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtConfirmarPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtConfirmarPass.HintForeColor = System.Drawing.Color.Empty;
+            this.txtConfirmarPass.HintText = "";
+            this.txtConfirmarPass.isPassword = true;
+            this.txtConfirmarPass.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtConfirmarPass.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtConfirmarPass.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtConfirmarPass.LineThickness = 3;
+            this.txtConfirmarPass.Location = new System.Drawing.Point(63, 303);
+            this.txtConfirmarPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmarPass.Name = "txtConfirmarPass";
+            this.txtConfirmarPass.Size = new System.Drawing.Size(274, 33);
+            this.txtConfirmarPass.TabIndex = 200;
+            this.txtConfirmarPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label3
             // 
@@ -250,44 +250,19 @@
             this.label3.TabIndex = 199;
             this.label3.Text = "Confirmar Contraseña:";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px;
-            this.btnCancelar.ImageActive = null;
-            this.btnCancelar.Location = new System.Drawing.Point(69, 350);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(61, 47);
-            this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCancelar.TabIndex = 204;
-            this.btnCancelar.TabStop = false;
-            this.btnCancelar.Zoom = 10;
-            // 
-            // label21
-            // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Sienna;
-            this.label21.Location = new System.Drawing.Point(139, 361);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(73, 23);
-            this.label21.TabIndex = 205;
-            this.label21.Text = "Cancelar";
-            // 
             // btn_guardar
             // 
             this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
             this.btn_guardar.ImageActive = null;
-            this.btn_guardar.Location = new System.Drawing.Point(217, 348);
+            this.btn_guardar.Location = new System.Drawing.Point(154, 352);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(54, 49);
             this.btn_guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_guardar.TabIndex = 202;
             this.btn_guardar.TabStop = false;
             this.btn_guardar.Zoom = 10;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // label15
             // 
@@ -296,7 +271,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Sienna;
-            this.label15.Location = new System.Drawing.Point(277, 366);
+            this.label15.Location = new System.Drawing.Point(214, 370);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 23);
             this.label15.TabIndex = 203;
@@ -314,19 +289,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 413);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.bunifuImageButton2);
-            this.Controls.Add(this.bunifuMaterialTextbox2);
+            this.Controls.Add(this.btn_mostrar3);
+            this.Controls.Add(this.txtConfirmarPass);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.bunifuImageButton1);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
+            this.Controls.Add(this.btn_mostrar2);
+            this.Controls.Add(this.txtNuevoPass);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtIdAlumno);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.btn_mostrar);
+            this.Controls.Add(this.btn_mostrar1);
             this.Controls.Add(this.txt_password);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelTitleBar);
@@ -337,10 +310,9 @@
             this.Load += new System.EventHandler(this.Cambiar_Contra_Usuario_Normal_Load);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_mostrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_mostrar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_mostrar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_mostrar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -352,19 +324,17 @@
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Label lblTitle;
-        private Bunifu.Framework.UI.BunifuImageButton btn_mostrar;
+        private Bunifu.Framework.UI.BunifuImageButton btn_mostrar1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_password;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIdAlumno;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label18;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNuevoPass;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private Bunifu.Framework.UI.BunifuImageButton btn_mostrar2;
+        private Bunifu.Framework.UI.BunifuImageButton btn_mostrar3;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtConfirmarPass;
         private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuImageButton btnCancelar;
-        private System.Windows.Forms.Label label21;
         private Bunifu.Framework.UI.BunifuImageButton btn_guardar;
         private System.Windows.Forms.Label label15;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;

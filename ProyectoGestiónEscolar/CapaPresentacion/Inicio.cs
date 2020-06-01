@@ -116,7 +116,6 @@ namespace CapaPresentacion
             this.WindowState = FormWindowState.Normal;
             btn_maximizar.Show();
             btn_restaurar.Hide();
-            
         }
 
         private void btn_maximizar_Click(object sender, EventArgs e)

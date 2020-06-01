@@ -33,9 +33,9 @@
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btExit = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txt_NuevoNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIdAlumno = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txt_nombre_usuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label23 = new System.Windows.Forms.Label();
@@ -86,24 +86,24 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Editar Usuario";
             // 
-            // bunifuMaterialTextbox1
+            // txt_NuevoNombre
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(226, 178);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(224, 33);
-            this.bunifuMaterialTextbox1.TabIndex = 198;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_NuevoNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_NuevoNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_NuevoNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_NuevoNombre.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_NuevoNombre.HintText = "";
+            this.txt_NuevoNombre.isPassword = false;
+            this.txt_NuevoNombre.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txt_NuevoNombre.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_NuevoNombre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txt_NuevoNombre.LineThickness = 3;
+            this.txt_NuevoNombre.Location = new System.Drawing.Point(226, 178);
+            this.txt_NuevoNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_NuevoNombre.Name = "txt_NuevoNombre";
+            this.txt_NuevoNombre.Size = new System.Drawing.Size(224, 33);
+            this.txt_NuevoNombre.TabIndex = 198;
+            this.txt_NuevoNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label1
             // 
@@ -118,13 +118,13 @@
             this.label1.TabIndex = 197;
             this.label1.Text = "Nuevo Nombre Usuario:";
             // 
-            // txtIdAlumno
+            // txtId
             // 
-            this.txtIdAlumno.BackColor = System.Drawing.Color.LightGray;
-            this.txtIdAlumno.Location = new System.Drawing.Point(220, 75);
-            this.txtIdAlumno.Name = "txtIdAlumno";
-            this.txtIdAlumno.Size = new System.Drawing.Size(100, 20);
-            this.txtIdAlumno.TabIndex = 195;
+            this.txtId.BackColor = System.Drawing.Color.LightGray;
+            this.txtId.Location = new System.Drawing.Point(220, 75);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 195;
             // 
             // label18
             // 
@@ -209,6 +209,7 @@
             this.btn_guardar.TabIndex = 199;
             this.btn_guardar.TabStop = false;
             this.btn_guardar.Zoom = 10;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // label15
             // 
@@ -239,9 +240,9 @@
             this.Controls.Add(this.label21);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
+            this.Controls.Add(this.txt_NuevoNombre);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtIdAlumno);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.txt_nombre_usuario);
             this.Controls.Add(this.label23);
@@ -250,6 +251,7 @@
             this.Name = "Editar_Usuario_normal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar_Usuario_normal";
+            this.Load += new System.EventHandler(this.Editar_Usuario_normal_Load);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
@@ -264,9 +266,9 @@
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Label lblTitle;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_NuevoNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIdAlumno;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label18;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_nombre_usuario;
         private System.Windows.Forms.Label label23;

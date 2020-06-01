@@ -54,11 +54,11 @@ namespace CapaPresentacion
             if (li.DialogResult == DialogResult.OK)
             {
                 txtCodigo.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[0].Value.ToString();
-                txtSeccion.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[8].Value.ToString();
-                txtCarrera.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[6].Value.ToString();
-                txtGrado.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[7].Value.ToString();
+                txtSeccion.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[10].Value.ToString();
+                txtCarrera.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[8].Value.ToString();
+                txtGrado.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[9].Value.ToString();
                 txtAlumno.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[5].Value.ToString();
-                txtCiclo.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[3].Value.ToString();
+                txtCodigoEscolar.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[4].Value.ToString();
             }
         }
 

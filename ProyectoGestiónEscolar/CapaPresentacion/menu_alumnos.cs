@@ -15,6 +15,11 @@ namespace CapaPresentacion
         public Menu_Alumnos()
         {
             InitializeComponent();
+            if (Login.nivel_x.Equals("3"))
+            {
+                bunifuImageButton1.Hide();
+                label1.Hide();
+            }
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -33,6 +38,11 @@ namespace CapaPresentacion
         {
             Listado_Encargados ventanalistadoencargados = new Listado_Encargados();
             ventanalistadoencargados.Show();
+        }
+
+        private void Menu_Alumnos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

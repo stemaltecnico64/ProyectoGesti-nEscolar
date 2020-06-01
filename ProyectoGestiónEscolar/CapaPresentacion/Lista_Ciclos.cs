@@ -24,9 +24,9 @@ namespace CapaPresentacion
 
         private void Mostrar()
         {
-            this.dataListado.DataSource = NCiclo.MostrarCicloActivos();
+            this.dataListadoCi.DataSource = NCiclo.MostrarCicloActivos();
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoCi.Rows.Count);
         }
         private void Lista_Ciclos_Load(object sender, EventArgs e)
         {
@@ -35,15 +35,15 @@ namespace CapaPresentacion
 
         private void DataListado_DoubleClick(object sender, EventArgs e)
         {
-            Cierre_Ciclo form = Cierre_Ciclo.GetInstancia();
-            string par1, par2, par3, par4, par5;
-            par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["Código"].Value);
-            par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["Ciclo o Año"].Value);
-            par3 = Convert.ToString(this.dataListado.CurrentRow.Cells["Descripción"].Value);
-            par4 = Convert.ToString(this.dataListado.CurrentRow.Cells["Fecha Generada"].Value);
-            par5 = Convert.ToString(this.dataListado.CurrentRow.Cells["Estado"].Value);
-            form.SetCierreCiclo(par1, par2, par3, par4, par5);
-            this.Hide();
+            if (dataListadoCi.Rows.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                Close();
+            }
         }
 
         private void Button1_Click(object sender, EventArgs e)

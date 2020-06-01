@@ -85,5 +85,11 @@ namespace CapaPresentacion
             form.SetAlumno(par1, par2, par3);
             this.Hide();
         }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Reporte_Alumnos_Actual raa = new Reporte_Alumnos_Actual();
+            raa.Show();
+        }
     }
 }

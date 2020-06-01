@@ -15,6 +15,16 @@ namespace CapaPresentacion
         public Menu_Asistencia()
         {
             InitializeComponent();
+            if (Login.nivel_x.Equals("3"))
+            {
+                btn_asistencia_empleados.Hide();
+                label4.Hide();
+            }
+            else if (Login.nivel_x.Equals("4"))
+            {
+                btn_asistencia_alumnos.Hide();
+                label1.Hide();
+            }
         }
 
         private void btn_asistencia_alumnos_Click(object sender, EventArgs e)
