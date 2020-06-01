@@ -24,28 +24,28 @@ namespace CapaPresentacion
 
         private void Mostrar()
         {
-            this.dataListado.DataSource = NAlumno.Mostrar();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            this.dataListadoAl.DataSource = NAlumno.Mostrar();
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoAl.Rows.Count);
         }
 
         private void BuscarApellido()
         {
-            this.dataListado.DataSource = NAlumno.Apellido(this.txtBuscar.Text);
+            this.dataListadoAl.DataSource = NAlumno.Apellido(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoAl.Rows.Count);
         }
         private void BuscarNombre()
         {
-            this.dataListado.DataSource = NAlumno.Nombre(this.txtBuscar.Text);
+            this.dataListadoAl.DataSource = NAlumno.Nombre(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoAl.Rows.Count);
         }
 
         private void BuscarCUI()
         {
-            this.dataListado.DataSource = NAlumno.cui(this.txtBuscar.Text);
+            this.dataListadoAl.DataSource = NAlumno.cui(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListadoAl.Rows.Count);
         }
 
         private void btExit_Click(object sender, EventArgs e)
@@ -79,9 +79,9 @@ namespace CapaPresentacion
         {
             Inscripcion_alumno form = Inscripcion_alumno.GetInstancia();
             string par1, par2, par3;
-            par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["Código"].Value);
-            par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["CUI"].Value);
-            par3 = Convert.ToString(this.dataListado.CurrentRow.Cells["Nombres y Apellidos"].Value);
+            par1 = Convert.ToString(this.dataListadoAl.CurrentRow.Cells["Código"].Value);
+            par2 = Convert.ToString(this.dataListadoAl.CurrentRow.Cells["CUI"].Value);
+            par3 = Convert.ToString(this.dataListadoAl.CurrentRow.Cells["Nombres y Apellidos"].Value);
             form.SetAlumno(par1, par2, par3);
             this.Hide();
         }
@@ -90,6 +90,39 @@ namespace CapaPresentacion
         {
             Reporte_Alumnos_Actual raa = new Reporte_Alumnos_Actual();
             raa.Show();
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            if (dataListadoAl.Rows.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                DialogResult Opcion;
+                Opcion = MessageBox.Show("Realmente Desea Borrar este Alumno", "SEGURIDAD DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Opcion == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string cmd = string.Format("Execute Delete_Alumno '{0}'", Convert.ToInt32(dataListadoAl.Rows[dataListadoAl.CurrentRow.Index].Cells[0].Value.ToString()));
+                        Login.Conexion_GX(cmd);
+                        MessageBox.Show("El Alumno se ha Borrado..!");
+                        this.Mostrar();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Ha ocurrido un Error!" + error);
+                    }
+                }
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

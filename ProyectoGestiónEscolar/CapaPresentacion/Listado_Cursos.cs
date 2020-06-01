@@ -105,5 +105,33 @@ namespace CapaPresentacion
                 BuscarCurso();
             }
         }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            if (Tabla_Cursos.Rows.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                DialogResult Opcion;
+                Opcion = MessageBox.Show("Realmente Desea Borrar este Curso", "SEGURIDAD DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Opcion == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string cmd = string.Format("Execute Delete_Curso '{0}'", Convert.ToInt32(Tabla_Cursos.Rows[Tabla_Cursos.CurrentRow.Index].Cells[0].Value.ToString()));
+                        Login.Conexion_GX(cmd);
+                        MessageBox.Show("El Curso se ha Borrado..!");
+                        cargarTablaCursos();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Ha ocurrido un Error!" + error);
+                    }
+                }
+            }
+        }
     }
 }
