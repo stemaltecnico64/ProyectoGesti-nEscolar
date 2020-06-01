@@ -32,6 +32,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_ingresar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCodigoE = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,8 +43,6 @@
             this.lblCodigoU = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.lblCodigoE = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -54,6 +54,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(93, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(246, 154);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -105,6 +106,32 @@
             this.panel1.Size = new System.Drawing.Size(412, 100);
             this.panel1.TabIndex = 161;
             // 
+            // lblCodigoE
+            // 
+            this.lblCodigoE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCodigoE.AutoSize = true;
+            this.lblCodigoE.BackColor = System.Drawing.Color.Transparent;
+            this.lblCodigoE.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblCodigoE.Location = new System.Drawing.Point(106, 17);
+            this.lblCodigoE.Name = "lblCodigoE";
+            this.lblCodigoE.Size = new System.Drawing.Size(56, 23);
+            this.lblCodigoE.TabIndex = 165;
+            this.lblCodigoE.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(12, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 23);
+            this.label4.TabIndex = 164;
+            this.label4.Text = "Código:";
+            // 
             // lblNombre
             // 
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -127,9 +154,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(12, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 23);
+            this.label2.Size = new System.Drawing.Size(73, 23);
             this.label2.TabIndex = 109;
-            this.label2.Text = "Nombres:";
+            this.label2.Text = "Nombre:";
             // 
             // panel2
             // 
@@ -223,32 +250,6 @@
             this.label18.Size = new System.Drawing.Size(63, 23);
             this.label18.TabIndex = 161;
             this.label18.Text = "Código:";
-            // 
-            // lblCodigoE
-            // 
-            this.lblCodigoE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCodigoE.AutoSize = true;
-            this.lblCodigoE.BackColor = System.Drawing.Color.Transparent;
-            this.lblCodigoE.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblCodigoE.Location = new System.Drawing.Point(106, 17);
-            this.lblCodigoE.Name = "lblCodigoE";
-            this.lblCodigoE.Size = new System.Drawing.Size(56, 23);
-            this.lblCodigoE.TabIndex = 165;
-            this.lblCodigoE.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(12, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 23);
-            this.label4.TabIndex = 164;
-            this.label4.Text = "Código:";
             // 
             // Smenu_Usuarios
             // 

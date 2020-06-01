@@ -71,8 +71,8 @@ namespace CapaPresentacion
             {
                 txtCodigo.Text = le.Tabla_Empleados.Rows[le.Tabla_Empleados.CurrentRow.Index].Cells[0].Value.ToString();
                 txtempleado.Text = le.Tabla_Empleados.Rows[le.Tabla_Empleados.CurrentRow.Index].Cells[2].Value.ToString();
-                txtpuesto.Text = le.Tabla_Empleados.Rows[le.Tabla_Empleados.CurrentRow.Index].Cells[1].Value.ToString();
-                txtdpi.Text = le.Tabla_Empleados.Rows[le.Tabla_Empleados.CurrentRow.Index].Cells[5].Value.ToString();
+                txtpuesto.Text = le.Tabla_Empleados.Rows[le.Tabla_Empleados.CurrentRow.Index].Cells[5].Value.ToString();
+                txtdpi.Text = le.Tabla_Empleados.Rows[le.Tabla_Empleados.CurrentRow.Index].Cells[1].Value.ToString();
             }
         }
 

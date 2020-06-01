@@ -41,9 +41,9 @@ namespace CapaPresentacion
             if (li.DialogResult == DialogResult.OK)
             {
                 txtCodigoA.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[0].Value.ToString();
-                txtSeccion.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[8].Value.ToString();
-                txtCarrera.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[6].Value.ToString();
-                txtGrado.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[7].Value.ToString();
+                txtSeccionA.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[10].Value.ToString();
+                txtCarreraA.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[8].Value.ToString();
+                txtGradoA.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[9].Value.ToString();
                 txtAlumno.Text = li.Tabla_Inscripciones.Rows[li.Tabla_Inscripciones.CurrentRow.Index].Cells[5].Value.ToString();
             }
         }
@@ -61,24 +61,43 @@ namespace CapaPresentacion
             if (lca.DialogResult == DialogResult.OK)
             {
                 txtcodigoM.Text = lca.Tabla_Cursos_A.Rows[lca.Tabla_Cursos_A.CurrentRow.Index].Cells[0].Value.ToString();
-                txtSeccionA.Text = lca.Tabla_Cursos_A.Rows[lca.Tabla_Cursos_A.CurrentRow.Index].Cells[5].Value.ToString();
+                txtSeccionM.Text = lca.Tabla_Cursos_A.Rows[lca.Tabla_Cursos_A.CurrentRow.Index].Cells[5].Value.ToString();
                 txtCurso.Text = lca.Tabla_Cursos_A.Rows[lca.Tabla_Cursos_A.CurrentRow.Index].Cells[4].Value.ToString();
                 txtMaestro.Text = lca.Tabla_Cursos_A.Rows[lca.Tabla_Cursos_A.CurrentRow.Index].Cells[1].Value.ToString();
+                txtCarreraM.Text = lca.Tabla_Cursos_A.Rows[lca.Tabla_Cursos_A.CurrentRow.Index].Cells[2].Value.ToString();
+                txtGradoM.Text = lca.Tabla_Cursos_A.Rows[lca.Tabla_Cursos_A.CurrentRow.Index].Cells[3].Value.ToString();
             }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if (txtCarreraM.Text == txtCarreraA.Text && txtGradoM.Text == txtGradoA.Text && txtSeccionM.Text == txtSeccionA.Text)
             {
-                string cmd = string.Format("Execute insertar_inscrip_maes_enNotas '{0}','{1}'", Convert.ToInt32(txtcodigoM.Text), Convert.ToInt32(txtCodigoA.Text));
-                Conexion_GX(cmd);
-                MessageBox.Show("Se Asignado El Curso al Alumno Exitosamente..!");
+                try
+                {
+                    string cmd = string.Format("Execute insertar_inscrip_maes_enNotas '{0}','{1}'", Convert.ToInt32(txtcodigoM.Text), Convert.ToInt32(txtCodigoA.Text));
+                    Conexion_GX(cmd);
+                    MessageBox.Show("Se Asignado El Curso al Alumno Exitosamente..!");
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Ha ocurrido un Error!" + error);
+                }
             }
-            catch (Exception error)
+            else if (txtCarreraM.Text != txtCarreraA.Text && txtGradoM.Text == txtGradoA.Text && txtSeccionM.Text == txtSeccionA.Text)
             {
-                MessageBox.Show("Ha ocurrido un Error!" + error);
+                MessageBox.Show("Ha ocurrido un Error, El Grado y la Sección No pertenecen a esta Carrera!");
             }
+            else if (txtCarreraM.Text == txtCarreraA.Text && txtGradoM.Text == txtGradoA.Text && txtSeccionM.Text != txtSeccionA.Text)
+            {
+                MessageBox.Show("Ha ocurrido un Error, Las Secciones son diferentes!");
+            }
+            else if (txtCarreraM.Text == txtCarreraA.Text && txtGradoM.Text != txtGradoA.Text && txtSeccionM.Text == txtSeccionA.Text)
+            {
+                MessageBox.Show("Ha ocurrido un Error, El curso no pertenece a este Grado!");
+            }
+            
+
         }
     }
 }

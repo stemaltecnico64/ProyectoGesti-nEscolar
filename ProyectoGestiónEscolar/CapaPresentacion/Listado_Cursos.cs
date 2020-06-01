@@ -22,7 +22,7 @@ namespace CapaPresentacion
         {
             SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
             con.Open();
-            SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_cursos", con);
+            SqlDataAdapter DP = new SqlDataAdapter("select * from vista_listado_cursos order by Carrera,Grado", con);
             DataTable dt = new DataTable();
 
             DP.Fill(dt);

@@ -73,6 +73,15 @@ namespace CapaPresentacion
         {
             Lista_Ciclos ver = new Lista_Ciclos();
             ver.ShowDialog();
+
+            if (ver.DialogResult == DialogResult.OK)
+            {
+                txtId_Ciclo.Text = ver.dataListadoCi.Rows[ver.dataListadoCi.CurrentRow.Index].Cells[0].Value.ToString();
+                txtCiclo.Text= ver.dataListadoCi.Rows[ver.dataListadoCi.CurrentRow.Index].Cells[1].Value.ToString();
+                txtdes.Text = ver.dataListadoCi.Rows[ver.dataListadoCi.CurrentRow.Index].Cells[2].Value.ToString();
+                cbEstado.Text = ver.dataListadoCi.Rows[ver.dataListadoCi.CurrentRow.Index].Cells[4].Value.ToString();
+                dtFecha.Text = ver.dataListadoCi.Rows[ver.dataListadoCi.CurrentRow.Index].Cells[3].Value.ToString();
+            }
         }
 
         private void btnGuardar_Click_1(object sender, EventArgs e)

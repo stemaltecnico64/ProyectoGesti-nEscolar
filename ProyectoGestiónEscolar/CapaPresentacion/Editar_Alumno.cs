@@ -369,5 +369,10 @@ namespace CapaPresentacion
         {
             _Instancia = null;
         }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -17,6 +17,31 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             OpenChilForm(new Smenu_Usuarios());
+            if (Login.nivel_x.Equals("3"))
+            {
+                btn_Departamentos.Hide();
+                btn_municipios.Hide();
+                btn_puestos.Hide();
+                btn_inscripcion.Hide();
+                btn_puestos.Hide();
+                btn_ciclo.Hide();
+                btn_encargados.Hide();
+            }
+            else if (Login.nivel_x.Equals("4"))
+            {
+                btn_inscripcion.Hide();
+                btn_puestos.Hide();
+                btn_Departamentos.Hide();
+                btn_municipios.Hide();
+                btn_encargados.Hide();
+            }
+            else if (Login.nivel_x.Equals("2"))
+            {
+                btn_inscripcion.Hide();
+                btn_puestos.Hide();
+                btn_Departamentos.Hide();
+                btn_municipios.Hide();
+            }
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -78,7 +103,7 @@ namespace CapaPresentacion
 
         private void btn_ciclo_Click(object sender, EventArgs e)
         {
-            OpenChilForm(Cierre_Ciclo.GetInstancia()); 
+            OpenChilForm(new Cierre_Ciclo()); 
         }
 
         private void btn_inscripcion_Click(object sender, EventArgs e)

@@ -25,14 +25,51 @@ namespace CapaPresentacion
 
         private void cargarTablaNotas()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
-            con.Open();
-            SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas", con);
-            DataTable dt = new DataTable();
+            if (Login.nivel_x.Equals("3"))
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                con.Open();
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '"+Login.NOMBRE_EMPLEADO+"'", con);
+                DataTable dt = new DataTable();
 
-            DP.Fill(dt);
+                DP.Fill(dt);
 
-            Tabla_Notas.DataSource = dt;
+                Tabla_Notas.DataSource = dt;
+            }
+            else if (Login.nivel_x.Equals("2"))
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                con.Open();
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas", con);
+                DataTable dt = new DataTable();
+
+                DP.Fill(dt);
+
+                Tabla_Notas.DataSource = dt;
+            }
+            else if (Login.nivel_x.Equals("4"))
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                con.Open();
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas", con);
+                DataTable dt = new DataTable();
+
+                DP.Fill(dt);
+
+                Tabla_Notas.DataSource = dt;
+            }
+            else if (Login.nivel_x.Equals("1"))
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                con.Open();
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas", con);
+                DataTable dt = new DataTable();
+
+                DP.Fill(dt);
+
+                Tabla_Notas.DataSource = dt;
+            }
+
         }
 
         private void btExit_Click(object sender, EventArgs e)
@@ -49,84 +86,176 @@ namespace CapaPresentacion
 
         private void BuscarCurso()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
-            SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Curso like'%" + txtBuscar.Text + "%'", con);
-            DataTable dt = new DataTable();
+            if (Login.nivel_x.Equals("3"))
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Curso like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
 
-            DP.Fill(dt);
+                DP.Fill(dt);
 
-            Tabla_Notas.DataSource = dt;
+                Tabla_Notas.DataSource = dt;
+
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Curso like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
+
+                DP.Fill(dt);
+
+                Tabla_Notas.DataSource = dt;
+
+            }
 
         }
         private void BuscarGrado()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
-            SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Grado like'%" + txtBuscar.Text + "%'", con);
-            DataTable dt = new DataTable();
+            if (Login.nivel_x.Equals("3"))
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Grado like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
 
-            DP.Fill(dt);
+                DP.Fill(dt);
 
-            Tabla_Notas.DataSource = dt;
+                Tabla_Notas.DataSource = dt;
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Grado like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
+
+                DP.Fill(dt);
+
+                Tabla_Notas.DataSource = dt;
+            }
 
         }
         private void BuscarCarrera()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
-            SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Carrera like'%" + txtBuscar.Text + "%'", con);
-            DataTable dt = new DataTable();
+            if (Login.nivel_x.Equals("3"))
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Carrera like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
 
-            DP.Fill(dt);
+                DP.Fill(dt);
 
-            Tabla_Notas.DataSource = dt;
+                Tabla_Notas.DataSource = dt;
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Carrera like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
 
+                DP.Fill(dt);
+
+                Tabla_Notas.DataSource = dt;
+            }
         }
 
         private void BuscarMaestro()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
-            SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro like'%" + txtBuscar.Text + "%'", con);
-            DataTable dt = new DataTable();
+            if (Login.nivel_x.Equals("3"))
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Maestro like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
 
-            DP.Fill(dt);
+                DP.Fill(dt);
 
-            Tabla_Notas.DataSource = dt;
+                Tabla_Notas.DataSource = dt;
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
 
+                DP.Fill(dt);
+
+                Tabla_Notas.DataSource = dt;
+
+            }
         }
 
         private void BuscarAlumno()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
-            SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Alumno like'%" + txtBuscar.Text + "%'", con);
-            DataTable dt = new DataTable();
+            if (Login.nivel_x.Equals("3"))
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Alumno like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
 
-            DP.Fill(dt);
+                DP.Fill(dt);
 
-            Tabla_Notas.DataSource = dt;
+                Tabla_Notas.DataSource = dt;
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Alumno like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
 
+                DP.Fill(dt);
+
+                Tabla_Notas.DataSource = dt;
+
+            }
         }
 
         private void BuscarCiclo()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
-            SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Ciclo like'%" + txtBuscar.Text + "%'", con);
-            DataTable dt = new DataTable();
+            if (Login.nivel_x.Equals("3"))
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Ciclo like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
 
-            DP.Fill(dt);
+                DP.Fill(dt);
 
-            Tabla_Notas.DataSource = dt;
+                Tabla_Notas.DataSource = dt;
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Ciclo like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
 
+                DP.Fill(dt);
+
+                Tabla_Notas.DataSource = dt;
+
+            }
         }
 
         private void BuscarSeccion()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
-            SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Sección like'%" + txtBuscar.Text + "%'", con);
-            DataTable dt = new DataTable();
+            if (Login.nivel_x.Equals("3"))
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Sección like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
 
-            DP.Fill(dt);
+                DP.Fill(dt);
 
-            Tabla_Notas.DataSource = dt;
+                Tabla_Notas.DataSource = dt;
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+                SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Sección like'%" + txtBuscar.Text + "%'", con);
+                DataTable dt = new DataTable();
 
+                DP.Fill(dt);
+
+                Tabla_Notas.DataSource = dt;
+
+            }
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -277,6 +406,12 @@ namespace CapaPresentacion
                 MessageBox.Show("Debe Ingresar una Nota en el Bloque 1..!");
             }
 
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Impresion_Notas im = new Impresion_Notas();
+            im.Show();
         }
     }
 }

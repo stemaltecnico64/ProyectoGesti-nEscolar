@@ -15,9 +15,14 @@ namespace CapaPresentacion
         public Menu_Mantenimiento()
         {
             InitializeComponent();
+            if (Login.nivel_x.Equals("4"))
+            {
+                btn_Usuario.Hide();
+                label3.Hide();
+            }
         }
 
-        private void btn_Usuario_Click(object sender, EventArgs e)
+            private void btn_Usuario_Click(object sender, EventArgs e)
         {
             Editar_Usuario eu = new Editar_Usuario();
             eu.Show();
@@ -33,6 +38,12 @@ namespace CapaPresentacion
         {
             Editar_Alumno ea = new Editar_Alumno();
             ea.Show();
+        }
+
+        private void btn_Encargado_Click(object sender, EventArgs e)
+        {
+            Editar_Encargado ee = new Editar_Encargado();
+            ee.Show();
         }
     }
 }

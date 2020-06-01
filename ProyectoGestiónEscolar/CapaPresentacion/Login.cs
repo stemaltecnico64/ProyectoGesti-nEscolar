@@ -26,6 +26,8 @@ namespace CapaPresentacion
 
         public static string ID_EMPLEADO = "";
 
+        public static string NOMBRE_EMPLEADO = "";
+
 
         public static DataSet Conexion_GX(string cmd)
         {
@@ -73,6 +75,8 @@ namespace CapaPresentacion
                     ID_USER = ds.Tables[0].Rows[0]["ID_USUARIO"].ToString().Trim();
                     ID_EMPLEADO = ds.Tables[0].Rows[0]["ID_EMPLEADO"].ToString().Trim();
 
+                    datos_empleados();
+
                     if (nivel_x.Equals("1"))
                     {
                         if (usuario == txt_usuario.Text.Trim() && password == txt_password.Text.Trim())
@@ -118,6 +122,16 @@ namespace CapaPresentacion
             }
         }
 
+        private void datos_empleados()
+        {
+            string cmd = "select ID_EMPLEADO, CONCAT(NOMBRE_1, ' ', NOMBRE_2, ' ', APELLIDO_1, ' ', APELLIDO_2) as Empleado from EMPLEADOS where ID_EMPLEADO=" + ID_EMPLEADO;
+
+            DataSet DS = Conexion_GX(cmd);
+
+            NOMBRE_EMPLEADO= DS.Tables[0].Rows[0]["Empleado"].ToString().Trim();
+
+        }
+
         private void btn_ingresar_Click_1(object sender, EventArgs e)
         {
             try
@@ -130,6 +144,8 @@ namespace CapaPresentacion
                 nivel_x = ds.Tables[0].Rows[0]["ID_NIVEL_USUARIO"].ToString().Trim();
                 ID_USER = ds.Tables[0].Rows[0]["ID_USUARIO"].ToString().Trim();
                 ID_EMPLEADO = ds.Tables[0].Rows[0]["ID_EMPLEADO"].ToString().Trim();
+
+                datos_empleados();
 
                 if (nivel_x.Equals("1"))
                 {
@@ -172,6 +188,11 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Usuario o Contraseña incorrecta...!");
             }
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

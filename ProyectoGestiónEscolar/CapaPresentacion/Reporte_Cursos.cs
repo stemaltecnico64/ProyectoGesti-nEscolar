@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Asistencia_Alumnos : Form
+    public partial class Reporte_Cursos : Form
     {
-        public Asistencia_Alumnos()
+        public Reporte_Cursos()
         {
             InitializeComponent();
         }
 
-        private void Timer_Fecha_Hora_Tick(object sender, EventArgs e)
+        private void Reporte_Cursos_Load(object sender, EventArgs e)
         {
-            label_hora.Text = DateTime.Now.ToLongTimeString();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -78,7 +78,42 @@ namespace CapaPresentacion
 
         private void Btn_Cerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult Opcion;
+            Opcion = MessageBox.Show("Realmente Desea Salir", "SEGURIDAD DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (Opcion == DialogResult.Yes)
+            {
+                this.Hide();
+                Login l = new Login();
+                l.Show();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btn_asistencia_Click(object sender, EventArgs e)
+        {
+            OpenChilForm(new Menu_Asistencia());
+            lblTitle.Text = "Asistencia";
+        }
+
+        private void btn_reportes_Click(object sender, EventArgs e)
+        {
+            OpenChilForm(new Menu_Reportes());
+            lblTitle.Text = "Reportes";
+        }
+
+        private void btn_alumnos_Click(object sender, EventArgs e)
+        {
+            OpenChilForm(new Menu_Alumnos());
+            lblTitle.Text = "Alumnos";
+        }
+
+        private void btn_ajustes_Click(object sender, EventArgs e)
+        {
+            Ajustes_Admin aa = new Ajustes_Admin();
+            aa.Show();
         }
     }
 }
