@@ -60,9 +60,10 @@ namespace CapaDatos
                 SqlCmd.Parameters.Add(ParNombre);
 
                 SqlParameter ParIdCarrera = new SqlParameter();
-                ParIdGrado.ParameterName = "@Id_Carrera";
-                ParIdGrado.SqlDbType = SqlDbType.Int;
-                ParIdGrado.Direction = ParameterDirection.Output;
+                ParIdCarrera.ParameterName = "@Id_Carrera";
+                ParIdCarrera.SqlDbType = SqlDbType.VarChar;
+                ParIdCarrera.Size = 50;
+                ParIdCarrera.Value = Grado.IdCarrera;
                 SqlCmd.Parameters.Add(ParIdCarrera);
 
 
@@ -109,6 +110,12 @@ namespace CapaDatos
                 ParNombre.Value = Grado.Nombre;
                 SqlCmd.Parameters.Add(ParNombre);
 
+                SqlParameter ParIdCarrera = new SqlParameter();
+                ParIdCarrera.ParameterName = "@Id_Carrera";
+                ParIdCarrera.SqlDbType = SqlDbType.VarChar;
+                ParIdCarrera.Size = 50;
+                ParIdCarrera.Value = Grado.IdCarrera;
+                SqlCmd.Parameters.Add(ParIdCarrera);
                 //Ejecutamos nuestro comando
 
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Actualizo el Registro";

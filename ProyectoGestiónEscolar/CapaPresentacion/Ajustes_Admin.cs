@@ -117,5 +117,20 @@ namespace CapaPresentacion
         {
             OpenChilForm(new Apertura_Ciclo());
         }
+
+        private void BtnGrado_Click(object sender, EventArgs e)
+        {
+            OpenChilForm(new Ingreso_de_Grados());
+        }
+
+        private void BtnCarrera_Click(object sender, EventArgs e)
+        {
+            OpenChilForm(new Ingreso_Carrera());
+        }
+
+        private void Btn_Seccion_Click(object sender, EventArgs e)
+        {
+            OpenChilForm(new Ingreso_de_Sección());
+        }
     }
 }

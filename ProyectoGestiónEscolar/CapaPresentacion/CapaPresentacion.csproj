@@ -242,6 +242,12 @@
     <Compile Include="Ingresar_Usuario.Designer.cs">
       <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ingreso_Carrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_Carrera.Designer.cs">
+      <DependentUpon>Ingreso_Carrera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingreso_de_Grados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -606,6 +612,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar_Usuario.resx">
       <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_Carrera.resx">
+      <DependentUpon>Ingreso_Carrera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingreso_de_Grados.resx">
       <DependentUpon>Ingreso_de_Grados.cs</DependentUpon>

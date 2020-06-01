@@ -66,7 +66,6 @@
             this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -91,12 +90,11 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panelTitleBar.Controls.Add(this.btExit);
             this.panelTitleBar.Controls.Add(this.label9);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(452, 61);
+            this.panelTitleBar.Size = new System.Drawing.Size(460, 61);
             this.panelTitleBar.TabIndex = 202;
             // 
             // label9
@@ -106,7 +104,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(90, 12);
+            this.label9.Location = new System.Drawing.Point(94, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(251, 26);
             this.label9.TabIndex = 0;
@@ -120,7 +118,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 68);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(443, 455);
+            this.tabControl1.Size = new System.Drawing.Size(457, 501);
             this.tabControl1.TabIndex = 201;
             // 
             // tabPage1
@@ -137,7 +135,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(435, 419);
+            this.tabPage1.Size = new System.Drawing.Size(449, 465);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Inicio";
             // 
@@ -287,7 +285,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(435, 419);
+            this.tabPage2.Size = new System.Drawing.Size(449, 465);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ingreso";
             // 
@@ -298,7 +296,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Maroon;
-            this.label6.Location = new System.Drawing.Point(217, 353);
+            this.label6.Location = new System.Drawing.Point(277, 376);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 23);
             this.label6.TabIndex = 106;
@@ -311,7 +309,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Maroon;
-            this.label5.Location = new System.Drawing.Point(95, 274);
+            this.label5.Location = new System.Drawing.Point(107, 309);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 23);
             this.label5.TabIndex = 104;
@@ -324,7 +322,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(233, 274);
+            this.label2.Location = new System.Drawing.Point(277, 309);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 23);
             this.label2.TabIndex = 102;
@@ -337,7 +335,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Maroon;
-            this.label20.Location = new System.Drawing.Point(88, 353);
+            this.label20.Location = new System.Drawing.Point(107, 376);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(70, 23);
             this.label20.TabIndex = 100;
@@ -350,7 +348,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Maroon;
-            this.lblTitle.Location = new System.Drawing.Point(162, 3);
+            this.lblTitle.Location = new System.Drawing.Point(180, 3);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(100, 26);
             this.lblTitle.TabIndex = 98;
@@ -467,7 +465,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Cancel_48px;
             this.btnCancelar.ImageActive = null;
-            this.btnCancelar.Location = new System.Drawing.Point(164, 342);
+            this.btnCancelar.Location = new System.Drawing.Point(224, 366);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(47, 44);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -481,7 +479,7 @@
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
             this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.icons8_Edit_Property_48px;
             this.btnEditar.ImageActive = null;
-            this.btnEditar.Location = new System.Drawing.Point(167, 262);
+            this.btnEditar.Location = new System.Drawing.Point(224, 296);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(47, 44);
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -495,7 +493,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.icons8_Save_48px;
             this.btnGuardar.ImageActive = null;
-            this.btnGuardar.Location = new System.Drawing.Point(36, 344);
+            this.btnGuardar.Location = new System.Drawing.Point(54, 366);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(47, 44);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -509,7 +507,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
             this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.icons8_Add_List_48px;
             this.btnNuevo.ImageActive = null;
-            this.btnNuevo.Location = new System.Drawing.Point(42, 262);
+            this.btnNuevo.Location = new System.Drawing.Point(54, 296);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(47, 44);
             this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -518,25 +516,12 @@
             this.btnNuevo.Zoom = 10;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
-            // btExit
-            // 
-            this.btExit.BackColor = System.Drawing.Color.Red;
-            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
-            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btExit.ForeColor = System.Drawing.Color.Red;
-            this.btExit.Location = new System.Drawing.Point(411, 3);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(35, 35);
-            this.btExit.TabIndex = 2;
-            this.btExit.UseVisualStyleBackColor = false;
-            this.btExit.Click += new System.EventHandler(this.BtExit_Click);
-            // 
             // ConfigMunicipio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(452, 524);
+            this.ClientSize = new System.Drawing.Size(460, 581);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -598,6 +583,5 @@
         private Bunifu.Framework.UI.BunifuImageButton btnEditar;
         private Bunifu.Framework.UI.BunifuImageButton btnGuardar;
         private Bunifu.Framework.UI.BunifuImageButton btnNuevo;
-        private System.Windows.Forms.Button btExit;
     }
 }

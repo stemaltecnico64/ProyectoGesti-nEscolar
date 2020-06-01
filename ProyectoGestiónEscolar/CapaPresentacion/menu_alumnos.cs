@@ -25,7 +25,7 @@ namespace CapaPresentacion
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             Inscripcion_alumno VenAlumnos = Inscripcion_alumno.GetInstancia();
-            VenAlumnos.Show();
+            VenAlumnos.ShowDialog();
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)

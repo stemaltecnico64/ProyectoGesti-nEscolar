@@ -8,41 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocios;
-using System.Data.SqlClient;
+
 namespace CapaPresentacion
 {
-    public partial class Ingreso_de_Grados : Form
+    public partial class Ingreso_Carrera : Form
     {
         private bool IsNuevo = false;
 
         private bool IsEditar = false;
-        public Ingreso_de_Grados()
+        public Ingreso_Carrera()
         {
             InitializeComponent();
-            this.ttMensaje.SetToolTip(this.txtGrado, "Debe ingresas un grado, Ejemplo: 4to. 5to. 6to.");
-            this.LlenarComboCarrera();
-        }
-
-
-        SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
-
-
-        private void LlenarComboCarrera()
-        {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select Id_Carrera, Nombre from Carrera", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            con.Close();
-
-            DataRow fila = dt.NewRow();
-            fila["Nombre"] = "Seleccione una Carrera";
-            dt.Rows.InsertAt(fila, 0);
-
-            cbCarrera.ValueMember = "Id_Carrera";
-            cbCarrera.DisplayMember = "Nombre";
-            cbCarrera.DataSource = dt;
+            this.ttMensaje.SetToolTip(this.txtCarrera, "Debe el nombre de un Carrera");
         }
 
         private void MensajeOk(string mensaje)
@@ -58,8 +35,8 @@ namespace CapaPresentacion
 
         private void Limpiar()
         {
-            this.txtId_Grado.Text = string.Empty;
-            this.txtGrado.Text = string.Empty;
+            this.txtId_Carrera.Text = string.Empty;
+            this.txtCarrera.Text = string.Empty;
 
         }
 
@@ -67,13 +44,13 @@ namespace CapaPresentacion
 
         private void Habilitar(bool valor)
         {
-            this.txtId_Grado.ReadOnly = !valor;
-            this.txtGrado.Enabled = valor;
-          
+            this.txtId_Carrera.ReadOnly = !valor;
+            this.txtCarrera.Enabled = valor;
+
         }
         private void Botones()
         {
-            if (this.IsNuevo || this.IsEditar) 
+            if (this.IsNuevo || this.IsEditar)
             {
                 this.Habilitar(true);
                 this.btnNuevo.Enabled = false;
@@ -97,12 +74,12 @@ namespace CapaPresentacion
 
         private void Mostrar()
         {
-            this.dataListado.DataSource = NGrado.Mostrar();
+            this.dataListado.DataSource = NCarrera.Mostrar();
             this.OcultarColumnas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
-        private void Ingreso_de_Grados_Load(object sender, EventArgs e)
+        private void Ingreso_Carrera_Load(object sender, EventArgs e)
         {
             this.Mostrar();
             this.Habilitar(false);
@@ -116,7 +93,7 @@ namespace CapaPresentacion
             this.Botones();
             this.Limpiar();
             this.Habilitar(true);
-            this.txtGrado.Focus();
+            this.txtCarrera.Focus();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -125,23 +102,23 @@ namespace CapaPresentacion
             try
             {
                 string rpta = "";
-                if (this.txtGrado.Text == string.Empty)
+                if (this.txtCarrera.Text == string.Empty)
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
-                    errorIcono.SetError(txtGrado, "Ingrese un Valor");
+                    errorIcono.SetError(txtCarrera, "Ingrese un Valor");
 
                 }
                 else
                 {
                     if (this.IsNuevo)
                     {
-                        rpta = NGrado.Insertar(this.txtGrado.Text, Convert.ToInt32(this.cbCarrera.SelectedValue));
+                        rpta = NCarrera.Insertar(this.txtCarrera.Text);
 
                     }
                     else
                     {
-                        rpta = NGrado.Editar(Convert.ToInt32(this.txtGrado.Text),
-                            this.txtGrado.Text, (Convert.ToInt32(this.cbCarrera.SelectedValue)));
+                        rpta = NCarrera.Editar(Convert.ToInt32(this.txtId_Carrera.Text),
+                            this.txtId_Carrera.Text);
                     }
 
                     if (rpta.Equals("OK"))
@@ -172,12 +149,11 @@ namespace CapaPresentacion
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
-
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            if (!this.txtGrado.Text.Equals(""))
+            if (!this.txtId_Carrera.Text.Equals(""))
             {
                 this.IsEditar = true;
                 this.Botones();
@@ -195,24 +171,13 @@ namespace CapaPresentacion
             this.IsEditar = false;
             this.Botones();
             this.Limpiar();
-            this.txtGrado.Text = string.Empty;
-        }
-
-        private void DataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            
+            this.txtCarrera.Text = string.Empty;
         }
 
         private void DataListado_DoubleClick(object sender, EventArgs e)
         {
-            this.txtId_Grado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Código"].Value);
-            this.txtGrado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Grado"].Value);
-        }
-
-        private void BtExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            this.txtId_Carrera.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Id_Carrera"].Value);
+            this.txtCarrera.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Nombre"].Value);
         }
     }
 }

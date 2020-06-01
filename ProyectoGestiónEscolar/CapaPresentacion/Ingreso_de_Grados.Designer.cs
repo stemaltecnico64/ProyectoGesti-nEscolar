@@ -119,7 +119,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Sienna;
-            this.label1.Location = new System.Drawing.Point(11, 122);
+            this.label1.Location = new System.Drawing.Point(12, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 23);
             this.label1.TabIndex = 213;
@@ -132,7 +132,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Sienna;
-            this.label21.Location = new System.Drawing.Point(348, 217);
+            this.label21.Location = new System.Drawing.Point(348, 239);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(73, 23);
             this.label21.TabIndex = 212;
@@ -145,7 +145,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Sienna;
-            this.label20.Location = new System.Drawing.Point(23, 217);
+            this.label20.Location = new System.Drawing.Point(23, 239);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(55, 23);
             this.label20.TabIndex = 210;
@@ -158,7 +158,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Sienna;
-            this.label15.Location = new System.Drawing.Point(147, 217);
+            this.label15.Location = new System.Drawing.Point(147, 239);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 23);
             this.label15.TabIndex = 208;
@@ -181,7 +181,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Sienna;
-            this.label18.Location = new System.Drawing.Point(11, 79);
+            this.label18.Location = new System.Drawing.Point(11, 81);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 23);
             this.label18.TabIndex = 216;
@@ -223,7 +223,7 @@
             this.dataListado.EnableHeadersVisualStyles = false;
             this.dataListado.HeaderBgColor = System.Drawing.Color.Maroon;
             this.dataListado.HeaderForeColor = System.Drawing.Color.White;
-            this.dataListado.Location = new System.Drawing.Point(16, 280);
+            this.dataListado.Location = new System.Drawing.Point(16, 332);
             this.dataListado.Name = "dataListado";
             this.dataListado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataListado.RowHeadersVisible = false;
@@ -248,7 +248,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Sienna;
-            this.label2.Location = new System.Drawing.Point(258, 217);
+            this.label2.Location = new System.Drawing.Point(258, 239);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 23);
             this.label2.TabIndex = 219;
@@ -259,7 +259,7 @@
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
             this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.icons8_Edit_Property_48px1;
             this.btnEditar.ImageActive = null;
-            this.btnEditar.Location = new System.Drawing.Point(262, 162);
+            this.btnEditar.Location = new System.Drawing.Point(262, 184);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(51, 52);
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -273,7 +273,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px;
             this.btnCancelar.ImageActive = null;
-            this.btnCancelar.Location = new System.Drawing.Point(352, 162);
+            this.btnCancelar.Location = new System.Drawing.Point(352, 184);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(51, 47);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -287,7 +287,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
             this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.icons8_Add_List_48px;
             this.btnNuevo.ImageActive = null;
-            this.btnNuevo.Location = new System.Drawing.Point(27, 162);
+            this.btnNuevo.Location = new System.Drawing.Point(27, 184);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(51, 52);
             this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -301,7 +301,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageActive = null;
-            this.btnGuardar.Location = new System.Drawing.Point(151, 162);
+            this.btnGuardar.Location = new System.Drawing.Point(151, 184);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(51, 49);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -315,7 +315,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lblTotal.Location = new System.Drawing.Point(53, 254);
+            this.lblTotal.Location = new System.Drawing.Point(38, 279);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(56, 23);
@@ -349,7 +349,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 524);
+            this.ClientSize = new System.Drawing.Size(452, 568);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.cbCarrera);
             this.Controls.Add(this.lblTotal);

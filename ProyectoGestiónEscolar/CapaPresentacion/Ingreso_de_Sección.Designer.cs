@@ -35,6 +35,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingreso_de_Sección));
             this.label18 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btExit = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtSecc = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btExit = new System.Windows.Forms.Button();
             this.btnCancelar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
@@ -69,7 +69,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Sienna;
-            this.label18.Location = new System.Drawing.Point(12, 87);
+            this.label18.Location = new System.Drawing.Point(12, 81);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 23);
             this.label18.TabIndex = 231;
@@ -83,8 +83,21 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(552, 61);
+            this.panelTitleBar.Size = new System.Drawing.Size(452, 61);
             this.panelTitleBar.TabIndex = 221;
+            // 
+            // btExit
+            // 
+            this.btExit.BackColor = System.Drawing.Color.Red;
+            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
+            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btExit.ForeColor = System.Drawing.Color.Red;
+            this.btExit.Location = new System.Drawing.Point(514, 3);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(35, 35);
+            this.btExit.TabIndex = 114;
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.BtExit_Click);
             // 
             // lblTitle
             // 
@@ -93,7 +106,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(240, 12);
+            this.lblTitle.Location = new System.Drawing.Point(190, 12);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(98, 26);
             this.lblTitle.TabIndex = 0;
@@ -111,7 +124,7 @@
             this.txtSecc.LineIdleColor = System.Drawing.Color.Gray;
             this.txtSecc.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtSecc.LineThickness = 3;
-            this.txtSecc.Location = new System.Drawing.Point(79, 121);
+            this.txtSecc.Location = new System.Drawing.Point(94, 128);
             this.txtSecc.Margin = new System.Windows.Forms.Padding(4);
             this.txtSecc.Name = "txtSecc";
             this.txtSecc.Size = new System.Drawing.Size(158, 33);
@@ -125,7 +138,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Sienna;
-            this.label1.Location = new System.Drawing.Point(12, 131);
+            this.label1.Location = new System.Drawing.Point(7, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 23);
             this.label1.TabIndex = 228;
@@ -138,7 +151,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Sienna;
-            this.label21.Location = new System.Drawing.Point(454, 198);
+            this.label21.Location = new System.Drawing.Point(353, 243);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(73, 23);
             this.label21.TabIndex = 227;
@@ -149,7 +162,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lblTotal.Location = new System.Drawing.Point(383, 260);
+            this.lblTotal.Location = new System.Drawing.Point(383, 292);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(56, 23);
@@ -163,7 +176,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Sienna;
-            this.label2.Location = new System.Drawing.Point(334, 198);
+            this.label2.Location = new System.Drawing.Point(244, 243);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 23);
             this.label2.TabIndex = 234;
@@ -205,12 +218,12 @@
             this.dataListado.EnableHeadersVisualStyles = false;
             this.dataListado.HeaderBgColor = System.Drawing.Color.Maroon;
             this.dataListado.HeaderForeColor = System.Drawing.Color.White;
-            this.dataListado.Location = new System.Drawing.Point(12, 286);
+            this.dataListado.Location = new System.Drawing.Point(11, 328);
             this.dataListado.Name = "dataListado";
             this.dataListado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataListado.RowHeadersVisible = false;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(528, 158);
+            this.dataListado.Size = new System.Drawing.Size(428, 158);
             this.dataListado.TabIndex = 232;
             this.dataListado.DoubleClick += new System.EventHandler(this.DataListado_DoubleClick);
             // 
@@ -219,7 +232,7 @@
             this.txtId_Secc.BackColor = System.Drawing.Color.LightGray;
             this.txtId_Secc.Enabled = false;
             this.txtId_Secc.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtId_Secc.Location = new System.Drawing.Point(80, 87);
+            this.txtId_Secc.Location = new System.Drawing.Point(94, 83);
             this.txtId_Secc.Name = "txtId_Secc";
             this.txtId_Secc.Size = new System.Drawing.Size(100, 23);
             this.txtId_Secc.TabIndex = 230;
@@ -235,7 +248,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Sienna;
-            this.label20.Location = new System.Drawing.Point(73, 198);
+            this.label20.Location = new System.Drawing.Point(19, 244);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(55, 23);
             this.label20.TabIndex = 225;
@@ -248,7 +261,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Sienna;
-            this.label15.Location = new System.Drawing.Point(197, 198);
+            this.label15.Location = new System.Drawing.Point(125, 244);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 23);
             this.label15.TabIndex = 223;
@@ -265,25 +278,12 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
-            // btExit
-            // 
-            this.btExit.BackColor = System.Drawing.Color.Red;
-            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
-            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btExit.ForeColor = System.Drawing.Color.Red;
-            this.btExit.Location = new System.Drawing.Point(514, 3);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(35, 35);
-            this.btExit.TabIndex = 114;
-            this.btExit.UseVisualStyleBackColor = false;
-            this.btExit.Click += new System.EventHandler(this.BtExit_Click);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px;
             this.btnCancelar.ImageActive = null;
-            this.btnCancelar.Location = new System.Drawing.Point(401, 186);
+            this.btnCancelar.Location = new System.Drawing.Point(357, 185);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(51, 47);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -297,7 +297,7 @@
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
             this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.icons8_Edit_Property_48px1;
             this.btnEditar.ImageActive = null;
-            this.btnEditar.Location = new System.Drawing.Point(277, 181);
+            this.btnEditar.Location = new System.Drawing.Point(248, 180);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(51, 52);
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -311,7 +311,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
             this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.icons8_Add_List_48px;
             this.btnNuevo.ImageActive = null;
-            this.btnNuevo.Location = new System.Drawing.Point(16, 181);
+            this.btnNuevo.Location = new System.Drawing.Point(16, 180);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(51, 52);
             this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -325,7 +325,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageActive = null;
-            this.btnGuardar.Location = new System.Drawing.Point(144, 184);
+            this.btnGuardar.Location = new System.Drawing.Point(129, 180);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(51, 49);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -338,7 +338,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 450);
+            this.ClientSize = new System.Drawing.Size(452, 524);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.txtSecc);

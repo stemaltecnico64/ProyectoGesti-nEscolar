@@ -20,7 +20,7 @@ namespace CapaPresentacion
 
         public static DataSet Conexion_GX1(string cmd)
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             con.Open();
 
             DataSet DS = new DataSet();
@@ -79,7 +79,7 @@ namespace CapaPresentacion
         }
         private void cargarTablaCursos_Asignados()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             con.Open();
             SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_cursos_a_empleados", con);
             DataTable dt = new DataTable();

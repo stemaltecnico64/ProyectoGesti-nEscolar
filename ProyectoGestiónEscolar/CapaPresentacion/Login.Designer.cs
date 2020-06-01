@@ -40,7 +40,9 @@
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.Btn_Cerrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuDragControl1
@@ -52,6 +54,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Btn_Cerrar);
             this.panel1.Controls.Add(this.txt_usuario);
             this.panel1.Controls.Add(this.txt_password);
             this.panel1.Controls.Add(this.label3);
@@ -198,6 +201,21 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(272, 431);
             this.bunifuGradientPanel1.TabIndex = 2;
             // 
+            // Btn_Cerrar
+            // 
+            this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Cerrar.BackColor = System.Drawing.Color.DarkRed;
+            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
+            this.Btn_Cerrar.ImageActive = null;
+            this.Btn_Cerrar.Location = new System.Drawing.Point(242, 3);
+            this.Btn_Cerrar.Name = "Btn_Cerrar";
+            this.Btn_Cerrar.Size = new System.Drawing.Size(30, 24);
+            this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Cerrar.TabIndex = 49;
+            this.Btn_Cerrar.TabStop = false;
+            this.Btn_Cerrar.Zoom = 10;
+            this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +230,7 @@
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,5 +246,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_ingresar;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuImageButton Btn_Cerrar;
     }
 }

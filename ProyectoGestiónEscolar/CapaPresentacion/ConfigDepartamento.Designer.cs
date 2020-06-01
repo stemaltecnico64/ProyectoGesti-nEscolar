@@ -64,7 +64,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.txtIdDepartamento = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -89,12 +88,11 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panelTitleBar.Controls.Add(this.btExit);
             this.panelTitleBar.Controls.Add(this.label8);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(452, 61);
+            this.panelTitleBar.Size = new System.Drawing.Size(460, 61);
             this.panelTitleBar.TabIndex = 200;
             // 
             // label8
@@ -104,7 +102,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(75, 12);
+            this.label8.Location = new System.Drawing.Point(79, 12);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(296, 26);
             this.label8.TabIndex = 0;
@@ -115,10 +113,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.tabControl1.Location = new System.Drawing.Point(11, 67);
+            this.tabControl1.Location = new System.Drawing.Point(0, 67);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(429, 420);
+            this.tabControl1.Size = new System.Drawing.Size(460, 512);
             this.tabControl1.TabIndex = 199;
             // 
             // tabPage1
@@ -135,7 +133,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(421, 384);
+            this.tabPage1.Size = new System.Drawing.Size(452, 476);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Inicio";
             // 
@@ -198,7 +196,7 @@
             this.BtnImprimir.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnImprimir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BtnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnImprimir.Location = new System.Drawing.Point(286, 68);
+            this.BtnImprimir.Location = new System.Drawing.Point(321, 62);
             this.BtnImprimir.Name = "BtnImprimir";
             this.BtnImprimir.Size = new System.Drawing.Size(123, 46);
             this.BtnImprimir.TabIndex = 202;
@@ -217,7 +215,7 @@
             this.btnElimnar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnElimnar.Image = ((System.Drawing.Image)(resources.GetObject("btnElimnar.Image")));
             this.btnElimnar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnElimnar.Location = new System.Drawing.Point(286, 18);
+            this.btnElimnar.Location = new System.Drawing.Point(321, 12);
             this.btnElimnar.Name = "btnElimnar";
             this.btnElimnar.Size = new System.Drawing.Size(123, 44);
             this.btnElimnar.TabIndex = 201;
@@ -285,7 +283,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(421, 384);
+            this.tabPage2.Size = new System.Drawing.Size(452, 476);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ingreso";
             // 
@@ -296,7 +294,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(272, 316);
+            this.label6.Location = new System.Drawing.Point(260, 388);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 23);
             this.label6.TabIndex = 114;
@@ -307,7 +305,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Cancel_48px;
             this.btnCancelar.ImageActive = null;
-            this.btnCancelar.Location = new System.Drawing.Point(207, 306);
+            this.btnCancelar.Location = new System.Drawing.Point(271, 341);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(47, 44);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -323,7 +321,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(128, 252);
+            this.label5.Location = new System.Drawing.Point(81, 290);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 23);
             this.label5.TabIndex = 112;
@@ -334,7 +332,7 @@
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
             this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.icons8_Edit_Property_48px;
             this.btnEditar.ImageActive = null;
-            this.btnEditar.Location = new System.Drawing.Point(82, 306);
+            this.btnEditar.Location = new System.Drawing.Point(80, 341);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(47, 44);
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -350,7 +348,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(131, 327);
+            this.label2.Location = new System.Drawing.Point(76, 388);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 23);
             this.label2.TabIndex = 110;
@@ -361,7 +359,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.icons8_Save_48px;
             this.btnGuardar.ImageActive = null;
-            this.btnGuardar.Location = new System.Drawing.Point(207, 243);
+            this.btnGuardar.Location = new System.Drawing.Point(271, 243);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(47, 44);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -377,7 +375,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label20.Location = new System.Drawing.Point(251, 252);
+            this.label20.Location = new System.Drawing.Point(260, 290);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(70, 23);
             this.label20.TabIndex = 108;
@@ -409,7 +407,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Location = new System.Drawing.Point(8, 29);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(337, 195);
+            this.panel2.Size = new System.Drawing.Size(436, 195);
             this.panel2.TabIndex = 97;
             // 
             // label7
@@ -419,7 +417,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(22, 123);
+            this.label7.Location = new System.Drawing.Point(27, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 23);
             this.label7.TabIndex = 104;
@@ -429,7 +427,7 @@
             // 
             this.txtDes.BackColor = System.Drawing.Color.LightGray;
             this.txtDes.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtDes.Location = new System.Drawing.Point(127, 125);
+            this.txtDes.Location = new System.Drawing.Point(143, 125);
             this.txtDes.Multiline = true;
             this.txtDes.Name = "txtDes";
             this.txtDes.Size = new System.Drawing.Size(187, 60);
@@ -442,7 +440,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(22, 80);
+            this.label4.Location = new System.Drawing.Point(27, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 23);
             this.label4.TabIndex = 103;
@@ -454,7 +452,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtNombre.Location = new System.Drawing.Point(127, 80);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(187, 23);
+            this.txtNombre.Size = new System.Drawing.Size(203, 23);
             this.txtNombre.TabIndex = 100;
             // 
             // label18
@@ -464,7 +462,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label18.Location = new System.Drawing.Point(22, 39);
+            this.label18.Location = new System.Drawing.Point(27, 39);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 23);
             this.label18.TabIndex = 102;
@@ -486,31 +484,18 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(74, 10);
+            this.lblTitle.Location = new System.Drawing.Point(124, 10);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(145, 26);
             this.lblTitle.TabIndex = 105;
             this.lblTitle.Text = "Departamentos";
-            // 
-            // btExit
-            // 
-            this.btExit.BackColor = System.Drawing.Color.Red;
-            this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
-            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btExit.ForeColor = System.Drawing.Color.Red;
-            this.btExit.Location = new System.Drawing.Point(414, 3);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(35, 35);
-            this.btExit.TabIndex = 2;
-            this.btExit.UseVisualStyleBackColor = false;
-            this.btExit.Click += new System.EventHandler(this.BtExit_Click_1);
             // 
             // ConfigDepartamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(452, 524);
+            this.ClientSize = new System.Drawing.Size(460, 581);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -574,6 +559,5 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtIdDepartamento;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btExit;
     }
 }

@@ -20,7 +20,7 @@ namespace CapaPresentacion
 
         public void cargarTablaCursos()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             con.Open();
             SqlDataAdapter DP = new SqlDataAdapter("select * from vista_listado_cursos order by Carrera,Grado", con);
             DataTable dt = new DataTable();

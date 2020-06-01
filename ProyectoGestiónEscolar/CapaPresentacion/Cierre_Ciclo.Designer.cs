@@ -73,7 +73,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(451, 61);
+            this.panelTitleBar.Size = new System.Drawing.Size(460, 61);
             this.panelTitleBar.TabIndex = 253;
             // 
             // lblTitle
@@ -83,7 +83,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(147, 9);
+            this.lblTitle.Location = new System.Drawing.Point(152, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(147, 26);
             this.lblTitle.TabIndex = 0;
@@ -100,7 +100,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Sienna;
-            this.label4.Location = new System.Drawing.Point(53, 399);
+            this.label4.Location = new System.Drawing.Point(37, 407);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 299;
@@ -111,7 +111,7 @@
             this.btnBuscarCiclo.BackColor = System.Drawing.Color.Transparent;
             this.btnBuscarCiclo.Image = global::CapaPresentacion.Properties.Resources.icons8_Search_48px;
             this.btnBuscarCiclo.ImageActive = null;
-            this.btnBuscarCiclo.Location = new System.Drawing.Point(74, 329);
+            this.btnBuscarCiclo.Location = new System.Drawing.Point(62, 343);
             this.btnBuscarCiclo.Name = "btnBuscarCiclo";
             this.btnBuscarCiclo.Size = new System.Drawing.Size(51, 52);
             this.btnBuscarCiclo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -127,7 +127,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Sienna;
-            this.label3.Location = new System.Drawing.Point(42, 122);
+            this.label3.Location = new System.Drawing.Point(12, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 23);
             this.label3.TabIndex = 297;
@@ -138,7 +138,7 @@
             this.dtFecha.Enabled = false;
             this.dtFecha.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha.Location = new System.Drawing.Point(116, 107);
+            this.dtFecha.Location = new System.Drawing.Point(75, 81);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(122, 23);
             this.dtFecha.TabIndex = 295;
@@ -149,7 +149,7 @@
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
             "INACTIVO"});
-            this.cbEstado.Location = new System.Drawing.Point(336, 102);
+            this.cbEstado.Location = new System.Drawing.Point(362, 84);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(86, 23);
             this.cbEstado.TabIndex = 296;
@@ -167,10 +167,10 @@
             this.txtdes.LineIdleColor = System.Drawing.Color.Gray;
             this.txtdes.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtdes.LineThickness = 3;
-            this.txtdes.Location = new System.Drawing.Point(168, 275);
+            this.txtdes.Location = new System.Drawing.Point(120, 265);
             this.txtdes.Margin = new System.Windows.Forms.Padding(4);
             this.txtdes.Name = "txtdes";
-            this.txtdes.Size = new System.Drawing.Size(220, 33);
+            this.txtdes.Size = new System.Drawing.Size(327, 33);
             this.txtdes.TabIndex = 293;
             this.txtdes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -181,7 +181,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Sienna;
-            this.label2.Location = new System.Drawing.Point(42, 275);
+            this.label2.Location = new System.Drawing.Point(12, 275);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 23);
             this.label2.TabIndex = 292;
@@ -194,7 +194,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Sienna;
-            this.label10.Location = new System.Drawing.Point(266, 122);
+            this.label10.Location = new System.Drawing.Point(292, 81);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 23);
             this.label10.TabIndex = 294;
@@ -207,7 +207,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Sienna;
-            this.label18.Location = new System.Drawing.Point(42, 176);
+            this.label18.Location = new System.Drawing.Point(12, 139);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 23);
             this.label18.TabIndex = 291;
@@ -226,10 +226,10 @@
             this.txtCiclo.LineIdleColor = System.Drawing.Color.Gray;
             this.txtCiclo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtCiclo.LineThickness = 3;
-            this.txtCiclo.Location = new System.Drawing.Point(254, 229);
+            this.txtCiclo.Location = new System.Drawing.Point(206, 196);
             this.txtCiclo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCiclo.Name = "txtCiclo";
-            this.txtCiclo.Size = new System.Drawing.Size(134, 33);
+            this.txtCiclo.Size = new System.Drawing.Size(220, 33);
             this.txtCiclo.TabIndex = 289;
             this.txtCiclo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -240,7 +240,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Sienna;
-            this.label1.Location = new System.Drawing.Point(42, 229);
+            this.label1.Location = new System.Drawing.Point(12, 206);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(187, 23);
             this.label1.TabIndex = 288;
@@ -253,7 +253,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Sienna;
-            this.label15.Location = new System.Drawing.Point(292, 399);
+            this.label15.Location = new System.Drawing.Point(286, 407);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 23);
             this.label15.TabIndex = 287;
@@ -264,7 +264,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageActive = null;
-            this.btnGuardar.Location = new System.Drawing.Point(296, 329);
+            this.btnGuardar.Location = new System.Drawing.Point(296, 343);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(51, 52);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -278,7 +278,7 @@
             this.txtId_Ciclo.BackColor = System.Drawing.Color.LightGray;
             this.txtId_Ciclo.Enabled = false;
             this.txtId_Ciclo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtId_Ciclo.Location = new System.Drawing.Point(116, 178);
+            this.txtId_Ciclo.Location = new System.Drawing.Point(81, 141);
             this.txtId_Ciclo.Name = "txtId_Ciclo";
             this.txtId_Ciclo.Size = new System.Drawing.Size(100, 23);
             this.txtId_Ciclo.TabIndex = 290;
@@ -287,7 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 524);
+            this.ClientSize = new System.Drawing.Size(460, 581);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnBuscarCiclo);
             this.Controls.Add(this.label3);

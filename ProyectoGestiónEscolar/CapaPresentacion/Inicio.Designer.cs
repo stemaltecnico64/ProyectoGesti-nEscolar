@@ -244,7 +244,7 @@
             // 
             // TitlePanel
             // 
-            this.TitlePanel.BackColor = System.Drawing.Color.Tomato;
+            this.TitlePanel.BackColor = System.Drawing.Color.SaddleBrown;
             this.TitlePanel.Controls.Add(this.btn_restaurar);
             this.TitlePanel.Controls.Add(this.btn_minimizar);
             this.TitlePanel.Controls.Add(this.btn_maximizar);

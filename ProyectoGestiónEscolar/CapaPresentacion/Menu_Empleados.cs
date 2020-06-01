@@ -19,7 +19,7 @@ namespace CapaPresentacion
 
         private void Btn_Crear_Click(object sender, EventArgs e)
         {
-            Ingresar_Empleado ventanaEmpleado = new Ingresar_Empleado();
+            Ingresar_Empleado ventanaEmpleado =  Ingresar_Empleado.GetInstancia();
             ventanaEmpleado.Show();
         }
 
