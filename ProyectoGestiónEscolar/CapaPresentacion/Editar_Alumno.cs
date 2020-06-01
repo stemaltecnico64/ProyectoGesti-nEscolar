@@ -42,7 +42,7 @@ namespace CapaPresentacion
         public void SetAlumnoEditar(string id_alumno, string codigo_alumno, string cui, string nombre1, string nombre2, string nombre3, string apellido1, string apellido2, string apellido3, string fecha_nac,
             string sexo, string direccion, string id_municipio, string telefono, Image foto, string Estado, string id_encargado, string dpi, string nombre_encargado, string apellido_encargado )
         {
-            this.txtIdAlumno.Text = id_alumno;
+            this.txtCodigoAlumno.Text = id_alumno;
             this.txtCodigoAlumno.Text = codigo_alumno;
             this.txtCui.Text = cui;
             this.txtNombre1.Text = nombre1;
@@ -117,7 +117,7 @@ namespace CapaPresentacion
 
         private void Limpiar()
         {
-            this.txtIdAlumno.Text = string.Empty;
+            this.txtCodigoAlumno.Text = string.Empty;
             this.txtCodigoAlumno.Text = string.Empty;
             this.txtCui.Text = string.Empty;
             this.txtNombre1.Text = string.Empty;
@@ -139,7 +139,7 @@ namespace CapaPresentacion
 
         private void Habilitar(bool valor)
         {
-            this.txtIdAlumno.ReadOnly = !valor;
+            this.txtCodigoAlumno.ReadOnly = !valor;
             this.txtCodigoAlumno.Enabled = valor;
             this.txtCui.Enabled = valor;
             this.txtNombre1.Enabled = valor;
@@ -192,6 +192,81 @@ namespace CapaPresentacion
 
         private void BtnAgregarFoto_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void BtnQuitarFoto_Click(object sender, EventArgs e)
+        {
+            this.pxFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.pxFoto.Image = global::CapaPresentacion.Properties.Resources.file;
+        }
+        
+
+        private void BunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            if (!this.txtCodigoAlumno.Text.Equals(""))
+            {
+                this.IsEditar = true;
+                this.Botones();
+                this.Habilitar(true);
+            }
+            else
+            {
+                this.MensajeError("Debe de seleccionar primero el registro a Modificar");
+            }
+        }
+
+        private void BtnBuscarEncargado_Click(object sender, EventArgs e)
+        {
+            Listado_Encargados ver = new Listado_Encargados();
+            ver.ShowDialog();
+
+            if (ver.DialogResult == DialogResult.OK)
+            {
+                txtIdEncargado.Text = ver.dataListadoE.Rows[ver.dataListadoE.CurrentRow.Index].Cells[0].Value.ToString();
+                txtDpiEncargado.Text = ver.dataListadoE.Rows[ver.dataListadoE.CurrentRow.Index].Cells[1].Value.ToString();
+                txtNombreEncargado.Text = ver.dataListadoE.Rows[ver.dataListadoE.CurrentRow.Index].Cells[2].Value.ToString();
+                txtApellidoEncargado.Text = ver.dataListadoE.Rows[ver.dataListadoE.CurrentRow.Index].Cells[3].Value.ToString();
+            }
+        }
+
+        private void CbDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbDepartamento.SelectedValue.ToString() != null)
+            {
+                string id_departamento = cbDepartamento.SelectedValue.ToString();
+                LlenarComboMunicipio(id_departamento);
+            }
+        }
+        private void BtExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Editar_Alumno_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _Instancia = null;
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_nuevo_encargado_Click(object sender, EventArgs e)
+        {
+            Ingresar_Encargado ventanaEncargado = new Ingresar_Encargado();
+            ventanaEncargado.Show();
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            VistaAlumnoEditar ver = new VistaAlumnoEditar();
+            ver.Show();
+        }
+
+        private void BtnAgregarFoto_Click_1(object sender, EventArgs e)
+        {
             try
             {
 
@@ -211,13 +286,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void BtnQuitarFoto_Click(object sender, EventArgs e)
-        {
-            this.pxFoto.SizeMode = PictureBoxSizeMode.StretchImage;
-            this.pxFoto.Image = global::CapaPresentacion.Properties.Resources.file;
-        }
-
-        private void BtnNuevo_Click(object sender, EventArgs e)
+        private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             this.IsNuevo = true;
             this.IsEditar = false;
@@ -227,9 +296,8 @@ namespace CapaPresentacion
             this.txtCodigoAlumno.Focus();
         }
 
-        private void BtnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-
             try
             {
                 DialogResult Opcion;
@@ -262,7 +330,7 @@ namespace CapaPresentacion
                         }
                         else
                         {
-                            rpta = NAlumno.Editar(Convert.ToInt32(this.txtIdAlumno.Text),
+                            rpta = NAlumno.Editar(Convert.ToInt32(this.txtCodigoAlumno.Text),
                                 this.txtCodigoAlumno.Text, this.txtCui.Text, this.txtNombre1.Text, this.txtNombre2.Text, this.txtNombre3.Text, this.txtApellido1.Text, this.txtApellido2.Text, this.txtApellido3.Text,
                                 this.dtFechaNac.Value, this.cbSexo.Text, this.txtDireccion.Text, Convert.ToInt32(this.cbMunicipio.Text), this.txtTelefono.Text, imagen, Convert.ToInt32(this.txtIdEncargado.Text),
                                 this.cbEstado.Text);
@@ -302,77 +370,13 @@ namespace CapaPresentacion
             }
         }
 
-        private void BunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            if (!this.txtIdAlumno.Text.Equals(""))
-            {
-                this.IsEditar = true;
-                this.Botones();
-                this.Habilitar(true);
-            }
-            else
-            {
-                this.MensajeError("Debe de seleccionar primero el registro a Modificar");
-            }
-        }
-
-        private void BtnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             this.IsNuevo = false;
             this.IsEditar = false;
             this.Botones();
             this.Limpiar();
             this.Habilitar(false);
-        }
-
-        private void BtnBuscarEncargado_Click(object sender, EventArgs e)
-        {
-            Listado_Encargados ver = new Listado_Encargados();
-            ver.ShowDialog();
-
-            if (ver.DialogResult == DialogResult.OK)
-            {
-                txtIdEncargado.Text = ver.dataListadoE.Rows[ver.dataListadoE.CurrentRow.Index].Cells[0].Value.ToString();
-                txtDpiEncargado.Text = ver.dataListadoE.Rows[ver.dataListadoE.CurrentRow.Index].Cells[1].Value.ToString();
-                txtNombreEncargado.Text = ver.dataListadoE.Rows[ver.dataListadoE.CurrentRow.Index].Cells[2].Value.ToString();
-                txtApellidoEncargado.Text = ver.dataListadoE.Rows[ver.dataListadoE.CurrentRow.Index].Cells[3].Value.ToString();
-            }
-        }
-
-        private void BtnNuevoEncargado_Click(object sender, EventArgs e)
-        {
-            Ingresar_Encargado ventanaEncargado = new Ingresar_Encargado();
-            ventanaEncargado.Show();
-        }
-
-        private void CbDepartamento_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbDepartamento.SelectedValue.ToString() != null)
-            {
-                string id_departamento = cbDepartamento.SelectedValue.ToString();
-                LlenarComboMunicipio(id_departamento);
-            }
-        }
-
-        private void BtnBuscarAlumnoEditar_Click(object sender, EventArgs e)
-        {
-            VistaAlumnoEditar ver = new VistaAlumnoEditar();
-            ver.Show();
-        }
-
-        private void BtExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Editar_Alumno_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            _Instancia = null;
-        }
-
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
