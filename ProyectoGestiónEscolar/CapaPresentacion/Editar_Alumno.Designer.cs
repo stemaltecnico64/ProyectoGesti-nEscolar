@@ -48,8 +48,6 @@
             this.txtApellidoEncargado = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label26 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btn_buscar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_nuevo_encargado = new Bunifu.Framework.UI.BunifuImageButton();
             this.label25 = new System.Windows.Forms.Label();
             this.txtNombreEncargado = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label24 = new System.Windows.Forms.Label();
@@ -71,40 +69,50 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCui = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtNombre2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtApellido1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtNombre3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.btnCancelar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtIdAlumno = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.btn_add_foto = new Bunifu.Framework.UI.BunifuImageButton();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.label10 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label19 = new System.Windows.Forms.Label();
+            this.BtnQuitarFoto = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.BtnAgregarFoto = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.btnCancelar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label20 = new System.Windows.Forms.Label();
+            this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnBuscarEncargado = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnNuevoEncargado = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtCodigoAlumno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCui = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label28 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_nuevo_encargado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnQuitarFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnAgregarFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_add_foto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarEncargado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevoEncargado)).BeginInit();
             this.SuspendLayout();
             // 
             // label17
@@ -348,32 +356,6 @@
             this.label14.TabIndex = 102;
             this.label14.Text = "Nuevo Encargado";
             // 
-            // btn_buscar
-            // 
-            this.btn_buscar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar.Image")));
-            this.btn_buscar.ImageActive = null;
-            this.btn_buscar.Location = new System.Drawing.Point(44, 16);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(39, 36);
-            this.btn_buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_buscar.TabIndex = 101;
-            this.btn_buscar.TabStop = false;
-            this.btn_buscar.Zoom = 10;
-            // 
-            // btn_nuevo_encargado
-            // 
-            this.btn_nuevo_encargado.BackColor = System.Drawing.Color.Transparent;
-            this.btn_nuevo_encargado.Image = ((System.Drawing.Image)(resources.GetObject("btn_nuevo_encargado.Image")));
-            this.btn_nuevo_encargado.ImageActive = null;
-            this.btn_nuevo_encargado.Location = new System.Drawing.Point(268, 16);
-            this.btn_nuevo_encargado.Name = "btn_nuevo_encargado";
-            this.btn_nuevo_encargado.Size = new System.Drawing.Size(39, 36);
-            this.btn_nuevo_encargado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_nuevo_encargado.TabIndex = 100;
-            this.btn_nuevo_encargado.TabStop = false;
-            this.btn_nuevo_encargado.Zoom = 10;
-            // 
             // label25
             // 
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -527,6 +509,10 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtCodigoAlumno);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.txtCui);
+            this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtApellido3);
             this.panel1.Controls.Add(this.label1);
@@ -535,9 +521,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtCui);
             this.panel1.Controls.Add(this.txtNombre2);
-            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.txtApellido1);
             this.panel1.Controls.Add(this.txtNombre3);
             this.panel1.Controls.Add(this.label6);
@@ -668,25 +652,6 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Segundo Apellido";
             // 
-            // txtCui
-            // 
-            this.txtCui.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCui.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtCui.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCui.HintForeColor = System.Drawing.Color.Empty;
-            this.txtCui.HintText = "";
-            this.txtCui.isPassword = false;
-            this.txtCui.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtCui.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtCui.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCui.LineThickness = 3;
-            this.txtCui.Location = new System.Drawing.Point(15, 41);
-            this.txtCui.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCui.Name = "txtCui";
-            this.txtCui.Size = new System.Drawing.Size(162, 33);
-            this.txtCui.TabIndex = 49;
-            this.txtCui.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // txtNombre2
             // 
             this.txtNombre2.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -705,19 +670,6 @@
             this.txtNombre2.Size = new System.Drawing.Size(162, 33);
             this.txtNombre2.TabIndex = 7;
             this.txtNombre2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Sienna;
-            this.label11.Location = new System.Drawing.Point(71, 23);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 23);
-            this.label11.TabIndex = 48;
-            this.label11.Text = "CUI";
             // 
             // txtApellido1
             // 
@@ -783,19 +735,6 @@
             this.cbEstado.TabIndex = 113;
             this.cbEstado.Text = "ACTIVO";
             // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Sienna;
-            this.label8.Location = new System.Drawing.Point(771, 403);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 23);
-            this.label8.TabIndex = 122;
-            this.label8.Text = "Agregar Foto";
-            // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -808,11 +747,11 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnBuscarEncargado);
+            this.panel2.Controls.Add(this.btnNuevoEncargado);
             this.panel2.Controls.Add(this.txtApellidoEncargado);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.btn_buscar);
-            this.panel2.Controls.Add(this.btn_nuevo_encargado);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.txtNombreEncargado);
             this.panel2.Controls.Add(this.label24);
@@ -825,58 +764,6 @@
             this.panel2.Size = new System.Drawing.Size(607, 141);
             this.panel2.TabIndex = 119;
             // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Sienna;
-            this.label15.Location = new System.Drawing.Point(789, 553);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 23);
-            this.label15.TabIndex = 118;
-            this.label15.Text = "Guardar";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px;
-            this.btnCancelar.ImageActive = null;
-            this.btnCancelar.Location = new System.Drawing.Point(700, 608);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(70, 55);
-            this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCancelar.TabIndex = 126;
-            this.btnCancelar.TabStop = false;
-            this.btnCancelar.Zoom = 10;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.icons8_Add_List_48px;
-            this.btnNuevo.ImageActive = null;
-            this.btnNuevo.Location = new System.Drawing.Point(700, 458);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(70, 55);
-            this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnNuevo.TabIndex = 124;
-            this.btnNuevo.TabStop = false;
-            this.btnNuevo.Zoom = 10;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageActive = null;
-            this.btnGuardar.Location = new System.Drawing.Point(700, 533);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(70, 55);
-            this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnGuardar.TabIndex = 117;
-            this.btnGuardar.TabStop = false;
-            this.btnGuardar.Zoom = 10;
-            // 
             // txtIdAlumno
             // 
             this.txtIdAlumno.BackColor = System.Drawing.Color.LightGray;
@@ -884,32 +771,6 @@
             this.txtIdAlumno.Name = "txtIdAlumno";
             this.txtIdAlumno.Size = new System.Drawing.Size(100, 20);
             this.txtIdAlumno.TabIndex = 111;
-            // 
-            // label21
-            // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Sienna;
-            this.label21.Location = new System.Drawing.Point(786, 619);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(73, 23);
-            this.label21.TabIndex = 127;
-            this.label21.Text = "Cancelar";
-            // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Sienna;
-            this.label20.Location = new System.Drawing.Point(789, 472);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(55, 23);
-            this.label20.TabIndex = 125;
-            this.label20.Text = "Nuevo";
             // 
             // label18
             // 
@@ -923,19 +784,6 @@
             this.label18.Size = new System.Drawing.Size(63, 23);
             this.label18.TabIndex = 123;
             this.label18.Text = "Codigo:";
-            // 
-            // btn_add_foto
-            // 
-            this.btn_add_foto.BackColor = System.Drawing.Color.Transparent;
-            this.btn_add_foto.Image = ((System.Drawing.Image)(resources.GetObject("btn_add_foto.Image")));
-            this.btn_add_foto.ImageActive = null;
-            this.btn_add_foto.Location = new System.Drawing.Point(700, 381);
-            this.btn_add_foto.Name = "btn_add_foto";
-            this.btn_add_foto.Size = new System.Drawing.Size(70, 70);
-            this.btn_add_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_add_foto.TabIndex = 121;
-            this.btn_add_foto.TabStop = false;
-            this.btn_add_foto.Zoom = 10;
             // 
             // ttMensaje
             // 
@@ -954,27 +802,277 @@
             this.label10.TabIndex = 112;
             this.label10.Text = "Estado:";
             // 
+            // label27
+            // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Sienna;
+            this.label27.Location = new System.Drawing.Point(737, 640);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(57, 23);
+            this.label27.TabIndex = 154;
+            this.label27.Text = "Editar";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.icons8_Edit_Property_48px;
+            this.btnEditar.ImageActive = null;
+            this.btnEditar.Location = new System.Drawing.Point(683, 628);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(48, 49);
+            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEditar.TabIndex = 153;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Zoom = 10;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Sienna;
+            this.label19.Location = new System.Drawing.Point(829, 440);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(98, 23);
+            this.label19.TabIndex = 152;
+            this.label19.Text = "Quitar Foto";
+            // 
+            // BtnQuitarFoto
+            // 
+            this.BtnQuitarFoto.BackColor = System.Drawing.Color.Transparent;
+            this.BtnQuitarFoto.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px1;
+            this.BtnQuitarFoto.ImageActive = null;
+            this.BtnQuitarFoto.Location = new System.Drawing.Point(854, 390);
+            this.BtnQuitarFoto.Name = "BtnQuitarFoto";
+            this.BtnQuitarFoto.Size = new System.Drawing.Size(53, 47);
+            this.BtnQuitarFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnQuitarFoto.TabIndex = 151;
+            this.BtnQuitarFoto.TabStop = false;
+            this.BtnQuitarFoto.Zoom = 10;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Sienna;
+            this.label8.Location = new System.Drawing.Point(670, 440);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 23);
+            this.label8.TabIndex = 150;
+            this.label8.Text = "Agregar Foto";
+            // 
+            // BtnAgregarFoto
+            // 
+            this.BtnAgregarFoto.BackColor = System.Drawing.Color.Transparent;
+            this.BtnAgregarFoto.Image = ((System.Drawing.Image)(resources.GetObject("BtnAgregarFoto.Image")));
+            this.BtnAgregarFoto.ImageActive = null;
+            this.BtnAgregarFoto.Location = new System.Drawing.Point(693, 390);
+            this.BtnAgregarFoto.Name = "BtnAgregarFoto";
+            this.BtnAgregarFoto.Size = new System.Drawing.Size(53, 47);
+            this.BtnAgregarFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnAgregarFoto.TabIndex = 149;
+            this.BtnAgregarFoto.TabStop = false;
+            this.BtnAgregarFoto.Zoom = 10;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Sienna;
+            this.label15.Location = new System.Drawing.Point(866, 569);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 23);
+            this.label15.TabIndex = 144;
+            this.label15.Text = "Guardar";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Sienna;
+            this.label21.Location = new System.Drawing.Point(866, 640);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(73, 23);
+            this.label21.TabIndex = 148;
+            this.label21.Text = "Cancelar";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px;
+            this.btnCancelar.ImageActive = null;
+            this.btnCancelar.Location = new System.Drawing.Point(812, 628);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(48, 49);
+            this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCancelar.TabIndex = 147;
+            this.btnCancelar.TabStop = false;
+            this.btnCancelar.Zoom = 10;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Sienna;
+            this.label20.Location = new System.Drawing.Point(737, 569);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(55, 23);
+            this.label20.TabIndex = 146;
+            this.label20.Text = "Nuevo";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.icons8_Add_List_48px;
+            this.btnNuevo.ImageActive = null;
+            this.btnNuevo.Location = new System.Drawing.Point(683, 553);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(48, 49);
+            this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNuevo.TabIndex = 145;
+            this.btnNuevo.TabStop = false;
+            this.btnNuevo.Zoom = 10;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageActive = null;
+            this.btnGuardar.Location = new System.Drawing.Point(812, 553);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(48, 49);
+            this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnGuardar.TabIndex = 143;
+            this.btnGuardar.TabStop = false;
+            this.btnGuardar.Zoom = 10;
+            // 
+            // btnBuscarEncargado
+            // 
+            this.btnBuscarEncargado.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarEncargado.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarEncargado.Image")));
+            this.btnBuscarEncargado.ImageActive = null;
+            this.btnBuscarEncargado.Location = new System.Drawing.Point(44, 16);
+            this.btnBuscarEncargado.Name = "btnBuscarEncargado";
+            this.btnBuscarEncargado.Size = new System.Drawing.Size(39, 36);
+            this.btnBuscarEncargado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscarEncargado.TabIndex = 106;
+            this.btnBuscarEncargado.TabStop = false;
+            this.btnBuscarEncargado.Zoom = 10;
+            // 
+            // btnNuevoEncargado
+            // 
+            this.btnNuevoEncargado.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevoEncargado.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoEncargado.Image")));
+            this.btnNuevoEncargado.ImageActive = null;
+            this.btnNuevoEncargado.Location = new System.Drawing.Point(268, 16);
+            this.btnNuevoEncargado.Name = "btnNuevoEncargado";
+            this.btnNuevoEncargado.Size = new System.Drawing.Size(39, 36);
+            this.btnNuevoEncargado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNuevoEncargado.TabIndex = 105;
+            this.btnNuevoEncargado.TabStop = false;
+            this.btnNuevoEncargado.Zoom = 10;
+            // 
+            // txtCodigoAlumno
+            // 
+            this.txtCodigoAlumno.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodigoAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCodigoAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCodigoAlumno.HintForeColor = System.Drawing.Color.Empty;
+            this.txtCodigoAlumno.HintText = "";
+            this.txtCodigoAlumno.isPassword = false;
+            this.txtCodigoAlumno.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtCodigoAlumno.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtCodigoAlumno.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCodigoAlumno.LineThickness = 3;
+            this.txtCodigoAlumno.Location = new System.Drawing.Point(23, 35);
+            this.txtCodigoAlumno.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoAlumno.Name = "txtCodigoAlumno";
+            this.txtCodigoAlumno.Size = new System.Drawing.Size(162, 33);
+            this.txtCodigoAlumno.TabIndex = 55;
+            this.txtCodigoAlumno.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Sienna;
+            this.label11.Location = new System.Drawing.Point(37, 13);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(137, 23);
+            this.label11.TabIndex = 54;
+            this.label11.Text = "Código de Alumno";
+            // 
+            // txtCui
+            // 
+            this.txtCui.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCui.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCui.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCui.HintForeColor = System.Drawing.Color.Empty;
+            this.txtCui.HintText = "";
+            this.txtCui.isPassword = false;
+            this.txtCui.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtCui.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtCui.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCui.LineThickness = 3;
+            this.txtCui.Location = new System.Drawing.Point(224, 35);
+            this.txtCui.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCui.Name = "txtCui";
+            this.txtCui.Size = new System.Drawing.Size(162, 33);
+            this.txtCui.TabIndex = 53;
+            this.txtCui.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label28
+            // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Sienna;
+            this.label28.Location = new System.Drawing.Point(280, 13);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(41, 23);
+            this.label28.TabIndex = 52;
+            this.label28.Text = "CUI";
+            // 
             // Editar_Alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 722);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.BtnQuitarFoto);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.BtnAgregarFoto);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cbEstado);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.txtIdAlumno);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.btn_add_foto);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Editar_Alumno";
@@ -983,8 +1081,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_nuevo_encargado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
@@ -993,10 +1089,14 @@
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnQuitarFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnAgregarFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_add_foto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarEncargado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevoEncargado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1028,22 +1128,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCui;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombre2;
-        private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtApellido1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombre3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbEstado;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pxFoto;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtApellidoEncargado;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label14;
-        private Bunifu.Framework.UI.BunifuImageButton btn_buscar;
-        private Bunifu.Framework.UI.BunifuImageButton btn_nuevo_encargado;
         private System.Windows.Forms.Label label25;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombreEncargado;
         private System.Windows.Forms.Label label24;
@@ -1051,20 +1146,31 @@
         private System.Windows.Forms.Label label23;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtIdEncargado;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label15;
-        private Bunifu.Framework.UI.BunifuImageButton btnCancelar;
-        private Bunifu.Framework.UI.BunifuImageButton btnNuevo;
-        private Bunifu.Framework.UI.BunifuImageButton btnGuardar;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.TextBox txtIdAlumno;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label18;
-        private Bunifu.Framework.UI.BunifuImageButton btn_add_foto;
         private System.Windows.Forms.Label label10;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ToolTip ttMensaje;
+        private System.Windows.Forms.Label label27;
+        private Bunifu.Framework.UI.BunifuImageButton btnEditar;
+        private System.Windows.Forms.Label label19;
+        private Bunifu.Framework.UI.BunifuImageButton BtnQuitarFoto;
+        private System.Windows.Forms.Label label8;
+        private Bunifu.Framework.UI.BunifuImageButton BtnAgregarFoto;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label21;
+        private Bunifu.Framework.UI.BunifuImageButton btnCancelar;
+        private System.Windows.Forms.Label label20;
+        private Bunifu.Framework.UI.BunifuImageButton btnNuevo;
+        private Bunifu.Framework.UI.BunifuImageButton btnGuardar;
+        private Bunifu.Framework.UI.BunifuImageButton btnBuscarEncargado;
+        private Bunifu.Framework.UI.BunifuImageButton btnNuevoEncargado;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCodigoAlumno;
+        private System.Windows.Forms.Label label11;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCui;
+        private System.Windows.Forms.Label label28;
     }
 }
