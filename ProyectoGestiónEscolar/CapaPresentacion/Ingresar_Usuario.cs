@@ -33,7 +33,7 @@ namespace CapaPresentacion
             return DS;
         }
 
-        SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
 
         private void LlenarComboNivelU()
         {
@@ -122,7 +122,7 @@ namespace CapaPresentacion
             try
             {
                 string cmd = string.Format("Execute insertar_usuarios '{0}','{1}','{2}','{3}'", txt_nombre_usuario.Text,txt_password.Text,Convert.ToInt32(cbNivelU.SelectedValue),Convert.ToInt32(txtcodigoE.Text));
-                Conexion_GX(cmd);
+                Login.Conexion_GX(cmd);
                 MessageBox.Show("Se ha Guardado el Usuario Exitosamente..!");
             }
             catch (Exception error)
