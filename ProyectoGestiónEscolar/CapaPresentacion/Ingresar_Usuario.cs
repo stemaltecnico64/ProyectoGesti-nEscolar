@@ -20,7 +20,7 @@ namespace CapaPresentacion
 
         public static DataSet Conexion_GX(string cmd)
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             con.Open();
 
             DataSet DS = new DataSet();
@@ -33,7 +33,7 @@ namespace CapaPresentacion
             return DS;
         }
 
-        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
+        SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
 
         private void LlenarComboNivelU()
         {

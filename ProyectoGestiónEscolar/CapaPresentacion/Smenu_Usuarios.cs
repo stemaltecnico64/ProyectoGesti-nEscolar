@@ -41,7 +41,7 @@ namespace CapaPresentacion
 
             string url = DS.Tables[0].Rows[0]["FOTO"].ToString();
 
-            pictureBox1.Image = Image.FromFile(url);
+         //   pictureBox1.Image = Image.FromFile(url);
         }
 
         private void datos_usuarios()
