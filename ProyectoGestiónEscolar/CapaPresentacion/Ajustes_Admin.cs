@@ -26,6 +26,7 @@ namespace CapaPresentacion
                 btn_puestos.Hide();
                 btn_ciclo.Hide();
                 btn_encargados.Hide();
+                btn_apertura_ciclo.Hide();
             }
             else if (Login.nivel_x.Equals("4"))
             {
@@ -34,6 +35,7 @@ namespace CapaPresentacion
                 btn_Departamentos.Hide();
                 btn_municipios.Hide();
                 btn_encargados.Hide();
+                btn_apertura_ciclo.Hide();
             }
             else if (Login.nivel_x.Equals("2"))
             {
@@ -78,7 +80,7 @@ namespace CapaPresentacion
 
         private void btn_encargados_Click(object sender, EventArgs e)
         {
-            
+            OpenChilForm(new ConfigTipoEncargados());
         }
 
         private void btn_cuenta_Click(object sender, EventArgs e)
@@ -109,6 +111,11 @@ namespace CapaPresentacion
         private void btn_inscripcion_Click(object sender, EventArgs e)
         {
             OpenChilForm(new Agregar_Tipo_Inscripcion());
+        }
+
+        private void btn_apertura_ciclo_Click(object sender, EventArgs e)
+        {
+            OpenChilForm(new Apertura_Ciclo());
         }
     }
 }
