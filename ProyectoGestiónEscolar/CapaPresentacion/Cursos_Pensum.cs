@@ -20,7 +20,7 @@ namespace CapaPresentacion
             LlenarComboCarrera();
         }
 
-        SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
 
         private void LlenarComboPeriodos()
         {
@@ -57,22 +57,6 @@ namespace CapaPresentacion
             cbCarrera.DisplayMember = "Nombre";
             cbCarrera.DataSource = dt;
         }
-
-
-        public static DataSet Conexion_GX(string cmd)
-        {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
-            con.Open();
-
-            DataSet DS = new DataSet();
-            SqlDataAdapter DP = new SqlDataAdapter(cmd, con);
-
-            DP.Fill(DS);
-
-            con.Close();
-
-            return DS;
-        }
         private void LlenarComboGrado(string id_carrera)
         {
             con.Open();
@@ -97,7 +81,7 @@ namespace CapaPresentacion
             try
             {
                 string cmd = string.Format("Execute insertar_Cursos '{0}','{1}','{2}'", txtCurso.Text.Trim(), Convert.ToInt32(cbGrado.SelectedValue), Convert.ToInt32(cbPeriodos.SelectedValue));
-                Conexion_GX(cmd);
+                Login.Conexion_GX(cmd);
                 MessageBox.Show("Curso Guardado Exitosamente..!");
             }
             catch (Exception error)

@@ -17,9 +17,11 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
+
         public void cargarTablaMaestros()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             con.Open();
             SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_maestros", con);
             DataTable dt = new DataTable();
@@ -56,7 +58,6 @@ namespace CapaPresentacion
 
         private void BuscarDPI()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_maestros where DPI like'%" + txtBuscar.Text + "%'", con);
             DataTable dt = new DataTable();
 
@@ -68,7 +69,6 @@ namespace CapaPresentacion
 
         private void BuscarMaestro()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_maestros where Maestro like'%" + txtBuscar.Text + "%'", con);
             DataTable dt = new DataTable();
 
@@ -80,7 +80,6 @@ namespace CapaPresentacion
 
         private void BuscarCodigo()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_maestros where Código like'%" + txtBuscar.Text + "%'", con);
             DataTable dt = new DataTable();
 

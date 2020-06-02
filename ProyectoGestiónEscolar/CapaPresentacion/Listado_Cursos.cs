@@ -18,9 +18,10 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
+
         public void cargarTablaCursos()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             con.Open();
             SqlDataAdapter DP = new SqlDataAdapter("select * from vista_listado_cursos order by Carrera,Grado", con);
             DataTable dt = new DataTable();
@@ -37,7 +38,6 @@ namespace CapaPresentacion
 
         private void BuscarCurso()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
             SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_cursos where Curso like'%" + txtBuscar.Text + "%'", con);
             DataTable dt = new DataTable();
 
@@ -48,7 +48,6 @@ namespace CapaPresentacion
         }
         private void BuscarGrado()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
             SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_cursos where Grado like'%" + txtBuscar.Text + "%'", con);
             DataTable dt = new DataTable();
 
@@ -59,7 +58,6 @@ namespace CapaPresentacion
         }
         private void BuscarCarrera()
         {
-            SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuela; Integrated Security = true ");
             SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_cursos where Carrera like'%" + txtBuscar.Text + "%'", con);
             DataTable dt = new DataTable();
 

@@ -19,6 +19,9 @@ namespace CapaPresentacion
         private bool IsEditar = false;
 
         private static Editar_Alumno _Instancia;
+
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
+
         public static Editar_Alumno GetInstancia()
         {
             if (_Instancia == null)
@@ -63,8 +66,7 @@ namespace CapaPresentacion
             this.txtApellidoEncargado.Text = apellido_encargado;
             this.cbEstado.Text = Estado;
         }
-        SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
-
+        
         private void LlenarComboMunicipio(string id_departamento)
         {
             con.Open();
