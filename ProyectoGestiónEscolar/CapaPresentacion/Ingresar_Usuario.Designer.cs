@@ -42,7 +42,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.txt_password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_guardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
@@ -55,6 +54,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.txt_password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_guardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
@@ -207,26 +207,6 @@
             this.label18.Size = new System.Drawing.Size(63, 23);
             this.label18.TabIndex = 135;
             this.label18.Text = "Codigo:";
-            // 
-            // txt_password
-            // 
-            this.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_password.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_password.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_password.HintText = "";
-            this.txt_password.isPassword = true;
-            this.txt_password.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txt_password.LineIdleColor = System.Drawing.Color.Gray;
-            this.txt_password.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txt_password.LineThickness = 3;
-            this.txt_password.Location = new System.Drawing.Point(175, 184);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(224, 33);
-            this.txt_password.TabIndex = 139;
-            this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txt_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_password_KeyPress);
             // 
             // label1
             // 
@@ -408,6 +388,26 @@
             this.label22.TabIndex = 105;
             this.label22.Text = "Código";
             // 
+            // txt_password
+            // 
+            this.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_password.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_password.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_password.HintText = "";
+            this.txt_password.isPassword = true;
+            this.txt_password.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txt_password.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_password.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txt_password.LineThickness = 3;
+            this.txt_password.Location = new System.Drawing.Point(175, 184);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(224, 33);
+            this.txt_password.TabIndex = 139;
+            this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_password_KeyPress);
+            // 
             // Ingresar_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,7 +459,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label18;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_password;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtdpi;
@@ -470,5 +469,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label22;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_password;
     }
 }

@@ -53,6 +53,21 @@ namespace CapaPresentacion
             this.Close();
         }
 
+        private void Limpiar()
+        {
+            this.txtAlumno.Text = string.Empty;
+            this.txtCarreraA.Text = string.Empty;
+            this.txtCarreraM.Text = string.Empty;
+            this.txtCodigoA.Text = string.Empty;
+            this.txtcodigoM.Text = string.Empty;
+            this.txtCurso.Text = string.Empty;
+            this.txtGradoA.Text = string.Empty;
+            this.txtGradoM.Text = string.Empty;
+            this.txtMaestro.Text = string.Empty;
+            this.txtSeccionA.Text = string.Empty;
+            this.txtSeccionM.Text = string.Empty;
+        }
+
         private void btnBuscarM_Click(object sender, EventArgs e)
         {
             Listado_Cursos_Asignados lca = new Listado_Cursos_Asignados();
@@ -78,6 +93,8 @@ namespace CapaPresentacion
                     string cmd = string.Format("Execute insertar_inscrip_maes_enNotas '{0}','{1}'", Convert.ToInt32(txtcodigoM.Text), Convert.ToInt32(txtCodigoA.Text));
                     Conexion_GX(cmd);
                     MessageBox.Show("Se Asignado El Curso al Alumno Exitosamente..!");
+                    this.Limpiar();
+
                 }
                 catch (Exception error)
                 {

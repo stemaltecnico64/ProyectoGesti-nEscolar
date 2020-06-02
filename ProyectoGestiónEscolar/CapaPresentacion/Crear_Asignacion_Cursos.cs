@@ -41,7 +41,17 @@ namespace CapaPresentacion
 
             return DS;
         }
-        
+
+        private void Limpiar()
+        {
+            this.txtcodigo.Text = string.Empty;
+            this.txtdpi.Text = string.Empty;
+            this.txtnombreMaestro.Text = string.Empty;
+            this.cbCarrera.Text = string.Empty;
+            this.cbCurso.Text = string.Empty;
+            this.cbGrado.Text = string.Empty;
+            this.cbSeccion.Text = string.Empty;
+        }
         private void LlenarComboCarrera()
         {
             con.Open();
@@ -148,6 +158,7 @@ namespace CapaPresentacion
                 string cmd = string.Format("Execute insertar_cursos_empleados '{0}','{1}','{2}'", Convert.ToInt32(txtcodigo.Text), Convert.ToInt32(cbCurso.SelectedValue), Convert.ToInt32(cbSeccion.SelectedValue));
                 Conexion_GX(cmd);
                 MessageBox.Show("Asignación Guardada Exitosamente..!");
+                this.Limpiar();
             }
             catch (Exception error)
             {

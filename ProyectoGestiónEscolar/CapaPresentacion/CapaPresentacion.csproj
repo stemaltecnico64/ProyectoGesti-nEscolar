@@ -507,6 +507,12 @@
     <Compile Include="VistaEmpleados.Designer.cs">
       <DependentUpon>VistaEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista_Inscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista_Inscripcion.Designer.cs">
+      <DependentUpon>Vista_Inscripcion.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaNegocios\CapaNegocios.csproj">
@@ -750,6 +756,9 @@
     <EmbeddedResource Include="VistaEmpleados.resx">
       <DependentUpon>VistaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista_Inscripcion.resx">
+      <DependentUpon>Vista_Inscripcion.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fondo Proyecto.png" />
@@ -799,6 +808,8 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8_Search_Property_96px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

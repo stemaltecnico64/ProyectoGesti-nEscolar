@@ -33,7 +33,7 @@ namespace CapaPresentacion
             return DS;
         }
 
-        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
+        SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
 
         private void LlenarComboNivelU()
         {
@@ -87,6 +87,17 @@ namespace CapaPresentacion
             txtdpi.Enabled = false;
         }
 
+        private void Limpiar()
+        {
+            this.txtId.Text = string.Empty;
+            this.txt_nombre_usuario.Text = string.Empty;
+            this.txt_password.Text = string.Empty;
+            this.cbNivelU.Text = string.Empty;
+            this.txtcodigoE.Text = string.Empty;
+            this.txtnombreMaestro.Text = string.Empty;
+            this.txtdpi.Text = string.Empty;
+        }
+
         private void habilitar()
         {
             txt_nombre_usuario.Enabled = true;
@@ -124,6 +135,7 @@ namespace CapaPresentacion
                 string cmd = string.Format("Execute insertar_usuarios '{0}','{1}','{2}','{3}'", txt_nombre_usuario.Text,txt_password.Text,Convert.ToInt32(cbNivelU.SelectedValue),Convert.ToInt32(txtcodigoE.Text));
                 Login.Conexion_GX(cmd);
                 MessageBox.Show("Se ha Guardado el Usuario Exitosamente..!");
+                this.Limpiar();
             }
             catch (Exception error)
             {
