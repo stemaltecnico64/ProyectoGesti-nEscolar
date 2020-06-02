@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocios;
 using System.Data.SqlClient;
+using System.Data;
 namespace CapaPresentacion
 {
     public partial class Inscripcion_alumno : Form
     {
         private bool IsNuevo = false;
+
+        private bool IsEditar = false;
+
         private static Inscripcion_alumno _instancia;
         public static Inscripcion_alumno GetInstancia()
         {
@@ -49,6 +53,24 @@ namespace CapaPresentacion
             this.txtCui_Alumno.Text = cui;
             this.txtNombreAlumno.Text = nombresyapellidos;
         }
+
+
+        public void SetInscripcion(string idinscripcion, string id_ciclo, string id_carrera, string id_tipo_inscripcion, string idalumno,
+            string cui, string nombresyapellidos, string id_grado, string id_seccion, string fecha, string estado)
+        {
+            this.txtIdInscripcion.Text = idinscripcion;
+            this.cbCiclo.Text = id_ciclo;
+            this.cbCarrera.Text = id_carrera;
+            this.cbTipo_Inscripcion.Text = id_tipo_inscripcion;
+            this.txtId_Alumno.Text = idalumno;
+            this.txtCui_Alumno.Text = cui;
+            this.txtNombreAlumno.Text = nombresyapellidos;
+            this.cbGrado.Text = id_grado;
+            this.cbSeccion.Text = id_seccion;
+            this.dtFechaNac.Text = fecha;
+            this.cbEstado.Text = estado;
+        }
+
 
         private void LlenarComboCiclo()
         {
@@ -122,7 +144,7 @@ namespace CapaPresentacion
             con.Close();
 
             DataRow fila = dt.NewRow();
-            fila["Nombre"] = "Seleccione una Seccion";
+            fila["Nombre"] = "Seleccione una Sección";
             dt.Rows.InsertAt(fila, 0);
 
             cbSeccion.ValueMember = "Id_Seccion";
@@ -161,11 +183,12 @@ namespace CapaPresentacion
 
         private void Botones()
         {
-            if (this.IsNuevo) 
+            if (this.IsNuevo || this.IsEditar)
             {
                 this.Habilitar(true);
                 this.btnNuevo.Enabled = false;
                 this.btnGuardar.Enabled = true;
+                this.btnEditar.Enabled = false;
                 this.btnCancelar.Enabled = true;
                 this.btnBuscar.Enabled = true;
                 this.btnNuevoAlumno.Enabled = true;
@@ -175,6 +198,7 @@ namespace CapaPresentacion
                 this.Habilitar(false);
                 this.btnNuevo.Enabled = true;
                 this.btnGuardar.Enabled = false;
+                this.btnEditar.Enabled = true;
                 this.btnCancelar.Enabled = false;
                 this.btnBuscar.Enabled = false;
                 this.btnNuevoAlumno.Enabled = false;
@@ -202,6 +226,7 @@ namespace CapaPresentacion
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
             this.IsNuevo = true;
+            this.IsEditar = false;
             this.Botones();
             this.Limpiar();
             this.Habilitar(true);
@@ -210,13 +235,16 @@ namespace CapaPresentacion
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             this.IsNuevo = false;
+            this.IsEditar = false;
             this.Botones();
             this.Limpiar();
             this.Habilitar(false);
         }
 
+
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+
             try
             {
                 if (this.cbCiclo.Text == string.Empty)
@@ -224,17 +252,27 @@ namespace CapaPresentacion
                     MensajeError("Estimado Usuario no tiene un ciclo activo");
                 }
                 else
-                {
-                    DialogResult Opcion;
+                {                    
+                    if ()
+                    {
+                        MensajeError("El Alumno ya está ingreso");
+                    }
+                    else
+                    {
+                  DialogResult Opcion;
                     Opcion = MessageBox.Show("¿Está seguro de guardar estos datos?", "SEGURIDAD DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (Opcion == DialogResult.Yes)
                     {
                         string rpta = "";
-                        if (this.txtNombreAlumno.Text == string.Empty)
+                        if (this.txtNombreAlumno.Text == string.Empty || this.cbTipo_Inscripcion.Text == "Eliga un Tipo de Inscripción " || this.cbCarrera.Text == "Seleccione una Carrera"
+                            || this.cbGrado.Text == "Seleccione un Grado" || this.cbSeccion.Text == "Seleccione una Sección")
                         {
                             MensajeError("Falta ingresar algunos datos, serán remarcados");
-                            errorIcono.SetError(txtNombreAlumno, "Ingrese a un alumno");
-
+                            errorIcono.SetError(txtNombreAlumno, "Ingrese un Nombre de Alumno");
+                            errorIcono.SetError(cbTipo_Inscripcion, "Ingrese un tipo de inscripción");
+                            errorIcono.SetError(cbCarrera, "Ingrese una carrera");
+                            errorIcono.SetError(cbGrado, "Ingrese un grado");
+                            errorIcono.SetError(cbSeccion, "Ingrese una sección");
                         }
                         else
                         {
@@ -242,6 +280,11 @@ namespace CapaPresentacion
                             if (this.IsNuevo)
                             {
                                 rpta = NInscripcion.Insertar(Convert.ToInt32(this.cbCiclo.SelectedValue), Convert.ToInt32(this.cbCarrera.SelectedValue), Convert.ToInt32(this.cbTipo_Inscripcion.SelectedValue), Convert.ToInt32(this.txtId_Alumno.Text),
+                                     Convert.ToInt32(this.cbGrado.SelectedValue), Convert.ToInt32(this.cbSeccion.SelectedValue), this.dtFechaNac.Value, this.cbEstado.Text);
+                            }
+                            else
+                            {
+                                rpta = NInscripcion.Editar(Convert.ToInt32(txtIdInscripcion.Text), Convert.ToInt32(this.cbCiclo.SelectedValue), Convert.ToInt32(this.cbCarrera.SelectedValue), Convert.ToInt32(this.cbTipo_Inscripcion.SelectedValue), Convert.ToInt32(this.txtId_Alumno.Text),
                                     Convert.ToInt32(this.cbGrado.SelectedValue), Convert.ToInt32(this.cbSeccion.SelectedValue), this.dtFechaNac.Value, this.cbEstado.Text);
                             }
                             if (rpta.Equals("OK"))
@@ -260,6 +303,7 @@ namespace CapaPresentacion
                                 this.MensajeError(rpta);
                             }
                             this.IsNuevo = false;
+                            this.IsEditar = false;
                             this.Botones();
                             this.Limpiar();
 
@@ -269,6 +313,8 @@ namespace CapaPresentacion
                     {
 
                     }
+                    }
+  
                 }
             }
               
@@ -304,6 +350,26 @@ namespace CapaPresentacion
             {
                 string id_carrera = cbCarrera.SelectedValue.ToString();
                 LlenarComboGrado(id_carrera);
+            }
+        }
+
+        private void BtnBuscarAlumno_Click(object sender, EventArgs e)
+        {
+            Vista_Inscripcion ver = new Vista_Inscripcion();
+            ver.Show();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            if (!this.txtIdInscripcion.Text.Equals(""))
+            {
+                this.IsEditar = true;
+                this.Botones();
+                this.Habilitar(true);
+            }
+            else
+            {
+                this.MensajeError("Debe de seleccionar primero el registro a Modificar");
             }
         }
     }

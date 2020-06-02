@@ -27,6 +27,9 @@ namespace CapaPresentacion
                 btn_ciclo.Hide();
                 btn_encargados.Hide();
                 btn_apertura_ciclo.Hide();
+                btnCarrera.Hide();
+                btnGrado.Hide();
+                btn_Seccion.Hide();
             }
             else if (Login.nivel_x.Equals("4"))
             {
@@ -36,6 +39,7 @@ namespace CapaPresentacion
                 btn_municipios.Hide();
                 btn_encargados.Hide();
                 btn_apertura_ciclo.Hide();
+
             }
             else if (Login.nivel_x.Equals("2"))
             {

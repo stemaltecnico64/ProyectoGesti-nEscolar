@@ -76,6 +76,14 @@ namespace CapaPresentacion
             cbGrado.DataSource = dt;
         }
 
+        private void Limpiar()
+        {
+            this.txtCurso.Text = string.Empty;
+            this.cbPeriodos.Text = string.Empty;
+            this.cbCarrera.Text = string.Empty;
+            this.cbGrado.Text = string.Empty;
+
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -83,6 +91,7 @@ namespace CapaPresentacion
                 string cmd = string.Format("Execute insertar_Cursos '{0}','{1}','{2}'", txtCurso.Text.Trim(), Convert.ToInt32(cbGrado.SelectedValue), Convert.ToInt32(cbPeriodos.SelectedValue));
                 Login.Conexion_GX(cmd);
                 MessageBox.Show("Curso Guardado Exitosamente..!");
+                this.Limpiar();
             }
             catch (Exception error)
             {

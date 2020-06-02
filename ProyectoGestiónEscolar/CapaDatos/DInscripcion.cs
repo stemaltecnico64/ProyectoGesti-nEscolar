@@ -141,11 +141,10 @@ namespace CapaDatos
               }
               return rpta;
 
-          } 
+          }
 
 
-
-      /*  public string Insertar(DInscripcion Inscripcion)
+        public string Editar(DInscripcion Inscripcion)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -154,18 +153,16 @@ namespace CapaDatos
                 //Código
                 SqlCon.ConnectionString = Conexion.Cn;
                 SqlCon.Open();
-                //Establecer la trasacción
-                SqlTransaction SqlTra = SqlCon.BeginTransaction();
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "spinsertar_inscripcion";
+                SqlCmd.CommandText = "speditar_inscripcion";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter ParIdInscripcion = new SqlParameter();
                 ParIdInscripcion.ParameterName = "@Id_Inscripcion";
                 ParIdInscripcion.SqlDbType = SqlDbType.Int;
-                ParIdInscripcion.Direction = ParameterDirection.Output;
+                ParIdInscripcion.Value = Inscripcion.IdInscripcion;
                 SqlCmd.Parameters.Add(ParIdInscripcion);
 
                 SqlParameter IdCiclo = new SqlParameter();
@@ -200,7 +197,7 @@ namespace CapaDatos
                 IdGrado.ParameterName = "@Id_Grado";
                 IdGrado.SqlDbType = SqlDbType.VarChar;
                 IdGrado.Size = 50;
-                IdGrado.Value = Inscripcion.IdAlumno;
+                IdGrado.Value = Inscripcion.IdGrado;
                 SqlCmd.Parameters.Add(IdGrado);
 
                 SqlParameter IdSeccion = new SqlParameter();
@@ -224,16 +221,9 @@ namespace CapaDatos
                 Estado.Value = Inscripcion.Estado;
                 SqlCmd.Parameters.Add(Estado);
 
-                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
 
-                if (rpta.Equals("OK"))
-                {
-                    SqlTra.Commit();
-                }
-                else
-                {
-                    SqlTra.Rollback();
-                }
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Actualizo el Registro";
 
 
             }
@@ -246,7 +236,186 @@ namespace CapaDatos
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return rpta;
+        }
 
-        }*/
+
+        public DataTable Mostrar()
+        {
+            DataTable DtResultado = new DataTable("Inscripcion");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spmostrar_inscripcion";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
+
+
+        public DataTable BuscarCUI(DInscripcion Inscripcion)
+        {
+            DataTable DtResultado = new DataTable("Inscripcion");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spbuscar_inscripcion_cui";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = Inscripcion.TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*  public string Insertar(DInscripcion Inscripcion)
+          {
+              string rpta = "";
+              SqlConnection SqlCon = new SqlConnection();
+              try
+              {
+                  //Código
+                  SqlCon.ConnectionString = Conexion.Cn;
+                  SqlCon.Open();
+                  //Establecer la trasacción
+                  SqlTransaction SqlTra = SqlCon.BeginTransaction();
+                  //Establecer el Comando
+                  SqlCommand SqlCmd = new SqlCommand();
+                  SqlCmd.Connection = SqlCon;
+                  SqlCmd.CommandText = "spinsertar_inscripcion";
+                  SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                  SqlParameter ParIdInscripcion = new SqlParameter();
+                  ParIdInscripcion.ParameterName = "@Id_Inscripcion";
+                  ParIdInscripcion.SqlDbType = SqlDbType.Int;
+                  ParIdInscripcion.Direction = ParameterDirection.Output;
+                  SqlCmd.Parameters.Add(ParIdInscripcion);
+
+                  SqlParameter IdCiclo = new SqlParameter();
+                  IdCiclo.ParameterName = "@Id_Ciclo";
+                  IdCiclo.SqlDbType = SqlDbType.VarChar;
+                  IdCiclo.Size = 50;
+                  IdCiclo.Value = Inscripcion.IdCiclo;
+                  SqlCmd.Parameters.Add(IdCiclo);
+
+                  SqlParameter IdCarrera = new SqlParameter();
+                  IdCarrera.ParameterName = "@Id_Carrera";
+                  IdCarrera.SqlDbType = SqlDbType.VarChar;
+                  IdCarrera.Size = 50;
+                  IdCarrera.Value = Inscripcion.IdCarrera;
+                  SqlCmd.Parameters.Add(IdCarrera);
+
+                  SqlParameter IdTipoInscripcion = new SqlParameter();
+                  IdTipoInscripcion.ParameterName = "@Id_Tipo_Inscripcion";
+                  IdTipoInscripcion.SqlDbType = SqlDbType.VarChar;
+                  IdTipoInscripcion.Size = 50;
+                  IdTipoInscripcion.Value = Inscripcion.IdTipoInscripcion;
+                  SqlCmd.Parameters.Add(IdTipoInscripcion);
+
+                  SqlParameter IdAlumno = new SqlParameter();
+                  IdAlumno.ParameterName = "@Id_Alumno";
+                  IdAlumno.SqlDbType = SqlDbType.VarChar;
+                  IdAlumno.Size = 50;
+                  IdAlumno.Value = Inscripcion.IdAlumno;
+                  SqlCmd.Parameters.Add(IdAlumno);
+
+                  SqlParameter IdGrado = new SqlParameter();
+                  IdGrado.ParameterName = "@Id_Grado";
+                  IdGrado.SqlDbType = SqlDbType.VarChar;
+                  IdGrado.Size = 50;
+                  IdGrado.Value = Inscripcion.IdAlumno;
+                  SqlCmd.Parameters.Add(IdGrado);
+
+                  SqlParameter IdSeccion = new SqlParameter();
+                  IdSeccion.ParameterName = "@Id_Seccion";
+                  IdSeccion.SqlDbType = SqlDbType.VarChar;
+                  IdSeccion.Size = 50;
+                  IdSeccion.Value = Inscripcion.IdSeccion;
+                  SqlCmd.Parameters.Add(IdSeccion);
+
+                  SqlParameter Fecha = new SqlParameter();
+                  Fecha.ParameterName = "@Fecha";
+                  Fecha.SqlDbType = SqlDbType.VarChar;
+                  Fecha.Size = 50;
+                  Fecha.Value = Inscripcion.Fecha;
+                  SqlCmd.Parameters.Add(Fecha);
+
+                  SqlParameter Estado = new SqlParameter();
+                  Estado.ParameterName = "@Estado";
+                  Estado.SqlDbType = SqlDbType.VarChar;
+                  Estado.Size = 50;
+                  Estado.Value = Inscripcion.Estado;
+                  SqlCmd.Parameters.Add(Estado);
+
+                  rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
+
+                  if (rpta.Equals("OK"))
+                  {
+                      SqlTra.Commit();
+                  }
+                  else
+                  {
+                      SqlTra.Rollback();
+                  }
+
+
+              }
+              catch (Exception ex)
+              {
+                  rpta = ex.Message;
+              }
+              finally
+              {
+                  if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+              }
+              return rpta;
+
+          }*/
     }
 }

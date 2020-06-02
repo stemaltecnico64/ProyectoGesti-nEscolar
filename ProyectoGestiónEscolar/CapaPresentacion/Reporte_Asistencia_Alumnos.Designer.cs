@@ -41,14 +41,14 @@
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.ReportSource = this.R_Asistencia_Alumnos1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(823, 396);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1025, 396);
             this.crystalReportViewer1.TabIndex = 0;
             // 
             // Reporte_Asistencia_Alumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 396);
+            this.ClientSize = new System.Drawing.Size(1025, 396);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "Reporte_Asistencia_Alumnos";
             this.Text = "Reporte_Asistencia_Alumnos";

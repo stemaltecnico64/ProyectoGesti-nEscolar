@@ -36,12 +36,9 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnBuscar = new Bunifu.Framework.UI.BunifuImageButton();
             this.label15 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnNuevoAlumno = new Bunifu.Framework.UI.BunifuImageButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,9 +56,7 @@
             this.txt_codigo_alumno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
             this.label21 = new System.Windows.Forms.Label();
-            this.btnCancelar = new Bunifu.Framework.UI.BunifuImageButton();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dtFechaNac = new System.Windows.Forms.DateTimePicker();
@@ -75,15 +70,28 @@
             this.cbCarrera = new System.Windows.Forms.ComboBox();
             this.cbGrado = new System.Windows.Forms.ComboBox();
             this.cbSeccion = new System.Windows.Forms.ComboBox();
+            this.btnBuscarAlumno = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnCancelar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnNuevo = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnBuscar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnNuevoAlumno = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtIdInscripcion = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarAlumno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevoAlumno)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -94,7 +102,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(629, 45);
+            this.panelTitleBar.Size = new System.Drawing.Size(658, 45);
             this.panelTitleBar.TabIndex = 21;
             // 
             // btExit
@@ -103,7 +111,7 @@
             this.btExit.BackgroundImage = global::CapaPresentacion.Properties.Resources.icons8_Close_Window_48px;
             this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btExit.ForeColor = System.Drawing.Color.Red;
-            this.btExit.Location = new System.Drawing.Point(591, 3);
+            this.btExit.Location = new System.Drawing.Point(611, 3);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(35, 35);
             this.btExit.TabIndex = 114;
@@ -117,7 +125,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(265, 9);
+            this.lblTitle.Location = new System.Drawing.Point(280, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(108, 26);
             this.lblTitle.TabIndex = 0;
@@ -137,7 +145,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Sienna;
-            this.label2.Location = new System.Drawing.Point(310, 249);
+            this.label2.Location = new System.Drawing.Point(310, 242);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 23);
             this.label2.TabIndex = 108;
@@ -150,39 +158,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Sienna;
-            this.label1.Location = new System.Drawing.Point(419, 102);
+            this.label1.Location = new System.Drawing.Point(247, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 23);
             this.label1.TabIndex = 98;
             this.label1.Text = "Nuevo Alumno";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageActive = null;
-            this.btnGuardar.Location = new System.Drawing.Point(342, 319);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(54, 49);
-            this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnGuardar.TabIndex = 106;
-            this.btnGuardar.TabStop = false;
-            this.btnGuardar.Zoom = 10;
-            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageActive = null;
-            this.btnBuscar.Location = new System.Drawing.Point(116, 93);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(39, 36);
-            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBuscar.TabIndex = 97;
-            this.btnBuscar.TabStop = false;
-            this.btnBuscar.Zoom = 10;
-            this.btnBuscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // label15
             // 
@@ -191,7 +171,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Sienna;
-            this.label15.Location = new System.Drawing.Point(399, 332);
+            this.label15.Location = new System.Drawing.Point(344, 358);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 23);
             this.label15.TabIndex = 107;
@@ -204,7 +184,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Sienna;
-            this.label7.Location = new System.Drawing.Point(80, 308);
+            this.label7.Location = new System.Drawing.Point(69, 306);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 23);
             this.label7.TabIndex = 101;
@@ -217,25 +197,11 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Sienna;
-            this.label8.Location = new System.Drawing.Point(526, 249);
+            this.label8.Location = new System.Drawing.Point(541, 242);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 23);
             this.label8.TabIndex = 100;
             this.label8.Text = "Grado";
-            // 
-            // btnNuevoAlumno
-            // 
-            this.btnNuevoAlumno.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevoAlumno.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoAlumno.Image")));
-            this.btnNuevoAlumno.ImageActive = null;
-            this.btnNuevoAlumno.Location = new System.Drawing.Point(357, 93);
-            this.btnNuevoAlumno.Name = "btnNuevoAlumno";
-            this.btnNuevoAlumno.Size = new System.Drawing.Size(39, 36);
-            this.btnNuevoAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnNuevoAlumno.TabIndex = 96;
-            this.btnNuevoAlumno.TabStop = false;
-            this.btnNuevoAlumno.Zoom = 10;
-            this.btnNuevoAlumno.Click += new System.EventHandler(this.btn_nuevo_alumno_Click);
             // 
             // label10
             // 
@@ -244,7 +210,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Sienna;
-            this.label10.Location = new System.Drawing.Point(34, 249);
+            this.label10.Location = new System.Drawing.Point(34, 242);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(153, 23);
             this.label10.TabIndex = 102;
@@ -257,7 +223,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Sienna;
-            this.label14.Location = new System.Drawing.Point(173, 102);
+            this.label14.Location = new System.Drawing.Point(53, 133);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(116, 23);
             this.label14.TabIndex = 95;
@@ -273,9 +239,9 @@
             this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.txt_codigo_alumno);
             this.panel2.Controls.Add(this.label22);
-            this.panel2.Location = new System.Drawing.Point(12, 135);
+            this.panel2.Location = new System.Drawing.Point(7, 157);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(603, 81);
+            this.panel2.Size = new System.Drawing.Size(634, 81);
             this.panel2.TabIndex = 99;
             // 
             // panel1
@@ -289,7 +255,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(603, 81);
+            this.panel1.Size = new System.Drawing.Size(634, 81);
             this.panel1.TabIndex = 100;
             // 
             // txtNombreAlumno
@@ -319,7 +285,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Sienna;
-            this.label3.Location = new System.Drawing.Point(385, 9);
+            this.label3.Location = new System.Drawing.Point(384, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 23);
             this.label3.TabIndex = 71;
@@ -353,7 +319,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Sienna;
-            this.label4.Location = new System.Drawing.Point(210, 9);
+            this.label4.Location = new System.Drawing.Point(215, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 23);
             this.label4.TabIndex = 69;
@@ -386,7 +352,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Sienna;
-            this.label5.Location = new System.Drawing.Point(40, 9);
+            this.label5.Location = new System.Drawing.Point(45, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 23);
             this.label5.TabIndex = 67;
@@ -418,7 +384,7 @@
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Sienna;
-            this.label24.Location = new System.Drawing.Point(385, 9);
+            this.label24.Location = new System.Drawing.Point(401, 9);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(152, 23);
             this.label24.TabIndex = 71;
@@ -450,7 +416,7 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Sienna;
-            this.label23.Location = new System.Drawing.Point(210, 9);
+            this.label23.Location = new System.Drawing.Point(226, 9);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(41, 23);
             this.label23.TabIndex = 69;
@@ -482,7 +448,7 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Sienna;
-            this.label22.Location = new System.Drawing.Point(40, 9);
+            this.label22.Location = new System.Drawing.Point(56, 9);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(58, 23);
             this.label22.TabIndex = 67;
@@ -495,25 +461,11 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Sienna;
-            this.label20.Location = new System.Drawing.Point(266, 332);
+            this.label20.Location = new System.Drawing.Point(263, 358);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(55, 23);
             this.label20.TabIndex = 111;
             this.label20.Text = "Nuevo";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.icons8_Add_List_48px;
-            this.btnNuevo.ImageActive = null;
-            this.btnNuevo.Location = new System.Drawing.Point(207, 319);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(57, 52);
-            this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnNuevo.TabIndex = 110;
-            this.btnNuevo.TabStop = false;
-            this.btnNuevo.Zoom = 10;
-            this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // label21
             // 
@@ -522,35 +474,20 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Sienna;
-            this.label21.Location = new System.Drawing.Point(558, 332);
+            this.label21.Location = new System.Drawing.Point(530, 358);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(73, 23);
             this.label21.TabIndex = 113;
             this.label21.Text = "Cancelar";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px;
-            this.btnCancelar.ImageActive = null;
-            this.btnCancelar.Location = new System.Drawing.Point(495, 319);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(61, 47);
-            this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCancelar.TabIndex = 112;
-            this.btnCancelar.TabStop = false;
-            this.btnCancelar.Zoom = 10;
-            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
             // cbEstado
             // 
-            this.cbEstado.Enabled = false;
             this.cbEstado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
             "ACTIVO",
             "DESACTIVO"});
-            this.cbEstado.Location = new System.Drawing.Point(540, 49);
+            this.cbEstado.Location = new System.Drawing.Point(554, 55);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(86, 23);
             this.cbEstado.TabIndex = 115;
@@ -563,7 +500,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Sienna;
-            this.label6.Location = new System.Drawing.Point(470, 49);
+            this.label6.Location = new System.Drawing.Point(491, 55);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 23);
             this.label6.TabIndex = 114;
@@ -574,7 +511,7 @@
             this.dtFechaNac.Enabled = false;
             this.dtFechaNac.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.dtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaNac.Location = new System.Drawing.Point(62, 49);
+            this.dtFechaNac.Location = new System.Drawing.Point(66, 57);
             this.dtFechaNac.Name = "dtFechaNac";
             this.dtFechaNac.Size = new System.Drawing.Size(114, 23);
             this.dtFechaNac.TabIndex = 116;
@@ -586,7 +523,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Sienna;
-            this.label9.Location = new System.Drawing.Point(1, 49);
+            this.label9.Location = new System.Drawing.Point(8, 55);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 23);
             this.label9.TabIndex = 117;
@@ -605,7 +542,7 @@
             this.cbCiclo.Enabled = false;
             this.cbCiclo.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCiclo.FormattingEnabled = true;
-            this.cbCiclo.Location = new System.Drawing.Point(314, 49);
+            this.cbCiclo.Location = new System.Drawing.Point(345, 55);
             this.cbCiclo.Name = "cbCiclo";
             this.cbCiclo.Size = new System.Drawing.Size(118, 23);
             this.cbCiclo.TabIndex = 118;
@@ -617,7 +554,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Sienna;
-            this.label11.Location = new System.Drawing.Point(203, 49);
+            this.label11.Location = new System.Drawing.Point(234, 55);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(110, 23);
             this.label11.TabIndex = 119;
@@ -630,7 +567,7 @@
             this.cbTipo_Inscripcion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
             this.cbTipo_Inscripcion.ForeColor = System.Drawing.Color.Black;
             this.cbTipo_Inscripcion.FormattingEnabled = true;
-            this.cbTipo_Inscripcion.Location = new System.Drawing.Point(25, 275);
+            this.cbTipo_Inscripcion.Location = new System.Drawing.Point(25, 268);
             this.cbTipo_Inscripcion.Name = "cbTipo_Inscripcion";
             this.cbTipo_Inscripcion.Size = new System.Drawing.Size(168, 23);
             this.cbTipo_Inscripcion.TabIndex = 120;
@@ -642,7 +579,7 @@
             this.cbCarrera.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
             this.cbCarrera.ForeColor = System.Drawing.Color.Black;
             this.cbCarrera.FormattingEnabled = true;
-            this.cbCarrera.Location = new System.Drawing.Point(207, 275);
+            this.cbCarrera.Location = new System.Drawing.Point(207, 268);
             this.cbCarrera.Name = "cbCarrera";
             this.cbCarrera.Size = new System.Drawing.Size(267, 23);
             this.cbCarrera.TabIndex = 121;
@@ -655,7 +592,7 @@
             this.cbGrado.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
             this.cbGrado.ForeColor = System.Drawing.Color.Black;
             this.cbGrado.FormattingEnabled = true;
-            this.cbGrado.Location = new System.Drawing.Point(495, 275);
+            this.cbGrado.Location = new System.Drawing.Point(495, 268);
             this.cbGrado.Name = "cbGrado";
             this.cbGrado.Size = new System.Drawing.Size(130, 23);
             this.cbGrado.TabIndex = 122;
@@ -672,11 +609,163 @@
             this.cbSeccion.Size = new System.Drawing.Size(168, 23);
             this.cbSeccion.TabIndex = 123;
             // 
+            // btnBuscarAlumno
+            // 
+            this.btnBuscarAlumno.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarAlumno.Image = global::CapaPresentacion.Properties.Resources.icons8_Search_Property_96px;
+            this.btnBuscarAlumno.ImageActive = null;
+            this.btnBuscarAlumno.Location = new System.Drawing.Point(567, 111);
+            this.btnBuscarAlumno.Name = "btnBuscarAlumno";
+            this.btnBuscarAlumno.Size = new System.Drawing.Size(53, 43);
+            this.btnBuscarAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscarAlumno.TabIndex = 124;
+            this.btnBuscarAlumno.TabStop = false;
+            this.btnBuscarAlumno.Zoom = 10;
+            this.btnBuscarAlumno.Click += new System.EventHandler(this.BtnBuscarAlumno_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px;
+            this.btnCancelar.ImageActive = null;
+            this.btnCancelar.Location = new System.Drawing.Point(545, 319);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(39, 36);
+            this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCancelar.TabIndex = 112;
+            this.btnCancelar.TabStop = false;
+            this.btnCancelar.Zoom = 10;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.icons8_Add_List_48px;
+            this.btnNuevo.ImageActive = null;
+            this.btnNuevo.Location = new System.Drawing.Point(267, 319);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(39, 36);
+            this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNuevo.TabIndex = 110;
+            this.btnNuevo.TabStop = false;
+            this.btnNuevo.Zoom = 10;
+            this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageActive = null;
+            this.btnGuardar.Location = new System.Drawing.Point(359, 322);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(39, 36);
+            this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnGuardar.TabIndex = 106;
+            this.btnGuardar.TabStop = false;
+            this.btnGuardar.Zoom = 10;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageActive = null;
+            this.btnBuscar.Location = new System.Drawing.Point(12, 120);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(39, 36);
+            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscar.TabIndex = 97;
+            this.btnBuscar.TabStop = false;
+            this.btnBuscar.Zoom = 10;
+            this.btnBuscar.Click += new System.EventHandler(this.Btn_buscar_Click);
+            // 
+            // btnNuevoAlumno
+            // 
+            this.btnNuevoAlumno.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevoAlumno.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoAlumno.Image")));
+            this.btnNuevoAlumno.ImageActive = null;
+            this.btnNuevoAlumno.Location = new System.Drawing.Point(202, 120);
+            this.btnNuevoAlumno.Name = "btnNuevoAlumno";
+            this.btnNuevoAlumno.Size = new System.Drawing.Size(39, 36);
+            this.btnNuevoAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNuevoAlumno.TabIndex = 96;
+            this.btnNuevoAlumno.TabStop = false;
+            this.btnNuevoAlumno.Zoom = 10;
+            this.btnNuevoAlumno.Click += new System.EventHandler(this.btn_nuevo_alumno_Click);
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Sienna;
+            this.label12.Location = new System.Drawing.Point(421, 131);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(140, 23);
+            this.label12.TabIndex = 125;
+            this.label12.Text = "Lista de Inscritos";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Sienna;
+            this.label13.Location = new System.Drawing.Point(443, 358);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(57, 23);
+            this.label13.TabIndex = 126;
+            this.label13.Text = "Editar";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.icons8_Edit_Property_48px;
+            this.btnEditar.ImageActive = null;
+            this.btnEditar.Location = new System.Drawing.Point(447, 322);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(39, 36);
+            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEditar.TabIndex = 142;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Zoom = 10;
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // txtIdInscripcion
+            // 
+            this.txtIdInscripcion.BackColor = System.Drawing.Color.White;
+            this.txtIdInscripcion.Enabled = false;
+            this.txtIdInscripcion.Location = new System.Drawing.Point(182, 88);
+            this.txtIdInscripcion.Name = "txtIdInscripcion";
+            this.txtIdInscripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtIdInscripcion.TabIndex = 144;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Sienna;
+            this.label16.Location = new System.Drawing.Point(7, 87);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(173, 23);
+            this.label16.TabIndex = 145;
+            this.label16.Text = "Código de Inscripción:";
+            // 
             // Inscripcion_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 380);
+            this.ClientSize = new System.Drawing.Size(658, 380);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txtIdInscripcion);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.btnBuscarAlumno);
             this.Controls.Add(this.cbSeccion);
             this.Controls.Add(this.cbGrado);
             this.Controls.Add(this.cbCarrera);
@@ -713,16 +802,18 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Inscripcion_alumno_KeyDown);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNuevoAlumno)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarAlumno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevoAlumno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -775,5 +866,11 @@
         private System.Windows.Forms.ComboBox cbGrado;
         private System.Windows.Forms.ComboBox cbCarrera;
         private System.Windows.Forms.ComboBox cbSeccion;
+        private Bunifu.Framework.UI.BunifuImageButton btnBuscarAlumno;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private Bunifu.Framework.UI.BunifuImageButton btnEditar;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtIdInscripcion;
     }
 }
