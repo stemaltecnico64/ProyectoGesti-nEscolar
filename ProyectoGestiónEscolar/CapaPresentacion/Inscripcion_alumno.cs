@@ -190,8 +190,6 @@ namespace CapaPresentacion
                 this.btnGuardar.Enabled = true;
                 this.btnEditar.Enabled = false;
                 this.btnCancelar.Enabled = true;
-                this.btnBuscar.Enabled = true;
-                this.btnNuevoAlumno.Enabled = true;
             }
             else
             {
@@ -200,8 +198,6 @@ namespace CapaPresentacion
                 this.btnGuardar.Enabled = false;
                 this.btnEditar.Enabled = true;
                 this.btnCancelar.Enabled = false;
-                this.btnBuscar.Enabled = false;
-                this.btnNuevoAlumno.Enabled = false;
             }
 
         }
@@ -213,7 +209,7 @@ namespace CapaPresentacion
 
         private void btn_nuevo_alumno_Click(object sender, EventArgs e)
         {
-            Ingresar_Alumno ventanalumno = new Ingresar_Alumno();
+            Ingresar_Alumno ventanalumno = Ingresar_Alumno.GetInstancia();
             ventanalumno.Show();
         }
 
@@ -253,7 +249,7 @@ namespace CapaPresentacion
                 }
                 else
                 {                    
-                    if ()
+                    if (txtIdInscripcion.Text == txtId_Alumno.Text)
                     {
                         MensajeError("El Alumno ya está ingreso");
                     }
@@ -306,8 +302,12 @@ namespace CapaPresentacion
                             this.IsEditar = false;
                             this.Botones();
                             this.Limpiar();
+                            this.LlenarComboCiclo();
+                            this.LlenarTipoIns();
+                            this.LlenarComboCarrera();
+                             this.LlenarComboSeccion();
 
-                        }
+                            }
                     }
                     else
                     {
