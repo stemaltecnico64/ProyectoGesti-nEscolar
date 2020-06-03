@@ -44,5 +44,11 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void BunifuImageButton4_Click(object sender, EventArgs e)
+        {
+            VistaAlumnoEditar ver = new VistaAlumnoEditar();
+            ver.Show();
+        }
     }
 }

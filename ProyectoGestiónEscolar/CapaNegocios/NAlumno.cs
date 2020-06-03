@@ -81,6 +81,12 @@ namespace CapaNegocios
             return Obj.cui(Obj);
         }
 
+
+
+        public static DataTable MostrarEditar()
+        {
+            return new DAlumno().MostrarEditar();
+        }
         public static DataTable ApellidoEditar(string textobuscar)
         {
             DAlumno Obj = new DAlumno();

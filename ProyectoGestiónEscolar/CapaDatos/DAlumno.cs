@@ -244,6 +244,13 @@ namespace CapaDatos
                 ParIdAlumno.Value = Alumno.Id_Alumno;
                 SqlCmd.Parameters.Add(ParIdAlumno);
 
+                SqlParameter ParCodigo = new SqlParameter();
+                ParCodigo.ParameterName = "@Codigo_Alumno";
+                ParCodigo.SqlDbType = SqlDbType.VarChar;
+                ParCodigo.Size = 50;
+                ParCodigo.Value = Alumno.Codigo_Alumno;
+                SqlCmd.Parameters.Add(ParCodigo);
+
                 SqlParameter ParCUI = new SqlParameter();
                 ParCUI.ParameterName = "@Cui";
                 ParCUI.SqlDbType = SqlDbType.VarChar;
@@ -315,7 +322,7 @@ namespace CapaDatos
 
 
                 SqlParameter ParIdMunicipio = new SqlParameter();
-                ParIdMunicipio.ParameterName = "@Id_Minicipio";
+                ParIdMunicipio.ParameterName = "@Id_Municipio";
                 ParIdMunicipio.SqlDbType = SqlDbType.VarChar;
                 ParIdMunicipio.Value = Alumno.Id_Municipio;
                 SqlCmd.Parameters.Add(ParIdMunicipio);
@@ -342,7 +349,7 @@ namespace CapaDatos
                 SqlParameter ParEstado = new SqlParameter();
                 ParEstado.ParameterName = "@Estado";
                 ParEstado.SqlDbType = SqlDbType.VarChar;
-                ParTelefono.Size = 50;
+                ParEstado.Size = 50;
                 ParEstado.Value = Alumno.Estado;
                 SqlCmd.Parameters.Add(ParEstado);
 
@@ -480,7 +487,29 @@ namespace CapaDatos
             return DtResultado;
 
         }
+        public DataTable MostrarEditar()
+        {
+            DataTable DtResultado = new DataTable("Alumno");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spbuscar_alumno_mostrar_editar";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
 
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
 
         //EDITAR
         public DataTable ApellidoEditar(DAlumno Alumno)

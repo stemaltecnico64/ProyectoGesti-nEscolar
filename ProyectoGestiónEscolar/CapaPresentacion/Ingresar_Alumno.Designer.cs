@@ -96,6 +96,10 @@
             this.BtnAgregarFoto = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuImageButton();
             this.label19 = new System.Windows.Forms.Label();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.btnBuscarAlumno = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).BeginInit();
             this.panel2.SuspendLayout();
@@ -110,6 +114,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnAgregarFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarAlumno)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -411,7 +417,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Sienna;
-            this.label15.Location = new System.Drawing.Point(743, 545);
+            this.label15.Location = new System.Drawing.Point(858, 500);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 23);
             this.label15.TabIndex = 82;
@@ -907,7 +913,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Sienna;
-            this.label20.Location = new System.Drawing.Point(743, 474);
+            this.label20.Location = new System.Drawing.Point(712, 500);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(55, 23);
             this.label20.TabIndex = 91;
@@ -920,7 +926,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Sienna;
-            this.label21.Location = new System.Drawing.Point(743, 621);
+            this.label21.Location = new System.Drawing.Point(858, 575);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(73, 23);
             this.label21.TabIndex = 93;
@@ -976,7 +982,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.icons8_Delete_48px;
             this.btnCancelar.ImageActive = null;
-            this.btnCancelar.Location = new System.Drawing.Point(671, 602);
+            this.btnCancelar.Location = new System.Drawing.Point(791, 553);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(66, 63);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -990,7 +996,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
             this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.icons8_Add_List_48px;
             this.btnNuevo.ImageActive = null;
-            this.btnNuevo.Location = new System.Drawing.Point(671, 448);
+            this.btnNuevo.Location = new System.Drawing.Point(640, 474);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(66, 63);
             this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1018,7 +1024,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageActive = null;
-            this.btnGuardar.Location = new System.Drawing.Point(671, 527);
+            this.btnGuardar.Location = new System.Drawing.Point(791, 474);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(66, 63);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1040,11 +1046,69 @@
             this.label19.TabIndex = 95;
             this.label19.Text = "Quitar Foto";
             // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.icons8_Edit_Property_48px;
+            this.btnEditar.ImageActive = null;
+            this.btnEditar.Location = new System.Drawing.Point(640, 553);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(66, 63);
+            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEditar.TabIndex = 96;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Zoom = 10;
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // label28
+            // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Sienna;
+            this.label28.Location = new System.Drawing.Point(712, 575);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(57, 23);
+            this.label28.TabIndex = 97;
+            this.label28.Text = "Editar";
+            // 
+            // label29
+            // 
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Sienna;
+            this.label29.Location = new System.Drawing.Point(793, 80);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(132, 23);
+            this.label29.TabIndex = 127;
+            this.label29.Text = "Lista de Alumnos";
+            // 
+            // btnBuscarAlumno
+            // 
+            this.btnBuscarAlumno.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarAlumno.Image = global::CapaPresentacion.Properties.Resources.icons8_Search_Property_96px;
+            this.btnBuscarAlumno.ImageActive = null;
+            this.btnBuscarAlumno.Location = new System.Drawing.Point(745, 68);
+            this.btnBuscarAlumno.Name = "btnBuscarAlumno";
+            this.btnBuscarAlumno.Size = new System.Drawing.Size(42, 36);
+            this.btnBuscarAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscarAlumno.TabIndex = 126;
+            this.btnBuscarAlumno.TabStop = false;
+            this.btnBuscarAlumno.Zoom = 10;
+            this.btnBuscarAlumno.Click += new System.EventHandler(this.BtnBuscarAlumno_Click);
+            // 
             // Ingresar_Alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 671);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.btnBuscarAlumno);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.BtnQuitarFoto);
             this.Controls.Add(this.cbEstado);
@@ -1068,6 +1132,7 @@
             this.Name = "Ingresar_Alumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingresar_Alumno";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Ingresar_Alumno_FormClosing);
             this.Load += new System.EventHandler(this.Ingresar_Alumno_Load);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pxFoto)).EndInit();
@@ -1087,6 +1152,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnAgregarFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarAlumno)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1159,5 +1226,9 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCodigoAlumno;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.DateTimePicker dtFechaNac;
+        private System.Windows.Forms.Label label28;
+        private Bunifu.Framework.UI.BunifuImageButton btnEditar;
+        private System.Windows.Forms.Label label29;
+        private Bunifu.Framework.UI.BunifuImageButton btnBuscarAlumno;
     }
 }

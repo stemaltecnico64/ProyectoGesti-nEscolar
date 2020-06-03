@@ -39,8 +39,6 @@ namespace CapaPresentacion
             this.ttMensaje.SetToolTip(this.txtNombreEncargado, "Debe seleccionar el nombre de un encargado");
 
             this.LlenarComboDepartamento();
-            this.cbEstado.Visible = false;
-            this.label10.Visible = false;
         }
         private void LlenarComboMunicipio(string id_departamento)
         {
@@ -88,6 +86,32 @@ namespace CapaPresentacion
 
         }
 
+        public void SetAlumnoEditar(string id_alumno, string codigo_alumno, string cui, string nombre1, string nombre2, string nombre3, string apellido1, string apellido2, string apellido3, string fecha_nac,
+              string sexo, string direccion, string id_municipio, string id_departamento,string telefono, Image foto, string Estado, string id_encargado, string dpi, string nombre_encargado, string apellido_encargado)
+        {
+            this.txtIdAlumno.Text = id_alumno;
+            this.txtCodigoAlumno.Text = codigo_alumno;
+            this.txtCui.Text = cui;
+            this.txtNombre1.Text = nombre1;
+            this.txtNombre2.Text = nombre2;
+            this.txtNombre3.Text = nombre3;
+            this.txtApellido1.Text = apellido1;
+            this.txtApellido2.Text = apellido2;
+            this.txtApellido3.Text = apellido3;
+            this.dtFechaNac.Text = fecha_nac;
+            this.cbSexo.Text = sexo;
+            this.txtDireccion.Text = direccion;
+            this.cbMunicipio.Text = id_municipio;
+            this.cbDepartamento.Text = id_departamento;
+            this.txtTelefono.Text = telefono;
+            this.pxFoto.Image = foto;
+            this.txtIdEncargado.Text = id_encargado;
+            this.txtDpiEncargado.Text = dpi;
+            this.txtNombreEncargado.Text = nombre_encargado;
+            this.txtApellidoEncargado.Text = apellido_encargado;
+            this.cbEstado.Text = Estado;
+        }
+
         private void MensajeOk(string mensaje)
         {
             MessageBox.Show(mensaje, "SEGURIDAD DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -111,6 +135,7 @@ namespace CapaPresentacion
             this.txtApellido2.Text = string.Empty;
             this.txtApellido3.Text = string.Empty;
             this.txtTelefono.Text = string.Empty;
+            this.txtDireccion.Text = string.Empty;
             this.txtIdEncargado.Text = string.Empty;
             this.txtDpiEncargado.Text = string.Empty;
             this.txtNombreEncargado.Text = string.Empty;
@@ -146,14 +171,14 @@ namespace CapaPresentacion
             this.btnNuevoEncargado.Enabled = valor;
         }
 
-        //Habilitar los botones
         private void Botones()
         {
-            if (this.IsNuevo || this.IsEditar) //Alt + 124
+            if (this.IsNuevo || this.IsEditar)
             {
                 this.Habilitar(true);
                 this.btnNuevo.Enabled = false;
                 this.btnGuardar.Enabled = true;
+                this.btnEditar.Enabled = false;
                 this.btnCancelar.Enabled = true;
             }
             else
@@ -161,12 +186,13 @@ namespace CapaPresentacion
                 this.Habilitar(false);
                 this.btnNuevo.Enabled = true;
                 this.btnGuardar.Enabled = false;
+                this.btnEditar.Enabled = true;
                 this.btnCancelar.Enabled = false;
             }
 
         }
 
-    
+
         private void btn_add_foto_Click(object sender, EventArgs e)
         {
             try
@@ -232,14 +258,17 @@ namespace CapaPresentacion
                 {
                     string rpta = "";
                 if (this.txtCui.Text == string.Empty || this.txtNombre1.Text == string.Empty
-                    || this.txtApellido1.Text == string.Empty || this.txtIdEncargado.Text == string.Empty)
+                    || this.txtApellido1.Text == string.Empty || this.txtIdEncargado.Text == string.Empty || this.cbDepartamento.Text == "Seleccione un Departamento" 
+                    || this.cbMunicipio.Text == "Seleccione un Municipio")
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
                     errorIcono.SetError(txtCui, "Ingrese un Valor");
                     errorIcono.SetError(txtNombre1, "Ingrese un Valor");
                     errorIcono.SetError(txtApellido1, "Ingrese un Valor");
                     errorIcono.SetError(txtIdEncargado, "Ingrese un Valor");
-                }
+                    errorIcono.SetError(cbDepartamento, "Ingrese un Valor");
+                    errorIcono.SetError(cbMunicipio, "Ingrese un Valor");
+                    }
                 else
                 {
                     System.IO.MemoryStream ms = new System.IO.MemoryStream();
@@ -258,7 +287,7 @@ namespace CapaPresentacion
                     {
                         rpta = NAlumno.Editar(Convert.ToInt32(this.txtIdAlumno.Text),
                             this.txtCodigoAlumno.Text, this.txtCui.Text, this.txtNombre1.Text, this.txtNombre2.Text, this.txtNombre3.Text, this.txtApellido1.Text, this.txtApellido2.Text, this.txtApellido3.Text,
-                            this.dtFechaNac.Value, this.cbSexo.Text, this.txtDireccion.Text, Convert.ToInt32(this.cbMunicipio.Text), this.txtTelefono.Text, imagen, Convert.ToInt32(this.txtIdEncargado.Text),
+                            this.dtFechaNac.Value, this.cbSexo.Text, this.txtDireccion.Text, Convert.ToInt32(this.cbMunicipio.SelectedValue), this.txtTelefono.Text, imagen, Convert.ToInt32(this.txtIdEncargado.Text),
                             this.cbEstado.Text);
                     }
 
@@ -414,6 +443,31 @@ namespace CapaPresentacion
             {
                 string id_departamento = cbDepartamento.SelectedValue.ToString();
                 LlenarComboMunicipio(id_departamento);
+            }
+        }
+
+        private void BtnBuscarAlumno_Click(object sender, EventArgs e)
+        {
+            VistaAlumnoEditar ver = new VistaAlumnoEditar();
+            ver.Show();
+        }
+
+        private void Ingresar_Alumno_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _Instancia = null;
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            if (!this.txtIdAlumno.Text.Equals(""))
+            {
+                this.IsEditar = true;
+                this.Botones();
+                this.Habilitar(true);
+            }
+            else
+            {
+                this.MensajeError("Debe de seleccionar primero el registro a Modificar");
             }
         }
     }
