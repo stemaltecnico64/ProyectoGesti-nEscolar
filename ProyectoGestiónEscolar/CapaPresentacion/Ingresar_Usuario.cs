@@ -33,7 +33,7 @@ namespace CapaPresentacion
             return DS;
         }
 
-        SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
 
         private void LlenarComboNivelU()
         {
@@ -114,6 +114,7 @@ namespace CapaPresentacion
         {
             habilitar();
             txt_nombre_usuario.Focus();
+            txt_password.isPassword = true;
         }
 
         private void txt_nombre_usuario_KeyPress(object sender, KeyPressEventArgs e)

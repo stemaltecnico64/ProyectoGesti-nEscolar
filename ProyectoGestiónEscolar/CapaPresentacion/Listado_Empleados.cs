@@ -18,6 +18,8 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
+
         private void btExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -25,7 +27,6 @@ namespace CapaPresentacion
 
         private void cargarTablaEmpleados()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             con.Open();
             SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_empleados", con);
             DataTable dt = new DataTable();
@@ -44,7 +45,6 @@ namespace CapaPresentacion
 
         private void BuscarCodigo()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_empleados where Código like'%" + txtBuscar.Text + "%'", con);
             DataTable dt = new DataTable();
 
@@ -56,7 +56,6 @@ namespace CapaPresentacion
 
         private void BuscarDPI()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_empleados where DPI like'%" + txtBuscar.Text + "%'", con);
             DataTable dt = new DataTable();
 
@@ -68,7 +67,6 @@ namespace CapaPresentacion
 
         private void BuscarEmpleado()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
             SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_empleados where Empleado like'%" + txtBuscar.Text + "%'", con);
             DataTable dt = new DataTable();
 
@@ -80,8 +78,7 @@ namespace CapaPresentacion
 
         private void BuscarDireccion()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
-            SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_empleados where DIRECCION like'%" + txtBuscar.Text + "%'", con);
+            SqlDataAdapter DP = new SqlDataAdapter("Select * from vista_listado_empleados where Dirección like'%" + txtBuscar.Text + "%'", con);
             DataTable dt = new DataTable();
 
             DP.Fill(dt);

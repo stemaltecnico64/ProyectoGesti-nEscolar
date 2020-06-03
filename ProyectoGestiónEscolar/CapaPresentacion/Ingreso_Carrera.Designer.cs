@@ -164,7 +164,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Sienna;
-            this.label21.Location = new System.Drawing.Point(353, 277);
+            this.label21.Location = new System.Drawing.Point(353, 264);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(73, 23);
             this.label21.TabIndex = 242;
@@ -189,7 +189,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Sienna;
-            this.label2.Location = new System.Drawing.Point(244, 277);
+            this.label2.Location = new System.Drawing.Point(244, 264);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 23);
             this.label2.TabIndex = 249;
@@ -296,7 +296,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Sienna;
-            this.label20.Location = new System.Drawing.Point(19, 278);
+            this.label20.Location = new System.Drawing.Point(19, 265);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(55, 23);
             this.label20.TabIndex = 240;
@@ -309,7 +309,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Sienna;
-            this.label15.Location = new System.Drawing.Point(125, 278);
+            this.label15.Location = new System.Drawing.Point(125, 265);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 23);
             this.label15.TabIndex = 238;

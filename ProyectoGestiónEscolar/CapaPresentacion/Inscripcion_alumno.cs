@@ -252,20 +252,22 @@ namespace CapaPresentacion
                     MensajeError("Estimado Usuario no tiene un ciclo activo");
                 }
                 else
-                {                    
-                    if ()
-                    {
-                        MensajeError("El Alumno ya está ingreso");
-                    }
-                    else
-                    {
-                  DialogResult Opcion;
+                {
+                    string CMD = String.Format("Select * from Inscripcion where Id_Alumno like '{0}' and Id_Grado = '{1}'", txtId_Alumno.Text.Trim(), Convert.ToInt32(cbGrado.SelectedValue));
+                    DataSet ds = Login.Conexion_GX(CMD);
+                    string alumno = ds.Tables[0].Rows[0]["Id_Alumno"].ToString().Trim();
+                    string grado = ds.Tables[0].Rows[0]["Id_Grado"].ToString().Trim();
+                    string Estado = ds.Tables[0].Rows[0]["Estado"].ToString().Trim();
+                    string Ciclo = ds.Tables[0].Rows[0]["Id_Ciclo"].ToString().Trim();
+                    string inscripcion = ds.Tables[0].Rows[0]["Id_Inscripcion"].ToString().Trim();
+
+                    DialogResult Opcion;
                     Opcion = MessageBox.Show("¿Está seguro de guardar estos datos?", "SEGURIDAD DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (Opcion == DialogResult.Yes)
                     {
                         string rpta = "";
                         if (this.txtNombreAlumno.Text == string.Empty || this.cbTipo_Inscripcion.Text == "Eliga un Tipo de Inscripción " || this.cbCarrera.Text == "Seleccione una Carrera"
-                            || this.cbGrado.Text == "Seleccione un Grado" || this.cbSeccion.Text == "Seleccione una Sección")
+                        || this.cbGrado.Text == "Seleccione un Grado" || this.cbSeccion.Text == "Seleccione una Sección")
                         {
                             MensajeError("Falta ingresar algunos datos, serán remarcados");
                             errorIcono.SetError(txtNombreAlumno, "Ingrese un Nombre de Alumno");
@@ -274,47 +276,42 @@ namespace CapaPresentacion
                             errorIcono.SetError(cbGrado, "Ingrese un grado");
                             errorIcono.SetError(cbSeccion, "Ingrese una sección");
                         }
-                        else
-                        {
-
-                            if (this.IsNuevo)
-                            {
-                                rpta = NInscripcion.Insertar(Convert.ToInt32(this.cbCiclo.SelectedValue), Convert.ToInt32(this.cbCarrera.SelectedValue), Convert.ToInt32(this.cbTipo_Inscripcion.SelectedValue), Convert.ToInt32(this.txtId_Alumno.Text),
-                                     Convert.ToInt32(this.cbGrado.SelectedValue), Convert.ToInt32(this.cbSeccion.SelectedValue), this.dtFechaNac.Value, this.cbEstado.Text);
-                            }
+                  
                             else
-                            {
-                                rpta = NInscripcion.Editar(Convert.ToInt32(txtIdInscripcion.Text), Convert.ToInt32(this.cbCiclo.SelectedValue), Convert.ToInt32(this.cbCarrera.SelectedValue), Convert.ToInt32(this.cbTipo_Inscripcion.SelectedValue), Convert.ToInt32(this.txtId_Alumno.Text),
-                                    Convert.ToInt32(this.cbGrado.SelectedValue), Convert.ToInt32(this.cbSeccion.SelectedValue), this.dtFechaNac.Value, this.cbEstado.Text);
-                            }
-                            if (rpta.Equals("OK"))
                             {
                                 if (this.IsNuevo)
                                 {
-                                    this.MensajeOk("Se Insertó de forma correcta el registro");
+                                    rpta = NInscripcion.Insertar(Convert.ToInt32(this.cbCiclo.SelectedValue), Convert.ToInt32(this.cbCarrera.SelectedValue), Convert.ToInt32(this.cbTipo_Inscripcion.SelectedValue), Convert.ToInt32(this.txtId_Alumno.Text),
+                                         Convert.ToInt32(this.cbGrado.SelectedValue), Convert.ToInt32(this.cbSeccion.SelectedValue), this.dtFechaNac.Value, this.cbEstado.Text);
                                 }
                                 else
                                 {
-                                    this.MensajeOk("Se Actualizó de forma correcta el registro");
+                                    rpta = NInscripcion.Editar(Convert.ToInt32(txtIdInscripcion.Text), Convert.ToInt32(this.cbCiclo.SelectedValue), Convert.ToInt32(this.cbCarrera.SelectedValue), Convert.ToInt32(this.cbTipo_Inscripcion.SelectedValue), Convert.ToInt32(this.txtId_Alumno.Text),
+                                        Convert.ToInt32(this.cbGrado.SelectedValue), Convert.ToInt32(this.cbSeccion.SelectedValue), this.dtFechaNac.Value, this.cbEstado.Text);
                                 }
-                            }
-                            else
-                            {
-                                this.MensajeError(rpta);
-                            }
-                            this.IsNuevo = false;
-                            this.IsEditar = false;
-                            this.Botones();
-                            this.Limpiar();
+                                if (rpta.Equals("OK"))
+                                {
+                                    if (this.IsNuevo)
+                                    {
+                                        this.MensajeOk("Se Insertó de forma correcta el registro");
+                                    }
+                                    else
+                                    {
+                                        this.MensajeOk("Se Actualizó de forma correcta el registro");
+                                    }
+                                }
+                                else
+                                {
+                                    this.MensajeError(rpta);
+                                }
+                                this.IsNuevo = false;
+                                this.IsEditar = false;
+                                this.Botones();
+                                this.Limpiar();
 
-                        }
+                            }                        
                     }
-                    else
-                    {
-
-                    }
-                    }
-  
+                        
                 }
             }
               
