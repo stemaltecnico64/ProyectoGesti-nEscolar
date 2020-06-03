@@ -16,16 +16,15 @@ namespace CapaPresentacion
         private bool IsNuevo = false;
 
         private bool IsEditar = false;
+
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
+
         public Ingreso_de_Grados()
         {
             InitializeComponent();
             this.ttMensaje.SetToolTip(this.txtGrado, "Debe ingresas un grado, Ejemplo: 4to. 5to. 6to.");
             this.LlenarComboCarrera();
         }
-
-
-        SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
-
 
         private void LlenarComboCarrera()
         {

@@ -20,37 +20,12 @@ namespace CapaPresentacion
             LlenarComboSeccion();
         }
 
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
+
+
         private void btExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-
-        SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
-        public static DataSet Conexion_GX(string cmd)
-        {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
-            con.Open();
-
-            DataSet DS = new DataSet();
-            SqlDataAdapter DP = new SqlDataAdapter(cmd, con);
-
-            DP.Fill(DS);
-
-            con.Close();
-
-            return DS;
-        }
-
-        private void Limpiar()
-        {
-            this.txtcodigo.Text = string.Empty;
-            this.txtdpi.Text = string.Empty;
-            this.txtnombreMaestro.Text = string.Empty;
-            this.cbCarrera.Text = string.Empty;
-            this.cbCurso.Text = string.Empty;
-            this.cbGrado.Text = string.Empty;
-            this.cbSeccion.Text = string.Empty;
         }
         private void LlenarComboCarrera()
         {
@@ -156,9 +131,8 @@ namespace CapaPresentacion
             try
             {
                 string cmd = string.Format("Execute insertar_cursos_empleados '{0}','{1}','{2}'", Convert.ToInt32(txtcodigo.Text), Convert.ToInt32(cbCurso.SelectedValue), Convert.ToInt32(cbSeccion.SelectedValue));
-                Conexion_GX(cmd);
+                Login.Conexion_GX(cmd);
                 MessageBox.Show("Asignación Guardada Exitosamente..!");
-                this.Limpiar();
             }
             catch (Exception error)
             {

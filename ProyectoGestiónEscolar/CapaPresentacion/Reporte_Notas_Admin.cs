@@ -23,11 +23,12 @@ namespace CapaPresentacion
 
         }
 
+        SqlConnection con = new SqlConnection("Data Source = GX; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
+
         private void cargarTablaNotas()
         {
             if (Login.nivel_x.Equals("3"))
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 con.Open();
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '"+Login.NOMBRE_EMPLEADO+"'", con);
                 DataTable dt = new DataTable();
@@ -38,7 +39,6 @@ namespace CapaPresentacion
             }
             else if (Login.nivel_x.Equals("2"))
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 con.Open();
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas", con);
                 DataTable dt = new DataTable();
@@ -49,7 +49,6 @@ namespace CapaPresentacion
             }
             else if (Login.nivel_x.Equals("4"))
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 con.Open();
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas", con);
                 DataTable dt = new DataTable();
@@ -60,7 +59,6 @@ namespace CapaPresentacion
             }
             else if (Login.nivel_x.Equals("1"))
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 con.Open();
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas", con);
                 DataTable dt = new DataTable();
@@ -88,7 +86,6 @@ namespace CapaPresentacion
         {
             if (Login.nivel_x.Equals("3"))
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Curso like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -99,7 +96,6 @@ namespace CapaPresentacion
             }
             else
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Curso like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -114,7 +110,6 @@ namespace CapaPresentacion
         {
             if (Login.nivel_x.Equals("3"))
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Grado like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -124,7 +119,6 @@ namespace CapaPresentacion
             }
             else
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Grado like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -138,7 +132,6 @@ namespace CapaPresentacion
         {
             if (Login.nivel_x.Equals("3"))
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Carrera like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -148,7 +141,6 @@ namespace CapaPresentacion
             }
             else
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Carrera like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -162,7 +154,6 @@ namespace CapaPresentacion
         {
             if (Login.nivel_x.Equals("3"))
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Maestro like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -172,7 +163,6 @@ namespace CapaPresentacion
             }
             else
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -187,7 +177,6 @@ namespace CapaPresentacion
         {
             if (Login.nivel_x.Equals("3"))
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Alumno like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -197,7 +186,6 @@ namespace CapaPresentacion
             }
             else
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Alumno like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -212,7 +200,6 @@ namespace CapaPresentacion
         {
             if (Login.nivel_x.Equals("3"))
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Ciclo like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -222,7 +209,6 @@ namespace CapaPresentacion
             }
             else
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Ciclo like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -237,7 +223,6 @@ namespace CapaPresentacion
         {
             if (Login.nivel_x.Equals("3"))
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Maestro = '" + Login.NOMBRE_EMPLEADO + "' and Sección like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -247,7 +232,6 @@ namespace CapaPresentacion
             }
             else
             {
-                SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
                 SqlDataAdapter DP = new SqlDataAdapter("Select * from listado_notas where Sección like'%" + txtBuscar.Text + "%'", con);
                 DataTable dt = new DataTable();
 
@@ -309,22 +293,7 @@ namespace CapaPresentacion
                 txtNota1.Focus();
             }
         }
-
-        public static DataSet Conexion_GX(string cmd)
-        {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-NPN78EM; Initial Catalog = BDEscuelaComercio; Integrated Security = true ");
-            con.Open();
-
-            DataSet DS = new DataSet();
-            SqlDataAdapter DP = new SqlDataAdapter(cmd, con);
-
-            DP.Fill(DS);
-
-            con.Close();
-
-            return DS;
-        }
-
+        
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             Double n1 = Convert.ToDouble(txtNota1.Text);
@@ -339,7 +308,7 @@ namespace CapaPresentacion
                 try
                 {
                     string cmd = string.Format("Execute Actualizar_Notas '{0}','{1}','{2}','{3}','{4}','{5}'", Convert.ToInt32(txtIdNota.Text),n1,n2,n3,n4,p);
-                    Conexion_GX(cmd);
+                    Login.Conexion_GX(cmd);
                     MessageBox.Show("Se Guardado la Nota Exitosamente..!");
                     cargarTablaNotas();
                 }
@@ -354,7 +323,7 @@ namespace CapaPresentacion
                 try
                 {
                     string cmd = string.Format("Execute Actualizar_Notas '{0}','{1}','{2}','{3}','{4}','{5}'", Convert.ToInt32(txtIdNota.Text), n1, n2, n3, n4, p);
-                    Conexion_GX(cmd);
+                    Login.Conexion_GX(cmd);
                     MessageBox.Show("Se Guardado la Nota Exitosamente..!");
                     cargarTablaNotas();
                 }
@@ -369,7 +338,7 @@ namespace CapaPresentacion
                 try
                 {
                     string cmd = string.Format("Execute Actualizar_Notas '{0}','{1}','{2}','{3}','{4}','{5}'", Convert.ToInt32(txtIdNota.Text), n1, n2, n3, n4, p);
-                    Conexion_GX(cmd);
+                    Login.Conexion_GX(cmd);
                     MessageBox.Show("Se Guardado la Nota Exitosamente..!");
                     cargarTablaNotas();
                 }
@@ -384,7 +353,7 @@ namespace CapaPresentacion
                 try
                 {
                     string cmd = string.Format("Execute Actualizar_Notas '{0}','{1}','{2}','{3}','{4}','{5}'", Convert.ToInt32(txtIdNota.Text), n1, n2, n3, n4, p);
-                    Conexion_GX(cmd);
+                    Login.Conexion_GX(cmd);
                     MessageBox.Show("Se Guardado la Nota Exitosamente..!");
                     cargarTablaNotas();
                 }

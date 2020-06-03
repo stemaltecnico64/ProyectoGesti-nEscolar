@@ -720,6 +720,7 @@
             this.btn_guardar.TabIndex = 144;
             this.btn_guardar.TabStop = false;
             this.btn_guardar.Zoom = 10;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // label15
             // 
